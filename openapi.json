@@ -1,0 +1,716 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API de Municípios",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/municipios": {
+      "get": {
+        "summary": "Municipios",
+        "operationId": "municipios_municipios_get",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MunicipioResponse"
+                  },
+                  "title": "Response Municipios Municipios Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/municipios/geometrias": {
+      "get": {
+        "summary": "Geometrias Municipios",
+        "operationId": "geometrias_municipios_municipios_geometrias_get",
+        "parameters": [
+          {
+            "name": "codigos_ibge",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  },
+                  "minItems": 1,
+                  "maxItems": 100
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Códigos IBGE; repita o parâmetro para consultar vários municípios",
+              "title": "Codigos Ibge"
+            },
+            "description": "Códigos IBGE; repita o parâmetro para consultar vários municípios"
+          },
+          {
+            "name": "uf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 2,
+                  "maxLength": 2,
+                  "pattern": "^[A-Za-z]{2}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Sigla da unidade federativa, por exemplo GO",
+              "title": "Uf"
+            },
+            "description": "Sigla da unidade federativa, por exemplo GO"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Geometrias Municipios Municipios Geometrias Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/municipios/{codigo_ibge}": {
+      "get": {
+        "summary": "Municipio",
+        "operationId": "municipio_municipios__codigo_ibge__get",
+        "parameters": [
+          {
+            "name": "codigo_ibge",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Codigo Ibge"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MunicipioSemGeometriaResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/municipios/{codigo_ibge}/geometria": {
+      "get": {
+        "summary": "Geometria Municipio",
+        "operationId": "geometria_municipio_municipios__codigo_ibge__geometria_get",
+        "parameters": [
+          {
+            "name": "codigo_ibge",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Codigo Ibge"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Geometria Municipio Municipios  Codigo Ibge  Geometria Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/municipios/{codigo_ibge}/clima": {
+      "get": {
+        "summary": "Clima Municipio",
+        "operationId": "clima_municipio_municipios__codigo_ibge__clima_get",
+        "parameters": [
+          {
+            "name": "codigo_ibge",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Codigo Ibge"
+            }
+          },
+          {
+            "name": "inicio",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "description": "Data inicial inclusiva (UTC), no formato AAAA-MM-DD",
+              "title": "Inicio"
+            },
+            "description": "Data inicial inclusiva (UTC), no formato AAAA-MM-DD"
+          },
+          {
+            "name": "fim",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "description": "Data final inclusiva (UTC), no formato AAAA-MM-DD",
+              "title": "Fim"
+            },
+            "description": "Data final inclusiva (UTC), no formato AAAA-MM-DD"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClimaMunicipioResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ClimaMunicipioResponse": {
+        "properties": {
+          "codigo_ibge": {
+            "type": "integer",
+            "title": "Codigo Ibge"
+          },
+          "registros": {
+            "items": {
+              "$ref": "#/components/schemas/RegistroClimaticoResponse"
+            },
+            "type": "array",
+            "title": "Registros"
+          },
+          "enso": {
+            "items": {
+              "$ref": "#/components/schemas/EnsoMensalResponse"
+            },
+            "type": "array",
+            "title": "Enso"
+          }
+        },
+        "type": "object",
+        "required": [
+          "codigo_ibge",
+          "registros"
+        ],
+        "title": "ClimaMunicipioResponse"
+      },
+      "EnsoMensalResponse": {
+        "properties": {
+          "year": {
+            "type": "integer",
+            "title": "Year"
+          },
+          "month": {
+            "type": "integer",
+            "title": "Month"
+          },
+          "enso_index": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Enso Index"
+          }
+        },
+        "type": "object",
+        "required": [
+          "year",
+          "month",
+          "enso_index"
+        ],
+        "title": "EnsoMensalResponse"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "MunicipioDetailsResponse": {
+        "properties": {
+          "codigo_ibge": {
+            "type": "integer",
+            "title": "Codigo Ibge"
+          },
+          "municipio": {
+            "type": "string",
+            "title": "Municipio"
+          },
+          "uf": {
+            "type": "string",
+            "title": "Uf"
+          },
+          "estado": {
+            "type": "string",
+            "title": "Estado"
+          },
+          "regiao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Regiao"
+          },
+          "mesorregiao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mesorregiao"
+          },
+          "microrregiao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Microrregiao"
+          },
+          "populacao": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Populacao"
+          },
+          "ano_populacao": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ano Populacao"
+          },
+          "bioma": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bioma"
+          },
+          "geomorfologia": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Geomorfologia"
+          },
+          "regiao_geomorfologica": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Regiao Geomorfologica"
+          },
+          "dominio_geomorfologico": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dominio Geomorfologico"
+          },
+          "area_km2": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area Km2"
+          }
+        },
+        "type": "object",
+        "required": [
+          "codigo_ibge",
+          "municipio",
+          "uf",
+          "estado",
+          "regiao",
+          "mesorregiao",
+          "microrregiao",
+          "populacao",
+          "ano_populacao",
+          "bioma",
+          "geomorfologia",
+          "regiao_geomorfologica",
+          "dominio_geomorfologico",
+          "area_km2"
+        ],
+        "title": "MunicipioDetailsResponse"
+      },
+      "MunicipioResponse": {
+        "properties": {
+          "codigo_ibge": {
+            "type": "integer",
+            "title": "Codigo Ibge"
+          },
+          "latitude": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latitude"
+          },
+          "longitude": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Longitude"
+          },
+          "details": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MunicipioDetailsResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "geometry": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Geometry"
+          }
+        },
+        "type": "object",
+        "required": [
+          "codigo_ibge",
+          "latitude",
+          "longitude",
+          "details",
+          "geometry"
+        ],
+        "title": "MunicipioResponse"
+      },
+      "MunicipioSemGeometriaResponse": {
+        "properties": {
+          "codigo_ibge": {
+            "type": "integer",
+            "title": "Codigo Ibge"
+          },
+          "latitude": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latitude"
+          },
+          "longitude": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Longitude"
+          },
+          "details": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MunicipioDetailsResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "codigo_ibge",
+          "latitude",
+          "longitude",
+          "details"
+        ],
+        "title": "MunicipioSemGeometriaResponse"
+      },
+      "RegistroClimaticoResponse": {
+        "properties": {
+          "datetime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Datetime"
+          },
+          "umidade": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Umidade"
+          },
+          "temperatura": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Temperatura"
+          },
+          "precipitacao": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Precipitacao"
+          }
+        },
+        "type": "object",
+        "required": [
+          "datetime",
+          "umidade",
+          "temperatura",
+          "precipitacao"
+        ],
+        "title": "RegistroClimaticoResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

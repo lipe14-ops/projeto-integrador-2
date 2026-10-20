@@ -246,3 +246,58 @@ uv run codigo run carregar-clima -- --start-date 2015-01-01 --end-date 2015-01-3
 uv run codigo run consultar-municipios -- --uf RS
 uv run codigo run consultar-clima -- --municipio Porto Alegre --uf RS --variaveis
 ```
+
+## EDA climática municipal interativa (Marimo)
+
+O notebook [analises/eda_climatica_municipal.py](analises/eda_climatica_municipal.py)
+explora a série ERA5-Land carregada em `registro_climatico`, a dimensão
+municipal do PostGIS e o ONI mensal. Ele documenta o Shapefile IBGE 2025
+(`data/BR_Municipios_2025`) e o catálogo `data/municipios.parquet`. A associação
+municipal é feita pelo código IBGE, não pelo nome.
+
+Com as dependências do projeto instaladas e o PostGIS iniciado/migrado:
+
+```sh
+uv run marimo edit analises/eda_climatica_municipal.py
+```
+
+`pyproject.toml` é a configuração de dependências equivalente a
+`requirements.txt`; inclui Marimo, Pandas, NumPy, Plotly, GeoPandas, PyArrow,
+SQLAlchemy e o driver PostgreSQL. O notebook não abre os GRIB: usa os dados já
+carregados no banco. A consulta inicial é mensal; para evitar varreduras
+acidentais da tabela climática (cerca de 8 GiB com índices), a série temporal
+por intervalo de anos só roda ao clicar em **Carregar série agregada**. O
+coroplético interativo busca geometrias simplificadas no PostGIS para a UF
+escolhida; o mapa geral usa pontos de centróides e densidade por célula de 1°.
+
+### Estrutura e métodos observados
+
+- `registro_climatico`: chave `(codigo_ibge, datetime)`, índices pela chave e
+  pela data; temperatura em °C, umidade relativa em %, precipitação em mm por
+  intervalo de 12 horas; frequência nominal de duas observações diárias UTC.
+- `municipio` e `municipio_details`: código IBGE, coordenadas, geometria
+  PostGIS, nome, UF, estado e região. O Shapefile 2025 usa `CD_MUN` e CRS
+  EPSG:4674; o banco declara geometrias em EPSG:4326.
+- `enso_mensal` e `data/era5_land/registro_era5_enso.csv`: ONI mensal.
+- Estatísticas: média, mediana, desvio-padrão, variância, quartis, IQR,
+  coeficiente de variação, assimetria, curtose, P05/P95 e outliers relativos
+  pelo limite de 1,5×IQR. Correlações Pearson/Spearman são calculadas sobre
+  município-mês completo; inclinação linear é exploratória e não corrige
+  autocorrelação.
+
+### Limitações
+
+- O total exato da tabela toda não é calculado ao abrir o notebook porque isso
+  exige varrer bilhões de bytes; tamanho em disco e período são exibidos, e as
+  contagens exatas ficam restritas aos períodos consultados.
+- As taxas de faltantes são aproximações baseadas em duas observações por dia;
+  interprete-as junto da cobertura municipal e do período.
+- Os valores representam a célula ERA5-Land mais próxima do centróide, não
+  medições independentes dentro de cada polígono. A malha não aumenta a
+  resolução espacial da fonte climática.
+- Outliers IQR são relativos ao recorte. A frequência de 12 horas não sustenta
+  automaticamente definições oficiais de ondas de calor ou secas. Tendências
+  de longo prazo exigem climatologia de referência e testes com sazonalidade e
+  autocorrelação.
+- A associação com ONI usa meses coincidentes; correlação descritiva não
+  implica causalidade.
