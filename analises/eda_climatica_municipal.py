@@ -51,12 +51,13 @@ def _(mo):
     por intervalo de 12 h), às 00:00 e 12:00 UTC. Os agregados respeitam essas
     unidades: médias para temperatura/umidade e soma para precipitação.
 
-    **Desempenho:** os GRIB (mais de 6 GiB) nunca são carregados aqui. O
-    PostgreSQL agrega no servidor; a consulta inicial cobre um mês e a consulta
-    temporal mais longa só roda ao clicar no botão. Os mapas de pontos usam
-    centróides; o coroplético simplifica geometrias no PostGIS e exige selecionar
-    uma UF. Uma tendência dentro deste produto ERA5-Land é descritiva, não prova
-    mudança climática.
+    **Desempenho:** o PostgreSQL agrega as séries no servidor; a consulta inicial
+    cobre um mês e a série temporal é controlada pelos anos abaixo. Para mapas
+    municipais, somente o GRIB do mês selecionado é consultado. O mapa geral usa
+    centróides; os mapas municipais usam os centros internos da grade e podem
+    exibir a interpolação contínua. O coroplético simplifica geometrias no PostGIS
+    e exige selecionar uma UF. Uma tendência dentro deste produto ERA5-Land é
+    descritiva, não prova mudança climática.
     """)
     return
 
@@ -127,6 +128,78 @@ def _(Path, gpd, mo, pd):
     ])
     _saida_fontes
     return enso_df, inventario, malha_ids
+
+
+@app.cell
+def _(Path, gpd, inventario, mo, np, xr):
+    _raiz_cobertura = Path(__file__).resolve().parents[1]
+    _shp_cobertura = _raiz_cobertura / "data" / "BR_Municipios_2025" / "BR_Municipios_2025.shp"
+    if inventario.empty or not _shp_cobertura.is_file():
+        _saida_cobertura_grade = mo.md(
+            "## Cobertura espacial da grade ERA5-Land\n\nA análise requer a malha IBGE 2025 e ao menos um GRIB local."
+        )
+    else:
+        try:
+            import shapely as _shapely
+
+            _municipios_grade = gpd.read_file(_shp_cobertura).to_crs("EPSG:4326")
+            _municipios_grade = _municipios_grade.loc[
+                ~_municipios_grade["CD_MUN"].astype(str).isin(["4300001", "4300002"])
+            ].copy()
+            _arquivo_grade = _raiz_cobertura / "data" / "era5_land" / inventario.iloc[0]["arquivo"]
+            with xr.open_dataset(
+                _arquivo_grade, engine="cfgrib", backend_kwargs={"indexpath": ""}
+            ) as _ds_grade:
+                _lon_grade, _lat_grade = np.meshgrid(
+                    _ds_grade.longitude.values, _ds_grade.latitude.values
+                )
+            _contagens_grade = []
+            for _geom in _municipios_grade.geometry:
+                if _geom is None or _geom.is_empty:
+                    _contagens_grade.append(0)
+                    continue
+                _minx, _miny, _maxx, _maxy = _geom.bounds
+                _candidato_grade = (
+                    (_lon_grade >= _minx) & (_lon_grade <= _maxx)
+                    & (_lat_grade >= _miny) & (_lat_grade <= _maxy)
+                )
+                _contagens_grade.append(int(np.count_nonzero(
+                    _shapely.intersects_xy(
+                        _geom, _lon_grade[_candidato_grade], _lat_grade[_candidato_grade]
+                    )
+                )))
+            _municipios_grade["pontos internos"] = _contagens_grade
+            _sem_pontos_grade = _municipios_grade.loc[
+                _municipios_grade["pontos internos"] == 0,
+                ["CD_MUN", "NM_MUN", "SIGLA_UF", "pontos internos"],
+            ].rename(columns={
+                "CD_MUN": "código IBGE", "NM_MUN": "município", "SIGLA_UF": "UF",
+            }).sort_values(["UF", "município"])
+            _resumo_uf_grade = (
+                _sem_pontos_grade.groupby("UF", as_index=False)
+                .size().rename(columns={"size": "municípios sem ponto"})
+                .sort_values("municípios sem ponto", ascending=False)
+            )
+            _saida_cobertura_grade = mo.vstack([
+                mo.md(
+                    f"## Cobertura espacial da grade ERA5-Land\n\n"
+                    f"Na malha IBGE 2025, **{len(_sem_pontos_grade):,} de "
+                    f"{len(_municipios_grade):,} municípios não têm nenhum centro da grade "
+                    "(~9 km) dentro do polígono. A contagem usa os centros da grade do GRIB "
+                    "local; como a grade espacial é comum aos meses, foi lido apenas o arquivo "
+                    f"{_arquivo_grade.name}. Municípios pequenos podem não conter um centro, "
+                    "mesmo estando cobertos por células ERA5-Land vizinhas."
+                ),
+                mo.ui.table(_resumo_uf_grade, page_size=10),
+                mo.ui.table(_sem_pontos_grade, page_size=20),
+            ])
+        except Exception as _erro_cobertura:
+            _saida_cobertura_grade = mo.md(
+                "## Cobertura espacial da grade ERA5-Land\n\n"
+                f"Não foi possível calcular a cobertura ({type(_erro_cobertura).__name__}: {_erro_cobertura})."
+            )
+    _saida_cobertura_grade
+    return
 
 
 @app.cell
@@ -254,7 +327,6 @@ def _(codigos_db, conectado, malha_ids, mo):
 @app.cell
 def _(inventario, meses_banco, mo, municipios_db, ufs):
     _meses = meses_banco or (inventario["mês"].tolist() if not inventario.empty else [])
-    _anos = sorted({int(m[:4]) for m in _meses})
     _mes_padrao = _meses[-1] if _meses else ""
     mes = mo.ui.dropdown(
         options=_meses or ["sem dados"], value=_mes_padrao or "sem dados",
@@ -284,44 +356,15 @@ def _(inventario, meses_banco, mo, municipios_db, ufs):
         start=0, stop=100, step=5, value=80,
         label="Cobertura mínima para ranking (%)",
     )
-    if _anos:
-        _ano_inicial = mo.ui.dropdown(
-            options=_anos, value=_anos[-1], label="Ano inicial da série"
-        )
-        _ano_final = mo.ui.dropdown(
-            options=_anos, value=_anos[-1], label="Ano final da série"
-        )
-    else:
-        _ano_inicial = mo.ui.dropdown(options=[2025], value=2025, label="Ano inicial")
-        _ano_final = mo.ui.dropdown(options=[2025], value=2025, label="Ano final")
-    ano_inicial, ano_final = _ano_inicial, _ano_final
-    executar_serie = mo.ui.run_button(label="Carregar série agregada", kind="success")
     _saida_controles = mo.vstack([
         mo.md("## Filtros"),
         mo.hstack([mes, uf, variavel]),
-        mo.hstack([_ano_inicial, _ano_final, municipio_codigo, executar_serie]),
+        municipio_codigo,
         modo_mapa,
         cobertura_minima,
-        mo.md(
-            "A auditoria mensal é leve e automática. O histórico usa uma consulta "
-            "agregada no servidor, retorna no máximo uma linha por município/mês e "
-            "só começa ao clicar. Selecione um município para ver seu perfil e a distribuição climática. "
-            "A consulta tem limite de 120 segundos no servidor; "
-            "o padrão é um único ano recente e o período pode ser ampliado quando necessário."
-        ),
     ])
     _saida_controles
-    return (
-        ano_final,
-        ano_inicial,
-        cobertura_minima,
-        executar_serie,
-        mes,
-        modo_mapa,
-        municipio_codigo,
-        uf,
-        variavel,
-    )
+    return cobertura_minima, mes, modo_mapa, municipio_codigo, uf, variavel
 
 
 @app.cell
@@ -589,6 +632,38 @@ def _(mensal_df, mo, np, pd, px, variavel):
         ])
     _saida_descritiva
     return
+
+
+@app.cell
+def _(inventario, meses_banco, mo):
+    _meses_serie = meses_banco or (
+        inventario["mês"].tolist() if not inventario.empty else []
+    )
+    _anos_serie = sorted({int(_m[:4]) for _m in _meses_serie})
+    if _anos_serie:
+        ano_inicial = mo.ui.dropdown(
+            options=_anos_serie, value=_anos_serie[-1], label="Ano inicial"
+        )
+        ano_final = mo.ui.dropdown(
+            options=_anos_serie, value=_anos_serie[-1], label="Ano final"
+        )
+    else:
+        ano_inicial = mo.ui.dropdown(options=[2025], value=2025, label="Ano inicial")
+        ano_final = mo.ui.dropdown(options=[2025], value=2025, label="Ano final")
+    executar_serie = mo.ui.run_button(
+        label="Carregar série agregada", kind="success"
+    )
+    mo.vstack([
+        mo.md(
+            "### Gerar série temporal\n\n"
+            "Defina o período e clique para consultar os agregados mensais por UF. "
+            "A seleção de município nos filtros carrega automaticamente a série "
+            "municipal para os gráficos e o perfil. A consulta retorna uma linha por "
+            "município/mês e tem limite de 120 segundos."
+        ),
+        mo.hstack([ano_inicial, ano_final, executar_serie]),
+    ])
+    return ano_final, ano_inicial, executar_serie
 
 
 @app.cell
