@@ -16,11 +16,14 @@ def _():
     import plotly.express as px
     import plotly.graph_objects as go
     import geopandas as gpd
+    import xarray as xr
+    from shapely.geometry import Point, shape
     from dotenv import load_dotenv
     from sqlalchemy import create_engine, text
 
     return (
         Path,
+        Point,
         create_engine,
         go,
         gpd,
@@ -31,7 +34,9 @@ def _():
         os,
         pd,
         px,
+        shape,
         text,
+        xr,
     )
 
 
@@ -145,6 +150,7 @@ def _(Path, create_engine, load_dotenv, os, text):
     ufs = []
     meses_banco = []
     codigos_db = []
+    municipios_db = []
     try:
         with conectar() as _conn:
             _conn.execute(text("SELECT 1"))
@@ -166,9 +172,16 @@ def _(Path, create_engine, load_dotenv, os, text):
             ufs = list(_conn.execute(text(
                 "SELECT DISTINCT uf FROM municipio_details ORDER BY uf"
             )).scalars())
+            meses_banco = list(_conn.execute(text(
+                """SELECT DISTINCT to_char(date_trunc('month', datetime), 'YYYY-MM')
+                   FROM registro_climatico ORDER BY 1"""
+            )).scalars())
             codigos_db = list(_conn.execute(text(
                 "SELECT codigo_ibge FROM municipio ORDER BY codigo_ibge"
             )).scalars())
+            municipios_db = list(_conn.execute(text(
+                "SELECT codigo_ibge, municipio, uf FROM municipio_details ORDER BY municipio, uf"
+            )).mappings())
         perfil = {**dict(_dim), **dict(_datas), **dict(_tamanho)}
         conectado = True
     except Exception as _erro:
@@ -179,6 +192,7 @@ def _(Path, create_engine, load_dotenv, os, text):
         conectar,
         erro_conexao,
         meses_banco,
+        municipios_db,
         perfil,
         ufs,
     )
@@ -238,7 +252,7 @@ def _(codigos_db, conectado, malha_ids, mo):
 
 
 @app.cell
-def _(inventario, meses_banco, mo, ufs):
+def _(inventario, meses_banco, mo, municipios_db, ufs):
     _meses = meses_banco or (inventario["mês"].tolist() if not inventario.empty else [])
     _anos = sorted({int(m[:4]) for m in _meses})
     _mes_padrao = _meses[-1] if _meses else ""
@@ -254,9 +268,17 @@ def _(inventario, meses_banco, mo, ufs):
             "Precipitação acumulada (mm)": "precipitacao",
         }, value="Temperatura média (°C)", label="Variável",
     )
-    municipio_codigo = mo.ui.text(
-        value="", label="Código IBGE (opcional, para série municipal)",
-        placeholder="ex.: 5300108",
+    _opcoes_municipios = {"Selecione um município": ""}
+    _opcoes_municipios.update({
+        f"{m['municipio']} ({m['uf']}) — {m['codigo_ibge']}": str(m["codigo_ibge"])
+        for m in municipios_db
+    })
+    municipio_codigo = mo.ui.dropdown(
+        options=_opcoes_municipios, value="Selecione um município", label="Município",
+    )
+    modo_mapa = mo.ui.radio(
+        options={"Pontos": "pontos", "Superfície contínua": "superficie"},
+        value="Pontos", label="Mapa municipal",
     )
     cobertura_minima = mo.ui.slider(
         start=0, stop=100, step=5, value=80,
@@ -272,24 +294,30 @@ def _(inventario, meses_banco, mo, ufs):
     else:
         _ano_inicial = mo.ui.dropdown(options=[2025], value=2025, label="Ano inicial")
         _ano_final = mo.ui.dropdown(options=[2025], value=2025, label="Ano final")
+    ano_inicial, ano_final = _ano_inicial, _ano_final
     executar_serie = mo.ui.run_button(label="Carregar série agregada", kind="success")
     _saida_controles = mo.vstack([
         mo.md("## Filtros"),
         mo.hstack([mes, uf, variavel]),
         mo.hstack([_ano_inicial, _ano_final, municipio_codigo, executar_serie]),
+        modo_mapa,
         cobertura_minima,
         mo.md(
             "A auditoria mensal é leve e automática. O histórico usa uma consulta "
             "agregada no servidor, retorna no máximo uma linha por município/mês e "
-            "só começa ao clicar. A consulta tem limite de 120 segundos no servidor; "
+            "só começa ao clicar. Selecione um município para ver seu perfil e a distribuição climática. "
+            "A consulta tem limite de 120 segundos no servidor; "
             "o padrão é um único ano recente e o período pode ser ampliado quando necessário."
         ),
     ])
     _saida_controles
     return (
+        ano_final,
+        ano_inicial,
         cobertura_minima,
         executar_serie,
         mes,
+        modo_mapa,
         municipio_codigo,
         uf,
         variavel,
@@ -516,12 +544,26 @@ def _(mensal_df, mo, np, pd, px, variavel):
             id_vars=["codigo_ibge", "municipio", "uf", "regiao"],
             value_vars=_nomes, var_name="variável", value_name="valor",
         ).dropna(subset=["valor"])
-        _box = px.box(
-            _long, x="variável", y="valor", color="variável",
-            facet_col="variável", facet_col_wrap=1, points="outliers",
-            hover_data=["municipio", "uf", "codigo_ibge"],
-            title="Distribuição dos agregados mensais entre municípios",
-        )
+        _rotulos_box = {
+            "temperatura": "Temperatura (°C)",
+            "umidade": "Umidade relativa (%)",
+            "precipitacao": "Precipitação (mm)",
+        }
+        _boxplots = []
+        for _coluna_box in _nomes:
+            _dados_box = mensal_df.dropna(subset=[_coluna_box])
+            _grafico_box = px.box(
+                _dados_box, y=_coluna_box, points="outliers",
+                hover_data=["municipio", "uf", "codigo_ibge"],
+                title=_rotulos_box[_coluna_box],
+            )
+            _grafico_box.update_layout(
+                showlegend=False, height=350,
+                margin={"l": 35, "r": 10, "t": 55, "b": 35},
+                yaxis_title=_rotulos_box[_coluna_box],
+            )
+            _boxplots.append(_grafico_box)
+        _box = mo.hstack(_boxplots, widths="equal")
         _hist = px.histogram(
             _long, x="valor", facet_col="variável", facet_col_wrap=1,
             marginal="rug", nbins=40, title="Histogramas por variável",
@@ -550,12 +592,21 @@ def _(mensal_df, mo, np, pd, px, variavel):
 
 
 @app.cell
-def _(conectar, executar_serie, municipio_codigo, pd, text, uf):
+def _(
+    ano_final,
+    ano_inicial,
+    conectar,
+    executar_serie,
+    municipio_codigo,
+    pd,
+    text,
+    uf,
+):
     serie_df = pd.DataFrame()
     serie_n_municipios = 0
-    serie_status = "Clique em ‘Carregar série agregada’ para executar a consulta temporal."
-    if executar_serie.value:
-        _ano_ini, _ano_fim = int(_ano_inicial.value), int(_ano_final.value)
+    serie_status = "Selecione um município ou clique em ‘Carregar série agregada’ para executar a consulta temporal."
+    if executar_serie.value or municipio_codigo.value:
+        _ano_ini, _ano_fim = int(ano_inicial.value), int(ano_final.value)
         if _ano_ini > _ano_fim:
             serie_status = "Ano inicial posterior ao ano final. Ajuste os filtros."
         else:
@@ -770,6 +821,451 @@ def _(enso_df, mo, pd, px, serie_df, serie_n_municipios, serie_status):
             _enso_output,
         ])
     _saida_temporal
+    return
+
+
+@app.cell
+def _(
+    Path,
+    Point,
+    conectar,
+    enso_df,
+    go,
+    json,
+    mes,
+    mo,
+    modo_mapa,
+    municipio_codigo,
+    np,
+    pd,
+    px,
+    serie_df,
+    shape,
+    text,
+    xr,
+):
+    _codigo_txt = municipio_codigo.value.strip()
+    _variaveis = {
+        "temperatura": ("Temperatura média (°C)", "°C"),
+        "umidade": ("Umidade relativa média (%)", "%"),
+        "precipitacao": ("Precipitação acumulada (mm/mês)", "mm/mês"),
+    }
+    if not _codigo_txt:
+        _saida_distribuicao = mo.md(
+            "## Distribuição contínua municipal\n\nSelecione um município e carregue a série para visualizar o perfil e a distribuição."
+        )
+    elif serie_df.empty:
+        _saida_distribuicao = mo.md(
+            "## Distribuição contínua municipal\n\nCarregue a série para gerar a distribuição do município selecionado."
+        )
+    else:
+        _municipio_df = serie_df[
+            serie_df["codigo_ibge"].astype(str) == _codigo_txt
+        ]
+        _disponiveis = {
+            _coluna: _municipio_df[_coluna].dropna().to_numpy(dtype=float)
+            for _coluna in _variaveis
+        }
+        _area = None
+        try:
+            with conectar() as _conn:
+                _info = _conn.execute(text("""
+                    SELECT d.municipio, d.uf, d.estado, d.regiao, d.mesorregiao,
+                           d.microrregiao, d.populacao, d.ano_populacao, d.area_km2,
+                           d.bioma, d.geomorfologia, d.regiao_geomorfologica,
+                           d.dominio_geomorfologico
+                    FROM municipio_details d
+                    WHERE d.codigo_ibge = :codigo
+                """), {"codigo": int(_codigo_txt)}).mappings().one_or_none()
+            if _info is None:
+                _info_md = "Município não encontrado na dimensão complementar."
+            else:
+                _area = float(_info["area_km2"]) if _info["area_km2"] is not None else None
+                _pop = int(_info["populacao"]) if _info["populacao"] is not None else None
+                _dens_pop = _pop / _area if _pop is not None and _area and _area > 0 else None
+                _n_observacoes = int(_municipio_df["registros"].sum())
+                _formatado = lambda _v: f"{_v:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+                _pop_formatada = f"{_pop:,}".replace(",", ".") if _pop is not None else "não informada"
+                _ano_pop = f" (ano {_info['ano_populacao']})" if _info["ano_populacao"] else ""
+                _regiao_geo = f" ({_info['regiao_geomorfologica']})" if _info["regiao_geomorfologica"] else ""
+                _dominio_geo = f" — {_info['dominio_geomorfologico']}" if _info["dominio_geomorfologico"] else ""
+                _info_md = (
+                    f"### {_info['municipio']} ({_info['uf']})\n\n"
+                    f"**Código IBGE:** {_codigo_txt} · **Estado:** {_info['estado']} · "
+                    f"**Região:** {_info['regiao'] or 'não informado'}  \n"
+                    f"**Área:** {_formatado(_area) + ' km²' if _area is not None else 'não informada'} · "
+                    f"**População:** {_pop_formatada}{_ano_pop} · "
+                    f"**Densidade populacional:** {_formatado(_dens_pop) + ' hab./km²' if _dens_pop is not None else 'indisponível'}  \n"
+                    f"**Mesorregião:** {_info['mesorregiao'] or 'não informada'} · "
+                    f"**Microrregião:** {_info['microrregiao'] or 'não informada'}  \n"
+                    f"**Bioma:** {_info['bioma'] or 'não informado'} · "
+                    f"**Geomorfologia:** {_info['geomorfologia'] or 'não informada'}"
+                    f"{_regiao_geo}{_dominio_geo}  \n"
+                    f"**Observações climáticas no período carregado:** {_n_observacoes:,}."
+                )
+        except Exception as _erro_info:
+            _info_md = f"Não foi possível carregar o perfil municipal ({type(_erro_info).__name__})."
+        if not any(len(_v) for _v in _disponiveis.values()):
+            _saida_distribuicao = mo.md(
+                f"## Perfil municipal e distribuição mensal\n\n{_info_md}\n\nNão há dados mensais válidos para este município no período carregado."
+            )
+        else:
+            _graficos_distribuicao = []
+            for _coluna, (_rotulo, _unidade) in _variaveis.items():
+                _valores = _disponiveis[_coluna]
+                _grafico = go.Figure()
+                if len(_valores):
+                    _grafico.add_trace(go.Box(
+                        y=_valores,
+                        name="Agregados mensais",
+                        boxpoints="outliers",
+                        customdata=_municipio_df.loc[
+                            _municipio_df[_coluna].notna(), "mes"
+                        ].dt.strftime("%Y-%m").to_numpy(),
+                        hovertemplate=(
+                            "%{y:.2f} " + _unidade + "<br>Mês: %{customdata}"
+                            "<extra></extra>"
+                        ),
+                    ))
+                else:
+                    _grafico.add_annotation(
+                        text="Sem dados mensais", x=0.5, y=0.5, xref="paper", yref="paper",
+                        showarrow=False,
+                    )
+                _grafico.update_layout(
+                    title=_rotulo,
+                    yaxis_title=_unidade,
+                    showlegend=False,
+                    height=350,
+                    margin={"l": 45, "r": 15, "t": 55, "b": 35},
+                )
+                _graficos_distribuicao.append(_grafico)
+            _saida_distribuicao = mo.vstack([
+                mo.md(_info_md),
+                mo.md(
+                    "## Distribuição mensal municipal\n\n"
+                    "Os três box plots resumem temperatura, umidade e precipitação mensal. "
+                    "A precipitação está em mm/mês; cada variável mantém sua unidade original."
+                ),
+                mo.hstack(_graficos_distribuicao, widths="equal"),
+            ])
+            if enso_df.empty or not {"data", "oni"}.issubset(enso_df.columns):
+                _saida_enso_municipal = mo.md(
+                    "## Relação com o ONI (El Niño–La Niña)\n\nA série mensal do ONI não está disponível para pareamento."
+                )
+            else:
+                _enso_mensal = enso_df[["data", "oni"]].dropna().rename(columns={"data": "mes"})
+                _pareado_enso = _municipio_df[["mes", *_variaveis.keys()]].merge(
+                    _enso_mensal, on="mes", how="inner"
+                )
+                _linhas_enso = []
+                _graficos_enso = []
+                for _coluna, (_rotulo, _unidade) in _variaveis.items():
+                    _dados_enso = _pareado_enso.dropna(subset=["oni", _coluna])
+                    _r = (
+                        _dados_enso["oni"].corr(_dados_enso[_coluna])
+                        if len(_dados_enso) >= 2 else float("nan")
+                    )
+                    _linhas_enso.append({
+                        "Variável": _rotulo,
+                        "Pearson com ONI": _r,
+                        "Meses pareados": len(_dados_enso),
+                    })
+                    _grafico_enso = px.scatter(
+                        _dados_enso,
+                        x="oni",
+                        y=_coluna,
+                        hover_data={"mes": True, "oni": ":.2f", _coluna: ":.2f"},
+                        labels={"oni": "ONI (°C)", _coluna: f"{_rotulo} ({_unidade})"},
+                        title=f"ONI × {_rotulo.lower()}",
+                    )
+                    _grafico_enso.update_layout(
+                        height=350,
+                        showlegend=False,
+                        margin={"l": 45, "r": 15, "t": 55, "b": 40},
+                    )
+                    _graficos_enso.append(_grafico_enso)
+                _saida_enso_municipal = mo.vstack([
+                    mo.md(
+                        "## Relação dos agregados mensais com o ONI\n\n"
+                        "Cada ponto representa um mês pareado do município selecionado. "
+                        "A correlação de Pearson resume associação linear; não indica causalidade."
+                    ),
+                    mo.ui.table(pd.DataFrame(_linhas_enso).round(3), page_size=3),
+                    mo.hstack(_graficos_enso, widths="equal"),
+                ])
+            _saida_distribuicao = mo.vstack([_saida_distribuicao, _saida_enso_municipal])
+            try:
+                with conectar() as _conn:
+                    _geojson = _conn.execute(text("""
+                        SELECT ST_AsGeoJSON(m.geometry, 6)
+                        FROM municipio m
+                        WHERE m.codigo_ibge = :codigo AND m.geometry IS NOT NULL
+                    """), {"codigo": int(_codigo_txt)}).scalar_one_or_none()
+                _arquivo_grib = (
+                    Path(__file__).resolve().parents[1]
+                    / "data" / "era5_land" / f"era5_land_{mes.value.replace('-', '_')}.grib"
+                )
+                if _geojson is None:
+                    _saida_mapa = mo.md(
+                        "## Mapas climáticos\n\nO município selecionado não possui geometria cadastrada."
+                    )
+                elif not _arquivo_grib.is_file():
+                    _saida_mapa = mo.md(
+                        f"## Mapas climáticos\n\nO GRIB de {mes.value} não está disponível em `{_arquivo_grib.relative_to(Path(__file__).resolve().parents[1])}`. "
+                        "O banco guarda apenas a série no centróide municipal; para mapear células internas, é necessário o GRIB original do mês."
+                    )
+                else:
+                    _poligono = shape(json.loads(_geojson))
+                    _min_lon, _min_lat, _max_lon, _max_lat = _poligono.bounds
+                    _dados_grade = None
+                    with xr.open_dataset(
+                        _arquivo_grib,
+                        engine="cfgrib",
+                        chunks={"time": 1},
+                        backend_kwargs={"indexpath": ""},
+                    ) as _dataset:
+                        _latitudes = np.asarray(_dataset.latitude.values)
+                        _longitudes = np.asarray(_dataset.longitude.values)
+                        _idx_lat = np.flatnonzero(
+                            (_latitudes >= _min_lat) & (_latitudes <= _max_lat)
+                        )
+                        _idx_lon = np.flatnonzero(
+                            (_longitudes >= _min_lon) & (_longitudes <= _max_lon)
+                        )
+                        if len(_idx_lat) and len(_idx_lon):
+                            _lon_grid, _lat_grid = np.meshgrid(
+                                _longitudes[_idx_lon], _latitudes[_idx_lat]
+                            )
+                            _mascara = np.asarray([
+                                _poligono.covers(Point(float(_lon), float(_lat)))
+                                for _lat, _lon in zip(
+                                    _lat_grid.ravel(), _lon_grid.ravel(), strict=True
+                                )
+                            ]).reshape(_lat_grid.shape)
+                        else:
+                            _mascara = np.zeros((len(_idx_lat), len(_idx_lon)), dtype=bool)
+                        if _mascara.any():
+                            _lat_pontos = _lat_grid[_mascara]
+                            _lon_pontos = _lon_grid[_mascara]
+                            _n_pontos = len(_lat_pontos)
+                            _soma_temp = np.zeros(_n_pontos)
+                            _n_temp = np.zeros(_n_pontos)
+                            _soma_umidade = np.zeros(_n_pontos)
+                            _n_umidade = np.zeros(_n_pontos)
+                            _soma_precip = np.zeros(_n_pontos)
+                            _n_precip = np.zeros(_n_pontos)
+                            _passos_horas = _dataset.step.values.astype(
+                                "timedelta64[h]"
+                            ).astype(np.int64)
+                            _indice_passo_12 = int(np.flatnonzero(_passos_horas == 12)[0])
+                            _dataset_area = _dataset.isel(
+                                latitude=_idx_lat, longitude=_idx_lon
+                            )
+                            for _indice_tempo in range(_dataset.sizes["time"]):
+                                _frame = _dataset_area.isel(time=_indice_tempo).compute()
+                                for _indice_passo, _horas in enumerate(_passos_horas):
+                                    _valid_time = pd.Timestamp(
+                                        _frame["valid_time"].values[_indice_passo]
+                                    )
+                                    if (_valid_time.year, _valid_time.month) != tuple(
+                                        map(int, mes.value.split("-"))
+                                    ):
+                                        continue
+                                    _temp = _frame["t2m"].values[_indice_passo][_mascara] - 273.15
+                                    _dew = _frame["d2m"].values[_indice_passo][_mascara] - 273.15
+                                    _rh = np.clip(100 * np.exp(
+                                        17.625 * _dew / (243.04 + _dew)
+                                        - 17.625 * _temp / (243.04 + _temp)
+                                    ), 0, 100)
+                                    _ok_temp = np.isfinite(_temp)
+                                    _ok_rh = np.isfinite(_rh)
+                                    _soma_temp += np.where(_ok_temp, _temp, 0)
+                                    _n_temp += _ok_temp
+                                    _soma_umidade += np.where(_ok_rh, _rh, 0)
+                                    _n_umidade += _ok_rh
+                                    _precip = _frame["tp"].values[_indice_passo][_mascara]
+                                    if _horas == 24:
+                                        _precip = _precip - _frame["tp"].values[_indice_passo_12][_mascara]
+                                    _precip = np.maximum(_precip, 0) * 1000
+                                    _ok_precip = np.isfinite(_precip)
+                                    _soma_precip += np.where(_ok_precip, _precip, 0)
+                                    _n_precip += _ok_precip
+                            _dados_grade = {
+                                "temperatura": np.divide(
+                                    _soma_temp, _n_temp,
+                                    out=np.full(_n_pontos, np.nan), where=_n_temp > 0,
+                                ),
+                                "umidade": np.divide(
+                                    _soma_umidade, _n_umidade,
+                                    out=np.full(_n_pontos, np.nan), where=_n_umidade > 0,
+                                ),
+                                "precipitacao": _soma_precip,
+                                "lat": _lat_pontos,
+                                "lon": _lon_pontos,
+                            }
+                    _n_pontos_grade = (
+                        len(_dados_grade["lat"]) if _dados_grade is not None else 0
+                    )
+                    _densidade_grade = (
+                        _n_pontos_grade / _area
+                        if _area is not None and _area > 0 else None
+                    )
+                    _densidade_grade_txt = (
+                        f"{_densidade_grade:,.8f}".replace(",", "X").replace(".", ",").replace("X", ".")
+                        if _densidade_grade is not None else "indisponível"
+                    )
+                    _texto_densidade = (
+                        f"Densidade espacial: {_n_pontos_grade} pontos internos / "
+                        f"{_area:,.2f} km² = {_densidade_grade_txt} pontos/km². "
+                        if _area is not None and _area > 0 else
+                        f"Densidade espacial: {_n_pontos_grade} pontos internos; área municipal indisponível. "
+                    )
+                    if _dados_grade is None:
+                        _saida_mapa = mo.md(
+                            "## Mapas climáticos\n\nA grade ERA5-Land não possui centros de célula dentro do limite deste município. "
+                            + _texto_densidade
+                        )
+                    else:
+                        _partes = list(_poligono.geoms) if hasattr(_poligono, "geoms") else [_poligono]
+                        _mapas_variaveis = []
+                        for _coluna, (_rotulo, _unidade) in _variaveis.items():
+                            _valores_ponto = _dados_grade[_coluna]
+                            _validos = np.isfinite(_valores_ponto)
+                            _mapa_variavel = go.Figure()
+                            for _parte in _partes:
+                                _borda_lon, _borda_lat = _parte.exterior.xy
+                                if modo_mapa.value == "superficie":
+                                    _mapa_variavel.add_trace(go.Scatter(
+                                        x=list(_borda_lon), y=list(_borda_lat),
+                                        mode="lines", line={"color": "#202020", "width": 1},
+                                        showlegend=False, hoverinfo="skip",
+                                    ))
+                                else:
+                                    _mapa_variavel.add_trace(go.Scattergeo(
+                                        lon=list(_borda_lon), lat=list(_borda_lat),
+                                        mode="lines", line={"color": "#202020", "width": 1},
+                                        showlegend=False, hoverinfo="skip",
+                                    ))
+                            if _validos.any():
+                                if modo_mapa.value == "superficie":
+                                    _lon_eixo = np.linspace(_min_lon, _max_lon, 120)
+                                    _lat_eixo = np.linspace(_min_lat, _max_lat, 120)
+                                    _lon_interpolado, _lat_interpolado = np.meshgrid(
+                                        _lon_eixo, _lat_eixo
+                                    )
+                                    _dentro_municipio = np.asarray([
+                                        _poligono.covers(Point(float(_lon), float(_lat)))
+                                        for _lat, _lon in zip(
+                                            _lat_interpolado.ravel(),
+                                            _lon_interpolado.ravel(), strict=True,
+                                        )
+                                    ])
+                                    _escala_lon = np.cos(np.deg2rad(float(np.mean(_dados_grade["lat"])) ))
+                                    _pontos_xy = np.column_stack([
+                                        _dados_grade["lon"][_validos] * _escala_lon,
+                                        _dados_grade["lat"][_validos],
+                                    ])
+                                    _alvos_xy = np.column_stack([
+                                        _lon_interpolado.ravel() * _escala_lon,
+                                        _lat_interpolado.ravel(),
+                                    ])
+                                    _z_superficie = np.empty(len(_alvos_xy))
+                                    for _inicio_bloco in range(0, len(_alvos_xy), 256):
+                                        _fim_bloco = min(_inicio_bloco + 256, len(_alvos_xy))
+                                        _alvos_bloco = _alvos_xy[_inicio_bloco:_fim_bloco]
+                                        _dist2 = np.sum(
+                                            (_alvos_bloco[:, None, :] - _pontos_xy[None, :, :]) ** 2,
+                                            axis=2,
+                                        )
+                                        _pesos = 1 / np.maximum(_dist2, 1e-12)
+                                        _z_superficie[_inicio_bloco:_fim_bloco] = (
+                                            _pesos @ _valores_ponto[_validos]
+                                        ) / _pesos.sum(axis=1)
+                                    _z_superficie[~_dentro_municipio] = np.nan
+                                    _mapa_variavel.add_trace(go.Heatmap(
+                                        x=_lon_eixo, y=_lat_eixo,
+                                        z=_z_superficie.reshape(_lat_interpolado.shape),
+                                        colorscale="Turbo", colorbar={"title": _unidade},
+                                        hovertemplate=(
+                                            f"{_rotulo}: %{{z:.2f}} {_unidade}<br>"
+                                            "Lon: %{x:.3f}<br>Lat: %{y:.3f}<extra></extra>"
+                                        ),
+                                    ))
+                                else:
+                                    _mapa_variavel.add_trace(go.Scattergeo(
+                                        lon=_dados_grade["lon"][_validos],
+                                        lat=_dados_grade["lat"][_validos],
+                                        mode="markers",
+                                        marker={
+                                            "size": 10,
+                                            "color": _valores_ponto[_validos],
+                                            "colorscale": "Turbo",
+                                            "showscale": True,
+                                            "colorbar": {"title": _unidade},
+                                            "line": {"width": 0.3, "color": "#333"},
+                                        },
+                                        customdata=np.column_stack([
+                                            _dados_grade["lat"][_validos],
+                                            _dados_grade["lon"][_validos],
+                                        ]),
+                                        hovertemplate=(
+                                            f"{_rotulo}: %{{marker.color:.2f}} {_unidade}<br>"
+                                            "Lat: %{customdata[0]:.3f}<br>Lon: %{customdata[1]:.3f}<extra></extra>"
+                                        ),
+                                        showlegend=False,
+                                    ))
+                            _sem_dado = ~_validos
+                            if _sem_dado.any() and modo_mapa.value == "pontos":
+                                _mapa_variavel.add_trace(go.Scattergeo(
+                                    lon=_dados_grade["lon"][_sem_dado],
+                                    lat=_dados_grade["lat"][_sem_dado],
+                                    mode="markers",
+                                    marker={
+                                        "size": 10,
+                                        "color": "#777777",
+                                        "symbol": "circle-open",
+                                        "line": {"width": 1.5, "color": "#777777"},
+                                    },
+                                    hovertemplate=(
+                                        f"{_rotulo}: sem dado válido<br>"
+                                        "Lat: %{lat:.3f}<br>Lon: %{lon:.3f}<extra></extra>"
+                                    ),
+                                    showlegend=False,
+                                ))
+                            if modo_mapa.value == "superficie":
+                                _mapa_variavel.update_xaxes(
+                                    range=[_min_lon, _max_lon], title="Longitude"
+                                )
+                                _mapa_variavel.update_yaxes(
+                                    range=[_min_lat, _max_lat], title="Latitude",
+                                    scaleanchor="x", scaleratio=1,
+                                )
+                            else:
+                                _mapa_variavel.update_geos(fitbounds="locations", visible=False)
+                            _mapa_variavel.update_layout(
+                                title=f"{_rotulo} — {mes.value}", height=360,
+                                margin={"l": 0, "r": 0, "t": 55, "b": 0},
+                            )
+                            _mapas_variaveis.append(_mapa_variavel)
+                        _saida_mapa = mo.vstack([
+                            mo.md(
+                                "## Mapa climático municipal\n\n"
+                                f"Mapas do mês {mes.value} com {len(_dados_grade['lat'])} centros de célula que caem dentro do polígono municipal. "
+                                f"Modo: {'superfície contínua interpolada por distância inversa' if modo_mapa.value == 'superficie' else 'pontos observados na grade'}. "
+                                "Todos os centros internos são desenhados; células sem valor válido aparecem vazadas em cinza. "
+                                + _texto_densidade
+                                + "O valor em cada ponto é agregado no mês; temperatura e umidade são médias, precipitação é o acumulado mensal. "
+                                + "A resolução espacial corresponde à grade ERA5-Land (~9 km), não a estações locais."
+                            ),
+                            mo.hstack(_mapas_variaveis, widths="equal"),
+                        ])
+            except Exception as _erro_mapa:
+                _saida_mapa = mo.md(
+                    f"## Mapas climáticos\n\nFalha ao montar os mapas: `{type(_erro_mapa).__name__}: {_erro_mapa}`"
+                )
+            _saida_distribuicao = mo.vstack([_saida_distribuicao, _saida_mapa])
+    _saida_distribuicao
     return
 
 

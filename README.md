@@ -263,12 +263,23 @@ uv run marimo edit analises/eda_climatica_municipal.py
 
 `pyproject.toml` é a configuração de dependências equivalente a
 `requirements.txt`; inclui Marimo, Pandas, NumPy, Plotly, GeoPandas, PyArrow,
-SQLAlchemy e o driver PostgreSQL. O notebook não abre os GRIB: usa os dados já
-carregados no banco. A consulta inicial é mensal; para evitar varreduras
-acidentais da tabela climática (cerca de 8 GiB com índices), a série temporal
-por intervalo de anos só roda ao clicar em **Carregar série agregada**. O
-coroplético interativo busca geometrias simplificadas no PostGIS para a UF
-escolhida; o mapa geral usa pontos de centróides e densidade por célula de 1°.
+SQLAlchemy, o driver PostgreSQL e `cfgrib`/ecCodes para leitura dos arquivos
+GRIB. A consulta inicial é mensal; para evitar varreduras acidentais da tabela
+climática (cerca de 8 GiB com índices), a série temporal por intervalo de anos
+só roda ao clicar em **Carregar série agregada**. O coroplético interativo
+busca geometrias simplificadas no PostGIS para a UF escolhida; o mapa geral usa
+pontos de centróides e densidade por célula de 1°.
+
+Ao selecionar um município, o notebook mostra seu perfil (área, população e
+densidade populacional), a distribuição mensal das variáveis em três boxplots
+lado a lado e a relação dos agregados mensais com o ONI. O controle **Mapa
+municipal** alterna entre os pontos da grade ERA5-Land e uma superfície contínua
+interpolada para o mês escolhido. Os mapas selecionam todos os centros da grade
+que caem dentro do polígono municipal; a superfície é interpolada por distância
+inversa e recortada pelo limite do município. A densidade espacial é calculada
+como número desses pontos internos dividido pela área municipal, em pontos por
+km². A disponibilidade do mapa requer o GRIB mensal correspondente em
+`data/era5_land` e a geometria municipal no PostGIS.
 
 ### Estrutura e métodos observados
 
@@ -279,6 +290,11 @@ escolhida; o mapa geral usa pontos de centróides e densidade por célula de 1°
   PostGIS, nome, UF, estado e região. O Shapefile 2025 usa `CD_MUN` e CRS
   EPSG:4674; o banco declara geometrias em EPSG:4326.
 - `enso_mensal` e `data/era5_land/registro_era5_enso.csv`: ONI mensal.
+- Nos mapas municipais, cada ponto é um centro de célula ERA5-Land (~9 km)
+  dentro da geometria do município. Temperatura e umidade são médias mensais;
+  precipitação é o acumulado mensal. A superfície contínua é uma interpolação
+  visual dos mesmos pontos e não representa maior resolução nem observações
+  adicionais.
 - Estatísticas: média, mediana, desvio-padrão, variância, quartis, IQR,
   coeficiente de variação, assimetria, curtose, P05/P95 e outliers relativos
   pelo limite de 1,5×IQR. Correlações Pearson/Spearman são calculadas sobre
@@ -292,9 +308,10 @@ escolhida; o mapa geral usa pontos de centróides e densidade por célula de 1°
   contagens exatas ficam restritas aos períodos consultados.
 - As taxas de faltantes são aproximações baseadas em duas observações por dia;
   interprete-as junto da cobertura municipal e do período.
-- Os valores representam a célula ERA5-Land mais próxima do centróide, não
-  medições independentes dentro de cada polígono. A malha não aumenta a
-  resolução espacial da fonte climática.
+- A série agregada do banco representa a célula ERA5-Land mais próxima do
+  centróide. Os mapas municipais usam os centros de célula internos do GRIB
+  mensal e, em municípios pequenos, podem conter poucos pontos ou nenhum; a
+  malha não aumenta a resolução espacial da fonte climática.
 - Outliers IQR são relativos ao recorte. A frequência de 12 horas não sustenta
   automaticamente definições oficiais de ondas de calor ou secas. Tendências
   de longo prazo exigem climatologia de referência e testes com sazonalidade e
