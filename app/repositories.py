@@ -120,3 +120,28 @@ def list_registros_climaticos(
     )
 
     return db.execute(stmt).mappings().all()
+
+
+def list_registros_climaticos_mensais(
+    db: Session,
+    codigo_ibge: int,
+    inicio: DateTimeValue,
+    fim_exclusivo: DateTimeValue,
+):
+    mes = func.date_trunc("month", RegistroClimatico.datetime, "UTC")
+    stmt = (
+        select(
+            mes.label("datetime"),
+            func.avg(RegistroClimatico.umidade).label("umidade"),
+            func.avg(RegistroClimatico.temperatura).label("temperatura"),
+            func.sum(RegistroClimatico.precipitacao).label("precipitacao"),
+        )
+        .where(
+            RegistroClimatico.codigo_ibge == codigo_ibge,
+            RegistroClimatico.datetime >= inicio,
+            RegistroClimatico.datetime < fim_exclusivo,
+        )
+        .group_by(mes)
+        .order_by(mes)
+    )
+    return db.execute(stmt).mappings().all()

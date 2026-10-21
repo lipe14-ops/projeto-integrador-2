@@ -1,5 +1,5 @@
 import { useId, useMemo, useState } from 'react'
-import { ANOS, MUNICIPIOS, buscarMunicipio, normalizar, rotuloMunicipio, type Municipio } from '../data/climate'
+import { ANOS, MUNICIPIOS, normalizar, rotuloMunicipio, type Municipio } from '../data/climate'
 import { IconInfo, IconReset, IconSearch, IconSliders, IconX } from './Icons'
 
 export interface Filtros {
@@ -11,10 +11,11 @@ export interface Filtros {
 interface Props {
   aplicado: Filtros
   padrao: Filtros
+  municipios?: Municipio[]
   onAplicar: (f: Filtros) => void
 }
 
-export function SearchFilters({ aplicado, padrao, onAplicar }: Props) {
+export function SearchFilters({ aplicado, padrao, municipios = MUNICIPIOS, onAplicar }: Props) {
   const listId = useId()
   const [texto, setTexto] = useState(rotuloMunicipio(aplicado.municipio))
   const [de, setDe] = useState(aplicado.de)
@@ -25,11 +26,11 @@ export function SearchFilters({ aplicado, padrao, onAplicar }: Props) {
 
   const sugestoes = useMemo(() => {
     const t = normalizar(texto)
-    const todos = MUNICIPIOS
+    const todos = municipios
     // mostra tudo quando o texto é exatamente o município aplicado
-    if (!t || t === normalizar(rotuloMunicipio(aplicado.municipio))) return todos
-    return todos.filter((m) => normalizar(rotuloMunicipio(m)).includes(t))
-  }, [texto, aplicado.municipio])
+    if (!t || t === normalizar(rotuloMunicipio(aplicado.municipio))) return todos.slice(0, 50)
+    return todos.filter((m) => normalizar(rotuloMunicipio(m)).includes(t)).slice(0, 50)
+  }, [texto, aplicado.municipio, municipios])
 
   function escolher(m: Municipio) {
     setTexto(rotuloMunicipio(m))
@@ -39,7 +40,9 @@ export function SearchFilters({ aplicado, padrao, onAplicar }: Props) {
   }
 
   function aplicar() {
-    const m = buscarMunicipio(texto) ?? (sugestoes.length === 1 ? sugestoes[0] : undefined)
+    const chave = normalizar(texto)
+    const m = municipios.find((municipio) => normalizar(rotuloMunicipio(municipio)) === chave || normalizar(municipio.nome) === chave)
+      ?? (sugestoes.length === 1 ? sugestoes[0] : undefined)
     if (!m) {
       setErro('Município não encontrado. Escolha uma opção da lista.')
       setAberto(true)

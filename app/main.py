@@ -3,8 +3,6 @@ from json import loads
 
 from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from geoalchemy2.shape import to_shape
-from shapely.geometry import mapping
 from sqlalchemy.orm import Session
 
 from app.database import get_db
@@ -15,11 +13,12 @@ from app.repositories import (
     list_geometrias_geojson,
     list_geometrias_por_uf,
     list_registros_climaticos,
+    list_registros_climaticos_mensais,
     list_municipios,
     municipio_existe,
 )
 from app.schemas.clima import ClimaMunicipioResponse
-from app.schemas.municipio import MunicipioResponse, MunicipioSemGeometriaResponse
+from app.schemas.municipio import MunicipioSemGeometriaResponse
 
 app = FastAPI(
     title="API de Municípios",
@@ -34,16 +33,6 @@ app.add_middleware(
 )
 
 
-def municipio_para_resposta(municipio):
-    return {
-        "codigo_ibge": municipio.codigo_ibge,
-        "latitude": municipio.latitude,
-        "longitude": municipio.longitude,
-        "geometry": mapping(to_shape(municipio.geometry)),
-        "details": municipio.details,
-    }
-
-
 @app.get("/health")
 def health():
     return {
@@ -51,7 +40,7 @@ def health():
     }
 
 
-@app.get("/municipios", response_model=list[MunicipioResponse])
+@app.get("/municipios", response_model=list[MunicipioSemGeometriaResponse])
 def municipios(
     limit: int = Query(
         default=100,
@@ -70,7 +59,7 @@ def municipios(
         offset=offset,
     )
 
-    return [municipio_para_resposta(municipio) for municipio in municipios]
+    return municipios
 
 
 @app.get("/municipios/geometrias", response_model=dict[str, object])
@@ -179,6 +168,43 @@ def clima_municipio(
     )
 
     registros = list_registros_climaticos(
+        db,
+        codigo_ibge,
+        inicio_utc,
+        fim_exclusivo_utc,
+    )
+    if not registros and not municipio_existe(db, codigo_ibge):
+        raise HTTPException(status_code=404, detail="Município não encontrado")
+    return {
+        "codigo_ibge": codigo_ibge,
+        "registros": registros,
+        "enso": list_enso_mensal(db, inicio, fim),
+    }
+
+
+@app.get(
+    "/municipios/{codigo_ibge}/clima/mensal",
+    response_model=ClimaMunicipioResponse,
+)
+def clima_municipio_mensal(
+    codigo_ibge: int,
+    inicio: date = Query(description="Data inicial inclusiva (UTC), no formato AAAA-MM-DD"),
+    fim: date = Query(description="Data final inclusiva (UTC), no formato AAAA-MM-DD"),
+    db: Session = Depends(get_db),
+):
+    if inicio > fim:
+        raise HTTPException(
+            status_code=422,
+            detail="A data inicial não pode ser posterior à data final",
+        )
+
+    inicio_utc = datetime.combine(inicio, time.min, tzinfo=timezone.utc)
+    fim_exclusivo_utc = datetime.combine(
+        fim + timedelta(days=1),
+        time.min,
+        tzinfo=timezone.utc,
+    )
+    registros = list_registros_climaticos_mensais(
         db,
         codigo_ibge,
         inicio_utc,

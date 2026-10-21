@@ -4,11 +4,16 @@ const fmtCoord = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed
 
 export function MunicipioCard({ municipio }: { municipio: Municipio }) {
   const [nome, uf] = rotuloMunicipio(municipio).split(' — ')
+  const populacao = municipio.populacao == null ? '—' : `${municipio.populacao.toLocaleString('pt-BR')}${municipio.anoPopulacao ? ` (${municipio.anoPopulacao})` : ''}`
+  const area = municipio.areaKm2 == null ? '—' : `${municipio.areaKm2.toLocaleString('pt-BR')} km²`
   const linhas: [string, string][] = [
     ['Código IBGE', municipio.ibge],
     ['Dados', `${ANO_INICIO}-${ANO_FIM}`],
-    ['Atualização', 'março de 2026'],
+    ...(municipio.estado ? [['Estado', municipio.estado] as [string, string]] : []),
     ['Região', municipio.regiao],
+    ['População', populacao],
+    ['Bioma', municipio.bioma ?? '—'],
+    ['Área', area],
     ['Localização', `${fmtCoord(municipio.lat, 'N', 'S')}, ${fmtCoord(municipio.lon, 'L', 'O')}`],
   ]
   return (

@@ -1,7 +1,7 @@
 // Dados de exemplo (sintéticos) calibrados com os valores da interface de referência.
 // Para usar dados reais, substitua `serieDoMunicipio` por uma chamada à sua API / arquivos ERA5-Land.
 
-export const ANO_INICIO = 2010
+export const ANO_INICIO = 2015
 export const ANO_FIM = 2025
 export const TOTAL_MESES = (ANO_FIM - ANO_INICIO + 1) * 12
 export const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
@@ -18,6 +18,11 @@ export interface Municipio {
   temp: number // média do período (°C)
   chuva: number // média mensal acumulada (mm)
   umid: number // média do período (%)
+  estado?: string
+  populacao?: number | null
+  anoPopulacao?: number | null
+  bioma?: string | null
+  areaKm2?: number | null
 }
 
 export const MUNICIPIOS: Municipio[] = [
@@ -106,6 +111,10 @@ const PERFIL_CHUVA = [1.15, 1.0, 1.05, 0.55, 0.15, 0.03, 0.02, 0.04, 0.25, 0.75,
 const PERFIL_UMID = [78, 80, 79, 72, 62, 52, 47, 45, 50, 60, 72, 78]
 
 const cache = new Map<string, SerieClima>()
+
+export function registrarSerieReal(idMunicipio: string, serie: SerieClima) {
+  cache.set(idMunicipio, serie)
+}
 
 export function serieDoMunicipio(m: Municipio): SerieClima {
   const hit = cache.get(m.id)

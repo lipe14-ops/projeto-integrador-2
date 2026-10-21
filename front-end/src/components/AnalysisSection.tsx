@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
 import {
-  EPISODIOS_ENSO,
   MUNICIPIOS,
   agregar,
   janelaEmMeses,
@@ -9,6 +8,7 @@ import {
   type Granularidade,
   type Janela,
   type Municipio,
+  type SerieClima,
 } from '../data/climate'
 import { IconChevronDown, IconCompare } from './Icons'
 import { TimeSeriesChart, type SerieGrafico } from './TimeSeriesChart'
@@ -17,6 +17,8 @@ interface Props {
   municipio: Municipio
   mesDe: number
   mesAte: number
+  serie: SerieClima
+  enso: { year: number; month: number; enso_index: number | null }[]
 }
 
 const COR_COMPARACAO = '#7a5aa6'
@@ -28,7 +30,7 @@ const JANELAS: [Janela, string][] = [
 ]
 const slug = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/gi, '-').toLowerCase()
 
-export function AnalysisSection({ municipio, mesDe, mesAte }: Props) {
+export function AnalysisSection({ municipio, mesDe, mesAte, serie, enso }: Props) {
   const [gran, setGran] = useState<Granularidade>('mensal')
   const [janela, setJanela] = useState<Janela>('custom')
   const [comparando, setComparando] = useState(false)
@@ -37,15 +39,27 @@ export function AnalysisSection({ municipio, mesDe, mesAte }: Props) {
   const outro = comparando ? MUNICIPIOS.find((m) => m.id === outroId) : undefined
   const janelaEfetiva: Janela = gran === 'anual' && janela === '12m' ? '5a' : janela
   const [ini, fim] = janelaEmMeses(janelaEfetiva, mesDe, mesAte)
+  const episodios = useMemo(() => {
+    const resultado: { tipo: 'el-nino' | 'la-nina'; inicio: number; fim: number }[] = []
+    for (const item of enso) {
+      const tipo = (item.enso_index ?? 0) >= 0.5 ? 'el-nino' : (item.enso_index ?? 0) <= -0.5 ? 'la-nina' : null
+      if (!tipo) continue
+      const mes = (item.year - 2015) * 12 + item.month - 1
+      const anterior = resultado[resultado.length - 1]
+      if (anterior?.tipo === tipo && anterior.fim === mes) anterior.fim++
+      else resultado.push({ tipo, inicio: mes, fim: mes + 1 })
+    }
+    return resultado
+  }, [enso])
 
   const graficos = useMemo(() => {
     const monta = (campo: 'temp' | 'chuva' | 'umid', cor: string, modo: 'media' | 'soma'): SerieGrafico[] => {
       const lista: [Municipio, string][] = [[municipio, cor]]
       if (outro) lista.push([outro, COR_COMPARACAO])
-      return lista.map(([m, c]) => ({
+      return lista.map(([m, c], index) => ({
         nome: rotuloMunicipio(m),
         cor: c,
-        pontos: agregar(serieDoMunicipio(m)[campo], ini, fim, gran, modo),
+        pontos: agregar(index === 0 ? serie[campo] : serieDoMunicipio(m)[campo], ini, fim, gran, modo),
       }))
     }
     return {
@@ -53,7 +67,7 @@ export function AnalysisSection({ municipio, mesDe, mesAte }: Props) {
       chuva: monta('chuva', '#1769a8', 'soma'),
       umid: monta('umid', '#2f7d5b', 'media'),
     }
-  }, [municipio, outro, ini, fim, gran])
+  }, [municipio, outro, ini, fim, gran, serie])
 
   const chave = `${municipio.id}-${outro?.id ?? 'x'}-${gran}-${ini}-${fim}`
   const arq = (nome: string) => `${nome}_${slug(municipio.nome)}-${slug(municipio.uf)}${outro ? `_vs_${slug(outro.nome)}` : ''}`
@@ -132,7 +146,7 @@ export function AnalysisSection({ municipio, mesDe, mesAte }: Props) {
           unidade="°C"
           tipo="linha"
           series={graficos.temp}
-          episodios={EPISODIOS_ENSO}
+          episodios={episodios}
           decimais={1}
           altura={420}
           passoY={1}
@@ -145,7 +159,7 @@ export function AnalysisSection({ municipio, mesDe, mesAte }: Props) {
           unidade="mm"
           tipo="barra"
           series={graficos.chuva}
-          episodios={EPISODIOS_ENSO}
+          episodios={episodios}
           decimais={0}
           altura={400}
           passoY={5}
@@ -159,7 +173,7 @@ export function AnalysisSection({ municipio, mesDe, mesAte }: Props) {
           unidade="%"
           tipo="linha"
           series={graficos.umid}
-          episodios={EPISODIOS_ENSO}
+          episodios={episodios}
           decimais={0}
           altura={400}
           passoY={5}

@@ -14,7 +14,7 @@
   --el-nino: #f6dfd2;
   --la-nina: #d5e5f2;
   --map-water: #e1ece5;
-  --radius: 18px;
+  --radius: 13px;
   --shadow: 0 1px 2px rgb(15 47 45 / 4%), 0 6px 18px rgb(15 47 45 / 5%);
   --font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-display: 'Space Grotesk', 'Hanken Grotesk', system-ui, sans-serif;
@@ -162,7 +162,7 @@ button {
 /* ---------- Estrutura ---------- */
 .page {
   display: grid;
-  max-width: 1600px;
+  max-width: 1450px;
   gap: 32px;
   margin: 0 auto;
   padding: 48px clamp(16px, 2.4vw, 36px) 80px;
@@ -222,7 +222,7 @@ button {
   flex-wrap: wrap;
   align-items: flex-end;
   gap: 24px;
-  padding: 28px 30px;
+  padding: 20px 25px;
 }
 
 .field {
@@ -1084,6 +1084,58 @@ select.input {
 }
 
 /* ---------- Responsivo ---------- */
+.dashboard-loading {
+  display: grid;
+  gap: 18px;
+}
+
+.loading-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #315452;
+  font-weight: 600;
+}
+
+.loading-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #c7d8d5;
+  border-top-color: #066262;
+  border-radius: 50%;
+  animation: loading-spin 0.8s linear infinite;
+}
+
+.loading-kpis,
+.loading-charts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.loading-skeleton {
+  border-radius: 16px;
+  background: linear-gradient(100deg, #edf2f0 25%, #f8faf9 45%, #edf2f0 65%);
+  background-size: 220% 100%;
+  animation: loading-shimmer 1.4s ease-in-out infinite;
+}
+
+.loading-skeleton--kpi {
+  height: 132px;
+}
+
+.loading-skeleton--chart {
+  height: 340px;
+}
+
+@keyframes loading-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loading-shimmer {
+  to { background-position-x: -220%; }
+}
+
 @media (max-width: 1100px) {
   .explore {
     grid-template-columns: 1fr;
@@ -1095,6 +1147,11 @@ select.input {
   }
 
   .charts {
+    grid-template-columns: 1fr;
+  }
+
+  .loading-kpis,
+  .loading-charts {
     grid-template-columns: 1fr;
   }
 }
@@ -1179,5 +1236,10 @@ select.input {
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+  }
+
+  .loading-spinner,
+  .loading-skeleton {
+    animation: none;
   }
 }
