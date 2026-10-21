@@ -218,6 +218,8 @@ button {
 
 /* ---------- Filtros ---------- */
 .filters {
+  position: relative;
+  z-index: 1000;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -227,7 +229,7 @@ button {
 
 .field {
   display: grid;
-  gap: 10px;
+  gap: 5px;
 }
 
 .field--grow {
@@ -235,8 +237,13 @@ button {
   flex: 1 1 360px;
 }
 
+.field--state {
+  min-width: 220px;
+  flex: 0 1 270px;
+}
+
 .field__label {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -257,12 +264,12 @@ button {
 .input,
 select.input {
   width: 100%;
-  height: 66px;
+  height: 45px;
   padding: 0 18px;
   border: 1px solid var(--line-strong);
-  border-radius: 12px;
+  border-radius: 8px;
   background: #fff;
-  font-size: 19px;
+  font-size: 16px;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
@@ -322,7 +329,7 @@ select.input {
 
 .combo__list {
   position: absolute;
-  z-index: 20;
+  z-index: 1100;
   top: calc(100% + 6px);
   right: 0;
   left: 0;
@@ -420,14 +427,14 @@ select.input {
 
 .btn {
   display: inline-flex;
-  height: 66px;
+  height: 45px;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 0 28px;
+  padding: 0 15px;
   border: 1px solid transparent;
-  border-radius: 12px;
-  font-size: 19px;
+  border-radius: 8px;
+  font-size: 16px;
   font-weight: 600;
   transition: background-color 0.15s, border-color 0.15s, transform 0.1s;
 }
@@ -466,10 +473,30 @@ select.input {
 
 /* ---------- Mapa + município ---------- */
 .explore {
+  position: relative;
+  z-index: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1.9fr) minmax(300px, 1fr);
+  grid-template-columns: minmax(0, 2.2fr) minmax(300px, 1fr);
   gap: 24px;
   align-items: stretch;
+}
+
+.municipio-vazio {
+  display: flex;
+  min-height: 240px;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+.municipio-vazio h2 {
+  margin: 8px 0;
+}
+
+.municipio-vazio p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .map-card {
@@ -593,7 +620,7 @@ select.input {
 .municipio-card__title {
   margin: 14px 0 28px;
   font-family: var(--font-display);
-  font-size: clamp(34px, 3.2vw, 46px);
+  font-size: clamp(20px, 2.5vw, 30px);
   font-weight: 600;
   line-height: 1.1;
 }
@@ -606,8 +633,8 @@ select.input {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 16px;
-  padding: 18px 0;
+  gap: 13px;
+  padding: 15px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -617,12 +644,12 @@ select.input {
 
 .data-list dt {
   color: var(--muted);
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .data-list dd {
   font-family: var(--font-mono);
-  font-size: 18px;
+  font-size: 16px;
   text-align: right;
 }
 
@@ -635,7 +662,7 @@ select.input {
 
 .kpi {
   --accent: var(--rust);
-  padding: 26px 30px 28px;
+  padding: 20px 25px 20px;
   border-left: 5px solid var(--accent);
 }
 
@@ -660,14 +687,14 @@ select.input {
 
 .kpi__head h3 {
   color: var(--ink);
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .kpi__value {
   margin-top: 14px;
   font-family: var(--font-display);
-  font-size: clamp(48px, 4.4vw, 62px);
+  font-size: clamp(20px, 3vw, 35px);
   font-weight: 600;
   line-height: 1.05;
 }

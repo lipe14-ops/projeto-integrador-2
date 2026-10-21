@@ -1,5 +1,7 @@
 /* MapaBrasil.css */
-.mapa-wrapper { position: relative; }
+.mapa-wrapper { 
+  position: relative; 
+}
 
 .mapa-voltar,
 .mapa-carregando {

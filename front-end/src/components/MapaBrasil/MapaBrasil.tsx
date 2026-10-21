@@ -171,7 +171,7 @@ export default function MapaBrasil({ onSelectMunicipio }: MapaBrasilProps) {
         zoom={4}
         zoomSnap={0.25}
         attributionControl={false}
-        style={{ height: 600, width: "100%", background: "#dcdcdc" }}
+        style={{ height: 600, width: "100%", background: "#dcdcdc", borderRadius: "13px" }}
       >
         {estadosGeo && (
           <GeoJSON

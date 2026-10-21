@@ -1,9 +1,9 @@
 import { useId, useMemo, useState } from 'react'
-import { ANOS, MUNICIPIOS, normalizar, rotuloMunicipio, type Municipio } from '../data/climate'
+import { ANOS, normalizar, rotuloMunicipio, type Municipio } from '../data/climate'
 import { IconInfo, IconReset, IconSearch, IconSliders, IconX } from './Icons'
 
 export interface Filtros {
-  municipio: Municipio
+  municipio: Municipio | null
   de: number
   ate: number
 }
@@ -11,26 +11,33 @@ export interface Filtros {
 interface Props {
   aplicado: Filtros
   padrao: Filtros
-  municipios?: Municipio[]
+  municipios: Municipio[]
   onAplicar: (f: Filtros) => void
+  carregandoMunicipios?: boolean
 }
 
-export function SearchFilters({ aplicado, padrao, municipios = MUNICIPIOS, onAplicar }: Props) {
+export function SearchFilters({ aplicado, padrao, municipios, onAplicar, carregandoMunicipios = false }: Props) {
   const listId = useId()
-  const [texto, setTexto] = useState(rotuloMunicipio(aplicado.municipio))
+  const [estado, setEstado] = useState(aplicado.municipio?.uf ?? '')
+  const [texto, setTexto] = useState(aplicado.municipio ? rotuloMunicipio(aplicado.municipio) : '')
   const [de, setDe] = useState(aplicado.de)
   const [ate, setAte] = useState(aplicado.ate)
   const [aberto, setAberto] = useState(false)
   const [ativo, setAtivo] = useState(-1)
   const [erro, setErro] = useState<string | null>(null)
 
+  const estados = useMemo(() => Array.from(new Map(
+    municipios.map((m) => [m.uf, m.estado ? `${m.estado} — ${m.uf}` : m.uf]),
+  ).entries()).sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')), [municipios])
+  const municipiosDoEstado = useMemo(() => municipios.filter((m) => m.uf === estado), [municipios, estado])
+
   const sugestoes = useMemo(() => {
     const t = normalizar(texto)
-    const todos = municipios
+    const todos = municipiosDoEstado
     // mostra tudo quando o texto é exatamente o município aplicado
-    if (!t || t === normalizar(rotuloMunicipio(aplicado.municipio))) return todos.slice(0, 50)
+    if (!t || (aplicado.municipio && t === normalizar(rotuloMunicipio(aplicado.municipio)))) return todos.slice(0, 50)
     return todos.filter((m) => normalizar(rotuloMunicipio(m)).includes(t)).slice(0, 50)
-  }, [texto, aplicado.municipio, municipios])
+  }, [texto, aplicado.municipio, municipiosDoEstado])
 
   function escolher(m: Municipio) {
     setTexto(rotuloMunicipio(m))
@@ -41,7 +48,11 @@ export function SearchFilters({ aplicado, padrao, municipios = MUNICIPIOS, onApl
 
   function aplicar() {
     const chave = normalizar(texto)
-    const m = municipios.find((municipio) => normalizar(rotuloMunicipio(municipio)) === chave || normalizar(municipio.nome) === chave)
+    if (!estado) {
+      setErro('Escolha um estado antes de selecionar o município.')
+      return
+    }
+    const m = municipiosDoEstado.find((municipio) => normalizar(rotuloMunicipio(municipio)) === chave || normalizar(municipio.nome) === chave)
       ?? (sugestoes.length === 1 ? sugestoes[0] : undefined)
     if (!m) {
       setErro('Município não encontrado. Escolha uma opção da lista.')
@@ -58,7 +69,8 @@ export function SearchFilters({ aplicado, padrao, municipios = MUNICIPIOS, onApl
   }
 
   function limpar() {
-    setTexto(rotuloMunicipio(padrao.municipio))
+    setEstado('')
+    setTexto('')
     setDe(padrao.de)
     setAte(padrao.ate)
     setErro(null)
@@ -91,6 +103,25 @@ export function SearchFilters({ aplicado, padrao, municipios = MUNICIPIOS, onApl
         aplicar()
       }}
     >
+      <div className="field field--state">
+        <label className="field__label" htmlFor="estado">Estado</label>
+        <select
+          id="estado"
+          className="input"
+          value={estado}
+          disabled={carregandoMunicipios || estados.length === 0}
+          onChange={(e) => {
+            setEstado(e.target.value)
+            setTexto('')
+            setAberto(false)
+            setAtivo(-1)
+            setErro(null)
+          }}
+        >
+          <option value="">{carregandoMunicipios ? 'Carregando estados…' : 'Selecione um estado'}</option>
+          {estados.map(([uf, nome]) => <option key={uf} value={uf}>{nome}</option>)}
+        </select>
+      </div>
       <div className="field field--grow">
         <label className="field__label" htmlFor="municipio">
           Município
@@ -102,13 +133,14 @@ export function SearchFilters({ aplicado, padrao, municipios = MUNICIPIOS, onApl
               id="municipio"
               className="input input--search"
               type="text"
+              disabled={!estado}
               role="combobox"
               aria-expanded={aberto}
               aria-controls={listId}
               aria-autocomplete="list"
               aria-invalid={erro ? true : undefined}
               autoComplete="off"
-              placeholder="Busque um município"
+              placeholder={estado ? 'Busque um município' : 'Escolha primeiro um estado'}
               value={texto}
               onChange={(e) => {
                 setTexto(e.target.value)
@@ -129,7 +161,7 @@ export function SearchFilters({ aplicado, padrao, municipios = MUNICIPIOS, onApl
               </button>
             )}
           </div>
-          {aberto && (
+          {aberto && estado && (
             <ul id={listId} className="combo__list" role="listbox">
               {sugestoes.length === 0 && <li className="combo__empty">Nenhum município encontrado</li>}
               {sugestoes.map((m, i) => (

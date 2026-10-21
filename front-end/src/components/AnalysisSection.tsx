@@ -81,34 +81,7 @@ export function AnalysisSection({ municipio, mesDe, mesAte, serie, enso }: Props
             Análise climática
           </h2>
         </div>
-        <div className="analysis__controls">
-          <div className="segmented" role="group" aria-label="Granularidade">
-            {(
-              [
-                ['mensal', 'Mensal'],
-                ['anual', 'Anual'],
-              ] as const
-            ).map(([id, label]) => (
-              <button key={id} type="button" className={gran === id ? 'is-active' : ''} aria-pressed={gran === id} onClick={() => setGran(id)}>
-                {label}
-              </button>
-            ))}
-          </div>
-          <div className="segmented" role="group" aria-label="Intervalo de tempo">
-            {JANELAS.map(([id, label]) => (
-              <button
-                key={id}
-                type="button"
-                className={janelaEfetiva === id ? 'is-active' : ''}
-                aria-pressed={janelaEfetiva === id}
-                disabled={gran === 'anual' && id === '12m'}
-                onClick={() => setJanela(id)}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
+        
       </div>
 
       <div className={comparando ? 'compare is-open' : 'compare'}>
