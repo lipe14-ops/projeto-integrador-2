@@ -1,0 +1,10 @@
+export declare const isNumber: (val: any) => val is number;
+export declare const isString: (val: any) => val is string;
+export declare const isPlainObject: <T extends object = object>(val: any) => val is T;
+export declare const isFunction: <Value, Args extends unknown[], Result>(val: Value | ((...args: Args) => Result)) => val is (...args: Args) => Result;
+export declare const isThenable: <T>(val?: PromiseLike<T>) => val is PromiseLike<T>;
+export declare const isPrimitive: (val: any) => boolean;
+export declare const isTransitionEvent: (event: Event) => event is TransitionEvent;
+export declare const isWindow: (val?: any) => val is Window;
+export declare const isDocument: (val: Document | HTMLElement | null) => val is Document;
+export declare const isHTMLElement: (val?: unknown) => val is HTMLElement;

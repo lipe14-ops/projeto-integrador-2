@@ -2,6 +2,7 @@ from datetime import date, datetime, time, timedelta, timezone
 from json import loads
 
 from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from geoalchemy2.shape import to_shape
 from shapely.geometry import mapping
 from sqlalchemy.orm import Session
@@ -23,6 +24,13 @@ from app.schemas.municipio import MunicipioResponse, MunicipioSemGeometriaRespon
 app = FastAPI(
     title="API de Municípios",
     version="1.0.0",
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:5174", "http://127.0.0.1:5174"],
+    allow_credentials=True,
+    allow_methods=["GET"],
+    allow_headers=["*"],
 )
 
 

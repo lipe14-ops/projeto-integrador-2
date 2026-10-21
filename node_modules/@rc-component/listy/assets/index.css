@@ -1,0 +1,36 @@
+.rc-listy {
+  position: relative;
+}
+.rc-listy-group-header {
+  background-color: #fff;
+}
+.rc-listy-group-header-sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.rc-listy-group-header-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.rc-listy-group-header-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.rc-listy-group-section {
+  position: relative;
+}
+.rc-listy-scrollbar {
+  z-index: 1;
+}

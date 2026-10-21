@@ -1,0 +1,36 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault").default;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _pl_PL = _interopRequireDefault(require("@rc-component/picker/locale/pl_PL"));
+var _pl_PL2 = _interopRequireDefault(require("../../time-picker/locale/pl_PL"));
+// Merge into a locale object
+const locale = {
+  lang: {
+    placeholder: 'Wybierz datę',
+    yearPlaceholder: 'Wybierz rok',
+    quarterPlaceholder: 'Wybierz kwartał',
+    monthPlaceholder: 'Wybierz miesiąc',
+    weekPlaceholder: 'Wybierz tydzień',
+    rangePlaceholder: ['Data początkowa', 'Data końcowa'],
+    rangeYearPlaceholder: ['Rok początkowy', 'Rok końcowy'],
+    rangeQuarterPlaceholder: ['Kwartał początkowy', 'Kwartał końcowy'],
+    rangeMonthPlaceholder: ['Miesiąc początkowy', 'Miesiąc końcowy'],
+    rangeWeekPlaceholder: ['Tydzień początkowy', 'Tydzień końcowy'],
+    yearFormat: 'YYYY',
+    monthFormat: 'MMMM',
+    monthBeforeYear: true,
+    shortWeekDays: ['Niedz', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'],
+    shortMonths: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru'],
+    ..._pl_PL.default
+  },
+  timePickerLocale: {
+    ..._pl_PL2.default
+  }
+};
+// All settings at:
+// https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
+var _default = exports.default = locale;

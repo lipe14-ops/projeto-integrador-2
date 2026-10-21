@@ -1,0 +1,107 @@
+{
+  "name": "@rc-component/segmented",
+  "version": "1.4.0",
+  "description": "React segmented controls used in ant.design",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-segmented",
+    "react-segmented-controls",
+    "segmented controls",
+    "antd",
+    "ant-design"
+  ],
+  "main": "./lib/index",
+  "module": "./es/index",
+  "types": "./es/index.d.ts",
+  "files": [
+    "assets/*.css",
+    "assets/*.less",
+    "es",
+    "lib",
+    "dist"
+  ],
+  "homepage": "https://react-component.github.io/segmented",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-component/segmented.git"
+  },
+  "bugs": {
+    "url": "https://github.com/react-component/segmented/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "dumi dev",
+    "build": "npm run compile && npm run docs:build",
+    "tsc": "tsc --noEmit",
+    "type:check": "tsc --noEmit",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "compile": "father build && lessc assets/index.less assets/index.css",
+    "gh-pages": "npm run compile && cross-env GH_PAGES=1 npm run docs:build && npm run docs:deploy",
+    "prepublishOnly": "npm run compile && rc-np",
+    "lint": "eslint src/ --ext .ts,.tsx,.jsx,.js,.md",
+    "prettier": "prettier --write --ignore-unknown .",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@babel/runtime": "^8.0.0",
+    "@rc-component/util": "^1.11.1",
+    "clsx": "^2.1.1",
+    "@rc-component/motion": "^1.1.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@eslint/compat": "^2.1.0",
+    "@rc-component/father-plugin": "^2.2.0",
+    "@rc-component/np": "^1.0.4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@umijs/test": "^4.6.68",
+    "cross-env": "^10.1.0",
+    "dumi": "^2.4.38",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jest": "^29.15.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "father": "^4.6.24",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "less": "^4.6.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.4",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "cnpm": {
+    "mode": "npm"
+  },
+  "tnpm": {
+    "mode": "npm"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  }
+}

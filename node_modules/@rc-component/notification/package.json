@@ -1,0 +1,103 @@
+{
+  "name": "@rc-component/notification",
+  "version": "2.0.9",
+  "description": "notification ui component for react",
+  "engines": {
+    "node": ">=8.x"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-notification",
+    "notification"
+  ],
+  "homepage": "https://react-component.github.io/notification",
+  "maintainers": [
+    "yiminghe@gmail.com",
+    "skyking_H@hotmail.com",
+    "hust2012jiangkai@gmail.com"
+  ],
+  "files": [
+    "assets/*.css",
+    "assets/*.less",
+    "es",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-component/notification.git"
+  },
+  "bugs": {
+    "url": "https://github.com/react-component/notification/issues"
+  },
+  "license": "MIT",
+  "main": "lib/index",
+  "module": "es/index",
+  "scripts": {
+    "start": "dumi dev",
+    "build": "npm run docs:build",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "compile": "father build && lessc assets/index.less assets/index.css",
+    "gh-pages": "cross-env GH_PAGES=1 npm run docs:build && npm run docs:deploy",
+    "prepublishOnly": "npm run compile && rc-np",
+    "lint": "eslint src/ docs/examples/ --ext .tsx,.ts,.jsx,.js",
+    "prettier": "prettier --write --ignore-unknown .",
+    "test": "vitest --watch=false",
+    "test:watch": "vitest",
+    "tsc": "tsc --noEmit",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@rc-component/motion": "^1.1.4",
+    "@rc-component/util": "^1.13.0",
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@csstools/css-parser-algorithms": "^4.0.0",
+    "@csstools/css-tokenizer": "^4.0.0",
+    "@eslint/js": "^10.0.1",
+    "@eslint/compat": "^2.1.0",
+    "@rc-component/father-plugin": "^2.2.0",
+    "@rc-component/np": "^1.0.4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "^4.1.9",
+    "cross-env": "^10.1.0",
+    "dumi": "^2.4.38",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jest": "^29.15.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "father": "^4.6.24",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "jsdom": "^29.1.1",
+    "less": "^4.6.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.4",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.1",
+    "vitest": "^4.1.9"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "./es/index.d.ts"
+}

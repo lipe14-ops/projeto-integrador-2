@@ -1,0 +1,17 @@
+/* MapaBrasil.css */
+.mapa-wrapper { position: relative; }
+
+.mapa-voltar,
+.mapa-carregando {
+  position: absolute; z-index: 1000; left: 60px; top: 12px;
+  padding: 6px 12px; border-radius: 6px; border: 1px solid #bbb;
+  background: #fff; font: 14px system-ui, sans-serif;
+}
+.mapa-voltar { cursor: pointer; }
+.mapa-carregando { top: 52px; }
+
+.tooltip-mapa {
+  background: #1f2d2c; color: #fff; border: none; border-radius: 6px;
+  padding: 6px 10px; font: 14px system-ui, sans-serif; box-shadow: none;
+}
+.tooltip-mapa::before { display: none; }

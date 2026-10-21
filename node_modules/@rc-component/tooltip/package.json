@@ -1,0 +1,96 @@
+{
+  "name": "@rc-component/tooltip",
+  "version": "1.5.2",
+  "description": "Tooltip UI component for React",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-tooltip",
+    "tooltip"
+  ],
+  "homepage": "https://react-component.github.io/tooltip",
+  "bugs": {
+    "url": "https://github.com/react-component/tooltip/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-component/tooltip.git"
+  },
+  "license": "MIT",
+  "maintainers": [
+    "yiminghe@gmail.com"
+  ],
+  "main": "./lib/index",
+  "module": "./es/index",
+  "files": [
+    "lib",
+    "es",
+    "assets/*.css",
+    "assets/*.less"
+  ],
+  "scripts": {
+    "build": "npm run compile && npm run docs:build",
+    "compile": "father build && lessc assets/bootstrap.less assets/bootstrap.css && lessc assets/bootstrap_white.less assets/bootstrap_white.css",
+    "coverage": "rc-test --coverage",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "deploy": "npm run gh-pages",
+    "gh-pages": "npm run compile && cross-env GH_PAGES=1 npm run docs:build && npm run docs:deploy",
+    "lint": "eslint src/ --ext .tsx,.ts,.jsx,.js",
+    "prepublishOnly": "npm run compile && rc-np",
+    "prettier": "prettier --write --ignore-unknown .",
+    "start": "dumi dev",
+    "test": "rc-test",
+    "tsc": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@rc-component/trigger": "^3.10.0",
+    "@rc-component/util": "^1.11.1",
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@eslint/compat": "^2.1.0",
+    "@rc-component/father-plugin": "^2.2.0",
+    "@rc-component/np": "^1.0.4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/warning": "^3.0.4",
+    "cross-env": "^10.1.0",
+    "dumi": "^2.4.38",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jest": "^29.15.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "father": "^4.6.24",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "less": "^4.6.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.4",
+    "rc-test": "^7.1.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.1"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "types": "./es/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  }
+}

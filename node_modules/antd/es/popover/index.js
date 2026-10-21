@@ -1,0 +1,122 @@
+"use client";
+
+import * as React from 'react';
+import { isReactRenderable, useControlledState } from '@rc-component/util';
+import { clsx } from 'clsx';
+import { getRenderPropValue } from '../_util/getRenderPropValue';
+import { useMergeSemantic, useSemanticRootStyle } from '../_util/hooks/useMergeSemantic';
+import { getTransitionName } from '../_util/motion';
+import { devUseWarning } from '../_util/warning';
+import { useComponentConfig } from '../config-provider/context';
+import Tooltip from '../tooltip';
+import useMergedArrow from '../tooltip/hook/useMergedArrow';
+import PurePanel, { Overlay } from './PurePanel';
+// CSSINJS
+import useStyle from './style';
+const InternalPopover = /*#__PURE__*/React.forwardRef((props, ref) => {
+  const {
+    prefixCls: customizePrefixCls,
+    title,
+    content,
+    overlayClassName,
+    placement = 'top',
+    trigger,
+    children,
+    mouseEnterDelay,
+    mouseLeaveDelay,
+    onOpenChange,
+    overlayStyle = {},
+    styles,
+    classNames,
+    motion,
+    arrow: popoverArrow,
+    ...restProps
+  } = props;
+  const {
+    getPrefixCls,
+    className: contextClassName,
+    style: contextStyle,
+    classNames: contextClassNames,
+    styles: contextStyles,
+    arrow: contextArrow,
+    trigger: contextTrigger,
+    mouseEnterDelay: contextMouseEnterDelay,
+    mouseLeaveDelay: contextMouseLeaveDelay
+  } = useComponentConfig('popover');
+  const mergedMouseEnterDelay = mouseEnterDelay ?? contextMouseEnterDelay ?? 0.1;
+  const mergedMouseLeaveDelay = mouseLeaveDelay ?? contextMouseLeaveDelay ?? 0.1;
+  const prefixCls = getPrefixCls('popover', customizePrefixCls);
+  const [hashId, cssVarCls] = useStyle(prefixCls);
+  const rootPrefixCls = getPrefixCls();
+  const mergedArrow = useMergedArrow(popoverArrow, contextArrow);
+  const mergedTrigger = trigger || contextTrigger || 'hover';
+  // ========================== Warning ===========================
+  if (process.env.NODE_ENV !== 'production') {
+    const warning = devUseWarning('Popover');
+    process.env.NODE_ENV !== "production" ? warning(!onOpenChange || onOpenChange.length <= 1, 'usage', 'The second `onOpenChange` parameter is internal and unsupported. Please lock to a previous version if needed.') : void 0;
+  }
+  // ============================= Styles =============================
+  const mergedProps = {
+    ...props,
+    placement,
+    trigger: mergedTrigger,
+    mouseEnterDelay: mergedMouseEnterDelay,
+    mouseLeaveDelay: mergedMouseLeaveDelay,
+    overlayStyle,
+    styles,
+    classNames
+  };
+  const contextStyleRoot = useSemanticRootStyle(contextStyle);
+  const overlayStyleRoot = useSemanticRootStyle(overlayStyle);
+  const [mergedClassNames, mergedStyles] = useMergeSemantic([contextClassNames, classNames], [contextStyles, contextStyleRoot, styles, overlayStyleRoot], {
+    props: mergedProps
+  });
+  const rootClassNames = clsx(overlayClassName, hashId, cssVarCls, contextClassName, mergedClassNames.root);
+  const [open, setOpen] = useControlledState(props.defaultOpen ?? false, props.open);
+  const settingOpen = nextOpen => {
+    setOpen(nextOpen);
+    onOpenChange?.(nextOpen);
+  };
+  const titleNode = getRenderPropValue(title);
+  const contentNode = getRenderPropValue(content);
+  return /*#__PURE__*/React.createElement(Tooltip, {
+    unique: false,
+    arrow: mergedArrow,
+    placement: placement,
+    trigger: mergedTrigger,
+    mouseEnterDelay: mergedMouseEnterDelay,
+    mouseLeaveDelay: mergedMouseLeaveDelay,
+    ...restProps,
+    prefixCls: prefixCls,
+    classNames: {
+      root: rootClassNames,
+      container: mergedClassNames.container,
+      arrow: mergedClassNames.arrow
+    },
+    styles: {
+      root: mergedStyles.root,
+      container: mergedStyles.container,
+      arrow: mergedStyles.arrow
+    },
+    ref: ref,
+    open: open,
+    onOpenChange: settingOpen,
+    overlay: isReactRenderable(titleNode) || isReactRenderable(contentNode) ? (/*#__PURE__*/React.createElement(Overlay, {
+      prefixCls: prefixCls,
+      title: titleNode,
+      content: contentNode,
+      classNames: mergedClassNames,
+      styles: mergedStyles
+    })) : null,
+    motion: {
+      motionName: getTransitionName(rootPrefixCls, 'zoom-big', typeof motion?.motionName === 'string' ? motion?.motionName : undefined)
+    },
+    "data-popover-inject": true
+  }, children);
+});
+const Popover = InternalPopover;
+Popover._InternalPanelDoNotUseOrYouWillBeFired = PurePanel;
+if (process.env.NODE_ENV !== 'production') {
+  Popover.displayName = 'Popover';
+}
+export default Popover;

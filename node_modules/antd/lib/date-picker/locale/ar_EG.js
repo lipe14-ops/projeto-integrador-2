@@ -1,0 +1,36 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault").default;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _ar_EG = _interopRequireDefault(require("@rc-component/picker/locale/ar_EG"));
+var _ar_EG2 = _interopRequireDefault(require("../../time-picker/locale/ar_EG"));
+// Merge into a locale object
+const locale = {
+  lang: {
+    placeholder: 'اختيار التاريخ',
+    yearPlaceholder: 'اختيار السنة',
+    quarterPlaceholder: 'اختيار ربع السنة',
+    monthPlaceholder: 'اختيار الشهر',
+    weekPlaceholder: 'اختيار الأسبوع',
+    rangePlaceholder: ['البداية', 'النهاية'],
+    rangeYearPlaceholder: ['سنة البداية', 'سنة النهاية'],
+    rangeQuarterPlaceholder: ['ربع سنة البداية', 'ربع سنة النهاية'],
+    rangeMonthPlaceholder: ['شهر البداية', 'شهر النهاية'],
+    rangeWeekPlaceholder: ['أسبوع البداية', 'أسبوع النهاية'],
+    yearFormat: 'YYYY',
+    monthFormat: 'MMMM',
+    monthBeforeYear: true,
+    shortWeekDays: ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
+    shortMonths: ['يناير', 'فبراير', 'مارس', 'إبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+    ..._ar_EG.default
+  },
+  timePickerLocale: {
+    ..._ar_EG2.default
+  }
+};
+// All settings at:
+// https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
+var _default = exports.default = locale;
