@@ -12,11 +12,6 @@ const FAQ: { pergunta: string; resposta: ReactNode }[] = [
     resposta:
       'Os efeitos variam por região. De forma geral, El Niño tende a deixar o Norte e o Nordeste mais secos e quentes e o Sul mais chuvoso; La Niña costuma inverter esse padrão. No Centro-Oeste a influência é mais sutil e depende da época do ano, por isso os episódios aparecem como faixas coloridas para você comparar com as séries.',
   },
-  {
-    pergunta: 'Os dados desta demonstração são reais?',
-    resposta:
-      'Não. As séries exibidas aqui são sintéticas e servem para demonstrar a interface: seguem o ciclo sazonal típico do Centro-Oeste e as médias do período mostradas nos cartões, mas não são valores observados. Os episódios de El Niño e La Niña são aproximações do ONI. Para uso científico, conecte a aplicação aos dados do ERA5-Land e da NOAA/CPC.',
-  },
 ]
 
 function Item({ pergunta, resposta }: { pergunta: string; resposta: ReactNode }) {

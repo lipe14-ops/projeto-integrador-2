@@ -1,6 +1,3 @@
-// Dados de exemplo (sintéticos) calibrados com os valores da interface de referência.
-// Para usar dados reais, substitua `serieDoMunicipio` por uma chamada à sua API / arquivos ERA5-Land.
-
 export const ANO_INICIO = 2015
 export const ANO_FIM = 2025
 export const TOTAL_MESES = (ANO_FIM - ANO_INICIO + 1) * 12

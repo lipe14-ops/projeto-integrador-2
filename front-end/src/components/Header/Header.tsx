@@ -1,4 +1,4 @@
-import { Logo } from '../Icons'
+import { GiEarthAmerica } from "react-icons/gi";
 
 export type Pagina = 'explorar' | 'sobre'
 
@@ -12,7 +12,7 @@ export function Header({ pagina, onNavegar }: HeaderProps) {
     <header className="site-header">
       <div className="site-header__inner">
         <button type="button" className="brand" onClick={() => onNavegar('explorar')} aria-label="Clima Brasil — ir para Explorar">
-          <Logo />
+          <GiEarthAmerica size={50} />
           <span className="brand__text">
             <span className="brand__title">Clima Brasil</span>
             <span className="brand__subtitle">Dados climáticos dos municípios brasileiros</span>

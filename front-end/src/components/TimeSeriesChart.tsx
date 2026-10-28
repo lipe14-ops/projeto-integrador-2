@@ -1,4 +1,17 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo } from 'react'
+import {
+  Bar,
+  CartesianGrid,
+  ComposedChart,
+  Brush,
+  Line,
+  ReferenceArea,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+  type TooltipContentProps,
+} from 'recharts'
 import type { EpisodioEnso, Ponto } from '../data/climate'
 import { IconDownload } from './Icons'
 
@@ -18,68 +31,65 @@ interface Props {
   decimais: number
   arquivo: string
   altura: number
-  passoY: number // múltiplo usado para arredondar os rótulos do eixo Y
+  passoY: number
   dominioZero?: boolean
   className?: string
 }
 
-const MARGEM = { esq: 56, dir: 24, topo: 14, base: 34 }
+interface LinhaGrafico {
+  rotulo: string
+  inicio: number
+  fim: number
+  episodio?: string
+  [key: string]: string | number | undefined
+}
+
 const COR_EL_NINO = '#f6dfd2'
 const COR_LA_NINA = '#d5e5f2'
-
-function useLargura<T extends HTMLElement>() {
-  const ref = useRef<T>(null)
-  const [largura, setLargura] = useState(640)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const ro = new ResizeObserver(([e]) => setLargura(Math.max(260, Math.round(e.contentRect.width))))
-    ro.observe(el)
-    return () => ro.disconnect()
-  }, [])
-  return [ref, largura] as const
-}
-
-function dominioY(min: number, max: number, passo: number, zero: boolean): { lo: number; hi: number; ticks: number[] } {
-  let lo = zero ? 0 : Math.floor(min / passo) * passo
-  let step = Math.max(passo, Math.ceil((max - lo) / 4 / passo) * passo)
-  while (lo + step * 4 < max) step += passo
-  if (!zero && lo + step * 4 - max > step * 2) lo += step // evita grande espaço vazio no topo
-  const hi = lo + step * 4
-  return { lo, hi, ticks: [0, 1, 2, 3, 4].map((k) => lo + k * step) }
-}
-
 const fmtNum = (v: number, d: number) => v.toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d })
 
-export function TimeSeriesChart(props: Props) {
-  const { titulo, subtitulo, unidade, tipo, series, episodios, decimais, arquivo, altura, passoY, dominioZero, className } = props
-  const [wrapRef, largura] = useLargura<HTMLDivElement>()
-  const base = series[0].pontos
-  const n = base.length
-  const [faixa, setFaixa] = useState<[number, number]>([0, n - 1])
-  const [b0, b1] = [Math.min(faixa[0], n - 1), Math.min(faixa[1], n - 1)]
-  const [hover, setHover] = useState<number | null>(null)
+function TooltipClima({ active, payload, label, unidade, decimais, series }: TooltipContentProps & { unidade: string; decimais: number; series: SerieGrafico[] }) {
+  if (!active || !payload?.length) return null
+  const dados = payload[0]?.payload as LinhaGrafico | undefined
+  return (
+    <div className="tooltip chart-tooltip">
+      <strong>{label}</strong>
+      {series.map((s) => (
+        <span key={s.nome} className="tooltip__row">
+          <i style={{ background: s.cor }} />
+          {s.nome}: {fmtNum(Number(dados?.[s.nome] ?? 0), decimais)} {unidade}
+        </span>
+      ))}
+      {dados?.episodio && <span className="tooltip__enso">{dados.episodio}</span>}
+    </div>
+  )
+}
 
-  const iw = largura - MARGEM.esq - MARGEM.dir
-  const ih = altura - MARGEM.topo - MARGEM.base
-  const visiveis = b1 - b0 + 1
-  const mesIni = base[b0].inicio
-  const mesFim = base[b1].fim
-  const px = (m: number) => MARGEM.esq + ((m - mesIni) / (mesFim - mesIni)) * iw
-  const larguraSlot = iw / visiveis
+export function TimeSeriesChart({ titulo, subtitulo, unidade, tipo, series, episodios, decimais, arquivo, altura, passoY, dominioZero, className }: Props) {
+  const dados = useMemo<LinhaGrafico[]>(() => {
+    const base = series[0]?.pontos ?? []
+    return base.map((p, i) => {
+      const episodio = episodios.find((e) => e.inicio < p.fim && e.fim > p.inicio)
+      const linha: LinhaGrafico = {
+        rotulo: p.rotulo,
+        inicio: p.inicio,
+        fim: p.fim,
+        episodio: episodio ? (episodio.tipo === 'el-nino' ? 'El Niño' : 'La Niña') : undefined,
+      }
+      series.forEach((s) => { linha[s.nome] = s.pontos[i]?.valor ?? 0 })
+      return linha
+    })
+  }, [series, episodios])
 
-  const { lo, hi, ticks } = useMemo(() => {
-    const vals = series.flatMap((s) => s.pontos.slice(b0, b1 + 1).map((p) => p.valor))
-    return dominioY(Math.min(...vals), Math.max(...vals), passoY, !!dominioZero)
-  }, [series, b0, b1, passoY, dominioZero])
-  const py = (v: number) => MARGEM.topo + ih - ((v - lo) / (hi - lo)) * ih
-
-  const nTicksX = Math.max(3, Math.min(12, Math.floor(iw / 92)))
-  const ticksX = Array.from(new Set(Array.from({ length: nTicksX }, (_, k) => b0 + Math.round((k * (visiveis - 1)) / (nTicksX - 1)))))
+  const areas = useMemo(() => episodios.flatMap((ep, i) => {
+    const atingidos = dados.filter((p) => ep.inicio < p.fim && ep.fim > p.inicio)
+    if (!atingidos.length) return []
+    return [{ x1: atingidos[0].rotulo, x2: atingidos[atingidos.length - 1].rotulo, fill: ep.tipo === 'el-nino' ? COR_EL_NINO : COR_LA_NINA, key: i }]
+  }), [episodios, dados])
 
   function baixar() {
     const linhas = [['periodo', ...series.map((s) => `${s.nome} (${unidade})`)].join(',')]
-    base.forEach((p, i) => linhas.push([p.rotulo, ...series.map((s) => s.pontos[i].valor.toFixed(decimais + 1))].join(',')))
+    dados.forEach((p) => linhas.push([p.rotulo, ...series.map((s) => Number(p[s.nome] ?? 0).toFixed(decimais + 1))].join(',')))
     const blob = new Blob(['\ufeff' + linhas.join('\n')], { type: 'text/csv;charset=utf-8' })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
@@ -88,16 +98,12 @@ export function TimeSeriesChart(props: Props) {
     URL.revokeObjectURL(a.href)
   }
 
-  function aoMover(e: React.PointerEvent<SVGRectElement>) {
-    const r = e.currentTarget.getBoundingClientRect()
-    setHover(b0 + Math.max(0, Math.min(visiveis - 1, Math.floor(((e.clientX - r.left) / r.width) * visiveis))))
-  }
-
-  const hp = hover !== null ? base[hover] : null
-  const hx = hp ? px((hp.inicio + hp.fim) / 2) : 0
-  const ensoHover = hp ? episodios.find((e) => e.inicio < hp.fim && e.fim > hp.inicio) : undefined
-  const grupo = Math.max(1, series.length)
-  const larguraBarra = Math.max(1, Math.min(14, (larguraSlot * 0.72) / grupo))
+  const valores = series.flatMap((s) => s.pontos.map((p) => p.valor))
+  const min = Math.min(...valores)
+  const max = Math.max(...valores)
+  const dominio: [number | 'auto', number | 'auto'] = dominioZero
+    ? [0, Math.ceil(max / passoY) * passoY || 'auto']
+    : [Math.floor(min / passoY) * passoY, Math.ceil(max / passoY) * passoY || 'auto']
 
   return (
     <article className={`card chart-card ${className ?? ''}`}>
@@ -112,96 +118,29 @@ export function TimeSeriesChart(props: Props) {
         </button>
       </header>
 
-      <div ref={wrapRef} className="chart-wrap">
-        <svg width={largura} height={altura} role="img" aria-label={`${titulo}: gráfico de ${tipo === 'linha' ? 'linha' : 'barras'}`}>
-          {episodios.map((e, i) => {
-            const a = Math.max(e.inicio, mesIni)
-            const b = Math.min(e.fim, mesFim)
-            if (b <= a) return null
-            return <rect key={i} x={px(a)} y={MARGEM.topo} width={px(b) - px(a)} height={ih} fill={e.tipo === 'el-nino' ? COR_EL_NINO : COR_LA_NINA} />
-          })}
-          {ticks.map((t) => (
-            <g key={t}>
-              <line x1={MARGEM.esq} x2={largura - MARGEM.dir} y1={py(t)} y2={py(t)} className="grid-line" />
-              <text x={MARGEM.esq - 10} y={py(t)} dy="0.32em" textAnchor="end" className="axis-text">
-                {fmtNum(t, 0)}
-              </text>
-            </g>
-          ))}
-          <text transform={`translate(14 ${MARGEM.topo + ih / 2}) rotate(-90)`} textAnchor="middle" className="axis-text axis-text--unit">
-            {unidade}
-          </text>
-
-          {ticksX.map((i, k) => (
-            <text
-              key={i}
-              x={px((base[i].inicio + base[i].fim) / 2)}
-              y={altura - 10}
-              textAnchor={k === 0 && ticksX.length > 1 ? 'start' : k === ticksX.length - 1 && ticksX.length > 1 ? 'end' : 'middle'}
-              dx={k === 0 && ticksX.length > 1 ? -12 : k === ticksX.length - 1 && ticksX.length > 1 ? 12 : 0}
-              className="axis-text"
-            >
-              {base[i].rotulo}
-            </text>
-          ))}
-
-          {tipo === 'barra'
-            ? series.map((s, si) =>
-                s.pontos.slice(b0, b1 + 1).map((p) => {
-                  const cx = px((p.inicio + p.fim) / 2)
-                  const x = cx - (larguraBarra * grupo) / 2 + si * larguraBarra
-                  const y = py(p.valor)
-                  return <rect key={`${si}-${p.inicio}`} x={x} y={y} width={larguraBarra} height={Math.max(0, MARGEM.topo + ih - y)} fill={s.cor} opacity={hover !== null && base[hover].inicio !== p.inicio ? 0.55 : 1} />
-                }),
-              )
-            : series.map((s, si) => (
-                <path
-                  key={si}
-                  d={s.pontos
-                    .slice(b0, b1 + 1)
-                    .map((p, k) => `${k ? 'L' : 'M'}${px((p.inicio + p.fim) / 2).toFixed(1)},${py(p.valor).toFixed(1)}`)
-                    .join('')}
-                  fill="none"
-                  stroke={s.cor}
-                  strokeWidth={2}
-                  strokeLinejoin="round"
-                  strokeLinecap="round"
-                />
-              ))}
-
-          {hp && (
-            <g pointerEvents="none">
-              <line x1={hx} x2={hx} y1={MARGEM.topo} y2={MARGEM.topo + ih} className="crosshair" />
-              {tipo === 'linha' &&
-                series.map((s, si) => <circle key={si} cx={hx} cy={py(s.pontos[hover!].valor)} r={4} fill="#fff" stroke={s.cor} strokeWidth={2} />)}
-            </g>
-          )}
-          <rect
-            x={MARGEM.esq}
-            y={MARGEM.topo}
-            width={iw}
-            height={ih}
-            fill="transparent"
-            onPointerMove={aoMover}
-            onPointerLeave={() => setHover(null)}
-          />
-        </svg>
-
-        {hp && (
-          <div className="tooltip" style={{ left: Math.min(largura - 170, Math.max(4, hx + 12)), top: MARGEM.topo + 6 }}>
-            <strong>{hp.rotulo}</strong>
-            {series.map((s) => (
-              <span key={s.nome} className="tooltip__row">
-                <i style={{ background: s.cor }} />
-                {s.nome}: {fmtNum(s.pontos[hover!].valor, decimais)} {unidade}
-              </span>
-            ))}
-            {ensoHover && <span className="tooltip__enso">{ensoHover.tipo === 'el-nino' ? 'El Niño' : 'La Niña'}</span>}
-          </div>
-        )}
+      <div className="chart-wrap" role="img" aria-label={`${titulo}: gráfico de ${tipo === 'linha' ? 'linha' : 'barras'}`}>
+        <ResponsiveContainer width="100%" height={altura}>
+          <ComposedChart data={dados} margin={{ top: 14, right: 20, bottom: 14, left: 12 }}>
+            <CartesianGrid stroke="#e5ece9" strokeDasharray="3 3" vertical={false} />
+            <XAxis dataKey="rotulo" tick={{ fill: '#5c7370', fontSize: 12 }} tickLine={false} axisLine={{ stroke: '#cfdad6' }} minTickGap={22} />
+            <YAxis
+              width={48}
+              domain={dominio}
+              tick={{ fill: '#5c7370', fontSize: 12 }}
+              tickLine={false}
+              axisLine={false}
+              tickFormatter={(v: number) => fmtNum(v, 0)}
+              label={{ value: unidade, angle: -90, position: 'insideLeft', fill: '#5c7370', fontSize: 12 }}
+            />
+            <Tooltip content={(props) => <TooltipClima {...props} unidade={unidade} decimais={decimais} series={series} />} />
+            {areas.map((a) => <ReferenceArea key={a.key} x1={a.x1} x2={a.x2} fill={a.fill} fillOpacity={0.72} ifOverflow="extendDomain" />)}
+            {series.map((s) => tipo === 'linha'
+              ? <Line key={s.nome} type="monotone" dataKey={s.nome} stroke={s.cor} strokeWidth={2.5} dot={false} activeDot={{ r: 4 }} />
+              : <Bar key={s.nome} dataKey={s.nome} fill={s.cor} maxBarSize={18} />)}
+            <Brush dataKey="rotulo" height={24} stroke="#0b6b63" fill="#f4f7f5" travellerWidth={9} />
+          </ComposedChart>
+        </ResponsiveContainer>
       </div>
-
-      <Brush n={n} faixa={[b0, b1]} onChange={setFaixa} esq={MARGEM.esq} dir={MARGEM.dir} />
 
       <footer className="legend">
         <ul>
@@ -211,83 +150,11 @@ export function TimeSeriesChart(props: Props) {
               {s.nome}
             </li>
           ))}
-          <li>
-            <i className="swatch swatch--bar" style={{ background: COR_EL_NINO }} />
-            El Niño
-          </li>
-          <li>
-            <i className="swatch swatch--bar" style={{ background: COR_LA_NINA }} />
-            La Niña
-          </li>
+          <li><i className="swatch swatch--bar" style={{ background: COR_EL_NINO }} />El Niño</li>
+          <li><i className="swatch swatch--bar" style={{ background: COR_LA_NINA }} />La Niña</li>
         </ul>
-        <span className="legend__hint">Arraste a barra inferior para ampliar</span>
+        <span className="legend__hint">Use a barra inferior para ampliar</span>
       </footer>
     </article>
-  )
-}
-
-interface BrushProps {
-  n: number
-  faixa: [number, number]
-  onChange: (f: [number, number]) => void
-  esq: number
-  dir: number
-}
-
-function Brush({ n, faixa, onChange, esq, dir }: BrushProps) {
-  const trilha = useRef<HTMLDivElement>(null)
-  const drag = useRef<{ modo: 'l' | 'r' | 'm'; x: number; f: [number, number] } | null>(null)
-  const minimo = Math.min(n, 3)
-  const [a, b] = faixa
-
-  function mover(e: React.PointerEvent) {
-    const d = drag.current
-    if (!d || !trilha.current) return
-    const largura = trilha.current.getBoundingClientRect().width
-    const delta = Math.round(((e.clientX - d.x) / largura) * n)
-    let [x0, x1] = d.f
-    if (d.modo === 'l') x0 = Math.max(0, Math.min(x1 - minimo + 1, x0 + delta))
-    else if (d.modo === 'r') x1 = Math.min(n - 1, Math.max(x0 + minimo - 1, x1 + delta))
-    else {
-      const w = x1 - x0
-      x0 = Math.max(0, Math.min(n - 1 - w, x0 + delta))
-      x1 = x0 + w
-    }
-    onChange([x0, x1])
-  }
-
-  function iniciar(modo: 'l' | 'r' | 'm') {
-    return (e: React.PointerEvent) => {
-      e.stopPropagation()
-      drag.current = { modo, x: e.clientX, f: faixa }
-      trilha.current?.setPointerCapture(e.pointerId)
-    }
-  }
-
-  function teclar(modo: 'l' | 'r') {
-    return (e: React.KeyboardEvent) => {
-      const passo = e.key === 'ArrowLeft' ? -1 : e.key === 'ArrowRight' ? 1 : 0
-      if (!passo) return
-      e.preventDefault()
-      if (modo === 'l') onChange([Math.max(0, Math.min(b - minimo + 1, a + passo)), b])
-      else onChange([a, Math.min(n - 1, Math.max(a + minimo - 1, b + passo))])
-    }
-  }
-
-  return (
-    <div className="brush" style={{ marginLeft: esq, marginRight: dir }}>
-      <div
-        ref={trilha}
-        className="brush__track"
-        onPointerMove={mover}
-        onPointerUp={() => (drag.current = null)}
-        onPointerCancel={() => (drag.current = null)}
-      >
-        <div className="brush__sel" style={{ left: `${(a / n) * 100}%`, width: `${((b - a + 1) / n) * 100}%` }} onPointerDown={iniciar('m')}>
-          <span className="brush__handle brush__handle--l" role="slider" tabIndex={0} aria-label="Início do intervalo" aria-valuemin={0} aria-valuemax={n - 1} aria-valuenow={a} onPointerDown={iniciar('l')} onKeyDown={teclar('l')} />
-          <span className="brush__handle brush__handle--r" role="slider" tabIndex={0} aria-label="Fim do intervalo" aria-valuemin={0} aria-valuemax={n - 1} aria-valuenow={b} onPointerDown={iniciar('r')} onKeyDown={teclar('r')} />
-        </div>
-      </div>
-    </div>
   )
 }

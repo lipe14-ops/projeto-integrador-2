@@ -1,6 +1,3 @@
-// Mapa esquemático de Goiás: contorno simplificado + malha de células (Voronoi) que representa
-// os municípios. Os municípios cadastrados em `MUNICIPIOS` ficam nas coordenadas reais.
-// Para produção, troque por GeoJSON oficial do IBGE (malhas municipais) sem mudar o componente do mapa.
 import { MUNICIPIOS } from './climate.ts'
 
 type P = [number, number] // [lon, lat]

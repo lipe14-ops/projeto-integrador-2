@@ -22,17 +22,11 @@ interface Props {
 }
 
 const COR_COMPARACAO = '#7a5aa6'
-const JANELAS: [Janela, string][] = [
-  ['12m', '12 meses'],
-  ['5a', '5 anos'],
-  ['10a', '10 anos'],
-  ['custom', 'Personalizado'],
-]
 const slug = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/gi, '-').toLowerCase()
 
 export function AnalysisSection({ municipio, mesDe, mesAte, serie, enso }: Props) {
-  const [gran, setGran] = useState<Granularidade>('mensal')
-  const [janela, setJanela] = useState<Janela>('custom')
+  const [gran] = useState<Granularidade>('mensal')
+  const [janela] = useState<Janela>('custom')
   const [comparando, setComparando] = useState(false)
   const [outroId, setOutroId] = useState<string>('')
 
