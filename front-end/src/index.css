@@ -1173,6 +1173,13 @@ select.input {
   grid-column: 1 / -1;
 }
 
+.about-context-note {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 .about-steps {
   display: grid;
   gap: 18px;

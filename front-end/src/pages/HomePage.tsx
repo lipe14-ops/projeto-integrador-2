@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnalysisSection } from '../components/AnalysisSection'
 import { MunicipioCard } from '../components/MunicipioCard'
 import MapaBrasil from '../components/MapaBrasil/MapaBrasil'
-import { Methodology } from '../components/Methodology'
 import { SearchFilters, type Filtros } from '../components/SearchFilters'
 import { SummaryCards } from '../components/SummaryCards'
 import { ANO_FIM, ANO_INICIO, mediaPeriodo, mesFinalDoAno, mesInicialDoAno, registrarSerieReal, type Municipio, type SerieClima } from '../data/climate'
@@ -113,7 +112,6 @@ export default function HomePage() {
         <SummaryCards {...resumo} />
         <AnalysisSection municipio={filtros.municipio} mesDe={mesDe} mesAte={mesAte} serie={serie!} enso={enso} />
       </>}
-      <Methodology />
     </div>
   )
 }
