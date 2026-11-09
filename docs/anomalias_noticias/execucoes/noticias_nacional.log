@@ -1,0 +1,25 @@
+2026-11-08 21:16:32,027 INFO climate_news.orchestrator: investigação ca0d56f8-a129-4d99-9ad7-184ad1b82a83: 22 tarefas
+[1] Porto Velho/RO: completed, 22 datas, 14 verificadas, 81 rejeitadas (5.0 min)
+2026-11-08 21:21:35,338 INFO climate_news.orchestrator: investigação 268fb076-b2c9-4c03-b1cb-8f14eecc89b2: 29 tarefas
+[2] Manaus/AM: completed, 29 datas, 41 verificadas, 84 rejeitadas (7.0 min)
+2026-11-08 21:28:32,613 INFO climate_news.orchestrator: investigação a1540c51-ad4c-41b7-8ab6-b670de7556dc: 29 tarefas
+[3] Ananindeua/PA: completed, 29 datas, 7 verificadas, 21 rejeitadas (2.8 min)
+2026-11-08 21:31:19,105 INFO climate_news.orchestrator: investigação 16254d97-1873-43ca-ad06-a2e2bcecf558: 48 tarefas
+[4] Boa Vista/RR: completed, 48 datas, 0 verificadas, 288 rejeitadas (2.4 min)
+2026-11-08 21:33:45,195 INFO climate_news.orchestrator: investigação 78613de5-2f74-42cb-9206-060f09bb4d32: 27 tarefas
+[5] Macapá/AP: completed, 27 datas, 22 verificadas, 77 rejeitadas (5.2 min)
+2026-11-08 21:38:59,298 INFO climate_news.orchestrator: investigação 18cc83e1-9781-4a1b-b4db-32b650bd9a27: 32 tarefas
+[6] Rio Branco/AC: completed, 32 datas, 0 verificadas, 192 rejeitadas (1.8 min)
+2026-11-08 21:40:48,231 INFO climate_news.orchestrator: investigação 9ad8dd1a-b5fe-492d-ac2f-c6bc87e2771e: 35 tarefas
+[7] Santarém/PA: completed, 35 datas, 13 verificadas, 45 rejeitadas (5.3 min)
+2026-11-08 21:46:08,958 INFO climate_news.orchestrator: investigação e1e15303-01dd-4ecc-b195-ce59e33d6be2: 29 tarefas
+[8] Palmas/TO: completed, 29 datas, 0 verificadas, 174 rejeitadas (1.7 min)
+2026-11-08 21:47:53,687 INFO climate_news.orchestrator: investigação 1b381a6b-f789-41c7-8dd7-957b18ae0c02: 48 tarefas
+[9] Parauapebas/PA: completed, 48 datas, 31 verificadas, 71 rejeitadas (5.1 min)
+2026-11-08 21:52:58,005 INFO climate_news.orchestrator: investigação d15a5f4e-ec24-4335-896e-6aa34755db00: 47 tarefas
+[10] Marabá/PA: completed, 47 datas, 22 verificadas, 87 rejeitadas (5.4 min)
+2026-11-08 21:58:19,088 INFO climate_news.orchestrator: investigação ff9ef728-9fb8-43e0-81bc-dbd2a0f5a139: 51 tarefas
+[11] São Luís/MA: completed, 51 datas, 55 verificadas, 150 rejeitadas (10.6 min)
+2026-11-08 22:08:58,018 INFO climate_news.orchestrator: investigação ba522967-7a59-486c-9c00-5d650c83a289: 39 tarefas
+[12] Teresina/PI: completed, 39 datas, 52 verificadas, 94 rejeitadas (7.5 min)
+2026-11-08 22:16:26,793 INFO climate_news.orchestrator: investigação 8ea373db-a841-4573-ac31-a1a51ab22bba: 47 tarefas

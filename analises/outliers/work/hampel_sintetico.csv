@@ -1,0 +1,1153 @@
+municipio,variavel,split,magnitude,meia_janela_dias,limiar,variante,n_injetadas,tp,fp_novos,fp_brutos,recall,precisao,precisao_bruta
+Manaus,temperatura,validacao,3,3,2.5,centrada,20,12,0,108,0.6,1.0,0.1
+Manaus,temperatura,validacao,3,3,3.0,centrada,20,11,0,73,0.55,1.0,0.13095238095238096
+Manaus,temperatura,validacao,3,3,3.5,centrada,20,9,0,53,0.45,1.0,0.14516129032258066
+Manaus,temperatura,validacao,3,3,4.0,centrada,20,9,0,40,0.45,1.0,0.1836734693877551
+Manaus,temperatura,validacao,3,7,2.5,centrada,20,14,0,56,0.7,1.0,0.2
+Manaus,temperatura,validacao,3,7,3.0,centrada,20,11,1,28,0.55,0.9166666666666666,0.28205128205128205
+Manaus,temperatura,validacao,3,7,3.5,centrada,20,7,0,19,0.35,1.0,0.2692307692307692
+Manaus,temperatura,validacao,3,7,4.0,centrada,20,6,0,11,0.3,1.0,0.35294117647058826
+Manaus,temperatura,validacao,3,15,2.5,centrada,20,11,0,35,0.55,1.0,0.2391304347826087
+Manaus,temperatura,validacao,3,15,3.0,centrada,20,11,0,15,0.55,1.0,0.4230769230769231
+Manaus,temperatura,validacao,3,15,3.5,centrada,20,8,0,8,0.4,1.0,0.5
+Manaus,temperatura,validacao,3,15,4.0,centrada,20,3,0,5,0.15,1.0,0.375
+Manaus,temperatura,validacao,3,3,2.5,causal,20,9,4,134,0.45,0.6923076923076923,0.06293706293706294
+Manaus,temperatura,validacao,3,3,3.0,causal,20,8,2,91,0.4,0.8,0.08080808080808081
+Manaus,temperatura,validacao,3,3,3.5,causal,20,4,1,69,0.2,0.8,0.0547945205479452
+Manaus,temperatura,validacao,3,3,4.0,causal,20,4,1,51,0.2,0.8,0.07272727272727272
+Manaus,temperatura,validacao,3,7,2.5,causal,20,9,1,82,0.45,0.9,0.0989010989010989
+Manaus,temperatura,validacao,3,7,3.0,causal,20,7,1,46,0.35,0.875,0.1320754716981132
+Manaus,temperatura,validacao,3,7,3.5,causal,20,5,0,28,0.25,1.0,0.15151515151515152
+Manaus,temperatura,validacao,3,7,4.0,causal,20,3,0,22,0.15,1.0,0.12
+Manaus,temperatura,validacao,3,15,2.5,causal,20,10,1,49,0.5,0.9090909090909091,0.1694915254237288
+Manaus,temperatura,validacao,3,15,3.0,causal,20,8,0,14,0.4,1.0,0.36363636363636365
+Manaus,temperatura,validacao,3,15,3.5,causal,20,5,0,5,0.25,1.0,0.5
+Manaus,temperatura,validacao,3,15,4.0,causal,20,3,0,2,0.15,1.0,0.6
+Manaus,temperatura,validacao,5,3,2.5,centrada,20,19,0,108,0.95,1.0,0.14960629921259844
+Manaus,temperatura,validacao,5,3,3.0,centrada,20,18,0,73,0.9,1.0,0.1978021978021978
+Manaus,temperatura,validacao,5,3,3.5,centrada,20,16,0,53,0.8,1.0,0.2318840579710145
+Manaus,temperatura,validacao,5,3,4.0,centrada,20,13,0,40,0.65,1.0,0.24528301886792453
+Manaus,temperatura,validacao,5,7,2.5,centrada,20,18,0,56,0.9,1.0,0.24324324324324326
+Manaus,temperatura,validacao,5,7,3.0,centrada,20,15,1,28,0.75,0.9375,0.3488372093023256
+Manaus,temperatura,validacao,5,7,3.5,centrada,20,15,0,19,0.75,1.0,0.4411764705882353
+Manaus,temperatura,validacao,5,7,4.0,centrada,20,14,0,11,0.7,1.0,0.56
+Manaus,temperatura,validacao,5,15,2.5,centrada,20,20,0,35,1.0,1.0,0.36363636363636365
+Manaus,temperatura,validacao,5,15,3.0,centrada,20,17,0,15,0.85,1.0,0.53125
+Manaus,temperatura,validacao,5,15,3.5,centrada,20,14,0,8,0.7,1.0,0.6363636363636364
+Manaus,temperatura,validacao,5,15,4.0,centrada,20,12,0,5,0.6,1.0,0.7058823529411765
+Manaus,temperatura,validacao,5,3,2.5,causal,20,18,4,134,0.9,0.8181818181818182,0.11842105263157894
+Manaus,temperatura,validacao,5,3,3.0,causal,20,17,2,91,0.85,0.8947368421052632,0.1574074074074074
+Manaus,temperatura,validacao,5,3,3.5,causal,20,12,1,69,0.6,0.9230769230769231,0.14814814814814814
+Manaus,temperatura,validacao,5,3,4.0,causal,20,10,1,51,0.5,0.9090909090909091,0.16393442622950818
+Manaus,temperatura,validacao,5,7,2.5,causal,20,18,1,82,0.9,0.9473684210526315,0.18
+Manaus,temperatura,validacao,5,7,3.0,causal,20,14,1,46,0.7,0.9333333333333333,0.23333333333333334
+Manaus,temperatura,validacao,5,7,3.5,causal,20,13,0,28,0.65,1.0,0.3170731707317073
+Manaus,temperatura,validacao,5,7,4.0,causal,20,10,0,22,0.5,1.0,0.3125
+Manaus,temperatura,validacao,5,15,2.5,causal,20,18,1,49,0.9,0.9473684210526315,0.26865671641791045
+Manaus,temperatura,validacao,5,15,3.0,causal,20,16,0,14,0.8,1.0,0.5333333333333333
+Manaus,temperatura,validacao,5,15,3.5,causal,20,14,0,5,0.7,1.0,0.7368421052631579
+Manaus,temperatura,validacao,5,15,4.0,causal,20,11,0,2,0.55,1.0,0.8461538461538461
+Manaus,temperatura,validacao,8,3,2.5,centrada,20,20,0,108,1.0,1.0,0.15625
+Manaus,temperatura,validacao,8,3,3.0,centrada,20,20,0,73,1.0,1.0,0.21505376344086022
+Manaus,temperatura,validacao,8,3,3.5,centrada,20,20,0,53,1.0,1.0,0.273972602739726
+Manaus,temperatura,validacao,8,3,4.0,centrada,20,19,0,40,0.95,1.0,0.3220338983050847
+Manaus,temperatura,validacao,8,7,2.5,centrada,20,20,0,56,1.0,1.0,0.2631578947368421
+Manaus,temperatura,validacao,8,7,3.0,centrada,20,19,1,28,0.95,0.95,0.40425531914893614
+Manaus,temperatura,validacao,8,7,3.5,centrada,20,19,0,19,0.95,1.0,0.5
+Manaus,temperatura,validacao,8,7,4.0,centrada,20,19,0,11,0.95,1.0,0.6333333333333333
+Manaus,temperatura,validacao,8,15,2.5,centrada,20,20,0,35,1.0,1.0,0.36363636363636365
+Manaus,temperatura,validacao,8,15,3.0,centrada,20,20,0,15,1.0,1.0,0.5714285714285714
+Manaus,temperatura,validacao,8,15,3.5,centrada,20,20,0,8,1.0,1.0,0.7142857142857143
+Manaus,temperatura,validacao,8,15,4.0,centrada,20,20,0,5,1.0,1.0,0.8
+Manaus,temperatura,validacao,8,3,2.5,causal,20,19,4,134,0.95,0.8260869565217391,0.12418300653594772
+Manaus,temperatura,validacao,8,3,3.0,causal,20,19,2,91,0.95,0.9047619047619048,0.17272727272727273
+Manaus,temperatura,validacao,8,3,3.5,causal,20,19,1,69,0.95,0.95,0.2159090909090909
+Manaus,temperatura,validacao,8,3,4.0,causal,20,18,1,51,0.9,0.9473684210526315,0.2608695652173913
+Manaus,temperatura,validacao,8,7,2.5,causal,20,20,1,82,1.0,0.9523809523809523,0.19607843137254902
+Manaus,temperatura,validacao,8,7,3.0,causal,20,20,1,46,1.0,0.9523809523809523,0.30303030303030304
+Manaus,temperatura,validacao,8,7,3.5,causal,20,19,0,28,0.95,1.0,0.40425531914893614
+Manaus,temperatura,validacao,8,7,4.0,causal,20,18,0,22,0.9,1.0,0.45
+Manaus,temperatura,validacao,8,15,2.5,causal,20,20,1,49,1.0,0.9523809523809523,0.2898550724637681
+Manaus,temperatura,validacao,8,15,3.0,causal,20,20,0,14,1.0,1.0,0.5882352941176471
+Manaus,temperatura,validacao,8,15,3.5,causal,20,19,0,5,0.95,1.0,0.7916666666666666
+Manaus,temperatura,validacao,8,15,4.0,causal,20,19,0,2,0.95,1.0,0.9047619047619048
+Manaus,temperatura,teste,3,3,2.5,centrada,20,9,0,64,0.45,1.0,0.1232876712328767
+Manaus,temperatura,teste,3,3,3.0,centrada,20,6,0,38,0.3,1.0,0.13636363636363635
+Manaus,temperatura,teste,3,3,3.5,centrada,20,5,0,24,0.25,1.0,0.1724137931034483
+Manaus,temperatura,teste,3,3,4.0,centrada,20,5,0,19,0.25,1.0,0.20833333333333334
+Manaus,temperatura,teste,3,7,2.5,centrada,20,11,0,40,0.55,1.0,0.21568627450980393
+Manaus,temperatura,teste,3,7,3.0,centrada,20,10,0,19,0.5,1.0,0.3448275862068966
+Manaus,temperatura,teste,3,7,3.5,centrada,20,6,0,11,0.3,1.0,0.35294117647058826
+Manaus,temperatura,teste,3,7,4.0,centrada,20,4,0,5,0.2,1.0,0.4444444444444444
+Manaus,temperatura,teste,3,15,2.5,centrada,20,11,0,29,0.55,1.0,0.275
+Manaus,temperatura,teste,3,15,3.0,centrada,20,9,0,11,0.45,1.0,0.45
+Manaus,temperatura,teste,3,15,3.5,centrada,20,6,0,5,0.3,1.0,0.5454545454545454
+Manaus,temperatura,teste,3,15,4.0,centrada,20,5,0,4,0.25,1.0,0.5555555555555556
+Manaus,temperatura,teste,3,3,2.5,causal,20,11,0,93,0.55,1.0,0.10576923076923077
+Manaus,temperatura,teste,3,3,3.0,causal,20,8,0,72,0.4,1.0,0.1
+Manaus,temperatura,teste,3,3,3.5,causal,20,7,0,53,0.35,1.0,0.11666666666666667
+Manaus,temperatura,teste,3,3,4.0,causal,20,5,0,35,0.25,1.0,0.125
+Manaus,temperatura,teste,3,7,2.5,causal,20,11,0,57,0.55,1.0,0.16176470588235295
+Manaus,temperatura,teste,3,7,3.0,causal,20,7,0,37,0.35,1.0,0.1590909090909091
+Manaus,temperatura,teste,3,7,3.5,causal,20,6,0,23,0.3,1.0,0.20689655172413793
+Manaus,temperatura,teste,3,7,4.0,causal,20,4,0,15,0.2,1.0,0.21052631578947367
+Manaus,temperatura,teste,3,15,2.5,causal,20,13,1,44,0.65,0.9285714285714286,0.22807017543859648
+Manaus,temperatura,teste,3,15,3.0,causal,20,8,0,24,0.4,1.0,0.25
+Manaus,temperatura,teste,3,15,3.5,causal,20,5,1,12,0.25,0.8333333333333334,0.29411764705882354
+Manaus,temperatura,teste,3,15,4.0,causal,20,4,0,4,0.2,1.0,0.5
+Manaus,temperatura,teste,5,3,2.5,centrada,20,19,0,64,0.95,1.0,0.2289156626506024
+Manaus,temperatura,teste,5,3,3.0,centrada,20,18,0,38,0.9,1.0,0.32142857142857145
+Manaus,temperatura,teste,5,3,3.5,centrada,20,15,0,24,0.75,1.0,0.38461538461538464
+Manaus,temperatura,teste,5,3,4.0,centrada,20,11,0,19,0.55,1.0,0.36666666666666664
+Manaus,temperatura,teste,5,7,2.5,centrada,20,18,0,40,0.9,1.0,0.3103448275862069
+Manaus,temperatura,teste,5,7,3.0,centrada,20,17,0,19,0.85,1.0,0.4722222222222222
+Manaus,temperatura,teste,5,7,3.5,centrada,20,16,0,11,0.8,1.0,0.5925925925925926
+Manaus,temperatura,teste,5,7,4.0,centrada,20,14,0,5,0.7,1.0,0.7368421052631579
+Manaus,temperatura,teste,5,15,2.5,centrada,20,17,0,29,0.85,1.0,0.3695652173913043
+Manaus,temperatura,teste,5,15,3.0,centrada,20,16,0,11,0.8,1.0,0.5925925925925926
+Manaus,temperatura,teste,5,15,3.5,centrada,20,14,0,5,0.7,1.0,0.7368421052631579
+Manaus,temperatura,teste,5,15,4.0,centrada,20,11,0,4,0.55,1.0,0.7333333333333333
+Manaus,temperatura,teste,5,3,2.5,causal,20,16,0,93,0.8,1.0,0.14678899082568808
+Manaus,temperatura,teste,5,3,3.0,causal,20,14,0,72,0.7,1.0,0.16279069767441862
+Manaus,temperatura,teste,5,3,3.5,causal,20,12,0,53,0.6,1.0,0.18461538461538463
+Manaus,temperatura,teste,5,3,4.0,causal,20,10,0,35,0.5,1.0,0.2222222222222222
+Manaus,temperatura,teste,5,7,2.5,causal,20,19,0,57,0.95,1.0,0.25
+Manaus,temperatura,teste,5,7,3.0,causal,20,15,0,37,0.75,1.0,0.28846153846153844
+Manaus,temperatura,teste,5,7,3.5,causal,20,13,0,23,0.65,1.0,0.3611111111111111
+Manaus,temperatura,teste,5,7,4.0,causal,20,12,0,15,0.6,1.0,0.4444444444444444
+Manaus,temperatura,teste,5,15,2.5,causal,20,18,1,44,0.9,0.9473684210526315,0.2903225806451613
+Manaus,temperatura,teste,5,15,3.0,causal,20,18,0,24,0.9,1.0,0.42857142857142855
+Manaus,temperatura,teste,5,15,3.5,causal,20,17,1,12,0.85,0.9444444444444444,0.5862068965517241
+Manaus,temperatura,teste,5,15,4.0,causal,20,14,0,4,0.7,1.0,0.7777777777777778
+Manaus,temperatura,teste,8,3,2.5,centrada,20,20,0,64,1.0,1.0,0.23809523809523808
+Manaus,temperatura,teste,8,3,3.0,centrada,20,20,0,38,1.0,1.0,0.3448275862068966
+Manaus,temperatura,teste,8,3,3.5,centrada,20,19,0,24,0.95,1.0,0.4418604651162791
+Manaus,temperatura,teste,8,3,4.0,centrada,20,19,0,19,0.95,1.0,0.5
+Manaus,temperatura,teste,8,7,2.5,centrada,20,20,0,40,1.0,1.0,0.3333333333333333
+Manaus,temperatura,teste,8,7,3.0,centrada,20,20,0,19,1.0,1.0,0.5128205128205128
+Manaus,temperatura,teste,8,7,3.5,centrada,20,20,0,11,1.0,1.0,0.6451612903225806
+Manaus,temperatura,teste,8,7,4.0,centrada,20,19,0,5,0.95,1.0,0.7916666666666666
+Manaus,temperatura,teste,8,15,2.5,centrada,20,20,0,29,1.0,1.0,0.40816326530612246
+Manaus,temperatura,teste,8,15,3.0,centrada,20,20,0,11,1.0,1.0,0.6451612903225806
+Manaus,temperatura,teste,8,15,3.5,centrada,20,20,0,5,1.0,1.0,0.8
+Manaus,temperatura,teste,8,15,4.0,centrada,20,17,0,4,0.85,1.0,0.8095238095238095
+Manaus,temperatura,teste,8,3,2.5,causal,20,20,0,93,1.0,1.0,0.17699115044247787
+Manaus,temperatura,teste,8,3,3.0,causal,20,19,0,72,0.95,1.0,0.2087912087912088
+Manaus,temperatura,teste,8,3,3.5,causal,20,19,0,53,0.95,1.0,0.2638888888888889
+Manaus,temperatura,teste,8,3,4.0,causal,20,18,0,35,0.9,1.0,0.33962264150943394
+Manaus,temperatura,teste,8,7,2.5,causal,20,19,0,57,0.95,1.0,0.25
+Manaus,temperatura,teste,8,7,3.0,causal,20,19,0,37,0.95,1.0,0.3392857142857143
+Manaus,temperatura,teste,8,7,3.5,causal,20,19,0,23,0.95,1.0,0.4523809523809524
+Manaus,temperatura,teste,8,7,4.0,causal,20,18,0,15,0.9,1.0,0.5454545454545454
+Manaus,temperatura,teste,8,15,2.5,causal,20,20,1,44,1.0,0.9523809523809523,0.3125
+Manaus,temperatura,teste,8,15,3.0,causal,20,20,0,24,1.0,1.0,0.45454545454545453
+Manaus,temperatura,teste,8,15,3.5,causal,20,20,1,12,1.0,0.9523809523809523,0.625
+Manaus,temperatura,teste,8,15,4.0,causal,20,19,0,4,0.95,1.0,0.8260869565217391
+Manaus,umidade,validacao,3,3,2.5,centrada,20,11,2,103,0.55,0.8461538461538461,0.09649122807017543
+Manaus,umidade,validacao,3,3,3.0,centrada,20,11,1,69,0.55,0.9166666666666666,0.1375
+Manaus,umidade,validacao,3,3,3.5,centrada,20,9,1,48,0.45,0.9,0.15789473684210525
+Manaus,umidade,validacao,3,3,4.0,centrada,20,7,1,37,0.35,0.875,0.1590909090909091
+Manaus,umidade,validacao,3,7,2.5,centrada,20,12,1,51,0.6,0.9230769230769231,0.19047619047619047
+Manaus,umidade,validacao,3,7,3.0,centrada,20,7,2,21,0.35,0.7777777777777778,0.25
+Manaus,umidade,validacao,3,7,3.5,centrada,20,6,1,9,0.3,0.8571428571428571,0.4
+Manaus,umidade,validacao,3,7,4.0,centrada,20,4,0,4,0.2,1.0,0.5
+Manaus,umidade,validacao,3,15,2.5,centrada,20,10,1,37,0.5,0.9090909090909091,0.2127659574468085
+Manaus,umidade,validacao,3,15,3.0,centrada,20,7,1,17,0.35,0.875,0.2916666666666667
+Manaus,umidade,validacao,3,15,3.5,centrada,20,4,0,8,0.2,1.0,0.3333333333333333
+Manaus,umidade,validacao,3,15,4.0,centrada,20,3,0,0,0.15,1.0,1.0
+Manaus,umidade,validacao,3,3,2.5,causal,20,10,1,118,0.5,0.9090909090909091,0.078125
+Manaus,umidade,validacao,3,3,3.0,causal,20,9,0,87,0.45,1.0,0.09375
+Manaus,umidade,validacao,3,3,3.5,causal,20,9,0,59,0.45,1.0,0.1323529411764706
+Manaus,umidade,validacao,3,3,4.0,causal,20,8,0,46,0.4,1.0,0.14814814814814814
+Manaus,umidade,validacao,3,7,2.5,causal,20,11,0,83,0.55,1.0,0.11702127659574468
+Manaus,umidade,validacao,3,7,3.0,causal,20,7,0,53,0.35,1.0,0.11666666666666667
+Manaus,umidade,validacao,3,7,3.5,causal,20,4,0,31,0.2,1.0,0.11428571428571428
+Manaus,umidade,validacao,3,7,4.0,causal,20,3,0,20,0.15,1.0,0.13043478260869565
+Manaus,umidade,validacao,3,15,2.5,causal,20,11,1,57,0.55,0.9166666666666666,0.16176470588235295
+Manaus,umidade,validacao,3,15,3.0,causal,20,8,0,34,0.4,1.0,0.19047619047619047
+Manaus,umidade,validacao,3,15,3.5,causal,20,6,1,14,0.3,0.8571428571428571,0.3
+Manaus,umidade,validacao,3,15,4.0,causal,20,2,0,3,0.1,1.0,0.4
+Manaus,umidade,validacao,5,3,2.5,centrada,20,16,2,103,0.8,0.8888888888888888,0.13445378151260504
+Manaus,umidade,validacao,5,3,3.0,centrada,20,13,1,69,0.65,0.9285714285714286,0.15853658536585366
+Manaus,umidade,validacao,5,3,3.5,centrada,20,12,1,48,0.6,0.9230769230769231,0.2
+Manaus,umidade,validacao,5,3,4.0,centrada,20,10,1,37,0.5,0.9090909090909091,0.2127659574468085
+Manaus,umidade,validacao,5,7,2.5,centrada,20,14,1,51,0.7,0.9333333333333333,0.2153846153846154
+Manaus,umidade,validacao,5,7,3.0,centrada,20,13,2,21,0.65,0.8666666666666667,0.38235294117647056
+Manaus,umidade,validacao,5,7,3.5,centrada,20,10,1,9,0.5,0.9090909090909091,0.5263157894736842
+Manaus,umidade,validacao,5,7,4.0,centrada,20,7,0,4,0.35,1.0,0.6363636363636364
+Manaus,umidade,validacao,5,15,2.5,centrada,20,13,1,37,0.65,0.9285714285714286,0.26
+Manaus,umidade,validacao,5,15,3.0,centrada,20,12,1,17,0.6,0.9230769230769231,0.41379310344827586
+Manaus,umidade,validacao,5,15,3.5,centrada,20,10,0,8,0.5,1.0,0.5555555555555556
+Manaus,umidade,validacao,5,15,4.0,centrada,20,8,0,0,0.4,1.0,1.0
+Manaus,umidade,validacao,5,3,2.5,causal,20,13,1,118,0.65,0.9285714285714286,0.09923664122137404
+Manaus,umidade,validacao,5,3,3.0,causal,20,11,0,87,0.55,1.0,0.11224489795918367
+Manaus,umidade,validacao,5,3,3.5,causal,20,11,0,59,0.55,1.0,0.15714285714285714
+Manaus,umidade,validacao,5,3,4.0,causal,20,10,0,46,0.5,1.0,0.17857142857142858
+Manaus,umidade,validacao,5,7,2.5,causal,20,12,0,83,0.6,1.0,0.12631578947368421
+Manaus,umidade,validacao,5,7,3.0,causal,20,10,0,53,0.5,1.0,0.15873015873015872
+Manaus,umidade,validacao,5,7,3.5,causal,20,9,0,31,0.45,1.0,0.225
+Manaus,umidade,validacao,5,7,4.0,causal,20,9,0,20,0.45,1.0,0.3103448275862069
+Manaus,umidade,validacao,5,15,2.5,causal,20,14,1,57,0.7,0.9333333333333333,0.19718309859154928
+Manaus,umidade,validacao,5,15,3.0,causal,20,12,0,34,0.6,1.0,0.2608695652173913
+Manaus,umidade,validacao,5,15,3.5,causal,20,10,1,14,0.5,0.9090909090909091,0.4166666666666667
+Manaus,umidade,validacao,5,15,4.0,causal,20,8,0,3,0.4,1.0,0.7272727272727273
+Manaus,umidade,validacao,8,3,2.5,centrada,20,16,2,103,0.8,0.8888888888888888,0.13445378151260504
+Manaus,umidade,validacao,8,3,3.0,centrada,20,15,1,69,0.75,0.9375,0.17857142857142858
+Manaus,umidade,validacao,8,3,3.5,centrada,20,14,1,48,0.7,0.9333333333333333,0.22580645161290322
+Manaus,umidade,validacao,8,3,4.0,centrada,20,14,1,37,0.7,0.9333333333333333,0.27450980392156865
+Manaus,umidade,validacao,8,7,2.5,centrada,20,15,1,51,0.75,0.9375,0.22727272727272727
+Manaus,umidade,validacao,8,7,3.0,centrada,20,14,2,21,0.7,0.875,0.4
+Manaus,umidade,validacao,8,7,3.5,centrada,20,11,1,9,0.55,0.9166666666666666,0.55
+Manaus,umidade,validacao,8,7,4.0,centrada,20,10,0,4,0.5,1.0,0.7142857142857143
+Manaus,umidade,validacao,8,15,2.5,centrada,20,13,1,37,0.65,0.9285714285714286,0.26
+Manaus,umidade,validacao,8,15,3.0,centrada,20,12,1,17,0.6,0.9230769230769231,0.41379310344827586
+Manaus,umidade,validacao,8,15,3.5,centrada,20,11,0,8,0.55,1.0,0.5789473684210527
+Manaus,umidade,validacao,8,15,4.0,centrada,20,10,0,0,0.5,1.0,1.0
+Manaus,umidade,validacao,8,3,2.5,causal,20,15,1,118,0.75,0.9375,0.11278195488721804
+Manaus,umidade,validacao,8,3,3.0,causal,20,12,0,87,0.6,1.0,0.12121212121212122
+Manaus,umidade,validacao,8,3,3.5,causal,20,12,0,59,0.6,1.0,0.16901408450704225
+Manaus,umidade,validacao,8,3,4.0,causal,20,10,0,46,0.5,1.0,0.17857142857142858
+Manaus,umidade,validacao,8,7,2.5,causal,20,13,0,83,0.65,1.0,0.13541666666666666
+Manaus,umidade,validacao,8,7,3.0,causal,20,11,0,53,0.55,1.0,0.171875
+Manaus,umidade,validacao,8,7,3.5,causal,20,10,0,31,0.5,1.0,0.24390243902439024
+Manaus,umidade,validacao,8,7,4.0,causal,20,9,0,20,0.45,1.0,0.3103448275862069
+Manaus,umidade,validacao,8,15,2.5,causal,20,14,1,57,0.7,0.9333333333333333,0.19718309859154928
+Manaus,umidade,validacao,8,15,3.0,causal,20,12,0,34,0.6,1.0,0.2608695652173913
+Manaus,umidade,validacao,8,15,3.5,causal,20,10,1,14,0.5,0.9090909090909091,0.4166666666666667
+Manaus,umidade,validacao,8,15,4.0,causal,20,10,0,3,0.5,1.0,0.7692307692307693
+Manaus,umidade,teste,3,3,2.5,centrada,20,10,0,78,0.5,1.0,0.11363636363636363
+Manaus,umidade,teste,3,3,3.0,centrada,20,7,0,57,0.35,1.0,0.109375
+Manaus,umidade,teste,3,3,3.5,centrada,20,6,0,38,0.3,1.0,0.13636363636363635
+Manaus,umidade,teste,3,3,4.0,centrada,20,6,0,25,0.3,1.0,0.1935483870967742
+Manaus,umidade,teste,3,7,2.5,centrada,20,10,1,52,0.5,0.9090909090909091,0.16129032258064516
+Manaus,umidade,teste,3,7,3.0,centrada,20,7,1,28,0.35,0.875,0.2
+Manaus,umidade,teste,3,7,3.5,centrada,20,6,0,13,0.3,1.0,0.3157894736842105
+Manaus,umidade,teste,3,7,4.0,centrada,20,3,0,5,0.15,1.0,0.375
+Manaus,umidade,teste,3,15,2.5,centrada,20,7,0,47,0.35,1.0,0.12962962962962962
+Manaus,umidade,teste,3,15,3.0,centrada,20,5,0,24,0.25,1.0,0.1724137931034483
+Manaus,umidade,teste,3,15,3.5,centrada,20,3,0,11,0.15,1.0,0.21428571428571427
+Manaus,umidade,teste,3,15,4.0,centrada,20,3,0,2,0.15,1.0,0.6
+Manaus,umidade,teste,3,3,2.5,causal,20,9,2,134,0.45,0.8181818181818182,0.06293706293706294
+Manaus,umidade,teste,3,3,3.0,causal,20,7,0,91,0.35,1.0,0.07142857142857142
+Manaus,umidade,teste,3,3,3.5,causal,20,7,0,60,0.35,1.0,0.1044776119402985
+Manaus,umidade,teste,3,3,4.0,causal,20,7,0,41,0.35,1.0,0.14583333333333334
+Manaus,umidade,teste,3,7,2.5,causal,20,8,0,74,0.4,1.0,0.0975609756097561
+Manaus,umidade,teste,3,7,3.0,causal,20,7,0,46,0.35,1.0,0.1320754716981132
+Manaus,umidade,teste,3,7,3.5,causal,20,6,0,27,0.3,1.0,0.18181818181818182
+Manaus,umidade,teste,3,7,4.0,causal,20,3,0,16,0.15,1.0,0.15789473684210525
+Manaus,umidade,teste,3,15,2.5,causal,20,9,0,58,0.45,1.0,0.13432835820895522
+Manaus,umidade,teste,3,15,3.0,causal,20,7,0,31,0.35,1.0,0.18421052631578946
+Manaus,umidade,teste,3,15,3.5,causal,20,4,0,16,0.2,1.0,0.2
+Manaus,umidade,teste,3,15,4.0,causal,20,3,0,6,0.15,1.0,0.3333333333333333
+Manaus,umidade,teste,5,3,2.5,centrada,20,13,0,78,0.65,1.0,0.14285714285714285
+Manaus,umidade,teste,5,3,3.0,centrada,20,11,0,57,0.55,1.0,0.16176470588235295
+Manaus,umidade,teste,5,3,3.5,centrada,20,9,0,38,0.45,1.0,0.19148936170212766
+Manaus,umidade,teste,5,3,4.0,centrada,20,8,0,25,0.4,1.0,0.24242424242424243
+Manaus,umidade,teste,5,7,2.5,centrada,20,12,0,51,0.6,1.0,0.19047619047619047
+Manaus,umidade,teste,5,7,3.0,centrada,20,10,0,27,0.5,1.0,0.2702702702702703
+Manaus,umidade,teste,5,7,3.5,centrada,20,10,0,13,0.5,1.0,0.43478260869565216
+Manaus,umidade,teste,5,7,4.0,centrada,20,10,0,5,0.5,1.0,0.6666666666666666
+Manaus,umidade,teste,5,15,2.5,centrada,20,11,0,47,0.55,1.0,0.1896551724137931
+Manaus,umidade,teste,5,15,3.0,centrada,20,8,0,24,0.4,1.0,0.25
+Manaus,umidade,teste,5,15,3.5,centrada,20,7,0,11,0.35,1.0,0.3888888888888889
+Manaus,umidade,teste,5,15,4.0,centrada,20,5,0,2,0.25,1.0,0.7142857142857143
+Manaus,umidade,teste,5,3,2.5,causal,20,10,0,132,0.5,1.0,0.07042253521126761
+Manaus,umidade,teste,5,3,3.0,causal,20,9,0,91,0.45,1.0,0.09
+Manaus,umidade,teste,5,3,3.5,causal,20,9,0,60,0.45,1.0,0.13043478260869565
+Manaus,umidade,teste,5,3,4.0,causal,20,9,0,41,0.45,1.0,0.18
+Manaus,umidade,teste,5,7,2.5,causal,20,9,0,74,0.45,1.0,0.10843373493975904
+Manaus,umidade,teste,5,7,3.0,causal,20,9,0,46,0.45,1.0,0.16363636363636364
+Manaus,umidade,teste,5,7,3.5,causal,20,7,0,27,0.35,1.0,0.20588235294117646
+Manaus,umidade,teste,5,7,4.0,causal,20,7,0,16,0.35,1.0,0.30434782608695654
+Manaus,umidade,teste,5,15,2.5,causal,20,12,0,58,0.6,1.0,0.17142857142857143
+Manaus,umidade,teste,5,15,3.0,causal,20,10,0,31,0.5,1.0,0.24390243902439024
+Manaus,umidade,teste,5,15,3.5,causal,20,7,0,16,0.35,1.0,0.30434782608695654
+Manaus,umidade,teste,5,15,4.0,causal,20,6,0,6,0.3,1.0,0.5
+Manaus,umidade,teste,8,3,2.5,centrada,20,14,0,78,0.7,1.0,0.15217391304347827
+Manaus,umidade,teste,8,3,3.0,centrada,20,13,0,57,0.65,1.0,0.18571428571428572
+Manaus,umidade,teste,8,3,3.5,centrada,20,12,0,38,0.6,1.0,0.24
+Manaus,umidade,teste,8,3,4.0,centrada,20,11,0,25,0.55,1.0,0.3055555555555556
+Manaus,umidade,teste,8,7,2.5,centrada,20,12,0,51,0.6,1.0,0.19047619047619047
+Manaus,umidade,teste,8,7,3.0,centrada,20,11,0,27,0.55,1.0,0.2894736842105263
+Manaus,umidade,teste,8,7,3.5,centrada,20,11,0,13,0.55,1.0,0.4583333333333333
+Manaus,umidade,teste,8,7,4.0,centrada,20,11,0,5,0.55,1.0,0.6875
+Manaus,umidade,teste,8,15,2.5,centrada,20,11,0,47,0.55,1.0,0.1896551724137931
+Manaus,umidade,teste,8,15,3.0,centrada,20,10,0,24,0.5,1.0,0.29411764705882354
+Manaus,umidade,teste,8,15,3.5,centrada,20,10,0,11,0.5,1.0,0.47619047619047616
+Manaus,umidade,teste,8,15,4.0,centrada,20,10,0,2,0.5,1.0,0.8333333333333334
+Manaus,umidade,teste,8,3,2.5,causal,20,10,0,132,0.5,1.0,0.07042253521126761
+Manaus,umidade,teste,8,3,3.0,causal,20,10,0,91,0.5,1.0,0.09900990099009901
+Manaus,umidade,teste,8,3,3.5,causal,20,10,0,60,0.5,1.0,0.14285714285714285
+Manaus,umidade,teste,8,3,4.0,causal,20,10,0,41,0.5,1.0,0.19607843137254902
+Manaus,umidade,teste,8,7,2.5,causal,20,11,0,74,0.55,1.0,0.12941176470588237
+Manaus,umidade,teste,8,7,3.0,causal,20,11,0,46,0.55,1.0,0.19298245614035087
+Manaus,umidade,teste,8,7,3.5,causal,20,8,0,27,0.4,1.0,0.22857142857142856
+Manaus,umidade,teste,8,7,4.0,causal,20,7,0,16,0.35,1.0,0.30434782608695654
+Manaus,umidade,teste,8,15,2.5,causal,20,14,0,58,0.7,1.0,0.19444444444444445
+Manaus,umidade,teste,8,15,3.0,causal,20,11,0,31,0.55,1.0,0.2619047619047619
+Manaus,umidade,teste,8,15,3.5,causal,20,10,0,16,0.5,1.0,0.38461538461538464
+Manaus,umidade,teste,8,15,4.0,causal,20,9,0,6,0.45,1.0,0.6
+Feira de Santana,temperatura,validacao,3,3,2.5,centrada,20,9,0,70,0.45,1.0,0.11392405063291139
+Feira de Santana,temperatura,validacao,3,3,3.0,centrada,20,8,0,42,0.4,1.0,0.16
+Feira de Santana,temperatura,validacao,3,3,3.5,centrada,20,8,0,29,0.4,1.0,0.21621621621621623
+Feira de Santana,temperatura,validacao,3,3,4.0,centrada,20,5,0,18,0.25,1.0,0.21739130434782608
+Feira de Santana,temperatura,validacao,3,7,2.5,centrada,20,7,2,57,0.35,0.7777777777777778,0.109375
+Feira de Santana,temperatura,validacao,3,7,3.0,centrada,20,4,1,35,0.2,0.8,0.10256410256410256
+Feira de Santana,temperatura,validacao,3,7,3.5,centrada,20,2,1,21,0.1,0.6666666666666666,0.08695652173913043
+Feira de Santana,temperatura,validacao,3,7,4.0,centrada,20,2,1,14,0.1,0.6666666666666666,0.125
+Feira de Santana,temperatura,validacao,3,15,2.5,centrada,20,9,0,39,0.45,1.0,0.1875
+Feira de Santana,temperatura,validacao,3,15,3.0,centrada,20,7,1,25,0.35,0.875,0.21875
+Feira de Santana,temperatura,validacao,3,15,3.5,centrada,20,4,0,14,0.2,1.0,0.2222222222222222
+Feira de Santana,temperatura,validacao,3,15,4.0,centrada,20,4,0,9,0.2,1.0,0.3076923076923077
+Feira de Santana,temperatura,validacao,3,3,2.5,causal,20,11,4,161,0.55,0.7333333333333333,0.06395348837209303
+Feira de Santana,temperatura,validacao,3,3,3.0,causal,20,11,4,111,0.55,0.7333333333333333,0.09016393442622951
+Feira de Santana,temperatura,validacao,3,3,3.5,causal,20,10,4,80,0.5,0.7142857142857143,0.1111111111111111
+Feira de Santana,temperatura,validacao,3,3,4.0,causal,20,9,3,62,0.45,0.75,0.1267605633802817
+Feira de Santana,temperatura,validacao,3,7,2.5,causal,20,8,2,108,0.4,0.8,0.06896551724137931
+Feira de Santana,temperatura,validacao,3,7,3.0,causal,20,8,1,73,0.4,0.8888888888888888,0.09876543209876543
+Feira de Santana,temperatura,validacao,3,7,3.5,causal,20,6,0,53,0.3,1.0,0.1016949152542373
+Feira de Santana,temperatura,validacao,3,7,4.0,causal,20,5,0,35,0.25,1.0,0.125
+Feira de Santana,temperatura,validacao,3,15,2.5,causal,20,9,0,90,0.45,1.0,0.09090909090909091
+Feira de Santana,temperatura,validacao,3,15,3.0,causal,20,6,0,64,0.3,1.0,0.08571428571428572
+Feira de Santana,temperatura,validacao,3,15,3.5,causal,20,6,1,42,0.3,0.8571428571428571,0.125
+Feira de Santana,temperatura,validacao,3,15,4.0,causal,20,4,0,31,0.2,1.0,0.11428571428571428
+Feira de Santana,temperatura,validacao,5,3,2.5,centrada,20,12,0,70,0.6,1.0,0.14634146341463414
+Feira de Santana,temperatura,validacao,5,3,3.0,centrada,20,11,0,42,0.55,1.0,0.20754716981132076
+Feira de Santana,temperatura,validacao,5,3,3.5,centrada,20,10,0,29,0.5,1.0,0.2564102564102564
+Feira de Santana,temperatura,validacao,5,3,4.0,centrada,20,10,0,18,0.5,1.0,0.35714285714285715
+Feira de Santana,temperatura,validacao,5,7,2.5,centrada,20,13,2,57,0.65,0.8666666666666667,0.18571428571428572
+Feira de Santana,temperatura,validacao,5,7,3.0,centrada,20,8,0,33,0.4,1.0,0.1951219512195122
+Feira de Santana,temperatura,validacao,5,7,3.5,centrada,20,8,1,20,0.4,0.8888888888888888,0.2857142857142857
+Feira de Santana,temperatura,validacao,5,7,4.0,centrada,20,6,1,14,0.3,0.8571428571428571,0.3
+Feira de Santana,temperatura,validacao,5,15,2.5,centrada,20,15,0,39,0.75,1.0,0.2777777777777778
+Feira de Santana,temperatura,validacao,5,15,3.0,centrada,20,13,1,25,0.65,0.9285714285714286,0.34210526315789475
+Feira de Santana,temperatura,validacao,5,15,3.5,centrada,20,12,0,14,0.6,1.0,0.46153846153846156
+Feira de Santana,temperatura,validacao,5,15,4.0,centrada,20,9,0,9,0.45,1.0,0.5
+Feira de Santana,temperatura,validacao,5,3,2.5,causal,20,15,4,161,0.75,0.7894736842105263,0.08522727272727272
+Feira de Santana,temperatura,validacao,5,3,3.0,causal,20,14,3,110,0.7,0.8235294117647058,0.11290322580645161
+Feira de Santana,temperatura,validacao,5,3,3.5,causal,20,12,3,79,0.6,0.8,0.13186813186813187
+Feira de Santana,temperatura,validacao,5,3,4.0,causal,20,12,2,61,0.6,0.8571428571428571,0.1643835616438356
+Feira de Santana,temperatura,validacao,5,7,2.5,causal,20,15,2,108,0.75,0.8823529411764706,0.12195121951219512
+Feira de Santana,temperatura,validacao,5,7,3.0,causal,20,12,0,72,0.6,1.0,0.14285714285714285
+Feira de Santana,temperatura,validacao,5,7,3.5,causal,20,10,0,53,0.5,1.0,0.15873015873015872
+Feira de Santana,temperatura,validacao,5,7,4.0,causal,20,9,0,35,0.45,1.0,0.20454545454545456
+Feira de Santana,temperatura,validacao,5,15,2.5,causal,20,15,0,90,0.75,1.0,0.14285714285714285
+Feira de Santana,temperatura,validacao,5,15,3.0,causal,20,13,0,64,0.65,1.0,0.16883116883116883
+Feira de Santana,temperatura,validacao,5,15,3.5,causal,20,13,1,42,0.65,0.9285714285714286,0.23636363636363636
+Feira de Santana,temperatura,validacao,5,15,4.0,causal,20,9,0,31,0.45,1.0,0.225
+Feira de Santana,temperatura,validacao,8,3,2.5,centrada,20,14,0,70,0.7,1.0,0.16666666666666666
+Feira de Santana,temperatura,validacao,8,3,3.0,centrada,20,13,0,42,0.65,1.0,0.23636363636363636
+Feira de Santana,temperatura,validacao,8,3,3.5,centrada,20,12,0,29,0.6,1.0,0.2926829268292683
+Feira de Santana,temperatura,validacao,8,3,4.0,centrada,20,12,0,18,0.6,1.0,0.4
+Feira de Santana,temperatura,validacao,8,7,2.5,centrada,20,19,2,57,0.95,0.9047619047619048,0.25
+Feira de Santana,temperatura,validacao,8,7,3.0,centrada,20,18,0,33,0.9,1.0,0.35294117647058826
+Feira de Santana,temperatura,validacao,8,7,3.5,centrada,20,16,1,20,0.8,0.9411764705882353,0.4444444444444444
+Feira de Santana,temperatura,validacao,8,7,4.0,centrada,20,16,1,14,0.8,0.9411764705882353,0.5333333333333333
+Feira de Santana,temperatura,validacao,8,15,2.5,centrada,20,20,0,39,1.0,1.0,0.3389830508474576
+Feira de Santana,temperatura,validacao,8,15,3.0,centrada,20,19,1,25,0.95,0.95,0.4318181818181818
+Feira de Santana,temperatura,validacao,8,15,3.5,centrada,20,19,0,14,0.95,1.0,0.5757575757575758
+Feira de Santana,temperatura,validacao,8,15,4.0,centrada,20,15,0,9,0.75,1.0,0.625
+Feira de Santana,temperatura,validacao,8,3,2.5,causal,20,19,4,161,0.95,0.8260869565217391,0.10555555555555556
+Feira de Santana,temperatura,validacao,8,3,3.0,causal,20,19,3,110,0.95,0.8636363636363636,0.14728682170542637
+Feira de Santana,temperatura,validacao,8,3,3.5,causal,20,19,3,79,0.95,0.8636363636363636,0.19387755102040816
+Feira de Santana,temperatura,validacao,8,3,4.0,causal,20,18,2,61,0.9,0.9,0.22784810126582278
+Feira de Santana,temperatura,validacao,8,7,2.5,causal,20,17,2,108,0.85,0.8947368421052632,0.136
+Feira de Santana,temperatura,validacao,8,7,3.0,causal,20,16,0,72,0.8,1.0,0.18181818181818182
+Feira de Santana,temperatura,validacao,8,7,3.5,causal,20,16,0,53,0.8,1.0,0.2318840579710145
+Feira de Santana,temperatura,validacao,8,7,4.0,causal,20,15,0,35,0.75,1.0,0.3
+Feira de Santana,temperatura,validacao,8,15,2.5,causal,20,20,0,90,1.0,1.0,0.18181818181818182
+Feira de Santana,temperatura,validacao,8,15,3.0,causal,20,19,0,64,0.95,1.0,0.2289156626506024
+Feira de Santana,temperatura,validacao,8,15,3.5,causal,20,18,1,42,0.9,0.9473684210526315,0.3
+Feira de Santana,temperatura,validacao,8,15,4.0,causal,20,15,0,31,0.75,1.0,0.32608695652173914
+Feira de Santana,temperatura,teste,3,3,2.5,centrada,20,13,0,62,0.65,1.0,0.17333333333333334
+Feira de Santana,temperatura,teste,3,3,3.0,centrada,20,7,0,49,0.35,1.0,0.125
+Feira de Santana,temperatura,teste,3,3,3.5,centrada,20,7,0,35,0.35,1.0,0.16666666666666666
+Feira de Santana,temperatura,teste,3,3,4.0,centrada,20,7,0,19,0.35,1.0,0.2692307692307692
+Feira de Santana,temperatura,teste,3,7,2.5,centrada,20,14,0,46,0.7,1.0,0.23333333333333334
+Feira de Santana,temperatura,teste,3,7,3.0,centrada,20,9,0,21,0.45,1.0,0.3
+Feira de Santana,temperatura,teste,3,7,3.5,centrada,20,7,0,13,0.35,1.0,0.35
+Feira de Santana,temperatura,teste,3,7,4.0,centrada,20,5,0,6,0.25,1.0,0.45454545454545453
+Feira de Santana,temperatura,teste,3,15,2.5,centrada,20,12,0,43,0.6,1.0,0.21818181818181817
+Feira de Santana,temperatura,teste,3,15,3.0,centrada,20,9,0,18,0.45,1.0,0.3333333333333333
+Feira de Santana,temperatura,teste,3,15,3.5,centrada,20,8,0,8,0.4,1.0,0.5
+Feira de Santana,temperatura,teste,3,15,4.0,centrada,20,4,0,7,0.2,1.0,0.36363636363636365
+Feira de Santana,temperatura,teste,3,3,2.5,causal,20,13,0,149,0.65,1.0,0.08024691358024691
+Feira de Santana,temperatura,teste,3,3,3.0,causal,20,11,0,114,0.55,1.0,0.088
+Feira de Santana,temperatura,teste,3,3,3.5,causal,20,9,0,72,0.45,1.0,0.1111111111111111
+Feira de Santana,temperatura,teste,3,3,4.0,causal,20,9,0,57,0.45,1.0,0.13636363636363635
+Feira de Santana,temperatura,teste,3,7,2.5,causal,20,14,0,104,0.7,1.0,0.11864406779661017
+Feira de Santana,temperatura,teste,3,7,3.0,causal,20,11,0,64,0.55,1.0,0.14666666666666667
+Feira de Santana,temperatura,teste,3,7,3.5,causal,20,8,0,42,0.4,1.0,0.16
+Feira de Santana,temperatura,teste,3,7,4.0,causal,20,6,0,28,0.3,1.0,0.17647058823529413
+Feira de Santana,temperatura,teste,3,15,2.5,causal,20,13,1,103,0.65,0.9285714285714286,0.11206896551724138
+Feira de Santana,temperatura,teste,3,15,3.0,causal,20,8,0,57,0.4,1.0,0.12307692307692308
+Feira de Santana,temperatura,teste,3,15,3.5,causal,20,8,0,35,0.4,1.0,0.18604651162790697
+Feira de Santana,temperatura,teste,3,15,4.0,causal,20,8,0,17,0.4,1.0,0.32
+Feira de Santana,temperatura,teste,5,3,2.5,centrada,20,19,0,62,0.95,1.0,0.2345679012345679
+Feira de Santana,temperatura,teste,5,3,3.0,centrada,20,16,0,49,0.8,1.0,0.24615384615384617
+Feira de Santana,temperatura,teste,5,3,3.5,centrada,20,15,0,35,0.75,1.0,0.3
+Feira de Santana,temperatura,teste,5,3,4.0,centrada,20,13,0,19,0.65,1.0,0.40625
+Feira de Santana,temperatura,teste,5,7,2.5,centrada,20,18,0,46,0.9,1.0,0.28125
+Feira de Santana,temperatura,teste,5,7,3.0,centrada,20,16,0,21,0.8,1.0,0.43243243243243246
+Feira de Santana,temperatura,teste,5,7,3.5,centrada,20,16,0,13,0.8,1.0,0.5517241379310345
+Feira de Santana,temperatura,teste,5,7,4.0,centrada,20,14,0,6,0.7,1.0,0.7
+Feira de Santana,temperatura,teste,5,15,2.5,centrada,20,16,0,43,0.8,1.0,0.2711864406779661
+Feira de Santana,temperatura,teste,5,15,3.0,centrada,20,14,0,18,0.7,1.0,0.4375
+Feira de Santana,temperatura,teste,5,15,3.5,centrada,20,12,0,8,0.6,1.0,0.6
+Feira de Santana,temperatura,teste,5,15,4.0,centrada,20,11,0,7,0.55,1.0,0.6111111111111112
+Feira de Santana,temperatura,teste,5,3,2.5,causal,20,18,0,149,0.9,1.0,0.10778443113772455
+Feira de Santana,temperatura,teste,5,3,3.0,causal,20,15,0,114,0.75,1.0,0.11627906976744186
+Feira de Santana,temperatura,teste,5,3,3.5,causal,20,15,0,72,0.75,1.0,0.1724137931034483
+Feira de Santana,temperatura,teste,5,3,4.0,causal,20,14,0,57,0.7,1.0,0.19718309859154928
+Feira de Santana,temperatura,teste,5,7,2.5,causal,20,17,0,104,0.85,1.0,0.14049586776859505
+Feira de Santana,temperatura,teste,5,7,3.0,causal,20,17,0,64,0.85,1.0,0.20987654320987653
+Feira de Santana,temperatura,teste,5,7,3.5,causal,20,17,0,42,0.85,1.0,0.288135593220339
+Feira de Santana,temperatura,teste,5,7,4.0,causal,20,16,0,28,0.8,1.0,0.36363636363636365
+Feira de Santana,temperatura,teste,5,15,2.5,causal,20,19,1,103,0.95,0.95,0.1557377049180328
+Feira de Santana,temperatura,teste,5,15,3.0,causal,20,14,0,57,0.7,1.0,0.19718309859154928
+Feira de Santana,temperatura,teste,5,15,3.5,causal,20,14,0,35,0.7,1.0,0.2857142857142857
+Feira de Santana,temperatura,teste,5,15,4.0,causal,20,13,0,17,0.65,1.0,0.43333333333333335
+Feira de Santana,temperatura,teste,8,3,2.5,centrada,20,19,0,62,0.95,1.0,0.2345679012345679
+Feira de Santana,temperatura,teste,8,3,3.0,centrada,20,19,0,49,0.95,1.0,0.27941176470588236
+Feira de Santana,temperatura,teste,8,3,3.5,centrada,20,19,0,35,0.95,1.0,0.35185185185185186
+Feira de Santana,temperatura,teste,8,3,4.0,centrada,20,18,0,19,0.9,1.0,0.4864864864864865
+Feira de Santana,temperatura,teste,8,7,2.5,centrada,20,20,0,46,1.0,1.0,0.30303030303030304
+Feira de Santana,temperatura,teste,8,7,3.0,centrada,20,20,0,21,1.0,1.0,0.4878048780487805
+Feira de Santana,temperatura,teste,8,7,3.5,centrada,20,19,0,13,0.95,1.0,0.59375
+Feira de Santana,temperatura,teste,8,7,4.0,centrada,20,18,0,6,0.9,1.0,0.75
+Feira de Santana,temperatura,teste,8,15,2.5,centrada,20,20,0,43,1.0,1.0,0.31746031746031744
+Feira de Santana,temperatura,teste,8,15,3.0,centrada,20,20,0,18,1.0,1.0,0.5263157894736842
+Feira de Santana,temperatura,teste,8,15,3.5,centrada,20,18,0,8,0.9,1.0,0.6923076923076923
+Feira de Santana,temperatura,teste,8,15,4.0,centrada,20,16,0,7,0.8,1.0,0.6956521739130435
+Feira de Santana,temperatura,teste,8,3,2.5,causal,20,20,0,149,1.0,1.0,0.11834319526627218
+Feira de Santana,temperatura,teste,8,3,3.0,causal,20,19,0,114,0.95,1.0,0.14285714285714285
+Feira de Santana,temperatura,teste,8,3,3.5,causal,20,18,0,72,0.9,1.0,0.2
+Feira de Santana,temperatura,teste,8,3,4.0,causal,20,17,0,57,0.85,1.0,0.22972972972972974
+Feira de Santana,temperatura,teste,8,7,2.5,causal,20,18,0,104,0.9,1.0,0.14754098360655737
+Feira de Santana,temperatura,teste,8,7,3.0,causal,20,18,0,64,0.9,1.0,0.21951219512195122
+Feira de Santana,temperatura,teste,8,7,3.5,causal,20,17,0,42,0.85,1.0,0.288135593220339
+Feira de Santana,temperatura,teste,8,7,4.0,causal,20,17,0,28,0.85,1.0,0.37777777777777777
+Feira de Santana,temperatura,teste,8,15,2.5,causal,20,20,1,103,1.0,0.9523809523809523,0.16260162601626016
+Feira de Santana,temperatura,teste,8,15,3.0,causal,20,20,0,57,1.0,1.0,0.2597402597402597
+Feira de Santana,temperatura,teste,8,15,3.5,causal,20,20,0,35,1.0,1.0,0.36363636363636365
+Feira de Santana,temperatura,teste,8,15,4.0,causal,20,18,0,17,0.9,1.0,0.5142857142857142
+Feira de Santana,umidade,validacao,3,3,2.5,centrada,20,11,2,95,0.55,0.8461538461538461,0.10377358490566038
+Feira de Santana,umidade,validacao,3,3,3.0,centrada,20,11,3,66,0.55,0.7857142857142857,0.14285714285714285
+Feira de Santana,umidade,validacao,3,3,3.5,centrada,20,9,1,46,0.45,0.9,0.16363636363636364
+Feira de Santana,umidade,validacao,3,3,4.0,centrada,20,7,1,27,0.35,0.875,0.20588235294117646
+Feira de Santana,umidade,validacao,3,7,2.5,centrada,20,9,0,80,0.45,1.0,0.10112359550561797
+Feira de Santana,umidade,validacao,3,7,3.0,centrada,20,6,0,54,0.3,1.0,0.1
+Feira de Santana,umidade,validacao,3,7,3.5,centrada,20,5,0,39,0.25,1.0,0.11363636363636363
+Feira de Santana,umidade,validacao,3,7,4.0,centrada,20,3,0,20,0.15,1.0,0.13043478260869565
+Feira de Santana,umidade,validacao,3,15,2.5,centrada,20,10,2,49,0.5,0.8333333333333334,0.1694915254237288
+Feira de Santana,umidade,validacao,3,15,3.0,centrada,20,10,2,30,0.5,0.8333333333333334,0.25
+Feira de Santana,umidade,validacao,3,15,3.5,centrada,20,5,0,16,0.25,1.0,0.23809523809523808
+Feira de Santana,umidade,validacao,3,15,4.0,centrada,20,3,0,11,0.15,1.0,0.21428571428571427
+Feira de Santana,umidade,validacao,3,3,2.5,causal,20,12,1,147,0.6,0.9230769230769231,0.07547169811320754
+Feira de Santana,umidade,validacao,3,3,3.0,causal,20,10,2,121,0.5,0.8333333333333334,0.07633587786259542
+Feira de Santana,umidade,validacao,3,3,3.5,causal,20,8,3,97,0.4,0.7272727272727273,0.0761904761904762
+Feira de Santana,umidade,validacao,3,3,4.0,causal,20,6,3,77,0.3,0.6666666666666666,0.07228915662650602
+Feira de Santana,umidade,validacao,3,7,2.5,causal,20,12,1,96,0.6,0.9230769230769231,0.1111111111111111
+Feira de Santana,umidade,validacao,3,7,3.0,causal,20,10,1,61,0.5,0.9090909090909091,0.14084507042253522
+Feira de Santana,umidade,validacao,3,7,3.5,causal,20,5,1,42,0.25,0.8333333333333334,0.10638297872340426
+Feira de Santana,umidade,validacao,3,7,4.0,causal,20,4,1,25,0.2,0.8,0.13793103448275862
+Feira de Santana,umidade,validacao,3,15,2.5,causal,20,10,0,88,0.5,1.0,0.10204081632653061
+Feira de Santana,umidade,validacao,3,15,3.0,causal,20,8,0,63,0.4,1.0,0.11267605633802817
+Feira de Santana,umidade,validacao,3,15,3.5,causal,20,5,1,38,0.25,0.8333333333333334,0.11627906976744186
+Feira de Santana,umidade,validacao,3,15,4.0,causal,20,5,1,26,0.25,0.8333333333333334,0.16129032258064516
+Feira de Santana,umidade,validacao,5,3,2.5,centrada,20,14,2,95,0.7,0.875,0.12844036697247707
+Feira de Santana,umidade,validacao,5,3,3.0,centrada,20,12,3,66,0.6,0.8,0.15384615384615385
+Feira de Santana,umidade,validacao,5,3,3.5,centrada,20,10,1,46,0.5,0.9090909090909091,0.17857142857142858
+Feira de Santana,umidade,validacao,5,3,4.0,centrada,20,9,1,27,0.45,0.9,0.25
+Feira de Santana,umidade,validacao,5,7,2.5,centrada,20,13,0,80,0.65,1.0,0.13978494623655913
+Feira de Santana,umidade,validacao,5,7,3.0,centrada,20,11,0,54,0.55,1.0,0.16923076923076924
+Feira de Santana,umidade,validacao,5,7,3.5,centrada,20,9,0,39,0.45,1.0,0.1875
+Feira de Santana,umidade,validacao,5,7,4.0,centrada,20,5,0,20,0.25,1.0,0.2
+Feira de Santana,umidade,validacao,5,15,2.5,centrada,20,15,1,48,0.75,0.9375,0.23809523809523808
+Feira de Santana,umidade,validacao,5,15,3.0,centrada,20,13,2,30,0.65,0.8666666666666667,0.3023255813953488
+Feira de Santana,umidade,validacao,5,15,3.5,centrada,20,11,0,16,0.55,1.0,0.4074074074074074
+Feira de Santana,umidade,validacao,5,15,4.0,centrada,20,9,0,11,0.45,1.0,0.45
+Feira de Santana,umidade,validacao,5,3,2.5,causal,20,18,0,146,0.9,1.0,0.10975609756097561
+Feira de Santana,umidade,validacao,5,3,3.0,causal,20,16,1,120,0.8,0.9411764705882353,0.11764705882352941
+Feira de Santana,umidade,validacao,5,3,3.5,causal,20,14,2,96,0.7,0.875,0.12727272727272726
+Feira de Santana,umidade,validacao,5,3,4.0,causal,20,13,2,76,0.65,0.8666666666666667,0.14606741573033707
+Feira de Santana,umidade,validacao,5,7,2.5,causal,20,20,1,96,1.0,0.9523809523809523,0.1724137931034483
+Feira de Santana,umidade,validacao,5,7,3.0,causal,20,14,1,61,0.7,0.9333333333333333,0.18666666666666668
+Feira de Santana,umidade,validacao,5,7,3.5,causal,20,10,1,42,0.5,0.9090909090909091,0.19230769230769232
+Feira de Santana,umidade,validacao,5,7,4.0,causal,20,9,1,25,0.45,0.9,0.2647058823529412
+Feira de Santana,umidade,validacao,5,15,2.5,causal,20,19,0,88,0.95,1.0,0.17757009345794392
+Feira de Santana,umidade,validacao,5,15,3.0,causal,20,14,0,63,0.7,1.0,0.18181818181818182
+Feira de Santana,umidade,validacao,5,15,3.5,causal,20,12,1,38,0.6,0.9230769230769231,0.24
+Feira de Santana,umidade,validacao,5,15,4.0,causal,20,10,1,26,0.5,0.9090909090909091,0.2777777777777778
+Feira de Santana,umidade,validacao,8,3,2.5,centrada,20,18,2,95,0.9,0.9,0.1592920353982301
+Feira de Santana,umidade,validacao,8,3,3.0,centrada,20,15,3,66,0.75,0.8333333333333334,0.18518518518518517
+Feira de Santana,umidade,validacao,8,3,3.5,centrada,20,14,1,46,0.7,0.9333333333333333,0.23333333333333334
+Feira de Santana,umidade,validacao,8,3,4.0,centrada,20,12,1,27,0.6,0.9230769230769231,0.3076923076923077
+Feira de Santana,umidade,validacao,8,7,2.5,centrada,20,15,0,80,0.75,1.0,0.15789473684210525
+Feira de Santana,umidade,validacao,8,7,3.0,centrada,20,15,0,54,0.75,1.0,0.21739130434782608
+Feira de Santana,umidade,validacao,8,7,3.5,centrada,20,13,0,39,0.65,1.0,0.25
+Feira de Santana,umidade,validacao,8,7,4.0,centrada,20,12,0,20,0.6,1.0,0.375
+Feira de Santana,umidade,validacao,8,15,2.5,centrada,20,17,1,48,0.85,0.9444444444444444,0.26153846153846155
+Feira de Santana,umidade,validacao,8,15,3.0,centrada,20,17,2,30,0.85,0.8947368421052632,0.3617021276595745
+Feira de Santana,umidade,validacao,8,15,3.5,centrada,20,14,0,16,0.7,1.0,0.4666666666666667
+Feira de Santana,umidade,validacao,8,15,4.0,centrada,20,12,0,11,0.6,1.0,0.5217391304347826
+Feira de Santana,umidade,validacao,8,3,2.5,causal,20,19,0,146,0.95,1.0,0.11515151515151516
+Feira de Santana,umidade,validacao,8,3,3.0,causal,20,18,1,120,0.9,0.9473684210526315,0.13043478260869565
+Feira de Santana,umidade,validacao,8,3,3.5,causal,20,18,2,96,0.9,0.9,0.15789473684210525
+Feira de Santana,umidade,validacao,8,3,4.0,causal,20,17,2,76,0.85,0.8947368421052632,0.1827956989247312
+Feira de Santana,umidade,validacao,8,7,2.5,causal,20,20,1,96,1.0,0.9523809523809523,0.1724137931034483
+Feira de Santana,umidade,validacao,8,7,3.0,causal,20,19,1,61,0.95,0.95,0.2375
+Feira de Santana,umidade,validacao,8,7,3.5,causal,20,18,1,42,0.9,0.9473684210526315,0.3
+Feira de Santana,umidade,validacao,8,7,4.0,causal,20,15,1,25,0.75,0.9375,0.375
+Feira de Santana,umidade,validacao,8,15,2.5,causal,20,20,0,88,1.0,1.0,0.18518518518518517
+Feira de Santana,umidade,validacao,8,15,3.0,causal,20,16,0,63,0.8,1.0,0.20253164556962025
+Feira de Santana,umidade,validacao,8,15,3.5,causal,20,15,1,38,0.75,0.9375,0.2830188679245283
+Feira de Santana,umidade,validacao,8,15,4.0,causal,20,15,1,26,0.75,0.9375,0.36585365853658536
+Feira de Santana,umidade,teste,3,3,2.5,centrada,20,10,1,82,0.5,0.9090909090909091,0.10869565217391304
+Feira de Santana,umidade,teste,3,3,3.0,centrada,20,7,1,53,0.35,0.875,0.11666666666666667
+Feira de Santana,umidade,teste,3,3,3.5,centrada,20,4,0,35,0.2,1.0,0.10256410256410256
+Feira de Santana,umidade,teste,3,3,4.0,centrada,20,3,0,26,0.15,1.0,0.10344827586206896
+Feira de Santana,umidade,teste,3,7,2.5,centrada,20,12,0,45,0.6,1.0,0.21052631578947367
+Feira de Santana,umidade,teste,3,7,3.0,centrada,20,9,0,26,0.45,1.0,0.2571428571428571
+Feira de Santana,umidade,teste,3,7,3.5,centrada,20,7,0,15,0.35,1.0,0.3181818181818182
+Feira de Santana,umidade,teste,3,7,4.0,centrada,20,7,1,12,0.35,0.875,0.3684210526315789
+Feira de Santana,umidade,teste,3,15,2.5,centrada,20,11,0,51,0.55,1.0,0.1774193548387097
+Feira de Santana,umidade,teste,3,15,3.0,centrada,20,7,2,31,0.35,0.7777777777777778,0.18421052631578946
+Feira de Santana,umidade,teste,3,15,3.5,centrada,20,5,0,19,0.25,1.0,0.20833333333333334
+Feira de Santana,umidade,teste,3,15,4.0,centrada,20,4,0,12,0.2,1.0,0.25
+Feira de Santana,umidade,teste,3,3,2.5,causal,20,11,1,131,0.55,0.9166666666666666,0.07746478873239436
+Feira de Santana,umidade,teste,3,3,3.0,causal,20,11,1,105,0.55,0.9166666666666666,0.09482758620689655
+Feira de Santana,umidade,teste,3,3,3.5,causal,20,9,1,79,0.45,0.9,0.10227272727272728
+Feira de Santana,umidade,teste,3,3,4.0,causal,20,9,2,65,0.45,0.8181818181818182,0.12162162162162163
+Feira de Santana,umidade,teste,3,7,2.5,causal,20,12,0,111,0.6,1.0,0.0975609756097561
+Feira de Santana,umidade,teste,3,7,3.0,causal,20,8,1,70,0.4,0.8888888888888888,0.10256410256410256
+Feira de Santana,umidade,teste,3,7,3.5,causal,20,7,0,54,0.35,1.0,0.11475409836065574
+Feira de Santana,umidade,teste,3,7,4.0,causal,20,6,0,37,0.3,1.0,0.13953488372093023
+Feira de Santana,umidade,teste,3,15,2.5,causal,20,9,1,78,0.45,0.9,0.10344827586206896
+Feira de Santana,umidade,teste,3,15,3.0,causal,20,6,0,51,0.3,1.0,0.10526315789473684
+Feira de Santana,umidade,teste,3,15,3.5,causal,20,5,0,31,0.25,1.0,0.1388888888888889
+Feira de Santana,umidade,teste,3,15,4.0,causal,20,5,0,25,0.25,1.0,0.16666666666666666
+Feira de Santana,umidade,teste,5,3,2.5,centrada,20,12,1,82,0.6,0.9230769230769231,0.1276595744680851
+Feira de Santana,umidade,teste,5,3,3.0,centrada,20,12,1,53,0.6,0.9230769230769231,0.18461538461538463
+Feira de Santana,umidade,teste,5,3,3.5,centrada,20,10,0,35,0.5,1.0,0.2222222222222222
+Feira de Santana,umidade,teste,5,3,4.0,centrada,20,10,0,26,0.5,1.0,0.2777777777777778
+Feira de Santana,umidade,teste,5,7,2.5,centrada,20,15,0,45,0.75,1.0,0.25
+Feira de Santana,umidade,teste,5,7,3.0,centrada,20,14,0,26,0.7,1.0,0.35
+Feira de Santana,umidade,teste,5,7,3.5,centrada,20,13,0,15,0.65,1.0,0.4642857142857143
+Feira de Santana,umidade,teste,5,7,4.0,centrada,20,10,1,12,0.5,0.9090909090909091,0.45454545454545453
+Feira de Santana,umidade,teste,5,15,2.5,centrada,20,14,0,51,0.7,1.0,0.2153846153846154
+Feira de Santana,umidade,teste,5,15,3.0,centrada,20,12,1,30,0.6,0.9230769230769231,0.2857142857142857
+Feira de Santana,umidade,teste,5,15,3.5,centrada,20,10,0,19,0.5,1.0,0.3448275862068966
+Feira de Santana,umidade,teste,5,15,4.0,centrada,20,9,0,12,0.45,1.0,0.42857142857142855
+Feira de Santana,umidade,teste,5,3,2.5,causal,20,14,0,130,0.7,1.0,0.09722222222222222
+Feira de Santana,umidade,teste,5,3,3.0,causal,20,12,0,104,0.6,1.0,0.10344827586206896
+Feira de Santana,umidade,teste,5,3,3.5,causal,20,11,0,78,0.55,1.0,0.12359550561797752
+Feira de Santana,umidade,teste,5,3,4.0,causal,20,11,0,63,0.55,1.0,0.14864864864864866
+Feira de Santana,umidade,teste,5,7,2.5,causal,20,16,0,111,0.8,1.0,0.12598425196850394
+Feira de Santana,umidade,teste,5,7,3.0,causal,20,15,0,69,0.75,1.0,0.17857142857142858
+Feira de Santana,umidade,teste,5,7,3.5,causal,20,14,0,54,0.7,1.0,0.20588235294117646
+Feira de Santana,umidade,teste,5,7,4.0,causal,20,11,0,37,0.55,1.0,0.22916666666666666
+Feira de Santana,umidade,teste,5,15,2.5,causal,20,15,1,78,0.75,0.9375,0.16129032258064516
+Feira de Santana,umidade,teste,5,15,3.0,causal,20,15,0,51,0.75,1.0,0.22727272727272727
+Feira de Santana,umidade,teste,5,15,3.5,causal,20,12,0,31,0.6,1.0,0.27906976744186046
+Feira de Santana,umidade,teste,5,15,4.0,causal,20,9,0,25,0.45,1.0,0.2647058823529412
+Feira de Santana,umidade,teste,8,3,2.5,centrada,20,12,1,82,0.6,0.9230769230769231,0.1276595744680851
+Feira de Santana,umidade,teste,8,3,3.0,centrada,20,12,1,53,0.6,0.9230769230769231,0.18461538461538463
+Feira de Santana,umidade,teste,8,3,3.5,centrada,20,12,0,35,0.6,1.0,0.2553191489361702
+Feira de Santana,umidade,teste,8,3,4.0,centrada,20,12,0,26,0.6,1.0,0.3157894736842105
+Feira de Santana,umidade,teste,8,7,2.5,centrada,20,16,0,45,0.8,1.0,0.26229508196721313
+Feira de Santana,umidade,teste,8,7,3.0,centrada,20,14,0,26,0.7,1.0,0.35
+Feira de Santana,umidade,teste,8,7,3.5,centrada,20,13,0,15,0.65,1.0,0.4642857142857143
+Feira de Santana,umidade,teste,8,7,4.0,centrada,20,12,1,12,0.6,0.9230769230769231,0.5
+Feira de Santana,umidade,teste,8,15,2.5,centrada,20,16,0,51,0.8,1.0,0.23880597014925373
+Feira de Santana,umidade,teste,8,15,3.0,centrada,20,15,1,30,0.75,0.9375,0.3333333333333333
+Feira de Santana,umidade,teste,8,15,3.5,centrada,20,13,0,19,0.65,1.0,0.40625
+Feira de Santana,umidade,teste,8,15,4.0,centrada,20,13,0,12,0.65,1.0,0.52
+Feira de Santana,umidade,teste,8,3,2.5,causal,20,16,0,130,0.8,1.0,0.1095890410958904
+Feira de Santana,umidade,teste,8,3,3.0,causal,20,15,0,104,0.75,1.0,0.12605042016806722
+Feira de Santana,umidade,teste,8,3,3.5,causal,20,14,0,78,0.7,1.0,0.15217391304347827
+Feira de Santana,umidade,teste,8,3,4.0,causal,20,13,0,63,0.65,1.0,0.17105263157894737
+Feira de Santana,umidade,teste,8,7,2.5,causal,20,17,0,111,0.85,1.0,0.1328125
+Feira de Santana,umidade,teste,8,7,3.0,causal,20,16,0,69,0.8,1.0,0.18823529411764706
+Feira de Santana,umidade,teste,8,7,3.5,causal,20,16,0,54,0.8,1.0,0.22857142857142856
+Feira de Santana,umidade,teste,8,7,4.0,causal,20,15,0,37,0.75,1.0,0.28846153846153844
+Feira de Santana,umidade,teste,8,15,2.5,causal,20,16,1,78,0.8,0.9411764705882353,0.1702127659574468
+Feira de Santana,umidade,teste,8,15,3.0,causal,20,16,0,51,0.8,1.0,0.23880597014925373
+Feira de Santana,umidade,teste,8,15,3.5,causal,20,15,0,31,0.75,1.0,0.32608695652173914
+Feira de Santana,umidade,teste,8,15,4.0,causal,20,13,0,25,0.65,1.0,0.34210526315789475
+Porto Alegre,temperatura,validacao,3,3,2.5,centrada,20,10,0,66,0.5,1.0,0.13157894736842105
+Porto Alegre,temperatura,validacao,3,3,3.0,centrada,20,6,0,46,0.3,1.0,0.11538461538461539
+Porto Alegre,temperatura,validacao,3,3,3.5,centrada,20,5,0,38,0.25,1.0,0.11627906976744186
+Porto Alegre,temperatura,validacao,3,3,4.0,centrada,20,5,0,30,0.25,1.0,0.14285714285714285
+Porto Alegre,temperatura,validacao,3,7,2.5,centrada,20,11,0,58,0.55,1.0,0.15942028985507245
+Porto Alegre,temperatura,validacao,3,7,3.0,centrada,20,8,1,32,0.4,0.8888888888888888,0.2
+Porto Alegre,temperatura,validacao,3,7,3.5,centrada,20,6,0,19,0.3,1.0,0.24
+Porto Alegre,temperatura,validacao,3,7,4.0,centrada,20,4,0,11,0.2,1.0,0.26666666666666666
+Porto Alegre,temperatura,validacao,3,15,2.5,centrada,20,7,1,38,0.35,0.875,0.15555555555555556
+Porto Alegre,temperatura,validacao,3,15,3.0,centrada,20,5,0,19,0.25,1.0,0.20833333333333334
+Porto Alegre,temperatura,validacao,3,15,3.5,centrada,20,2,0,9,0.1,1.0,0.18181818181818182
+Porto Alegre,temperatura,validacao,3,15,4.0,centrada,20,1,0,5,0.05,1.0,0.16666666666666666
+Porto Alegre,temperatura,validacao,3,3,2.5,causal,20,12,1,144,0.6,0.9230769230769231,0.07692307692307693
+Porto Alegre,temperatura,validacao,3,3,3.0,causal,20,10,0,109,0.5,1.0,0.08403361344537816
+Porto Alegre,temperatura,validacao,3,3,3.5,causal,20,10,0,83,0.5,1.0,0.10752688172043011
+Porto Alegre,temperatura,validacao,3,3,4.0,causal,20,8,1,64,0.4,0.8888888888888888,0.1111111111111111
+Porto Alegre,temperatura,validacao,3,7,2.5,causal,20,10,2,109,0.5,0.8333333333333334,0.08403361344537816
+Porto Alegre,temperatura,validacao,3,7,3.0,causal,20,8,0,68,0.4,1.0,0.10526315789473684
+Porto Alegre,temperatura,validacao,3,7,3.5,causal,20,5,0,49,0.25,1.0,0.09259259259259259
+Porto Alegre,temperatura,validacao,3,7,4.0,causal,20,4,0,31,0.2,1.0,0.11428571428571428
+Porto Alegre,temperatura,validacao,3,15,2.5,causal,20,10,3,75,0.5,0.7692307692307693,0.11764705882352941
+Porto Alegre,temperatura,validacao,3,15,3.0,causal,20,9,2,31,0.45,0.8181818181818182,0.225
+Porto Alegre,temperatura,validacao,3,15,3.5,causal,20,6,0,14,0.3,1.0,0.3
+Porto Alegre,temperatura,validacao,3,15,4.0,causal,20,2,0,6,0.1,1.0,0.25
+Porto Alegre,temperatura,validacao,5,3,2.5,centrada,20,16,0,66,0.8,1.0,0.1951219512195122
+Porto Alegre,temperatura,validacao,5,3,3.0,centrada,20,15,0,46,0.75,1.0,0.2459016393442623
+Porto Alegre,temperatura,validacao,5,3,3.5,centrada,20,15,0,38,0.75,1.0,0.2830188679245283
+Porto Alegre,temperatura,validacao,5,3,4.0,centrada,20,12,0,30,0.6,1.0,0.2857142857142857
+Porto Alegre,temperatura,validacao,5,7,2.5,centrada,20,17,0,58,0.85,1.0,0.22666666666666666
+Porto Alegre,temperatura,validacao,5,7,3.0,centrada,20,14,1,32,0.7,0.9333333333333333,0.30434782608695654
+Porto Alegre,temperatura,validacao,5,7,3.5,centrada,20,12,0,19,0.6,1.0,0.3870967741935484
+Porto Alegre,temperatura,validacao,5,7,4.0,centrada,20,10,0,11,0.5,1.0,0.47619047619047616
+Porto Alegre,temperatura,validacao,5,15,2.5,centrada,20,15,0,36,0.75,1.0,0.29411764705882354
+Porto Alegre,temperatura,validacao,5,15,3.0,centrada,20,13,0,19,0.65,1.0,0.40625
+Porto Alegre,temperatura,validacao,5,15,3.5,centrada,20,11,0,9,0.55,1.0,0.55
+Porto Alegre,temperatura,validacao,5,15,4.0,centrada,20,7,0,5,0.35,1.0,0.5833333333333334
+Porto Alegre,temperatura,validacao,5,3,2.5,causal,20,17,1,144,0.85,0.9444444444444444,0.10559006211180125
+Porto Alegre,temperatura,validacao,5,3,3.0,causal,20,16,0,109,0.8,1.0,0.128
+Porto Alegre,temperatura,validacao,5,3,3.5,causal,20,14,0,83,0.7,1.0,0.14432989690721648
+Porto Alegre,temperatura,validacao,5,3,4.0,causal,20,13,1,64,0.65,0.9285714285714286,0.16883116883116883
+Porto Alegre,temperatura,validacao,5,7,2.5,causal,20,16,2,109,0.8,0.8888888888888888,0.128
+Porto Alegre,temperatura,validacao,5,7,3.0,causal,20,15,0,68,0.75,1.0,0.18072289156626506
+Porto Alegre,temperatura,validacao,5,7,3.5,causal,20,12,0,49,0.6,1.0,0.19672131147540983
+Porto Alegre,temperatura,validacao,5,7,4.0,causal,20,12,0,31,0.6,1.0,0.27906976744186046
+Porto Alegre,temperatura,validacao,5,15,2.5,causal,20,16,3,74,0.8,0.8421052631578947,0.17777777777777778
+Porto Alegre,temperatura,validacao,5,15,3.0,causal,20,14,2,31,0.7,0.875,0.3111111111111111
+Porto Alegre,temperatura,validacao,5,15,3.5,causal,20,12,0,14,0.6,1.0,0.46153846153846156
+Porto Alegre,temperatura,validacao,5,15,4.0,causal,20,10,0,6,0.5,1.0,0.625
+Porto Alegre,temperatura,validacao,8,3,2.5,centrada,20,19,0,66,0.95,1.0,0.2235294117647059
+Porto Alegre,temperatura,validacao,8,3,3.0,centrada,20,19,0,46,0.95,1.0,0.2923076923076923
+Porto Alegre,temperatura,validacao,8,3,3.5,centrada,20,16,0,38,0.8,1.0,0.2962962962962963
+Porto Alegre,temperatura,validacao,8,3,4.0,centrada,20,16,0,30,0.8,1.0,0.34782608695652173
+Porto Alegre,temperatura,validacao,8,7,2.5,centrada,20,20,0,58,1.0,1.0,0.2564102564102564
+Porto Alegre,temperatura,validacao,8,7,3.0,centrada,20,20,1,32,1.0,0.9523809523809523,0.38461538461538464
+Porto Alegre,temperatura,validacao,8,7,3.5,centrada,20,20,0,19,1.0,1.0,0.5128205128205128
+Porto Alegre,temperatura,validacao,8,7,4.0,centrada,20,17,0,11,0.85,1.0,0.6071428571428571
+Porto Alegre,temperatura,validacao,8,15,2.5,centrada,20,20,0,36,1.0,1.0,0.35714285714285715
+Porto Alegre,temperatura,validacao,8,15,3.0,centrada,20,17,0,19,0.85,1.0,0.4722222222222222
+Porto Alegre,temperatura,validacao,8,15,3.5,centrada,20,16,0,9,0.8,1.0,0.64
+Porto Alegre,temperatura,validacao,8,15,4.0,centrada,20,15,0,5,0.75,1.0,0.75
+Porto Alegre,temperatura,validacao,8,3,2.5,causal,20,20,1,144,1.0,0.9523809523809523,0.12195121951219512
+Porto Alegre,temperatura,validacao,8,3,3.0,causal,20,20,0,109,1.0,1.0,0.15503875968992248
+Porto Alegre,temperatura,validacao,8,3,3.5,causal,20,19,0,83,0.95,1.0,0.18627450980392157
+Porto Alegre,temperatura,validacao,8,3,4.0,causal,20,19,1,64,0.95,0.95,0.2289156626506024
+Porto Alegre,temperatura,validacao,8,7,2.5,causal,20,19,2,109,0.95,0.9047619047619048,0.1484375
+Porto Alegre,temperatura,validacao,8,7,3.0,causal,20,19,0,68,0.95,1.0,0.21839080459770116
+Porto Alegre,temperatura,validacao,8,7,3.5,causal,20,18,0,49,0.9,1.0,0.26865671641791045
+Porto Alegre,temperatura,validacao,8,7,4.0,causal,20,16,0,31,0.8,1.0,0.3404255319148936
+Porto Alegre,temperatura,validacao,8,15,2.5,causal,20,20,3,74,1.0,0.8695652173913043,0.2127659574468085
+Porto Alegre,temperatura,validacao,8,15,3.0,causal,20,20,2,31,1.0,0.9090909090909091,0.39215686274509803
+Porto Alegre,temperatura,validacao,8,15,3.5,causal,20,19,0,14,0.95,1.0,0.5757575757575758
+Porto Alegre,temperatura,validacao,8,15,4.0,causal,20,17,0,6,0.85,1.0,0.7391304347826086
+Porto Alegre,temperatura,teste,3,3,2.5,centrada,20,7,1,52,0.35,0.875,0.11864406779661017
+Porto Alegre,temperatura,teste,3,3,3.0,centrada,20,5,1,29,0.25,0.8333333333333334,0.14705882352941177
+Porto Alegre,temperatura,teste,3,3,3.5,centrada,20,5,0,18,0.25,1.0,0.21739130434782608
+Porto Alegre,temperatura,teste,3,3,4.0,centrada,20,4,0,15,0.2,1.0,0.21052631578947367
+Porto Alegre,temperatura,teste,3,7,2.5,centrada,20,8,1,48,0.4,0.8888888888888888,0.14285714285714285
+Porto Alegre,temperatura,teste,3,7,3.0,centrada,20,7,1,15,0.35,0.875,0.3181818181818182
+Porto Alegre,temperatura,teste,3,7,3.5,centrada,20,5,0,5,0.25,1.0,0.5
+Porto Alegre,temperatura,teste,3,7,4.0,centrada,20,4,0,3,0.2,1.0,0.5714285714285714
+Porto Alegre,temperatura,teste,3,15,2.5,centrada,20,5,0,16,0.25,1.0,0.23809523809523808
+Porto Alegre,temperatura,teste,3,15,3.0,centrada,20,3,1,9,0.15,0.75,0.25
+Porto Alegre,temperatura,teste,3,15,3.5,centrada,20,2,1,4,0.1,0.6666666666666666,0.3333333333333333
+Porto Alegre,temperatura,teste,3,15,4.0,centrada,20,2,0,1,0.1,1.0,0.6666666666666666
+Porto Alegre,temperatura,teste,3,3,2.5,causal,20,11,1,128,0.55,0.9166666666666666,0.07913669064748201
+Porto Alegre,temperatura,teste,3,3,3.0,causal,20,10,0,75,0.5,1.0,0.11764705882352941
+Porto Alegre,temperatura,teste,3,3,3.5,causal,20,9,0,47,0.45,1.0,0.16071428571428573
+Porto Alegre,temperatura,teste,3,3,4.0,causal,20,9,0,36,0.45,1.0,0.2
+Porto Alegre,temperatura,teste,3,7,2.5,causal,20,8,1,86,0.4,0.8888888888888888,0.0851063829787234
+Porto Alegre,temperatura,teste,3,7,3.0,causal,20,7,0,54,0.35,1.0,0.11475409836065574
+Porto Alegre,temperatura,teste,3,7,3.5,causal,20,6,0,26,0.3,1.0,0.1875
+Porto Alegre,temperatura,teste,3,7,4.0,causal,20,6,0,17,0.3,1.0,0.2608695652173913
+Porto Alegre,temperatura,teste,3,15,2.5,causal,20,7,0,58,0.35,1.0,0.1076923076923077
+Porto Alegre,temperatura,teste,3,15,3.0,causal,20,5,0,28,0.25,1.0,0.15151515151515152
+Porto Alegre,temperatura,teste,3,15,3.5,causal,20,2,0,15,0.1,1.0,0.11764705882352941
+Porto Alegre,temperatura,teste,3,15,4.0,causal,20,2,1,6,0.1,0.6666666666666666,0.25
+Porto Alegre,temperatura,teste,5,3,2.5,centrada,20,15,1,52,0.75,0.9375,0.22388059701492538
+Porto Alegre,temperatura,teste,5,3,3.0,centrada,20,12,1,29,0.6,0.9230769230769231,0.2926829268292683
+Porto Alegre,temperatura,teste,5,3,3.5,centrada,20,10,0,18,0.5,1.0,0.35714285714285715
+Porto Alegre,temperatura,teste,5,3,4.0,centrada,20,8,0,15,0.4,1.0,0.34782608695652173
+Porto Alegre,temperatura,teste,5,7,2.5,centrada,20,16,1,48,0.8,0.9411764705882353,0.25
+Porto Alegre,temperatura,teste,5,7,3.0,centrada,20,15,1,15,0.75,0.9375,0.5
+Porto Alegre,temperatura,teste,5,7,3.5,centrada,20,11,0,5,0.55,1.0,0.6875
+Porto Alegre,temperatura,teste,5,7,4.0,centrada,20,10,0,3,0.5,1.0,0.7692307692307693
+Porto Alegre,temperatura,teste,5,15,2.5,centrada,20,15,0,16,0.75,1.0,0.4838709677419355
+Porto Alegre,temperatura,teste,5,15,3.0,centrada,20,14,1,9,0.7,0.9333333333333333,0.6086956521739131
+Porto Alegre,temperatura,teste,5,15,3.5,centrada,20,9,1,4,0.45,0.9,0.6923076923076923
+Porto Alegre,temperatura,teste,5,15,4.0,centrada,20,6,0,1,0.3,1.0,0.8571428571428571
+Porto Alegre,temperatura,teste,5,3,2.5,causal,20,15,1,128,0.75,0.9375,0.1048951048951049
+Porto Alegre,temperatura,teste,5,3,3.0,causal,20,14,0,75,0.7,1.0,0.15730337078651685
+Porto Alegre,temperatura,teste,5,3,3.5,causal,20,12,0,47,0.6,1.0,0.2033898305084746
+Porto Alegre,temperatura,teste,5,3,4.0,causal,20,11,0,36,0.55,1.0,0.23404255319148937
+Porto Alegre,temperatura,teste,5,7,2.5,causal,20,14,1,86,0.7,0.9333333333333333,0.14
+Porto Alegre,temperatura,teste,5,7,3.0,causal,20,14,0,54,0.7,1.0,0.20588235294117646
+Porto Alegre,temperatura,teste,5,7,3.5,causal,20,13,0,26,0.65,1.0,0.3333333333333333
+Porto Alegre,temperatura,teste,5,7,4.0,causal,20,10,0,17,0.5,1.0,0.37037037037037035
+Porto Alegre,temperatura,teste,5,15,2.5,causal,20,13,0,58,0.65,1.0,0.18309859154929578
+Porto Alegre,temperatura,teste,5,15,3.0,causal,20,13,0,28,0.65,1.0,0.3170731707317073
+Porto Alegre,temperatura,teste,5,15,3.5,causal,20,11,0,15,0.55,1.0,0.4230769230769231
+Porto Alegre,temperatura,teste,5,15,4.0,causal,20,8,1,6,0.4,0.8888888888888888,0.5714285714285714
+Porto Alegre,temperatura,teste,8,3,2.5,centrada,20,18,1,52,0.9,0.9473684210526315,0.2571428571428571
+Porto Alegre,temperatura,teste,8,3,3.0,centrada,20,17,1,29,0.85,0.9444444444444444,0.3695652173913043
+Porto Alegre,temperatura,teste,8,3,3.5,centrada,20,17,0,18,0.85,1.0,0.4857142857142857
+Porto Alegre,temperatura,teste,8,3,4.0,centrada,20,17,0,15,0.85,1.0,0.53125
+Porto Alegre,temperatura,teste,8,7,2.5,centrada,20,20,1,48,1.0,0.9523809523809523,0.29411764705882354
+Porto Alegre,temperatura,teste,8,7,3.0,centrada,20,20,1,15,1.0,0.9523809523809523,0.5714285714285714
+Porto Alegre,temperatura,teste,8,7,3.5,centrada,20,19,0,5,0.95,1.0,0.7916666666666666
+Porto Alegre,temperatura,teste,8,7,4.0,centrada,20,17,0,3,0.85,1.0,0.85
+Porto Alegre,temperatura,teste,8,15,2.5,centrada,20,19,0,16,0.95,1.0,0.5428571428571428
+Porto Alegre,temperatura,teste,8,15,3.0,centrada,20,18,1,9,0.9,0.9473684210526315,0.6666666666666666
+Porto Alegre,temperatura,teste,8,15,3.5,centrada,20,17,1,4,0.85,0.9444444444444444,0.8095238095238095
+Porto Alegre,temperatura,teste,8,15,4.0,centrada,20,16,0,1,0.8,1.0,0.9411764705882353
+Porto Alegre,temperatura,teste,8,3,2.5,causal,20,18,1,128,0.9,0.9473684210526315,0.1232876712328767
+Porto Alegre,temperatura,teste,8,3,3.0,causal,20,17,0,75,0.85,1.0,0.18478260869565216
+Porto Alegre,temperatura,teste,8,3,3.5,causal,20,16,0,47,0.8,1.0,0.25396825396825395
+Porto Alegre,temperatura,teste,8,3,4.0,causal,20,15,0,36,0.75,1.0,0.29411764705882354
+Porto Alegre,temperatura,teste,8,7,2.5,causal,20,20,1,86,1.0,0.9523809523809523,0.18867924528301888
+Porto Alegre,temperatura,teste,8,7,3.0,causal,20,18,0,54,0.9,1.0,0.25
+Porto Alegre,temperatura,teste,8,7,3.5,causal,20,18,0,26,0.9,1.0,0.4090909090909091
+Porto Alegre,temperatura,teste,8,7,4.0,causal,20,16,0,17,0.8,1.0,0.48484848484848486
+Porto Alegre,temperatura,teste,8,15,2.5,causal,20,19,0,58,0.95,1.0,0.24675324675324675
+Porto Alegre,temperatura,teste,8,15,3.0,causal,20,19,0,28,0.95,1.0,0.40425531914893614
+Porto Alegre,temperatura,teste,8,15,3.5,causal,20,18,0,15,0.9,1.0,0.5454545454545454
+Porto Alegre,temperatura,teste,8,15,4.0,causal,20,15,1,6,0.75,0.9375,0.7142857142857143
+Porto Alegre,umidade,validacao,3,3,2.5,centrada,20,11,0,95,0.55,1.0,0.10377358490566038
+Porto Alegre,umidade,validacao,3,3,3.0,centrada,20,10,0,70,0.5,1.0,0.125
+Porto Alegre,umidade,validacao,3,3,3.5,centrada,20,8,0,53,0.4,1.0,0.13114754098360656
+Porto Alegre,umidade,validacao,3,3,4.0,centrada,20,6,0,36,0.3,1.0,0.14285714285714285
+Porto Alegre,umidade,validacao,3,7,2.5,centrada,20,9,0,64,0.45,1.0,0.1232876712328767
+Porto Alegre,umidade,validacao,3,7,3.0,centrada,20,6,0,42,0.3,1.0,0.125
+Porto Alegre,umidade,validacao,3,7,3.5,centrada,20,5,0,27,0.25,1.0,0.15625
+Porto Alegre,umidade,validacao,3,7,4.0,centrada,20,3,1,15,0.15,0.75,0.16666666666666666
+Porto Alegre,umidade,validacao,3,15,2.5,centrada,20,9,1,58,0.45,0.9,0.13432835820895522
+Porto Alegre,umidade,validacao,3,15,3.0,centrada,20,3,0,29,0.15,1.0,0.09375
+Porto Alegre,umidade,validacao,3,15,3.5,centrada,20,2,0,14,0.1,1.0,0.125
+Porto Alegre,umidade,validacao,3,15,4.0,centrada,20,1,0,7,0.05,1.0,0.125
+Porto Alegre,umidade,validacao,3,3,2.5,causal,20,10,1,129,0.5,0.9090909090909091,0.07194244604316546
+Porto Alegre,umidade,validacao,3,3,3.0,causal,20,8,2,95,0.4,0.8,0.07766990291262135
+Porto Alegre,umidade,validacao,3,3,3.5,causal,20,6,2,81,0.3,0.75,0.06896551724137931
+Porto Alegre,umidade,validacao,3,3,4.0,causal,20,4,1,64,0.2,0.8,0.058823529411764705
+Porto Alegre,umidade,validacao,3,7,2.5,causal,20,9,0,79,0.45,1.0,0.10227272727272728
+Porto Alegre,umidade,validacao,3,7,3.0,causal,20,8,0,53,0.4,1.0,0.13114754098360656
+Porto Alegre,umidade,validacao,3,7,3.5,causal,20,4,0,34,0.2,1.0,0.10526315789473684
+Porto Alegre,umidade,validacao,3,7,4.0,causal,20,2,0,21,0.1,1.0,0.08695652173913043
+Porto Alegre,umidade,validacao,3,15,2.5,causal,20,6,0,56,0.3,1.0,0.0967741935483871
+Porto Alegre,umidade,validacao,3,15,3.0,causal,20,6,0,24,0.3,1.0,0.2
+Porto Alegre,umidade,validacao,3,15,3.5,causal,20,2,0,14,0.1,1.0,0.125
+Porto Alegre,umidade,validacao,3,15,4.0,causal,20,2,0,9,0.1,1.0,0.18181818181818182
+Porto Alegre,umidade,validacao,5,3,2.5,centrada,20,13,0,95,0.65,1.0,0.12037037037037036
+Porto Alegre,umidade,validacao,5,3,3.0,centrada,20,12,0,70,0.6,1.0,0.14634146341463414
+Porto Alegre,umidade,validacao,5,3,3.5,centrada,20,10,0,53,0.5,1.0,0.15873015873015872
+Porto Alegre,umidade,validacao,5,3,4.0,centrada,20,9,0,36,0.45,1.0,0.2
+Porto Alegre,umidade,validacao,5,7,2.5,centrada,20,13,0,64,0.65,1.0,0.16883116883116883
+Porto Alegre,umidade,validacao,5,7,3.0,centrada,20,12,0,42,0.6,1.0,0.2222222222222222
+Porto Alegre,umidade,validacao,5,7,3.5,centrada,20,11,0,27,0.55,1.0,0.2894736842105263
+Porto Alegre,umidade,validacao,5,7,4.0,centrada,20,10,1,15,0.5,0.9090909090909091,0.4
+Porto Alegre,umidade,validacao,5,15,2.5,centrada,20,16,1,58,0.8,0.9411764705882353,0.21621621621621623
+Porto Alegre,umidade,validacao,5,15,3.0,centrada,20,12,0,29,0.6,1.0,0.2926829268292683
+Porto Alegre,umidade,validacao,5,15,3.5,centrada,20,10,0,14,0.5,1.0,0.4166666666666667
+Porto Alegre,umidade,validacao,5,15,4.0,centrada,20,6,0,7,0.3,1.0,0.46153846153846156
+Porto Alegre,umidade,validacao,5,3,2.5,causal,20,15,1,129,0.75,0.9375,0.10416666666666667
+Porto Alegre,umidade,validacao,5,3,3.0,causal,20,13,1,94,0.65,0.9285714285714286,0.12149532710280374
+Porto Alegre,umidade,validacao,5,3,3.5,causal,20,9,1,80,0.45,0.9,0.10112359550561797
+Porto Alegre,umidade,validacao,5,3,4.0,causal,20,7,0,63,0.35,1.0,0.1
+Porto Alegre,umidade,validacao,5,7,2.5,causal,20,15,0,79,0.75,1.0,0.1595744680851064
+Porto Alegre,umidade,validacao,5,7,3.0,causal,20,13,0,53,0.65,1.0,0.19696969696969696
+Porto Alegre,umidade,validacao,5,7,3.5,causal,20,12,0,34,0.6,1.0,0.2608695652173913
+Porto Alegre,umidade,validacao,5,7,4.0,causal,20,8,0,21,0.4,1.0,0.27586206896551724
+Porto Alegre,umidade,validacao,5,15,2.5,causal,20,14,0,56,0.7,1.0,0.2
+Porto Alegre,umidade,validacao,5,15,3.0,causal,20,12,0,24,0.6,1.0,0.3333333333333333
+Porto Alegre,umidade,validacao,5,15,3.5,causal,20,10,0,14,0.5,1.0,0.4166666666666667
+Porto Alegre,umidade,validacao,5,15,4.0,causal,20,6,0,9,0.3,1.0,0.4
+Porto Alegre,umidade,validacao,8,3,2.5,centrada,20,14,0,95,0.7,1.0,0.12844036697247707
+Porto Alegre,umidade,validacao,8,3,3.0,centrada,20,14,0,70,0.7,1.0,0.16666666666666666
+Porto Alegre,umidade,validacao,8,3,3.5,centrada,20,12,0,53,0.6,1.0,0.18461538461538463
+Porto Alegre,umidade,validacao,8,3,4.0,centrada,20,11,0,36,0.55,1.0,0.23404255319148937
+Porto Alegre,umidade,validacao,8,7,2.5,centrada,20,13,0,64,0.65,1.0,0.16883116883116883
+Porto Alegre,umidade,validacao,8,7,3.0,centrada,20,13,0,42,0.65,1.0,0.23636363636363636
+Porto Alegre,umidade,validacao,8,7,3.5,centrada,20,12,0,27,0.6,1.0,0.3076923076923077
+Porto Alegre,umidade,validacao,8,7,4.0,centrada,20,12,1,15,0.6,0.9230769230769231,0.4444444444444444
+Porto Alegre,umidade,validacao,8,15,2.5,centrada,20,16,1,58,0.8,0.9411764705882353,0.21621621621621623
+Porto Alegre,umidade,validacao,8,15,3.0,centrada,20,13,0,29,0.65,1.0,0.30952380952380953
+Porto Alegre,umidade,validacao,8,15,3.5,centrada,20,12,0,14,0.6,1.0,0.46153846153846156
+Porto Alegre,umidade,validacao,8,15,4.0,centrada,20,11,0,7,0.55,1.0,0.6111111111111112
+Porto Alegre,umidade,validacao,8,3,2.5,causal,20,15,1,129,0.75,0.9375,0.10416666666666667
+Porto Alegre,umidade,validacao,8,3,3.0,causal,20,15,1,94,0.75,0.9375,0.13761467889908258
+Porto Alegre,umidade,validacao,8,3,3.5,causal,20,12,1,80,0.6,0.9230769230769231,0.13043478260869565
+Porto Alegre,umidade,validacao,8,3,4.0,causal,20,12,0,63,0.6,1.0,0.16
+Porto Alegre,umidade,validacao,8,7,2.5,causal,20,16,0,79,0.8,1.0,0.16842105263157894
+Porto Alegre,umidade,validacao,8,7,3.0,causal,20,15,0,53,0.75,1.0,0.22058823529411764
+Porto Alegre,umidade,validacao,8,7,3.5,causal,20,13,0,34,0.65,1.0,0.2765957446808511
+Porto Alegre,umidade,validacao,8,7,4.0,causal,20,13,0,21,0.65,1.0,0.38235294117647056
+Porto Alegre,umidade,validacao,8,15,2.5,causal,20,14,0,56,0.7,1.0,0.2
+Porto Alegre,umidade,validacao,8,15,3.0,causal,20,14,0,24,0.7,1.0,0.3684210526315789
+Porto Alegre,umidade,validacao,8,15,3.5,causal,20,13,0,14,0.65,1.0,0.48148148148148145
+Porto Alegre,umidade,validacao,8,15,4.0,causal,20,12,0,9,0.6,1.0,0.5714285714285714
+Porto Alegre,umidade,teste,3,3,2.5,centrada,20,7,2,84,0.35,0.7777777777777778,0.07692307692307693
+Porto Alegre,umidade,teste,3,3,3.0,centrada,20,6,2,58,0.3,0.75,0.09375
+Porto Alegre,umidade,teste,3,3,3.5,centrada,20,6,2,43,0.3,0.75,0.12244897959183673
+Porto Alegre,umidade,teste,3,3,4.0,centrada,20,6,3,29,0.3,0.6666666666666666,0.17142857142857143
+Porto Alegre,umidade,teste,3,7,2.5,centrada,20,9,0,68,0.45,1.0,0.11688311688311688
+Porto Alegre,umidade,teste,3,7,3.0,centrada,20,8,0,37,0.4,1.0,0.17777777777777778
+Porto Alegre,umidade,teste,3,7,3.5,centrada,20,8,0,24,0.4,1.0,0.25
+Porto Alegre,umidade,teste,3,7,4.0,centrada,20,6,0,17,0.3,1.0,0.2608695652173913
+Porto Alegre,umidade,teste,3,15,2.5,centrada,20,8,1,52,0.4,0.8888888888888888,0.13333333333333333
+Porto Alegre,umidade,teste,3,15,3.0,centrada,20,4,2,27,0.2,0.6666666666666666,0.12903225806451613
+Porto Alegre,umidade,teste,3,15,3.5,centrada,20,4,3,16,0.2,0.5714285714285714,0.2
+Porto Alegre,umidade,teste,3,15,4.0,centrada,20,2,2,5,0.1,0.5,0.2857142857142857
+Porto Alegre,umidade,teste,3,3,2.5,causal,20,11,0,142,0.55,1.0,0.0718954248366013
+Porto Alegre,umidade,teste,3,3,3.0,causal,20,10,1,114,0.5,0.9090909090909091,0.08064516129032258
+Porto Alegre,umidade,teste,3,3,3.5,causal,20,9,1,89,0.45,0.9,0.09183673469387756
+Porto Alegre,umidade,teste,3,3,4.0,causal,20,8,1,70,0.4,0.8888888888888888,0.10256410256410256
+Porto Alegre,umidade,teste,3,7,2.5,causal,20,11,2,88,0.55,0.8461538461538461,0.1111111111111111
+Porto Alegre,umidade,teste,3,7,3.0,causal,20,8,2,64,0.4,0.8,0.1111111111111111
+Porto Alegre,umidade,teste,3,7,3.5,causal,20,7,0,36,0.35,1.0,0.16279069767441862
+Porto Alegre,umidade,teste,3,7,4.0,causal,20,6,0,26,0.3,1.0,0.1875
+Porto Alegre,umidade,teste,3,15,2.5,causal,20,10,2,66,0.5,0.8333333333333334,0.13157894736842105
+Porto Alegre,umidade,teste,3,15,3.0,causal,20,7,1,34,0.35,0.875,0.17073170731707318
+Porto Alegre,umidade,teste,3,15,3.5,causal,20,5,2,21,0.25,0.7142857142857143,0.19230769230769232
+Porto Alegre,umidade,teste,3,15,4.0,causal,20,4,0,15,0.2,1.0,0.21052631578947367
+Porto Alegre,umidade,teste,5,3,2.5,centrada,20,11,1,83,0.55,0.9166666666666666,0.11702127659574468
+Porto Alegre,umidade,teste,5,3,3.0,centrada,20,10,1,57,0.5,0.9090909090909091,0.14925373134328357
+Porto Alegre,umidade,teste,5,3,3.5,centrada,20,8,1,42,0.4,0.8888888888888888,0.16
+Porto Alegre,umidade,teste,5,3,4.0,centrada,20,7,2,28,0.35,0.7777777777777778,0.2
+Porto Alegre,umidade,teste,5,7,2.5,centrada,20,13,0,68,0.65,1.0,0.16049382716049382
+Porto Alegre,umidade,teste,5,7,3.0,centrada,20,12,0,37,0.6,1.0,0.24489795918367346
+Porto Alegre,umidade,teste,5,7,3.5,centrada,20,10,0,24,0.5,1.0,0.29411764705882354
+Porto Alegre,umidade,teste,5,7,4.0,centrada,20,8,0,17,0.4,1.0,0.32
+Porto Alegre,umidade,teste,5,15,2.5,centrada,20,13,1,52,0.65,0.9285714285714286,0.2
+Porto Alegre,umidade,teste,5,15,3.0,centrada,20,13,2,27,0.65,0.8666666666666667,0.325
+Porto Alegre,umidade,teste,5,15,3.5,centrada,20,11,3,16,0.55,0.7857142857142857,0.4074074074074074
+Porto Alegre,umidade,teste,5,15,4.0,centrada,20,5,2,5,0.25,0.7142857142857143,0.5
+Porto Alegre,umidade,teste,5,3,2.5,causal,20,15,0,142,0.75,1.0,0.09554140127388536
+Porto Alegre,umidade,teste,5,3,3.0,causal,20,12,1,114,0.6,0.9230769230769231,0.09523809523809523
+Porto Alegre,umidade,teste,5,3,3.5,causal,20,11,1,89,0.55,0.9166666666666666,0.11
+Porto Alegre,umidade,teste,5,3,4.0,causal,20,10,1,70,0.5,0.9090909090909091,0.125
+Porto Alegre,umidade,teste,5,7,2.5,causal,20,12,2,87,0.6,0.8571428571428571,0.12121212121212122
+Porto Alegre,umidade,teste,5,7,3.0,causal,20,12,2,64,0.6,0.8571428571428571,0.15789473684210525
+Porto Alegre,umidade,teste,5,7,3.5,causal,20,11,0,36,0.55,1.0,0.23404255319148937
+Porto Alegre,umidade,teste,5,7,4.0,causal,20,11,0,26,0.55,1.0,0.2972972972972973
+Porto Alegre,umidade,teste,5,15,2.5,causal,20,15,2,66,0.75,0.8823529411764706,0.18518518518518517
+Porto Alegre,umidade,teste,5,15,3.0,causal,20,13,1,34,0.65,0.9285714285714286,0.2765957446808511
+Porto Alegre,umidade,teste,5,15,3.5,causal,20,11,2,21,0.55,0.8461538461538461,0.34375
+Porto Alegre,umidade,teste,5,15,4.0,causal,20,8,0,15,0.4,1.0,0.34782608695652173
+Porto Alegre,umidade,teste,8,3,2.5,centrada,20,13,1,83,0.65,0.9285714285714286,0.13541666666666666
+Porto Alegre,umidade,teste,8,3,3.0,centrada,20,13,1,57,0.65,0.9285714285714286,0.18571428571428572
+Porto Alegre,umidade,teste,8,3,3.5,centrada,20,12,1,42,0.6,0.9230769230769231,0.2222222222222222
+Porto Alegre,umidade,teste,8,3,4.0,centrada,20,12,2,28,0.6,0.8571428571428571,0.3
+Porto Alegre,umidade,teste,8,7,2.5,centrada,20,14,0,68,0.7,1.0,0.17073170731707318
+Porto Alegre,umidade,teste,8,7,3.0,centrada,20,14,0,37,0.7,1.0,0.27450980392156865
+Porto Alegre,umidade,teste,8,7,3.5,centrada,20,14,0,24,0.7,1.0,0.3684210526315789
+Porto Alegre,umidade,teste,8,7,4.0,centrada,20,13,0,17,0.65,1.0,0.43333333333333335
+Porto Alegre,umidade,teste,8,15,2.5,centrada,20,13,1,52,0.65,0.9285714285714286,0.2
+Porto Alegre,umidade,teste,8,15,3.0,centrada,20,13,2,27,0.65,0.8666666666666667,0.325
+Porto Alegre,umidade,teste,8,15,3.5,centrada,20,13,3,16,0.65,0.8125,0.4482758620689655
+Porto Alegre,umidade,teste,8,15,4.0,centrada,20,10,2,5,0.5,0.8333333333333334,0.6666666666666666
+Porto Alegre,umidade,teste,8,3,2.5,causal,20,16,0,142,0.8,1.0,0.10126582278481013
+Porto Alegre,umidade,teste,8,3,3.0,causal,20,14,1,114,0.7,0.9333333333333333,0.109375
+Porto Alegre,umidade,teste,8,3,3.5,causal,20,13,1,89,0.65,0.9285714285714286,0.12745098039215685
+Porto Alegre,umidade,teste,8,3,4.0,causal,20,13,1,70,0.65,0.9285714285714286,0.1566265060240964
+Porto Alegre,umidade,teste,8,7,2.5,causal,20,14,2,87,0.7,0.875,0.13861386138613863
+Porto Alegre,umidade,teste,8,7,3.0,causal,20,14,2,64,0.7,0.875,0.1794871794871795
+Porto Alegre,umidade,teste,8,7,3.5,causal,20,13,0,36,0.65,1.0,0.2653061224489796
+Porto Alegre,umidade,teste,8,7,4.0,causal,20,13,0,26,0.65,1.0,0.3333333333333333
+Porto Alegre,umidade,teste,8,15,2.5,causal,20,15,2,66,0.75,0.8823529411764706,0.18518518518518517
+Porto Alegre,umidade,teste,8,15,3.0,causal,20,14,1,34,0.7,0.9333333333333333,0.2916666666666667
+Porto Alegre,umidade,teste,8,15,3.5,causal,20,13,2,21,0.65,0.8666666666666667,0.38235294117647056
+Porto Alegre,umidade,teste,8,15,4.0,causal,20,12,0,15,0.6,1.0,0.4444444444444444
+Goiânia,temperatura,validacao,3,3,2.5,centrada,20,13,2,71,0.65,0.8666666666666667,0.15476190476190477
+Goiânia,temperatura,validacao,3,3,3.0,centrada,20,11,1,46,0.55,0.9166666666666666,0.19298245614035087
+Goiânia,temperatura,validacao,3,3,3.5,centrada,20,7,0,31,0.35,1.0,0.18421052631578946
+Goiânia,temperatura,validacao,3,3,4.0,centrada,20,7,0,26,0.35,1.0,0.21212121212121213
+Goiânia,temperatura,validacao,3,7,2.5,centrada,20,9,0,48,0.45,1.0,0.15789473684210525
+Goiânia,temperatura,validacao,3,7,3.0,centrada,20,9,0,33,0.45,1.0,0.21428571428571427
+Goiânia,temperatura,validacao,3,7,3.5,centrada,20,9,0,21,0.45,1.0,0.3
+Goiânia,temperatura,validacao,3,7,4.0,centrada,20,5,0,13,0.25,1.0,0.2777777777777778
+Goiânia,temperatura,validacao,3,15,2.5,centrada,20,11,0,37,0.55,1.0,0.22916666666666666
+Goiânia,temperatura,validacao,3,15,3.0,centrada,20,9,0,23,0.45,1.0,0.28125
+Goiânia,temperatura,validacao,3,15,3.5,centrada,20,5,0,15,0.25,1.0,0.25
+Goiânia,temperatura,validacao,3,15,4.0,centrada,20,2,0,8,0.1,1.0,0.2
+Goiânia,temperatura,validacao,3,3,2.5,causal,20,8,2,145,0.4,0.8,0.05228758169934641
+Goiânia,temperatura,validacao,3,3,3.0,causal,20,8,2,117,0.4,0.8,0.064
+Goiânia,temperatura,validacao,3,3,3.5,causal,20,7,3,93,0.35,0.7,0.07
+Goiânia,temperatura,validacao,3,3,4.0,causal,20,6,1,71,0.3,0.8571428571428571,0.07792207792207792
+Goiânia,temperatura,validacao,3,7,2.5,causal,20,11,0,101,0.55,1.0,0.09821428571428571
+Goiânia,temperatura,validacao,3,7,3.0,causal,20,9,0,65,0.45,1.0,0.12162162162162163
+Goiânia,temperatura,validacao,3,7,3.5,causal,20,6,0,42,0.3,1.0,0.125
+Goiânia,temperatura,validacao,3,7,4.0,causal,20,6,0,32,0.3,1.0,0.15789473684210525
+Goiânia,temperatura,validacao,3,15,2.5,causal,20,9,2,71,0.45,0.8181818181818182,0.1125
+Goiânia,temperatura,validacao,3,15,3.0,causal,20,9,0,40,0.45,1.0,0.1836734693877551
+Goiânia,temperatura,validacao,3,15,3.5,causal,20,8,0,29,0.4,1.0,0.21621621621621623
+Goiânia,temperatura,validacao,3,15,4.0,causal,20,7,0,22,0.35,1.0,0.2413793103448276
+Goiânia,temperatura,validacao,5,3,2.5,centrada,20,18,1,70,0.9,0.9473684210526315,0.20454545454545456
+Goiânia,temperatura,validacao,5,3,3.0,centrada,20,17,0,45,0.85,1.0,0.27419354838709675
+Goiânia,temperatura,validacao,5,3,3.5,centrada,20,14,0,31,0.7,1.0,0.3111111111111111
+Goiânia,temperatura,validacao,5,3,4.0,centrada,20,13,0,26,0.65,1.0,0.3333333333333333
+Goiânia,temperatura,validacao,5,7,2.5,centrada,20,15,0,48,0.75,1.0,0.23809523809523808
+Goiânia,temperatura,validacao,5,7,3.0,centrada,20,13,0,33,0.65,1.0,0.2826086956521739
+Goiânia,temperatura,validacao,5,7,3.5,centrada,20,11,0,21,0.55,1.0,0.34375
+Goiânia,temperatura,validacao,5,7,4.0,centrada,20,9,0,13,0.45,1.0,0.4090909090909091
+Goiânia,temperatura,validacao,5,15,2.5,centrada,20,18,0,37,0.9,1.0,0.32727272727272727
+Goiânia,temperatura,validacao,5,15,3.0,centrada,20,15,0,23,0.75,1.0,0.39473684210526316
+Goiânia,temperatura,validacao,5,15,3.5,centrada,20,12,0,15,0.6,1.0,0.4444444444444444
+Goiânia,temperatura,validacao,5,15,4.0,centrada,20,10,0,8,0.5,1.0,0.5555555555555556
+Goiânia,temperatura,validacao,5,3,2.5,causal,20,16,1,144,0.8,0.9411764705882353,0.1
+Goiânia,temperatura,validacao,5,3,3.0,causal,20,11,1,116,0.55,0.9166666666666666,0.08661417322834646
+Goiânia,temperatura,validacao,5,3,3.5,causal,20,10,2,92,0.5,0.8333333333333334,0.09803921568627451
+Goiânia,temperatura,validacao,5,3,4.0,causal,20,8,0,70,0.4,1.0,0.10256410256410256
+Goiânia,temperatura,validacao,5,7,2.5,causal,20,17,0,101,0.85,1.0,0.1440677966101695
+Goiânia,temperatura,validacao,5,7,3.0,causal,20,12,0,65,0.6,1.0,0.15584415584415584
+Goiânia,temperatura,validacao,5,7,3.5,causal,20,11,0,42,0.55,1.0,0.20754716981132076
+Goiânia,temperatura,validacao,5,7,4.0,causal,20,11,0,32,0.55,1.0,0.2558139534883721
+Goiânia,temperatura,validacao,5,15,2.5,causal,20,15,1,70,0.75,0.9375,0.17647058823529413
+Goiânia,temperatura,validacao,5,15,3.0,causal,20,13,0,40,0.65,1.0,0.24528301886792453
+Goiânia,temperatura,validacao,5,15,3.5,causal,20,12,0,29,0.6,1.0,0.2926829268292683
+Goiânia,temperatura,validacao,5,15,4.0,causal,20,10,0,22,0.5,1.0,0.3125
+Goiânia,temperatura,validacao,8,3,2.5,centrada,20,20,1,70,1.0,0.9523809523809523,0.2222222222222222
+Goiânia,temperatura,validacao,8,3,3.0,centrada,20,20,0,45,1.0,1.0,0.3076923076923077
+Goiânia,temperatura,validacao,8,3,3.5,centrada,20,19,0,31,0.95,1.0,0.38
+Goiânia,temperatura,validacao,8,3,4.0,centrada,20,18,0,26,0.9,1.0,0.4090909090909091
+Goiânia,temperatura,validacao,8,7,2.5,centrada,20,20,0,48,1.0,1.0,0.29411764705882354
+Goiânia,temperatura,validacao,8,7,3.0,centrada,20,19,0,33,0.95,1.0,0.36538461538461536
+Goiânia,temperatura,validacao,8,7,3.5,centrada,20,19,0,21,0.95,1.0,0.475
+Goiânia,temperatura,validacao,8,7,4.0,centrada,20,16,0,13,0.8,1.0,0.5517241379310345
+Goiânia,temperatura,validacao,8,15,2.5,centrada,20,20,0,37,1.0,1.0,0.3508771929824561
+Goiânia,temperatura,validacao,8,15,3.0,centrada,20,19,0,23,0.95,1.0,0.4523809523809524
+Goiânia,temperatura,validacao,8,15,3.5,centrada,20,18,0,15,0.9,1.0,0.5454545454545454
+Goiânia,temperatura,validacao,8,15,4.0,centrada,20,18,0,8,0.9,1.0,0.6923076923076923
+Goiânia,temperatura,validacao,8,3,2.5,causal,20,20,1,144,1.0,0.9523809523809523,0.12195121951219512
+Goiânia,temperatura,validacao,8,3,3.0,causal,20,20,1,116,1.0,0.9523809523809523,0.14705882352941177
+Goiânia,temperatura,validacao,8,3,3.5,causal,20,19,2,92,0.95,0.9047619047619048,0.17117117117117117
+Goiânia,temperatura,validacao,8,3,4.0,causal,20,16,0,70,0.8,1.0,0.18604651162790697
+Goiânia,temperatura,validacao,8,7,2.5,causal,20,19,0,101,0.95,1.0,0.15833333333333333
+Goiânia,temperatura,validacao,8,7,3.0,causal,20,19,0,65,0.95,1.0,0.2261904761904762
+Goiânia,temperatura,validacao,8,7,3.5,causal,20,19,0,42,0.95,1.0,0.3114754098360656
+Goiânia,temperatura,validacao,8,7,4.0,causal,20,18,0,32,0.9,1.0,0.36
+Goiânia,temperatura,validacao,8,15,2.5,causal,20,19,1,70,0.95,0.95,0.21348314606741572
+Goiânia,temperatura,validacao,8,15,3.0,causal,20,17,0,40,0.85,1.0,0.2982456140350877
+Goiânia,temperatura,validacao,8,15,3.5,causal,20,17,0,29,0.85,1.0,0.3695652173913043
+Goiânia,temperatura,validacao,8,15,4.0,causal,20,15,0,22,0.75,1.0,0.40540540540540543
+Goiânia,temperatura,teste,3,3,2.5,centrada,20,13,0,65,0.65,1.0,0.16666666666666666
+Goiânia,temperatura,teste,3,3,3.0,centrada,20,12,0,52,0.6,1.0,0.1875
+Goiânia,temperatura,teste,3,3,3.5,centrada,20,10,0,41,0.5,1.0,0.19607843137254902
+Goiânia,temperatura,teste,3,3,4.0,centrada,20,10,0,28,0.5,1.0,0.2631578947368421
+Goiânia,temperatura,teste,3,7,2.5,centrada,20,10,0,47,0.5,1.0,0.17543859649122806
+Goiânia,temperatura,teste,3,7,3.0,centrada,20,9,0,29,0.45,1.0,0.23684210526315788
+Goiânia,temperatura,teste,3,7,3.5,centrada,20,7,0,16,0.35,1.0,0.30434782608695654
+Goiânia,temperatura,teste,3,7,4.0,centrada,20,5,1,9,0.25,0.8333333333333334,0.35714285714285715
+Goiânia,temperatura,teste,3,15,2.5,centrada,20,8,0,26,0.4,1.0,0.23529411764705882
+Goiânia,temperatura,teste,3,15,3.0,centrada,20,5,0,12,0.25,1.0,0.29411764705882354
+Goiânia,temperatura,teste,3,15,3.5,centrada,20,5,1,7,0.25,0.8333333333333334,0.4166666666666667
+Goiânia,temperatura,teste,3,15,4.0,centrada,20,3,0,4,0.15,1.0,0.42857142857142855
+Goiânia,temperatura,teste,3,3,2.5,causal,20,9,1,141,0.45,0.9,0.06
+Goiânia,temperatura,teste,3,3,3.0,causal,20,9,0,98,0.45,1.0,0.08411214953271028
+Goiânia,temperatura,teste,3,3,3.5,causal,20,9,0,78,0.45,1.0,0.10344827586206896
+Goiânia,temperatura,teste,3,3,4.0,causal,20,7,0,55,0.35,1.0,0.11290322580645161
+Goiânia,temperatura,teste,3,7,2.5,causal,20,11,0,90,0.55,1.0,0.10891089108910891
+Goiânia,temperatura,teste,3,7,3.0,causal,20,8,0,51,0.4,1.0,0.13559322033898305
+Goiânia,temperatura,teste,3,7,3.5,causal,20,5,0,36,0.25,1.0,0.12195121951219512
+Goiânia,temperatura,teste,3,7,4.0,causal,20,4,0,26,0.2,1.0,0.13333333333333333
+Goiânia,temperatura,teste,3,15,2.5,causal,20,7,7,60,0.35,0.5,0.1044776119402985
+Goiânia,temperatura,teste,3,15,3.0,causal,20,4,2,23,0.2,0.6666666666666666,0.14814814814814814
+Goiânia,temperatura,teste,3,15,3.5,causal,20,3,0,12,0.15,1.0,0.2
+Goiânia,temperatura,teste,3,15,4.0,causal,20,2,0,6,0.1,1.0,0.25
+Goiânia,temperatura,teste,5,3,2.5,centrada,20,19,0,65,0.95,1.0,0.2261904761904762
+Goiânia,temperatura,teste,5,3,3.0,centrada,20,18,0,52,0.9,1.0,0.2571428571428571
+Goiânia,temperatura,teste,5,3,3.5,centrada,20,16,0,41,0.8,1.0,0.2807017543859649
+Goiânia,temperatura,teste,5,3,4.0,centrada,20,14,0,28,0.7,1.0,0.3333333333333333
+Goiânia,temperatura,teste,5,7,2.5,centrada,20,19,0,47,0.95,1.0,0.2878787878787879
+Goiânia,temperatura,teste,5,7,3.0,centrada,20,19,0,29,0.95,1.0,0.3958333333333333
+Goiânia,temperatura,teste,5,7,3.5,centrada,20,19,0,16,0.95,1.0,0.5428571428571428
+Goiânia,temperatura,teste,5,7,4.0,centrada,20,13,1,9,0.65,0.9285714285714286,0.5909090909090909
+Goiânia,temperatura,teste,5,15,2.5,centrada,20,18,0,26,0.9,1.0,0.4090909090909091
+Goiânia,temperatura,teste,5,15,3.0,centrada,20,17,0,12,0.85,1.0,0.5862068965517241
+Goiânia,temperatura,teste,5,15,3.5,centrada,20,15,1,7,0.75,0.9375,0.6818181818181818
+Goiânia,temperatura,teste,5,15,4.0,centrada,20,12,0,4,0.6,1.0,0.75
+Goiânia,temperatura,teste,5,3,2.5,causal,20,16,1,141,0.8,0.9411764705882353,0.10191082802547771
+Goiânia,temperatura,teste,5,3,3.0,causal,20,16,0,98,0.8,1.0,0.14035087719298245
+Goiânia,temperatura,teste,5,3,3.5,causal,20,14,0,78,0.7,1.0,0.15217391304347827
+Goiânia,temperatura,teste,5,3,4.0,causal,20,12,0,55,0.6,1.0,0.1791044776119403
+Goiânia,temperatura,teste,5,7,2.5,causal,20,17,0,90,0.85,1.0,0.1588785046728972
+Goiânia,temperatura,teste,5,7,3.0,causal,20,16,0,51,0.8,1.0,0.23880597014925373
+Goiânia,temperatura,teste,5,7,3.5,causal,20,15,0,36,0.75,1.0,0.29411764705882354
+Goiânia,temperatura,teste,5,7,4.0,causal,20,12,0,26,0.6,1.0,0.3157894736842105
+Goiânia,temperatura,teste,5,15,2.5,causal,20,18,2,55,0.9,0.9,0.2465753424657534
+Goiânia,temperatura,teste,5,15,3.0,causal,20,17,0,21,0.85,1.0,0.4473684210526316
+Goiânia,temperatura,teste,5,15,3.5,causal,20,15,0,12,0.75,1.0,0.5555555555555556
+Goiânia,temperatura,teste,5,15,4.0,causal,20,8,0,6,0.4,1.0,0.5714285714285714
+Goiânia,temperatura,teste,8,3,2.5,centrada,20,20,0,65,1.0,1.0,0.23529411764705882
+Goiânia,temperatura,teste,8,3,3.0,centrada,20,20,0,52,1.0,1.0,0.2777777777777778
+Goiânia,temperatura,teste,8,3,3.5,centrada,20,20,0,41,1.0,1.0,0.32786885245901637
+Goiânia,temperatura,teste,8,3,4.0,centrada,20,20,0,28,1.0,1.0,0.4166666666666667
+Goiânia,temperatura,teste,8,7,2.5,centrada,20,20,0,47,1.0,1.0,0.29850746268656714
+Goiânia,temperatura,teste,8,7,3.0,centrada,20,20,0,29,1.0,1.0,0.40816326530612246
+Goiânia,temperatura,teste,8,7,3.5,centrada,20,19,0,16,0.95,1.0,0.5428571428571428
+Goiânia,temperatura,teste,8,7,4.0,centrada,20,19,1,9,0.95,0.95,0.6785714285714286
+Goiânia,temperatura,teste,8,15,2.5,centrada,20,20,0,26,1.0,1.0,0.43478260869565216
+Goiânia,temperatura,teste,8,15,3.0,centrada,20,19,0,12,0.95,1.0,0.6129032258064516
+Goiânia,temperatura,teste,8,15,3.5,centrada,20,19,1,7,0.95,0.95,0.7307692307692307
+Goiânia,temperatura,teste,8,15,4.0,centrada,20,18,0,4,0.9,1.0,0.8181818181818182
+Goiânia,temperatura,teste,8,3,2.5,causal,20,20,1,141,1.0,0.9523809523809523,0.12422360248447205
+Goiânia,temperatura,teste,8,3,3.0,causal,20,20,0,98,1.0,1.0,0.1694915254237288
+Goiânia,temperatura,teste,8,3,3.5,causal,20,20,0,78,1.0,1.0,0.20408163265306123
+Goiânia,temperatura,teste,8,3,4.0,causal,20,17,0,55,0.85,1.0,0.2361111111111111
+Goiânia,temperatura,teste,8,7,2.5,causal,20,19,0,90,0.95,1.0,0.1743119266055046
+Goiânia,temperatura,teste,8,7,3.0,causal,20,19,0,51,0.95,1.0,0.2714285714285714
+Goiânia,temperatura,teste,8,7,3.5,causal,20,19,0,36,0.95,1.0,0.34545454545454546
+Goiânia,temperatura,teste,8,7,4.0,causal,20,18,0,26,0.9,1.0,0.4090909090909091
+Goiânia,temperatura,teste,8,15,2.5,causal,20,20,2,55,1.0,0.9090909090909091,0.26666666666666666
+Goiânia,temperatura,teste,8,15,3.0,causal,20,19,0,21,0.95,1.0,0.475
+Goiânia,temperatura,teste,8,15,3.5,causal,20,19,0,12,0.95,1.0,0.6129032258064516
+Goiânia,temperatura,teste,8,15,4.0,causal,20,18,0,6,0.9,1.0,0.75
+Goiânia,umidade,validacao,3,3,2.5,centrada,20,9,1,63,0.45,0.9,0.125
+Goiânia,umidade,validacao,3,3,3.0,centrada,20,6,1,44,0.3,0.8571428571428571,0.12
+Goiânia,umidade,validacao,3,3,3.5,centrada,20,6,1,31,0.3,0.8571428571428571,0.16216216216216217
+Goiânia,umidade,validacao,3,3,4.0,centrada,20,5,1,23,0.25,0.8333333333333334,0.17857142857142858
+Goiânia,umidade,validacao,3,7,2.5,centrada,20,10,2,52,0.5,0.8333333333333334,0.16129032258064516
+Goiânia,umidade,validacao,3,7,3.0,centrada,20,8,1,23,0.4,0.8888888888888888,0.25806451612903225
+Goiânia,umidade,validacao,3,7,3.5,centrada,20,6,0,15,0.3,1.0,0.2857142857142857
+Goiânia,umidade,validacao,3,7,4.0,centrada,20,5,0,10,0.25,1.0,0.3333333333333333
+Goiânia,umidade,validacao,3,15,2.5,centrada,20,8,0,47,0.4,1.0,0.14545454545454545
+Goiânia,umidade,validacao,3,15,3.0,centrada,20,5,1,28,0.25,0.8333333333333334,0.15151515151515152
+Goiânia,umidade,validacao,3,15,3.5,centrada,20,2,1,16,0.1,0.6666666666666666,0.1111111111111111
+Goiânia,umidade,validacao,3,15,4.0,centrada,20,1,3,12,0.05,0.25,0.07692307692307693
+Goiânia,umidade,validacao,3,3,2.5,causal,20,10,4,162,0.5,0.7142857142857143,0.05813953488372093
+Goiânia,umidade,validacao,3,3,3.0,causal,20,9,2,115,0.45,0.8181818181818182,0.07258064516129033
+Goiânia,umidade,validacao,3,3,3.5,causal,20,7,1,83,0.35,0.875,0.07777777777777778
+Goiânia,umidade,validacao,3,3,4.0,causal,20,6,1,63,0.3,0.8571428571428571,0.08695652173913043
+Goiânia,umidade,validacao,3,7,2.5,causal,20,6,7,125,0.3,0.46153846153846156,0.04580152671755725
+Goiânia,umidade,validacao,3,7,3.0,causal,20,4,5,82,0.2,0.4444444444444444,0.046511627906976744
+Goiânia,umidade,validacao,3,7,3.5,causal,20,4,4,50,0.2,0.5,0.07407407407407407
+Goiânia,umidade,validacao,3,7,4.0,causal,20,3,3,35,0.15,0.5,0.07894736842105263
+Goiânia,umidade,validacao,3,15,2.5,causal,20,6,0,79,0.3,1.0,0.07058823529411765
+Goiânia,umidade,validacao,3,15,3.0,causal,20,4,0,44,0.2,1.0,0.08333333333333333
+Goiânia,umidade,validacao,3,15,3.5,causal,20,2,0,27,0.1,1.0,0.06896551724137931
+Goiânia,umidade,validacao,3,15,4.0,causal,20,1,0,17,0.05,1.0,0.05555555555555555
+Goiânia,umidade,validacao,5,3,2.5,centrada,20,13,0,62,0.65,1.0,0.17333333333333334
+Goiânia,umidade,validacao,5,3,3.0,centrada,20,11,0,43,0.55,1.0,0.2037037037037037
+Goiânia,umidade,validacao,5,3,3.5,centrada,20,11,0,30,0.55,1.0,0.2682926829268293
+Goiânia,umidade,validacao,5,3,4.0,centrada,20,8,0,22,0.4,1.0,0.26666666666666666
+Goiânia,umidade,validacao,5,7,2.5,centrada,20,14,2,52,0.7,0.875,0.21212121212121213
+Goiânia,umidade,validacao,5,7,3.0,centrada,20,13,0,22,0.65,1.0,0.37142857142857144
+Goiânia,umidade,validacao,5,7,3.5,centrada,20,12,0,15,0.6,1.0,0.4444444444444444
+Goiânia,umidade,validacao,5,7,4.0,centrada,20,7,0,10,0.35,1.0,0.4117647058823529
+Goiânia,umidade,validacao,5,15,2.5,centrada,20,12,0,47,0.6,1.0,0.2033898305084746
+Goiânia,umidade,validacao,5,15,3.0,centrada,20,9,1,28,0.45,0.9,0.24324324324324326
+Goiânia,umidade,validacao,5,15,3.5,centrada,20,9,1,16,0.45,0.9,0.36
+Goiânia,umidade,validacao,5,15,4.0,centrada,20,8,1,10,0.4,0.8888888888888888,0.4444444444444444
+Goiânia,umidade,validacao,5,3,2.5,causal,20,15,1,159,0.75,0.9375,0.08620689655172414
+Goiânia,umidade,validacao,5,3,3.0,causal,20,14,1,114,0.7,0.9333333333333333,0.109375
+Goiânia,umidade,validacao,5,3,3.5,causal,20,12,0,82,0.6,1.0,0.1276595744680851
+Goiânia,umidade,validacao,5,3,4.0,causal,20,10,0,62,0.5,1.0,0.1388888888888889
+Goiânia,umidade,validacao,5,7,2.5,causal,20,12,4,122,0.6,0.75,0.08955223880597014
+Goiânia,umidade,validacao,5,7,3.0,causal,20,10,3,80,0.5,0.7692307692307693,0.1111111111111111
+Goiânia,umidade,validacao,5,7,3.5,causal,20,9,4,50,0.45,0.6923076923076923,0.15254237288135594
+Goiânia,umidade,validacao,5,7,4.0,causal,20,6,3,35,0.3,0.6666666666666666,0.14634146341463414
+Goiânia,umidade,validacao,5,15,2.5,causal,20,11,0,79,0.55,1.0,0.12222222222222222
+Goiânia,umidade,validacao,5,15,3.0,causal,20,9,0,44,0.45,1.0,0.16981132075471697
+Goiânia,umidade,validacao,5,15,3.5,causal,20,9,0,27,0.45,1.0,0.25
+Goiânia,umidade,validacao,5,15,4.0,causal,20,6,0,17,0.3,1.0,0.2608695652173913
+Goiânia,umidade,validacao,8,3,2.5,centrada,20,14,0,62,0.7,1.0,0.18421052631578946
+Goiânia,umidade,validacao,8,3,3.0,centrada,20,13,0,43,0.65,1.0,0.23214285714285715
+Goiânia,umidade,validacao,8,3,3.5,centrada,20,13,0,30,0.65,1.0,0.3023255813953488
+Goiânia,umidade,validacao,8,3,4.0,centrada,20,10,0,22,0.5,1.0,0.3125
+Goiânia,umidade,validacao,8,7,2.5,centrada,20,15,2,52,0.75,0.8823529411764706,0.22388059701492538
+Goiânia,umidade,validacao,8,7,3.0,centrada,20,14,0,22,0.7,1.0,0.3888888888888889
+Goiânia,umidade,validacao,8,7,3.5,centrada,20,13,0,15,0.65,1.0,0.4642857142857143
+Goiânia,umidade,validacao,8,7,4.0,centrada,20,9,0,10,0.45,1.0,0.47368421052631576
+Goiânia,umidade,validacao,8,15,2.5,centrada,20,13,0,47,0.65,1.0,0.21666666666666667
+Goiânia,umidade,validacao,8,15,3.0,centrada,20,10,1,28,0.5,0.9090909090909091,0.2631578947368421
+Goiânia,umidade,validacao,8,15,3.5,centrada,20,10,1,16,0.5,0.9090909090909091,0.38461538461538464
+Goiânia,umidade,validacao,8,15,4.0,centrada,20,10,1,10,0.5,0.9090909090909091,0.5
+Goiânia,umidade,validacao,8,3,2.5,causal,20,18,1,159,0.9,0.9473684210526315,0.1016949152542373
+Goiânia,umidade,validacao,8,3,3.0,causal,20,14,1,114,0.7,0.9333333333333333,0.109375
+Goiânia,umidade,validacao,8,3,3.5,causal,20,13,0,82,0.65,1.0,0.1368421052631579
+Goiânia,umidade,validacao,8,3,4.0,causal,20,11,0,62,0.55,1.0,0.1506849315068493
+Goiânia,umidade,validacao,8,7,2.5,causal,20,14,4,122,0.7,0.7777777777777778,0.10294117647058823
+Goiânia,umidade,validacao,8,7,3.0,causal,20,12,3,80,0.6,0.8,0.13043478260869565
+Goiânia,umidade,validacao,8,7,3.5,causal,20,10,4,50,0.5,0.7142857142857143,0.16666666666666666
+Goiânia,umidade,validacao,8,7,4.0,causal,20,10,3,35,0.5,0.7692307692307693,0.2222222222222222
+Goiânia,umidade,validacao,8,15,2.5,causal,20,12,0,79,0.6,1.0,0.13186813186813187
+Goiânia,umidade,validacao,8,15,3.0,causal,20,11,0,44,0.55,1.0,0.2
+Goiânia,umidade,validacao,8,15,3.5,causal,20,11,0,27,0.55,1.0,0.2894736842105263
+Goiânia,umidade,validacao,8,15,4.0,causal,20,9,0,17,0.45,1.0,0.34615384615384615
+Goiânia,umidade,teste,3,3,2.5,centrada,20,13,2,79,0.65,0.8666666666666667,0.14130434782608695
+Goiânia,umidade,teste,3,3,3.0,centrada,20,13,0,49,0.65,1.0,0.20967741935483872
+Goiânia,umidade,teste,3,3,3.5,centrada,20,11,0,36,0.55,1.0,0.23404255319148937
+Goiânia,umidade,teste,3,3,4.0,centrada,20,6,0,22,0.3,1.0,0.21428571428571427
+Goiânia,umidade,teste,3,7,2.5,centrada,20,10,1,52,0.5,0.9090909090909091,0.16129032258064516
+Goiânia,umidade,teste,3,7,3.0,centrada,20,8,1,32,0.4,0.8888888888888888,0.2
+Goiânia,umidade,teste,3,7,3.5,centrada,20,6,0,21,0.3,1.0,0.2222222222222222
+Goiânia,umidade,teste,3,7,4.0,centrada,20,3,1,18,0.15,0.75,0.14285714285714285
+Goiânia,umidade,teste,3,15,2.5,centrada,20,11,0,49,0.55,1.0,0.18333333333333332
+Goiânia,umidade,teste,3,15,3.0,centrada,20,8,1,30,0.4,0.8888888888888888,0.21052631578947367
+Goiânia,umidade,teste,3,15,3.5,centrada,20,5,0,22,0.25,1.0,0.18518518518518517
+Goiânia,umidade,teste,3,15,4.0,centrada,20,4,0,14,0.2,1.0,0.2222222222222222
+Goiânia,umidade,teste,3,3,2.5,causal,20,10,1,141,0.5,0.9090909090909091,0.06622516556291391
+Goiânia,umidade,teste,3,3,3.0,causal,20,10,1,101,0.5,0.9090909090909091,0.09009009009009009
+Goiânia,umidade,teste,3,3,3.5,causal,20,8,0,69,0.4,1.0,0.1038961038961039
+Goiânia,umidade,teste,3,3,4.0,causal,20,4,1,53,0.2,0.8,0.07017543859649122
+Goiânia,umidade,teste,3,7,2.5,causal,20,11,0,103,0.55,1.0,0.09649122807017543
+Goiânia,umidade,teste,3,7,3.0,causal,20,9,2,70,0.45,0.8181818181818182,0.11392405063291139
+Goiânia,umidade,teste,3,7,3.5,causal,20,7,0,51,0.35,1.0,0.1206896551724138
+Goiânia,umidade,teste,3,7,4.0,causal,20,5,1,38,0.25,0.8333333333333334,0.11627906976744186
+Goiânia,umidade,teste,3,15,2.5,causal,20,12,1,97,0.6,0.9230769230769231,0.11009174311926606
+Goiânia,umidade,teste,3,15,3.0,causal,20,7,0,65,0.35,1.0,0.09722222222222222
+Goiânia,umidade,teste,3,15,3.5,causal,20,4,0,44,0.2,1.0,0.08333333333333333
+Goiânia,umidade,teste,3,15,4.0,causal,20,3,0,29,0.15,1.0,0.09375
+Goiânia,umidade,teste,5,3,2.5,centrada,20,14,2,79,0.7,0.875,0.15053763440860216
+Goiânia,umidade,teste,5,3,3.0,centrada,20,14,0,49,0.7,1.0,0.2222222222222222
+Goiânia,umidade,teste,5,3,3.5,centrada,20,13,0,36,0.65,1.0,0.2653061224489796
+Goiânia,umidade,teste,5,3,4.0,centrada,20,10,0,22,0.5,1.0,0.3125
+Goiânia,umidade,teste,5,7,2.5,centrada,20,12,1,52,0.6,0.9230769230769231,0.1875
+Goiânia,umidade,teste,5,7,3.0,centrada,20,11,1,32,0.55,0.9166666666666666,0.2558139534883721
+Goiânia,umidade,teste,5,7,3.5,centrada,20,9,0,21,0.45,1.0,0.3
+Goiânia,umidade,teste,5,7,4.0,centrada,20,8,1,18,0.4,0.8888888888888888,0.3076923076923077
+Goiânia,umidade,teste,5,15,2.5,centrada,20,13,0,49,0.65,1.0,0.20967741935483872
+Goiânia,umidade,teste,5,15,3.0,centrada,20,12,1,30,0.6,0.9230769230769231,0.2857142857142857
+Goiânia,umidade,teste,5,15,3.5,centrada,20,9,0,22,0.45,1.0,0.2903225806451613
+Goiânia,umidade,teste,5,15,4.0,centrada,20,9,0,14,0.45,1.0,0.391304347826087
+Goiânia,umidade,teste,5,3,2.5,causal,20,10,1,141,0.5,0.9090909090909091,0.06622516556291391
+Goiânia,umidade,teste,5,3,3.0,causal,20,10,1,101,0.5,0.9090909090909091,0.09009009009009009
+Goiânia,umidade,teste,5,3,3.5,causal,20,10,0,69,0.5,1.0,0.12658227848101267
+Goiânia,umidade,teste,5,3,4.0,causal,20,9,1,53,0.45,0.9,0.14516129032258066
+Goiânia,umidade,teste,5,7,2.5,causal,20,11,0,103,0.55,1.0,0.09649122807017543
+Goiânia,umidade,teste,5,7,3.0,causal,20,10,2,70,0.5,0.8333333333333334,0.125
+Goiânia,umidade,teste,5,7,3.5,causal,20,10,0,51,0.5,1.0,0.16393442622950818
+Goiânia,umidade,teste,5,7,4.0,causal,20,10,1,38,0.5,0.9090909090909091,0.20833333333333334
+Goiânia,umidade,teste,5,15,2.5,causal,20,15,1,97,0.75,0.9375,0.13392857142857142
+Goiânia,umidade,teste,5,15,3.0,causal,20,13,0,65,0.65,1.0,0.16666666666666666
+Goiânia,umidade,teste,5,15,3.5,causal,20,11,0,44,0.55,1.0,0.2
+Goiânia,umidade,teste,5,15,4.0,causal,20,10,0,29,0.5,1.0,0.2564102564102564
+Goiânia,umidade,teste,8,3,2.5,centrada,20,16,2,79,0.8,0.8888888888888888,0.16842105263157894
+Goiânia,umidade,teste,8,3,3.0,centrada,20,16,0,49,0.8,1.0,0.24615384615384617
+Goiânia,umidade,teste,8,3,3.5,centrada,20,15,0,36,0.75,1.0,0.29411764705882354
+Goiânia,umidade,teste,8,3,4.0,centrada,20,12,0,22,0.6,1.0,0.35294117647058826
+Goiânia,umidade,teste,8,7,2.5,centrada,20,12,1,52,0.6,0.9230769230769231,0.1875
+Goiânia,umidade,teste,8,7,3.0,centrada,20,11,1,32,0.55,0.9166666666666666,0.2558139534883721
+Goiânia,umidade,teste,8,7,3.5,centrada,20,9,0,21,0.45,1.0,0.3
+Goiânia,umidade,teste,8,7,4.0,centrada,20,9,1,18,0.45,0.9,0.3333333333333333
+Goiânia,umidade,teste,8,15,2.5,centrada,20,13,0,49,0.65,1.0,0.20967741935483872
+Goiânia,umidade,teste,8,15,3.0,centrada,20,12,1,30,0.6,0.9230769230769231,0.2857142857142857
+Goiânia,umidade,teste,8,15,3.5,centrada,20,11,0,22,0.55,1.0,0.3333333333333333
+Goiânia,umidade,teste,8,15,4.0,centrada,20,10,0,14,0.5,1.0,0.4166666666666667
+Goiânia,umidade,teste,8,3,2.5,causal,20,10,1,141,0.5,0.9090909090909091,0.06622516556291391
+Goiânia,umidade,teste,8,3,3.0,causal,20,10,1,101,0.5,0.9090909090909091,0.09009009009009009
+Goiânia,umidade,teste,8,3,3.5,causal,20,10,0,69,0.5,1.0,0.12658227848101267
+Goiânia,umidade,teste,8,3,4.0,causal,20,9,1,53,0.45,0.9,0.14516129032258066
+Goiânia,umidade,teste,8,7,2.5,causal,20,12,0,103,0.6,1.0,0.10434782608695652
+Goiânia,umidade,teste,8,7,3.0,causal,20,11,2,70,0.55,0.8461538461538461,0.13580246913580246
+Goiânia,umidade,teste,8,7,3.5,causal,20,11,0,51,0.55,1.0,0.1774193548387097
+Goiânia,umidade,teste,8,7,4.0,causal,20,10,1,38,0.5,0.9090909090909091,0.20833333333333334
+Goiânia,umidade,teste,8,15,2.5,causal,20,15,1,97,0.75,0.9375,0.13392857142857142
+Goiânia,umidade,teste,8,15,3.0,causal,20,13,0,65,0.65,1.0,0.16666666666666666
+Goiânia,umidade,teste,8,15,3.5,causal,20,12,0,44,0.6,1.0,0.21428571428571427
+Goiânia,umidade,teste,8,15,4.0,causal,20,12,0,29,0.6,1.0,0.2926829268292683

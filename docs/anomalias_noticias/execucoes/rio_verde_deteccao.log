@@ -1,0 +1,3 @@
+detecção f54cfda2-6f43-4ed9-a239-149ad9948cc0 (Rio Verde/GO): modelo [2, 0, 1] sazonal=none, período pontuado 2017-01-01..2025-12-30
+  anomalias: {'arima_zscore': 27, 'accumulation_percentile': 14} | status: {'detected': 0, 'scientifically_reviewed': 26, 'rejected': 15}
+  datas candidatas à investigação: 26

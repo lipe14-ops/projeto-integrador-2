@@ -6,7 +6,7 @@ interface Props {
   umid: number
 }
 
-const fmt = (v: number, d: number) => v.toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d })
+const fmt = (v: number, d: number) => (Number.isFinite(v) ? v.toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d }) : '—')
 
 export function SummaryCards({ temp, chuva, umid }: Props) {
   const itens = [
