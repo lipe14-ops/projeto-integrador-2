@@ -26,6 +26,10 @@ PIPELINE_STEPS = {
         "Carrega dados ERA5-Land no banco",
         (sys.executable, "-m", "scripts.upload_climate"),
     ),
+    "atualizar-clima-mensal": (
+        "Atualiza o agregado mensal usado pela API e pelo front-end",
+        (sys.executable, "-m", "scripts.refresh_clima_mensal"),
+    ),
 }
 
 UTILITY_COMMANDS = {
@@ -36,6 +40,10 @@ UTILITY_COMMANDS = {
     "consultar-clima": (
         "Consulta os arquivos climáticos",
         (sys.executable, "-m", "scripts.read_climate"),
+    ),
+    "anomalias-noticias": (
+        "Detecta anomalias de chuva e investiga notícias (detect|investigate|run|resume|show)",
+        (sys.executable, "-m", "app.climate_news.cli"),
     ),
 }
 

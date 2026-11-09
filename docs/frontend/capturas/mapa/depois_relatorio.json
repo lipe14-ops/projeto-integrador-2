@@ -1,0 +1,70 @@
+{
+  "inicial": {
+    "container": [
+      840,
+      540
+    ],
+    "clientSize": [
+      933,
+      600
+    ],
+    "svg": [
+      -840,
+      -540,
+      2519,
+      1620
+    ],
+    "zoomCss": "0.9"
+  },
+  "apos_zoom": {
+    "container": [
+      840,
+      540
+    ],
+    "clientSize": [
+      933,
+      600
+    ],
+    "svg": [
+      -840,
+      -540,
+      2519,
+      1620
+    ],
+    "zoomCss": "0.9"
+  },
+  "durante_arraste": {
+    "container": [
+      840,
+      540
+    ],
+    "clientSize": [
+      933,
+      600
+    ],
+    "svg": [
+      -580,
+      -380,
+      2519,
+      1620
+    ],
+    "zoomCss": "0.9"
+  },
+  "apos_arraste": {
+    "container": [
+      840,
+      540
+    ],
+    "clientSize": [
+      933,
+      600
+    ],
+    "svg": [
+      -840,
+      -540,
+      2519,
+      1620
+    ],
+    "zoomCss": "0.9"
+  }
+}

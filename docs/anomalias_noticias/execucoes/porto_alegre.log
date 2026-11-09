@@ -1,0 +1,14 @@
+2026-11-08 20:05:39,772 INFO climate_news.orchestrator: detecção ccbdd15c-e0b2-4eec-b863-87a0d83775e6: 35 anomalias (35 candidatas)
+2026-11-08 20:05:40,162 INFO climate_news.orchestrator: investigação 64f5cc22-a2a5-4da2-93cb-065749107d67: 35 tarefas
+detecção ccbdd15c-e0b2-4eec-b863-87a0d83775e6 (Porto Alegre/RS): modelo [0, 0, 1] sazonal=none, período pontuado 2017-01-01..2025-12-30
+  anomalias: {'arima_zscore': 17, 'accumulation_percentile': 18} | status: {'detected': 0, 'scientifically_reviewed': 35, 'rejected': 0}
+  datas candidatas à investigação: 35
+investigação 64f5cc22-a2a5-4da2-93cb-065749107d67: status completed
+  investigations_by_status: {'completed': 35}
+  news_found: 359
+  news_verified: 207
+  news_rejected: 109
+  news_pending: 43
+  queries: 105
+  datas com notícias verificadas: ['2017-05-28', '2017-10-13', '2018-11-03', '2019-04-16', '2020-07-07', '2020-07-08', '2020-07-11', '2020-09-09', '2020-09-12', '2021-06-26', '2021-09-07', '2022-04-03', '2022-06-17', '2022-07-14', '2023-06-16', '2023-07-12', '2023-07-14', '2023-08-23', '2023-09-04', '2023-09-05', '2023-09-26', '2023-11-02', '2023-11-03', '2023-11-18', '2024-03-21', '2024-05-02', '2024-05-12', '2024-05-23', '2024-12-16', '2025-05-29', '2025-06-19', '2025-09-22', '2025-11-07']
+  datas sem resultados: []
