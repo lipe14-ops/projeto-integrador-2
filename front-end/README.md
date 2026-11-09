@@ -4,7 +4,7 @@ Aplicação React, TypeScript e Vite para explorar os dados climáticos municipa
 
 ## Executar
 
-Primeiro, inicie o back-end seguindo as instruções do [README principal](../README.md). Depois, nesta pasta:
+Primeiro, inicie o back-end seguindo as instruções do [guia do backend](../docs/execucao-backend.md). Depois, nesta pasta:
 
 ```sh
 npm install

@@ -1,0 +1,12 @@
+investigação 64f5cc22-a2a5-4da2-93cb-065749107d67: status completed
+  investigations_by_status: {'completed': 35}
+  news_found: 359
+  news_verified: 153
+  news_rejected: 162
+  news_pending: 44
+investigação 238fed36-072f-4c0e-a2c9-802ccee2ab3e: status completed
+  investigations_by_status: {'completed': 26}
+  news_found: 243
+  news_verified: 11
+  news_rejected: 177
+  news_pending: 55

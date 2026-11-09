@@ -10,6 +10,7 @@ from app.models.municipio import Municipio
 from app.models.municipio_details import MunicipioDetails
 from app.models.registro_climatico import RegistroClimatico
 from app.models.enso_mensal import EnsoMensal
+import app.climate_news.models  # noqa: F401 — registra as tabelas de anomalias/notícias
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

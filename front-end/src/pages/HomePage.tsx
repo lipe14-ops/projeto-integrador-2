@@ -1,20 +1,23 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnalysisSection } from '../components/AnalysisSection'
+import { IconNews } from '../components/Icons'
 import { MunicipioCard } from '../components/MunicipioCard'
 import MapaBrasil from '../components/MapaBrasil/MapaBrasil'
 import { SearchFilters, type Filtros } from '../components/SearchFilters'
 import { SummaryCards } from '../components/SummaryCards'
 import { ANO_FIM, ANO_INICIO, mediaPeriodo, mesFinalDoAno, mesInicialDoAno, registrarSerieReal, type Municipio, type SerieClima } from '../data/climate'
-import { carregarClima, carregarMunicipio, carregarMunicipios } from '../data/api'
+import { carregarClima, carregarMunicipio, carregarMunicipios, carregarMunicipiosAnalisados, type MunicipioAnalisado } from '../data/api'
+
+type Enso = { year: number; month: number; enso_index: number | null }
 
 const PADRAO: Filtros = { municipio: null, de: ANO_INICIO, ate: ANO_FIM }
 
 export default function HomePage() {
   const [municipios, setMunicipios] = useState<Municipio[]>([])
   const [filtros, setFiltros] = useState<Filtros>(PADRAO)
-  const [serie, setSerie] = useState<SerieClima | null>(null)
-  const [enso, setEnso] = useState<{ year: number; month: number; enso_index: number | null }[]>([])
-  const [carregando, setCarregando] = useState(false)
+  // dados climáticos indexados pelo município: o período é recortado no cliente
+  const [dados, setDados] = useState<{ ibge: string; serie: SerieClima; enso: Enso[] } | null>(null)
+  const [erroClima, setErroClima] = useState<{ ibge: string; mensagem: string } | null>(null)
   const [carregandoMunicipios, setCarregandoMunicipios] = useState(true)
   const [erro, setErro] = useState('')
   const [versaoForm, setVersaoForm] = useState(0)
@@ -28,32 +31,52 @@ export default function HomePage() {
       .finally(() => setCarregandoMunicipios(false))
   }, [])
 
+  // pontos de notícias no mapa: as contagens seguem o período escolhido
+  const [pontosRes, setPontosRes] = useState<{ chave: string; lista?: MunicipioAnalisado[]; erro?: boolean } | null>(null)
+  const chavePontos = `${filtros.de}-${filtros.ate}`
   useEffect(() => {
-    const municipio = filtros.municipio
-    if (!municipio) {
-      setSerie(null)
-      setEnso([])
-      setCarregando(false)
-      return
-    }
     const controller = new AbortController()
-    const codigoIbge = municipio.ibge
-    const { de, ate } = filtros
-    setCarregando(true)
-    setErro('')
-    carregarClima(codigoIbge, de, ate, controller.signal).then(({ serie: dados, enso: indices }) => {
+    carregarMunicipiosAnalisados(controller.signal, { anoDe: filtros.de, anoAte: filtros.ate, fonte: '' })
+      .then((lista) => setPontosRes({ chave: chavePontos, lista }))
+      .catch(() => { if (!controller.signal.aborted) setPontosRes({ chave: chavePontos, erro: true }) })
+    return () => controller.abort()
+  }, [chavePontos, filtros.de, filtros.ate])
+  // enquanto troca o período, mantém os pontos anteriores na tela
+  const pontosNoticias = pontosRes?.lista ?? null
+  const statusNoticias: 'carregando' | 'erro' | 'ok' =
+    pontosRes?.chave !== chavePontos ? 'carregando' : pontosRes.erro ? 'erro' : 'ok'
+
+  const codigoIbge = filtros.municipio?.ibge ?? null
+  // aviso de notícias: aparece ao selecionar município com notícias verificadas
+  const [avisoFechado, setAvisoFechado] = useState<string | null>(null)
+  const noticiasSelecionado = (codigoIbge && pontosNoticias?.find((p) => p.codigoIbge === codigoIbge)?.noticias) || 0
+  const mostrarAviso = Boolean(codigoIbge) && noticiasSelecionado > 0 && avisoFechado !== codigoIbge
+
+  function irParaNoticias() {
+    setAvisoFechado(codigoIbge)
+    const secao = document.getElementById('noticias-eventos')
+    if (secao) secao.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    else window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+  }
+  useEffect(() => {
+    if (!codigoIbge) return
+    const controller = new AbortController()
+    carregarClima(codigoIbge, controller.signal).then(({ serie: s, enso: indices }) => {
       if (controller.signal.aborted) return
-      registrarSerieReal(codigoIbge, dados)
-      setSerie(dados)
-      setEnso(indices)
+      registrarSerieReal(codigoIbge, s)
+      setDados({ ibge: codigoIbge, serie: s, enso: indices })
     }).catch((e: unknown) => {
       if (!controller.signal.aborted && !(e instanceof DOMException && e.name === 'AbortError')) {
-        setSerie(null)
-        setErro(e instanceof Error ? e.message : 'Não foi possível carregar os dados climáticos.')
+        setErroClima({ ibge: codigoIbge, mensagem: e instanceof Error ? e.message : 'Não foi possível carregar os dados climáticos.' })
       }
-    }).finally(() => { if (!controller.signal.aborted) setCarregando(false) })
+    })
     return () => controller.abort()
-  }, [filtros.municipio?.ibge, filtros.de, filtros.ate])
+  }, [codigoIbge])
+
+  const serie = codigoIbge && dados?.ibge === codigoIbge ? dados.serie : null
+  const enso = serie ? dados!.enso : []
+  const erroAtual = codigoIbge && erroClima?.ibge === codigoIbge ? erroClima.mensagem : ''
+  const carregando = Boolean(codigoIbge) && !serie && !erroAtual
 
   const mesDe = mesInicialDoAno(filtros.de)
   const mesAte = mesFinalDoAno(filtros.ate)
@@ -90,14 +113,14 @@ export default function HomePage() {
     <div className="page">
       <section className="hero" aria-labelledby="hero-titulo">
         <h1 id="hero-titulo" style={{ fontSize: 40 }}>Explore o clima de qualquer município do Brasil</h1>
-        <p className="hero__lead">Temperatura, chuva e umidade de 2015 a 2025, com episódios de El Niño e La Niña em destaque.</p>
+        <p className="hero__lead">Temperatura, chuva e umidade de 2015 a 2025, com episódios de El Niño e La Niña e eventos de chuva extrema em destaque.</p>
       </section>
 
-      {erro && <p role="alert" className="filter-error">{erro}</p>}
+      {(erro || erroAtual) && <p role="alert" className="filter-error">{erro || erroAtual}</p>}
       <SearchFilters key={versaoForm} aplicado={filtros} padrao={PADRAO} municipios={municipios} carregandoMunicipios={carregandoMunicipios} onAplicar={(f) => { municipioAtual.current = f.municipio?.ibge ?? null; requisicaoDetalhes.current?.abort(); setFiltros(f); setVersaoForm((v) => v + 1) }} />
 
       <section className="explore" aria-label="Mapa e dados do município">
-        <MapaBrasil onSelectMunicipio={selecionarNoMapa} />
+        <MapaBrasil onSelectMunicipio={selecionarNoMapa} pontosNoticias={pontosNoticias} statusNoticias={statusNoticias} />
         {filtros.municipio
           ? <MunicipioCard municipio={filtros.municipio} />
           : <div className="card municipio-vazio"><p className="mono-label">Município selecionado</p><h2>Selecione um município</h2><p>Escolha um estado e um município nos filtros, ou selecione um no mapa.</p></div>}
@@ -110,8 +133,21 @@ export default function HomePage() {
       </section>}
       {resumo && !carregando && filtros.municipio && <>
         <SummaryCards {...resumo} />
-        <AnalysisSection municipio={filtros.municipio} mesDe={mesDe} mesAte={mesAte} serie={serie!} enso={enso} />
+        <AnalysisSection municipio={filtros.municipio} municipios={municipios} mesDe={mesDe} mesAte={mesAte} serie={serie!} enso={enso} />
       </>}
+      {mostrarAviso && filtros.municipio && (
+        <div className="aviso-noticias" role="status" aria-live="polite">
+          <IconNews size={20} className="aviso-noticias__icone" />
+          <button type="button" className="aviso-noticias__acao" onClick={irParaNoticias}>
+            <span>
+              <b>{noticiasSelecionado} {noticiasSelecionado === 1 ? 'notícia verificada' : 'notícias verificadas'}</b> de
+              desastre por chuva em {filtros.municipio.nome}
+            </span>
+            <span className="aviso-noticias__link">Ver notícias ↓</span>
+          </button>
+          <button type="button" className="aviso-noticias__fechar" aria-label="Fechar aviso" onClick={() => setAvisoFechado(codigoIbge)}>×</button>
+        </div>
+      )}
     </div>
   )
 }

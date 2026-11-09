@@ -1,0 +1,1385 @@
+--[1] stream
+{
+  "python": "3.12.15",
+  "pandas": "3.1.0",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "statsmodels": "0.15.0",
+  "scikit-learn": "1.9.1",
+  "scipy": "1.18.1"
+}
+
+--[7] stream
+(32144, 7)
+
+--[7] result
+                   datetime  codigo_ibge municipio  uf  temperatura    umidade  precipitacao
+0 2015-01-01 00:00:00+00:00      1302603    Manaus  AM    26.155176  85.881409           NaN
+1 2015-01-01 12:00:00+00:00      1302603    Manaus  AM    26.324609  86.075854      0.461289
+2 2015-01-02 00:00:00+00:00      1302603    Manaus  AM    25.034570  89.474028     19.998437
+3 2015-01-02 12:00:00+00:00      1302603    Manaus  AM    24.832666  89.720075      0.458255
+4 2015-01-03 00:00:00+00:00      1302603    Manaus  AM    24.731348  91.436470      9.517166
+--[9] stream
+Tipos:
+ datetime        datetime64[us, UTC]
+codigo_ibge                   int64
+municipio                       str
+uf                              str
+temperatura                 float64
+umidade                     float64
+precipitacao                float64
+dtype: object 
+
+Período: 2015-01-01 00:00:00+00:00 → 2025-12-31 12:00:00+00:00
+Duplicatas (município, datetime): 0
+Intervalos entre observações consecutivas:
+ datetime
+0 days 12:00:00    32140
+Name: count, dtype: int64 
+
+
+--[9] result
+uf                        AM               BA       GO           RS
+municipio             Manaus Feira de Santana  Goiânia Porto Alegre
+temperatura  count   8036.00          8036.00  8036.00      8036.00
+             mean      26.07            24.55    23.45        19.24
+             std        1.61             2.45     2.49         5.02
+             min       21.59            18.32    11.32         2.99
+             median    25.86            24.54    23.24        19.71
+             max       33.75            33.71    33.70        32.63
+umidade      count   8036.00          8036.00  8036.00      8036.00
+             mean      86.22            76.74    64.95        80.30
+             std        8.90            11.91    19.43        10.18
+             min       36.16            43.94    14.68        41.11
+             median    88.08            78.11    66.63        81.25
+             max      100.00            99.02    99.52        99.16
+precipitacao count   7904.00          7904.00  7904.00      7904.00
+             mean       3.74             0.97     1.60         2.00
+             std        6.26             2.43     3.70         5.42
+             min        0.00             0.00     0.00         0.00
+             median     1.32             0.36     0.01         0.03
+             max      118.88            72.80    69.97        88.56
+--[10] result
+                     temperatura  umidade  precipitacao
+uf municipio                                           
+AM Manaus                      0        0           132
+BA Feira de Santana            0        0           132
+GO Goiânia                     0        0           132
+RS Porto Alegre                0        0           132
+--[10] stream
+Precipitação ausente — dia do mês e hora UTC:
+datetime
+dia 01, 00 UTC    528
+Name: count, dtype: int64
+
+Fração de precipitação exatamente zero: 0.1242 | valores negativos: 0 | umidade fora de [0, 100]: 0
+
+--[12] IMAGE
+--[13] IMAGE
+--[16] result
+split                teste  treino  validacao
+município                                    
+Feira de Santana/BA   1462    5114       1460
+Goiânia/GO            1462    5114       1460
+Manaus/AM             1462    5114       1460
+Porto Alegre/RS       1462    5114       1460
+--[17] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[17] IMAGE
+--[17] stream
+Manaus/AM              R² sazonal (treino): temperatura=0.26, umidade=0.19
+Feira de Santana/BA    R² sazonal (treino): temperatura=0.79, umidade=0.60
+Goiânia/GO             R² sazonal (treino): temperatura=0.48, umidade=0.64
+Porto Alegre/RS        R² sazonal (treino): temperatura=0.67, umidade=0.22
+
+--[17] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[20] stream
+ARIMA: 143.6 s
+
+--[20] result
+              município      variável transf. ordem (BIC)  d  adf_p  kpss_p  lb_p_lag10  lb_p_lag30  lb2_p_lag30
+0             Manaus/AM   temperatura       —     (3,0,3)  0    0.0  0.0100      0.0004      0.0318          0.0
+1             Manaus/AM       umidade       —     (3,0,3)  0    0.0  0.0100      0.0000      0.0000          0.0
+2             Manaus/AM  precipitacao   log1p     (3,0,1)  0    0.0  0.0246      0.2551      0.0583          0.0
+3   Feira de Santana/BA   temperatura       —     (2,0,1)  0    0.0  0.0998      0.0074      0.0011          0.0
+4   Feira de Santana/BA       umidade       —     (3,0,2)  0    0.0  0.0247      0.7839      0.9487          0.0
+5   Feira de Santana/BA  precipitacao   log1p     (2,0,2)  0    0.0  0.0921      0.0168      0.0412          0.0
+6            Goiânia/GO   temperatura       —     (2,0,1)  0    0.0  0.0261      0.0002      0.0003          0.0
+7            Goiânia/GO       umidade       —     (2,0,2)  0    0.0  0.1000      0.0490      0.2286          0.0
+8            Goiânia/GO  precipitacao   log1p     (2,0,0)  0    0.0  0.1000      0.0071      0.0054          0.0
+9       Porto Alegre/RS   temperatura       —     (1,0,2)  0    0.0  0.1000      0.2289      0.0171          0.0
+10      Porto Alegre/RS       umidade       —     (2,0,0)  0    0.0  0.0100      0.2717      0.2226          0.0
+11      Porto Alegre/RS  precipitacao   log1p     (2,0,0)  0    0.0  0.0282      0.9096      0.6734          0.0
+--[22] stream
+Precipitação (log1p) — apenas diagnóstico:
+
+--[22] result
+             município  % flags |Z|>3  flags positivas  flags negativas  assimetria resíduos
+0            Manaus/AM           0.37               30                0                 0.57
+1  Feira de Santana/BA           2.05              157                8                 1.63
+2           Goiânia/GO           1.31               95               10                 0.91
+3      Porto Alegre/RS           1.99              160                0                 1.57
+--[22] stream
+% sinalizado por split (Z clássico), média sobre municípios e variáveis:
+
+--[22] result
+split            treino  validacao  teste
+tipo_z   limiar                          
+classico 2.5       2.17       2.77   2.36
+         3.0       1.03       1.41   1.06
+         3.5       0.46       0.71   0.58
+         4.0       0.24       0.39   0.32
+robusto  2.5       3.80       4.32   3.99
+         3.0       1.89       2.39   1.89
+         3.5       1.02       1.37   1.02
+         4.0       0.55       0.82   0.60
+--[22] stream
+Z clássico, |Z|>3, por município e variável:
+
+--[22] result
+                             n_neg                  n_pos                    pct                 
+split                        teste treino validacao teste treino validacao teste treino validacao
+municipio        variavel                                                                        
+Feira de Santana temperatura  21.0   62.0      19.0   2.0    8.0       3.0  1.57   1.37      1.51
+                 umidade       0.0    6.0       3.0  21.0   59.0      14.0  1.44   1.27      1.16
+Goiânia          temperatura  12.0   52.0      25.0   0.0    3.0       2.0  0.82   1.08      1.85
+                 umidade       4.0   12.0       7.0  15.0   57.0      15.0  1.30   1.35      1.51
+Manaus           temperatura   8.0   22.0      11.0   1.0    5.0       3.0  0.62   0.53      0.96
+                 umidade       5.0   22.0       7.0  12.0   16.0      12.0  1.16   0.74      1.30
+Porto Alegre     temperatura  17.0   46.0      22.0   1.0   11.0       5.0  1.23   1.12      1.85
+                 umidade       5.0   35.0      12.0   0.0    5.0       5.0  0.34   0.78      1.16
+--[23] result
+                           recall  precisao  precisao_tolerante
+magnitude tipo_z   limiar                                      
+3.0       classico 2.5      0.716     0.269               0.295
+                   3.0      0.542     0.390               0.427
+                   3.5      0.360     0.428               0.464
+                   4.0      0.201     0.409               0.433
+          robusto  2.5      0.800     0.202               0.219
+                   3.0      0.670     0.314               0.341
+                   3.5      0.516     0.404               0.439
+                   4.0      0.369     0.434               0.470
+5.0       classico 2.5      0.906     0.280               0.340
+                   3.0      0.859     0.428               0.539
+                   3.5      0.807     0.559               0.672
+                   4.0      0.744     0.673               0.767
+          robusto  2.5      0.920     0.203               0.238
+                   3.0      0.898     0.323               0.400
+                   3.5      0.855     0.449               0.555
+                   4.0      0.807     0.562               0.665
+--[25] IMAGE
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+/tmp/ipykernel_1461418/183433382.py:66: Pandas4Warning: DatetimeIndex.dayofyear is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_year instead.
+  doy = index.dayofyear.to_numpy() - 1
+
+--[28] stream
+Isolation Forest (ajuste + escore): 4.5 s
+
+--[28] stream
+Taxa de alertas fora do treino (média dos municípios):
+
+--[28] result
+split                   treino  validacao   teste
+config   contamination                           
+estatica 0.01           0.0101     0.0148  0.0127
+         0.03           0.0300     0.0453  0.0360
+         0.05           0.0501     0.0750  0.0647
+temporal 0.01           0.0101     0.0126  0.0117
+         0.03           0.0301     0.0390  0.0352
+         0.05           0.0502     0.0671  0.0605
+--[28] stream
+Sobreposição A × B (Jaccard):
+
+--[28] result
+contamination     0.01  0.03  0.05
+municipio                         
+Feira de Santana  0.38  0.49  0.48
+Goiânia           0.20  0.26  0.30
+Manaus            0.16  0.26  0.29
+Porto Alegre      0.29  0.35  0.42
+--[30] result
+                                  recall          precisao_ingenua          precisao_incremental         
+config                          estatica temporal         estatica temporal             estatica temporal
+cenario           contamination                                                                          
+multivariada_T_UR 0.01             0.008    0.002            0.006    0.004                 0.15    0.050
+                  0.03             0.030    0.048            0.014    0.017                 0.45    0.432
+                  0.05             0.220    0.220            0.044    0.048                 1.00    0.797
+temperatura       0.01             0.094    0.158            0.103    0.150                 0.70    0.791
+                  0.03             0.396    0.479            0.137    0.146                 1.00    0.861
+                  0.05             0.718    0.758            0.134    0.143                 1.00    0.843
+umidade           0.01             0.092    0.152            0.081    0.144                 0.55    0.840
+                  0.03             0.344    0.372            0.112    0.119                 1.00    0.880
+                  0.05             0.579    0.628            0.111    0.123                 1.00    0.863
+--[32] stream
+Variável dominante nos alertas (config temporal, c=0,01) — heurística, não atribuição causal:
+
+--[32] result
+var_dominante     anom_temperatura  anom_umidade  d24h_anom_temperatura  d24h_anom_umidade  d24h_log1p_precipitacao  log1p_precipitacao
+municipio                                                                                                                              
+Feira de Santana                 4             1                     20                  6                       50                  11
+Goiânia                          1             0                      4                  0                       69                   0
+Manaus                           2            23                     13                 26                       15                   0
+Porto Alegre                     2             0                      6                  6                       77                   1
+--[32] stream
+Alertas de maior escore:
+
+--[32] stream
+/tmp/ipykernel_1461418/102457682.py:7: UserWarning: obj.round has no effect with datetime, timedelta, or period dtypes. Use obj.dt.round(...) instead.
+  [["municipio", "datetime", *VARIAVEIS, "escore", "var_dominante", "z_dominante"]].round(2))
+
+--[32] result
+             municipio                  datetime  temperatura  umidade  precipitacao  escore            var_dominante  z_dominante
+2620  Feira de Santana 2024-11-24 12:00:00+00:00        23.35    95.81         55.22    0.78  d24h_log1p_precipitacao        12.21
+2588  Feira de Santana 2021-11-05 12:00:00+00:00        24.04    94.55         25.73    0.77  d24h_log1p_precipitacao         9.74
+2608  Feira de Santana 2022-11-26 12:00:00+00:00        23.96    90.19         35.54    0.77  d24h_log1p_precipitacao        10.44
+4061           Goiânia 2017-10-03 12:00:00+00:00        18.35    86.87         21.70    0.76  d24h_log1p_precipitacao        43.86
+4105           Goiânia 2024-10-15 12:00:00+00:00        21.21    93.16         23.36    0.74  d24h_log1p_precipitacao        44.43
+4057           Goiânia 2017-09-28 00:00:00+00:00        18.12    84.75         10.36    0.74  d24h_log1p_precipitacao        34.14
+945             Manaus 2020-11-01 12:00:00+00:00        24.13    99.92         36.27    0.70  d24h_log1p_precipitacao         4.38
+943             Manaus 2020-09-11 00:00:00+00:00        24.58    97.22         31.93    0.70  d24h_log1p_precipitacao         3.72
+926             Manaus 2016-01-25 00:00:00+00:00        31.61    59.50          0.04    0.70         anom_temperatura         4.77
+5582      Porto Alegre 2021-07-28 00:00:00+00:00         8.01    50.25          0.04    0.69  d24h_log1p_precipitacao         8.96
+5598      Porto Alegre 2022-12-28 12:00:00+00:00        19.89    86.07         38.04    0.69  d24h_log1p_precipitacao        13.38
+5541      Porto Alegre 2016-01-27 00:00:00+00:00        18.88    85.29         18.26    0.68  d24h_log1p_precipitacao        10.70
+--[35] result
+                              sigma_mediano             taxa_flags_pct            
+modo                                  misto por_horario          misto por_horario
+municipio        variavel                                                         
+Feira de Santana precipitacao         0.330       0.285          7.305       8.201
+                 temperatura          1.689       0.756          0.187       2.277
+                 umidade              9.778       4.893          0.311       2.875
+Goiânia          precipitacao         0.053       0.027         17.185      16.812
+                 temperatura          1.369       1.197          0.946       2.053
+                 umidade              7.963       7.022          1.419       2.377
+Manaus           precipitacao         0.883       0.644          6.334      10.154
+                 temperatura          1.049       0.959          0.697       1.481
+                 umidade              4.980       4.785          1.605       2.277
+Porto Alegre     precipitacao         0.049       0.040         29.741      28.123
+                 temperatura          2.340       2.228          1.070       2.041
+                 umidade              7.944       7.163          1.804       2.912
+--[36] stream
+Hampel (grade completa, 3 variáveis × 24 configs × 4 municípios): 2.0 s
+Taxa de alertas (%) no TESTE, média dos municípios:
+
+--[36] result
+limiar                                   2.5   3.0   3.5   4.0
+variavel     variante meia_janela_dias                        
+precipitacao causal   3                 4.31  2.78  1.77  0.89
+                      7                 4.95  3.25  2.17  1.06
+                      15                5.13  3.29  2.19  1.06
+             centrada 3                 3.60  2.21  1.41  0.80
+                      7                 4.39  2.79  1.67  0.87
+                      15                4.71  3.14  2.01  1.10
+temperatura  causal   3                 9.15  6.46  4.57  3.30
+                      7                 6.17  3.88  2.39  1.64
+                      15                4.75  2.46  1.40  0.60
+             centrada 3                 4.38  2.98  2.12  1.47
+                      7                 3.25  1.49  0.82  0.39
+                      15                2.18  0.93  0.38  0.27
+umidade      causal   3                 9.82  7.22  5.22  3.95
+                      7                 6.82  4.43  3.04  2.09
+                      15                5.39  3.32  2.09  1.40
+             centrada 3                 5.80  3.90  2.71  1.76
+                      7                 3.92  2.17  1.34  0.94
+                      15                3.64  2.06  1.25  0.64
+--[37] stream
+Configuração escolhida na VALIDAÇÃO:
+
+--[37] result
+    variante  meia_janela_dias  limiar  recall  taxa_real_val_pct  no_orcamento
+22  centrada                15     3.5   0.556              0.950          True
+11    causal                15     4.0   0.438              1.019         False
+--[37] stream
+Desempenho no TESTE (sintético) da configuração escolhida:
+
+--[37] result
+                     precisao               recall              
+magnitude                   3      5      8      3      5      8
+variavel    variante                                            
+temperatura causal      0.941  0.977  0.986  0.200  0.538  0.875
+            centrada    0.913  0.962  0.974  0.262  0.625  0.925
+umidade     causal      1.000  1.000  1.000  0.188  0.412  0.575
+            centrada    0.850  0.925  0.940  0.212  0.462  0.588
+--[38] stream
+Isolados × persistentes (agrupando alertas separados por ≤ 24 h), período completo:
+
+--[38] result
+tipo                   isolada  persistente
+variavel     variante                      
+precipitacao causal        167          120
+             centrada      287          236
+temperatura  causal         97          191
+             centrada      109           89
+umidade      causal        155          206
+             centrada      201          181
+--[39] IMAGE
+--[39] stream
+Precipitação acumulada 26/04–13/05/2024: 320 mm (1 valor ausente)
+
+--[41] stream
+Instantes sinalizados por método (4 municípios):
+
+--[41] result
+           ARIMA+Z n  ARIMA+Z %  IsolationForest n  IsolationForest %  Hampel n  Hampel %
+split                                                                                    
+treino           333       1.63                200               0.98       335      1.64
+validacao        129       2.21                 71               1.22       100      1.71
+teste             97       1.66                 66               1.13        84      1.44
+--[41] result
+                     ARIMA+Z  IsolationForest  Hampel
+municipio                                            
+Feira de Santana/BA      151               92     150
+Goiânia/GO               157               74     172
+Manaus/AM                100               79      65
+Porto Alegre/RS          151               92     132
+--[42] stream
+Padrões de concordância (instantes sinalizados por pelo menos um método):
+
+--[42] result
+                                      n   pct
+Hampel                              370  34.2
+ARIMA+Z                             306  28.3
+IsolationForest                     135  12.5
+ARIMA+Z ∩ IsolationForest           121  11.2
+ARIMA+Z ∩ Hampel                     68   6.3
+ARIMA+Z ∩ IsolationForest ∩ Hampel   64   5.9
+IsolationForest ∩ Hampel             17   1.6
+--[42] stream
+Índice de Jaccard entre métodos:
+
+--[42] result
+                 ARIMA+Z  IsolationForest  Hampel
+ARIMA+Z             1.00            0.260   0.140
+IsolationForest     0.26            1.000   0.105
+Hampel              0.14            0.105   1.000
+--[43] IMAGE
+--[43] stream
+Alertas por estação do ano (todos os métodos, % do total de cada método):
+
+--[43] result
+     ARIMA+Z  IsolationForest  Hampel
+mes                                  
+DJF     19.3             22.3    18.1
+JJA     22.2             13.4    29.7
+MAM     14.8             14.8    21.6
+SON     43.6             49.6    30.6
+--[44] result
+                 segundos                                      observação
+ARIMA+Z             143.6  grade (p,q) + resíduos de 8 séries + sintético
+IsolationForest       4.5       2 configs × 3 contaminações, 4 municípios
+Hampel                2.0         3 variáveis × 24 configs × 4 municípios
+--[46] IMAGE
+--[46] IMAGE
+--[46] IMAGE
+--[47] IMAGE
+--[47] stream
+Correlação de Spearman entre escores normalizados (todos os instantes de Manaus):
+
+--[47] result
+                 ARIMA+Z  IsolationForest  Hampel
+ARIMA+Z             1.00             0.49    0.40
+IsolationForest     0.49             1.00    0.29
+Hampel              0.40             0.29    1.00
+--[48] IMAGE
+--[49] IMAGE
+--[51] result
+                                        escopo % sinalizado teste recall sintético 5σ recall sintético 3σ tempo (s)  \
+ARIMA+Z                     univariado (T, UR)               1.66                0.86                0.54     143.6   
+IsolationForest        multivariado (T, UR, P)               1.13                0.16                 NaN       4.5   
+Hampel           univariado (T, UR; P à parte)               1.44                0.54                0.24       2.0   
+
+                                                    detecta melhor                                          limitação  
+ARIMA+Z          quebras da dinâmica (frentes frias, chuvas súb...  heterocedasticidade sazonal; precipitação inad...  
+IsolationForest  estados combinados raros (seca extrema, chuva ...    sem ordem temporal; depende de c e das entradas  
+Hampel                                       picos locais isolados         janela fixa; MAD=0 em séries intermitentes  

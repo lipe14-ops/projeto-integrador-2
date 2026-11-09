@@ -3,17 +3,42 @@
   position: relative; 
 }
 
-.mapa-voltar,
-.mapa-carregando {
+.mapa-voltar {
   position: absolute; z-index: 1000; left: 60px; top: 12px;
   padding: 6px 12px; border-radius: 6px; border: 1px solid #bbb;
-  background: #fff; font: 14px system-ui, sans-serif;
+  background: #fff; font: 14px system-ui, sans-serif; cursor: pointer;
 }
-.mapa-voltar { cursor: pointer; }
-.mapa-carregando { top: 52px; }
+
+/* aviso de carregamento centralizado no topo do mapa */
+.mapa-status {
+  position: absolute; z-index: 1001; top: 12px; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border: 1px solid #c9d4d1; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96); box-shadow: 0 4px 12px rgba(15, 47, 45, 0.12);
+  color: #1f2d2c; font: 14px system-ui, sans-serif; white-space: nowrap; pointer-events: none;
+}
+.mapa-status .loading-spinner { width: 14px; height: 14px; }
+.mapa-status--erro { border-color: #e2b5a2; color: #9b3b1a; }
 
 .tooltip-mapa {
   background: #1f2d2c; color: #fff; border: none; border-radius: 6px;
   padding: 6px 10px; font: 14px system-ui, sans-serif; box-shadow: none;
 }
 .tooltip-mapa::before { display: none; }
+.mapa-legenda {
+  position: absolute; z-index: 1000; left: 12px; bottom: 12px;
+  display: grid; gap: 2px; padding: 8px 12px; text-align: left;
+  border: 1px solid #bbb; border-radius: 6px; background: rgba(255, 255, 255, 0.94);
+  color: #1f2d2c; font: 13px system-ui, sans-serif; cursor: pointer;
+}
+.mapa-legenda:hover { border-color: #c0562b; }
+.mapa-legenda:focus-visible { outline: 2px solid #0b6b63; outline-offset: 2px; }
+.mapa-legenda__dica { padding-left: 20px; color: #5c7370; font-size: 11px; }
+.mapa-legenda.is-oculto .mapa-legenda__ponto { color: #8a9a97; text-decoration: line-through; }
+.mapa-legenda.is-oculto .mapa-legenda__ponto i { opacity: 0.35; }
+.mapa-legenda__ponto { display: flex; align-items: center; gap: 8px; }
+.mapa-legenda__ponto i {
+  width: 12px; height: 12px; flex: none; border: 2px solid #fff; border-radius: 50%;
+  box-shadow: 0 0 0 1px #c0562b;
+}
+

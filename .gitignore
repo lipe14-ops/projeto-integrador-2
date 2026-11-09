@@ -11,3 +11,5 @@ wheels/
 .env
 
 data/*
+.run/
+analises/outliers/work/*.csv.gz
