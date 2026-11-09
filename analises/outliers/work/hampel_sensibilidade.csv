@@ -1,0 +1,865 @@
+municipio,variavel,variante,meia_janela_dias,limiar,split,n_obs,n_classificadas,n_flags,taxa_pct
+Feira de Santana,precipitacao,causal,3,2.5,teste,1462,1438,25,1.7385257301808066
+Feira de Santana,precipitacao,causal,3,2.5,treino,5114,5022,68,1.3540422142572681
+Feira de Santana,precipitacao,causal,3,2.5,validacao,1460,1436,18,1.2534818941504178
+Feira de Santana,precipitacao,causal,3,3.0,teste,1462,1438,18,1.2517385257301807
+Feira de Santana,precipitacao,causal,3,3.0,treino,5114,5022,40,0.7964954201513341
+Feira de Santana,precipitacao,causal,3,3.0,validacao,1460,1436,12,0.8356545961002786
+Feira de Santana,precipitacao,causal,3,3.5,teste,1462,1438,14,0.9735744089012517
+Feira de Santana,precipitacao,causal,3,3.5,treino,5114,5022,21,0.41816009557945044
+Feira de Santana,precipitacao,causal,3,3.5,validacao,1460,1436,5,0.34818941504178275
+Feira de Santana,precipitacao,causal,3,4.0,teste,1462,1438,7,0.48678720445062584
+Feira de Santana,precipitacao,causal,3,4.0,treino,5114,5022,11,0.21903624054161688
+Feira de Santana,precipitacao,causal,3,4.0,validacao,1460,1436,1,0.06963788300835655
+Feira de Santana,precipitacao,causal,7,2.5,teste,1462,1438,30,2.086230876216968
+Feira de Santana,precipitacao,causal,7,2.5,treino,5114,5014,73,1.4559234144395692
+Feira de Santana,precipitacao,causal,7,2.5,validacao,1460,1436,26,1.8105849582172702
+Feira de Santana,precipitacao,causal,7,3.0,teste,1462,1438,21,1.4603616133518775
+Feira de Santana,precipitacao,causal,7,3.0,treino,5114,5014,47,0.9373753490227363
+Feira de Santana,precipitacao,causal,7,3.0,validacao,1460,1436,11,0.766016713091922
+Feira de Santana,precipitacao,causal,7,3.5,teste,1462,1438,17,1.1821974965229485
+Feira de Santana,precipitacao,causal,7,3.5,treino,5114,5014,25,0.49860390905464697
+Feira de Santana,precipitacao,causal,7,3.5,validacao,1460,1436,5,0.34818941504178275
+Feira de Santana,precipitacao,causal,7,4.0,teste,1462,1438,8,0.5563282336578581
+Feira de Santana,precipitacao,causal,7,4.0,treino,5114,5014,12,0.23932987634623054
+Feira de Santana,precipitacao,causal,7,4.0,validacao,1460,1436,2,0.1392757660167131
+Feira de Santana,precipitacao,causal,15,2.5,teste,1462,1438,30,2.086230876216968
+Feira de Santana,precipitacao,causal,15,2.5,treino,5114,4994,83,1.6619943932719263
+Feira de Santana,precipitacao,causal,15,2.5,validacao,1460,1436,23,1.6016713091922006
+Feira de Santana,precipitacao,causal,15,3.0,teste,1462,1438,21,1.4603616133518775
+Feira de Santana,precipitacao,causal,15,3.0,treino,5114,4994,51,1.0212254705646777
+Feira de Santana,precipitacao,causal,15,3.0,validacao,1460,1436,12,0.8356545961002786
+Feira de Santana,precipitacao,causal,15,3.5,teste,1462,1438,17,1.1821974965229485
+Feira de Santana,precipitacao,causal,15,3.5,treino,5114,4994,29,0.5806968362034441
+Feira de Santana,precipitacao,causal,15,3.5,validacao,1460,1436,8,0.5571030640668524
+Feira de Santana,precipitacao,causal,15,4.0,teste,1462,1438,8,0.5563282336578581
+Feira de Santana,precipitacao,causal,15,4.0,treino,5114,4994,14,0.2803364036844213
+Feira de Santana,precipitacao,causal,15,4.0,validacao,1460,1436,1,0.06963788300835655
+Feira de Santana,precipitacao,centrada,3,2.5,teste,1462,1436,14,0.9749303621169917
+Feira de Santana,precipitacao,centrada,3,2.5,treino,5114,5028,33,0.6563245823389021
+Feira de Santana,precipitacao,centrada,3,2.5,validacao,1460,1436,11,0.766016713091922
+Feira de Santana,precipitacao,centrada,3,3.0,teste,1462,1436,8,0.5571030640668524
+Feira de Santana,precipitacao,centrada,3,3.0,treino,5114,5028,17,0.33810660302307083
+Feira de Santana,precipitacao,centrada,3,3.0,validacao,1460,1436,7,0.48746518105849584
+Feira de Santana,precipitacao,centrada,3,3.5,teste,1462,1436,3,0.20891364902506965
+Feira de Santana,precipitacao,centrada,3,3.5,treino,5114,5028,8,0.15910898965791567
+Feira de Santana,precipitacao,centrada,3,3.5,validacao,1460,1436,3,0.20891364902506965
+Feira de Santana,precipitacao,centrada,3,4.0,teste,1462,1436,3,0.20891364902506965
+Feira de Santana,precipitacao,centrada,3,4.0,treino,5114,5028,5,0.09944311853619729
+Feira de Santana,precipitacao,centrada,3,4.0,validacao,1460,1436,1,0.06963788300835655
+Feira de Santana,precipitacao,centrada,7,2.5,teste,1462,1436,25,1.7409470752089136
+Feira de Santana,precipitacao,centrada,7,2.5,treino,5114,5028,56,1.1137629276054097
+Feira de Santana,precipitacao,centrada,7,2.5,validacao,1460,1436,17,1.1838440111420614
+Feira de Santana,precipitacao,centrada,7,3.0,teste,1462,1436,17,1.1838440111420614
+Feira de Santana,precipitacao,centrada,7,3.0,treino,5114,5028,30,0.5966587112171837
+Feira de Santana,precipitacao,centrada,7,3.0,validacao,1460,1436,11,0.766016713091922
+Feira de Santana,precipitacao,centrada,7,3.5,teste,1462,1436,10,0.6963788300835655
+Feira de Santana,precipitacao,centrada,7,3.5,treino,5114,5028,15,0.29832935560859186
+Feira de Santana,precipitacao,centrada,7,3.5,validacao,1460,1436,5,0.34818941504178275
+Feira de Santana,precipitacao,centrada,7,4.0,teste,1462,1436,4,0.2785515320334262
+Feira de Santana,precipitacao,centrada,7,4.0,treino,5114,5028,11,0.21877486077963404
+Feira de Santana,precipitacao,centrada,7,4.0,validacao,1460,1436,1,0.06963788300835655
+Feira de Santana,precipitacao,centrada,15,2.5,teste,1462,1432,26,1.8156424581005586
+Feira de Santana,precipitacao,centrada,15,2.5,treino,5114,5024,70,1.393312101910828
+Feira de Santana,precipitacao,centrada,15,2.5,validacao,1460,1436,21,1.4623955431754874
+Feira de Santana,precipitacao,centrada,15,3.0,teste,1462,1432,20,1.3966480446927374
+Feira de Santana,precipitacao,centrada,15,3.0,treino,5114,5024,43,0.8558917197452229
+Feira de Santana,precipitacao,centrada,15,3.0,validacao,1460,1436,11,0.766016713091922
+Feira de Santana,precipitacao,centrada,15,3.5,teste,1462,1432,13,0.9078212290502793
+Feira de Santana,precipitacao,centrada,15,3.5,treino,5114,5024,24,0.47770700636942676
+Feira de Santana,precipitacao,centrada,15,3.5,validacao,1460,1436,6,0.4178272980501393
+Feira de Santana,precipitacao,centrada,15,4.0,teste,1462,1432,8,0.5586592178770949
+Feira de Santana,precipitacao,centrada,15,4.0,treino,5114,5024,11,0.21894904458598727
+Feira de Santana,precipitacao,centrada,15,4.0,validacao,1460,1436,1,0.06963788300835655
+Feira de Santana,temperatura,causal,3,2.5,teste,1462,1462,159,10.875512995896033
+Feira de Santana,temperatura,causal,3,2.5,treino,5114,5106,524,10.262436349392871
+Feira de Santana,temperatura,causal,3,2.5,validacao,1460,1460,165,11.301369863013699
+Feira de Santana,temperatura,causal,3,3.0,teste,1462,1462,122,8.344733242134064
+Feira de Santana,temperatura,causal,3,3.0,treino,5114,5106,375,7.344300822561692
+Feira de Santana,temperatura,causal,3,3.0,validacao,1460,1460,114,7.808219178082192
+Feira de Santana,temperatura,causal,3,3.5,teste,1462,1462,79,5.403556771545827
+Feira de Santana,temperatura,causal,3,3.5,treino,5114,5106,275,5.385820603211908
+Feira de Santana,temperatura,causal,3,3.5,validacao,1460,1460,82,5.616438356164384
+Feira de Santana,temperatura,causal,3,4.0,teste,1462,1462,62,4.240766073871409
+Feira de Santana,temperatura,causal,3,4.0,treino,5114,5106,203,3.975714845280063
+Feira de Santana,temperatura,causal,3,4.0,validacao,1460,1460,65,4.4520547945205475
+Feira de Santana,temperatura,causal,7,2.5,teste,1462,1462,108,7.387140902872777
+Feira de Santana,temperatura,causal,7,2.5,treino,5114,5098,413,8.101216163201256
+Feira de Santana,temperatura,causal,7,2.5,validacao,1460,1460,113,7.739726027397261
+Feira de Santana,temperatura,causal,7,3.0,teste,1462,1462,69,4.719562243502052
+Feira de Santana,temperatura,causal,7,3.0,treino,5114,5098,267,5.237347979599843
+Feira de Santana,temperatura,causal,7,3.0,validacao,1460,1460,72,4.931506849315069
+Feira de Santana,temperatura,causal,7,3.5,teste,1462,1462,45,3.0779753761969904
+Feira de Santana,temperatura,causal,7,3.5,treino,5114,5098,190,3.7269517457826598
+Feira de Santana,temperatura,causal,7,3.5,validacao,1460,1460,55,3.767123287671233
+Feira de Santana,temperatura,causal,7,4.0,teste,1462,1462,31,2.1203830369357046
+Feira de Santana,temperatura,causal,7,4.0,treino,5114,5098,137,2.687328364064339
+Feira de Santana,temperatura,causal,7,4.0,validacao,1460,1460,37,2.5342465753424657
+Feira de Santana,temperatura,causal,15,2.5,teste,1462,1462,106,7.250341997264022
+Feira de Santana,temperatura,causal,15,2.5,treino,5114,5078,378,7.443875541551792
+Feira de Santana,temperatura,causal,15,2.5,validacao,1460,1460,94,6.438356164383562
+Feira de Santana,temperatura,causal,15,3.0,teste,1462,1462,63,4.309165526675787
+Feira de Santana,temperatura,causal,15,3.0,treino,5114,5078,224,4.411185506104766
+Feira de Santana,temperatura,causal,15,3.0,validacao,1460,1460,67,4.589041095890411
+Feira de Santana,temperatura,causal,15,3.5,teste,1462,1462,39,2.667578659370725
+Feira de Santana,temperatura,causal,15,3.5,treino,5114,5078,136,2.6782197715636076
+Feira de Santana,temperatura,causal,15,3.5,validacao,1460,1460,44,3.0136986301369864
+Feira de Santana,temperatura,causal,15,4.0,teste,1462,1462,18,1.231190150478796
+Feira de Santana,temperatura,causal,15,4.0,treino,5114,5078,91,1.792044111855061
+Feira de Santana,temperatura,causal,15,4.0,validacao,1460,1460,32,2.191780821917808
+Feira de Santana,temperatura,centrada,3,2.5,teste,1462,1460,67,4.589041095890411
+Feira de Santana,temperatura,centrada,3,2.5,treino,5114,5112,283,5.535993740219093
+Feira de Santana,temperatura,centrada,3,2.5,validacao,1460,1460,71,4.863013698630137
+Feira de Santana,temperatura,centrada,3,3.0,teste,1462,1460,52,3.5616438356164384
+Feira de Santana,temperatura,centrada,3,3.0,treino,5114,5112,192,3.755868544600939
+Feira de Santana,temperatura,centrada,3,3.0,validacao,1460,1460,46,3.1506849315068495
+Feira de Santana,temperatura,centrada,3,3.5,teste,1462,1460,37,2.5342465753424657
+Feira de Santana,temperatura,centrada,3,3.5,treino,5114,5112,137,2.679968701095462
+Feira de Santana,temperatura,centrada,3,3.5,validacao,1460,1460,31,2.1232876712328768
+Feira de Santana,temperatura,centrada,3,4.0,teste,1462,1460,21,1.4383561643835616
+Feira de Santana,temperatura,centrada,3,4.0,treino,5114,5112,90,1.7605633802816902
+Feira de Santana,temperatura,centrada,3,4.0,validacao,1460,1460,20,1.36986301369863
+Feira de Santana,temperatura,centrada,7,2.5,teste,1462,1460,48,3.287671232876712
+Feira de Santana,temperatura,centrada,7,2.5,treino,5114,5112,219,4.284037558685446
+Feira de Santana,temperatura,centrada,7,2.5,validacao,1460,1460,58,3.9726027397260273
+Feira de Santana,temperatura,centrada,7,3.0,teste,1462,1460,21,1.4383561643835616
+Feira de Santana,temperatura,centrada,7,3.0,treino,5114,5112,124,2.4256651017214397
+Feira de Santana,temperatura,centrada,7,3.0,validacao,1460,1460,36,2.4657534246575343
+Feira de Santana,temperatura,centrada,7,3.5,teste,1462,1460,13,0.8904109589041096
+Feira de Santana,temperatura,centrada,7,3.5,treino,5114,5112,84,1.6431924882629108
+Feira de Santana,temperatura,centrada,7,3.5,validacao,1460,1460,22,1.5068493150684932
+Feira de Santana,temperatura,centrada,7,4.0,teste,1462,1460,6,0.410958904109589
+Feira de Santana,temperatura,centrada,7,4.0,treino,5114,5112,50,0.9780907668231612
+Feira de Santana,temperatura,centrada,7,4.0,validacao,1460,1460,16,1.095890410958904
+Feira de Santana,temperatura,centrada,15,2.5,teste,1462,1456,45,3.090659340659341
+Feira de Santana,temperatura,centrada,15,2.5,treino,5114,5108,174,3.4064212999216914
+Feira de Santana,temperatura,centrada,15,2.5,validacao,1460,1460,43,2.9452054794520546
+Feira de Santana,temperatura,centrada,15,3.0,teste,1462,1456,18,1.2362637362637363
+Feira de Santana,temperatura,centrada,15,3.0,treino,5114,5108,94,1.8402505873140171
+Feira de Santana,temperatura,centrada,15,3.0,validacao,1460,1460,26,1.7808219178082192
+Feira de Santana,temperatura,centrada,15,3.5,teste,1462,1456,8,0.5494505494505495
+Feira de Santana,temperatura,centrada,15,3.5,treino,5114,5108,51,0.9984338292873923
+Feira de Santana,temperatura,centrada,15,3.5,validacao,1460,1460,16,1.095890410958904
+Feira de Santana,temperatura,centrada,15,4.0,teste,1462,1456,7,0.4807692307692308
+Feira de Santana,temperatura,centrada,15,4.0,treino,5114,5108,29,0.5677368833202819
+Feira de Santana,temperatura,centrada,15,4.0,validacao,1460,1460,12,0.821917808219178
+Feira de Santana,umidade,causal,3,2.5,teste,1462,1462,139,9.50752393980848
+Feira de Santana,umidade,causal,3,2.5,treino,5114,5106,499,9.772816294555424
+Feira de Santana,umidade,causal,3,2.5,validacao,1460,1460,154,10.547945205479452
+Feira de Santana,umidade,causal,3,3.0,teste,1462,1462,110,7.523939808481532
+Feira de Santana,umidade,causal,3,3.0,treino,5114,5106,367,7.187622405013709
+Feira de Santana,umidade,causal,3,3.0,validacao,1460,1460,126,8.63013698630137
+Feira de Santana,umidade,causal,3,3.5,teste,1462,1462,83,5.677154582763338
+Feira de Santana,umidade,causal,3,3.5,treino,5114,5106,261,5.111633372502938
+Feira de Santana,umidade,causal,3,3.5,validacao,1460,1460,99,6.780821917808219
+Feira de Santana,umidade,causal,3,4.0,teste,1462,1462,66,4.514363885088919
+Feira de Santana,umidade,causal,3,4.0,treino,5114,5106,191,3.7406972189580885
+Feira de Santana,umidade,causal,3,4.0,validacao,1460,1460,78,5.342465753424658
+Feira de Santana,umidade,causal,7,2.5,teste,1462,1462,119,8.13953488372093
+Feira de Santana,umidade,causal,7,2.5,treino,5114,5098,378,7.414672420557081
+Feira de Santana,umidade,causal,7,2.5,validacao,1460,1460,103,7.054794520547945
+Feira de Santana,umidade,causal,7,3.0,teste,1462,1462,73,4.993160054719562
+Feira de Santana,umidade,causal,7,3.0,treino,5114,5098,277,5.433503334641036
+Feira de Santana,umidade,causal,7,3.0,validacao,1460,1460,67,4.589041095890411
+Feira de Santana,umidade,causal,7,3.5,teste,1462,1462,54,3.6935704514363885
+Feira de Santana,umidade,causal,7,3.5,treino,5114,5098,186,3.648489603766183
+Feira de Santana,umidade,causal,7,3.5,validacao,1460,1460,50,3.4246575342465753
+Feira de Santana,umidade,causal,7,4.0,teste,1462,1462,38,2.5991792065663475
+Feira de Santana,umidade,causal,7,4.0,treino,5114,5098,124,2.4323264025107885
+Feira de Santana,umidade,causal,7,4.0,validacao,1460,1460,29,1.9863013698630136
+Feira de Santana,umidade,causal,15,2.5,teste,1462,1462,83,5.677154582763338
+Feira de Santana,umidade,causal,15,2.5,treino,5114,5078,302,5.947223316266246
+Feira de Santana,umidade,causal,15,2.5,validacao,1460,1460,96,6.575342465753424
+Feira de Santana,umidade,causal,15,3.0,teste,1462,1462,58,3.9671682626538987
+Feira de Santana,umidade,causal,15,3.0,treino,5114,5078,170,3.3477747144545096
+Feira de Santana,umidade,causal,15,3.0,validacao,1460,1460,66,4.52054794520548
+Feira de Santana,umidade,causal,15,3.5,teste,1462,1462,37,2.53077975376197
+Feira de Santana,umidade,causal,15,3.5,treino,5114,5078,104,2.048050413548641
+Feira de Santana,umidade,causal,15,3.5,validacao,1460,1460,40,2.73972602739726
+Feira de Santana,umidade,causal,15,4.0,teste,1462,1462,29,1.9835841313269493
+Feira de Santana,umidade,causal,15,4.0,treino,5114,5078,78,1.5360378101614809
+Feira de Santana,umidade,causal,15,4.0,validacao,1460,1460,26,1.7808219178082192
+Feira de Santana,umidade,centrada,3,2.5,teste,1462,1460,86,5.890410958904109
+Feira de Santana,umidade,centrada,3,2.5,treino,5114,5112,334,6.533646322378717
+Feira de Santana,umidade,centrada,3,2.5,validacao,1460,1460,99,6.780821917808219
+Feira de Santana,umidade,centrada,3,3.0,teste,1462,1460,56,3.835616438356164
+Feira de Santana,umidade,centrada,3,3.0,treino,5114,5112,243,4.753521126760563
+Feira de Santana,umidade,centrada,3,3.0,validacao,1460,1460,67,4.589041095890411
+Feira de Santana,umidade,centrada,3,3.5,teste,1462,1460,37,2.5342465753424657
+Feira de Santana,umidade,centrada,3,3.5,treino,5114,5112,177,3.4624413145539905
+Feira de Santana,umidade,centrada,3,3.5,validacao,1460,1460,48,3.287671232876712
+Feira de Santana,umidade,centrada,3,4.0,teste,1462,1460,27,1.8493150684931507
+Feira de Santana,umidade,centrada,3,4.0,treino,5114,5112,134,2.621283255086072
+Feira de Santana,umidade,centrada,3,4.0,validacao,1460,1460,27,1.8493150684931507
+Feira de Santana,umidade,centrada,7,2.5,teste,1462,1460,46,3.1506849315068495
+Feira de Santana,umidade,centrada,7,2.5,treino,5114,5112,232,4.538341158059468
+Feira de Santana,umidade,centrada,7,2.5,validacao,1460,1460,83,5.684931506849315
+Feira de Santana,umidade,centrada,7,3.0,teste,1462,1460,27,1.8493150684931507
+Feira de Santana,umidade,centrada,7,3.0,treino,5114,5112,147,2.875586854460094
+Feira de Santana,umidade,centrada,7,3.0,validacao,1460,1460,56,3.835616438356164
+Feira de Santana,umidade,centrada,7,3.5,teste,1462,1460,16,1.095890410958904
+Feira de Santana,umidade,centrada,7,3.5,treino,5114,5112,99,1.9366197183098592
+Feira de Santana,umidade,centrada,7,3.5,validacao,1460,1460,40,2.73972602739726
+Feira de Santana,umidade,centrada,7,4.0,teste,1462,1460,11,0.7534246575342466
+Feira de Santana,umidade,centrada,7,4.0,treino,5114,5112,67,1.310641627543036
+Feira de Santana,umidade,centrada,7,4.0,validacao,1460,1460,23,1.5753424657534247
+Feira de Santana,umidade,centrada,15,2.5,teste,1462,1456,53,3.64010989010989
+Feira de Santana,umidade,centrada,15,2.5,treino,5114,5108,191,3.739232576350822
+Feira de Santana,umidade,centrada,15,2.5,validacao,1460,1460,51,3.493150684931507
+Feira de Santana,umidade,centrada,15,3.0,teste,1462,1456,30,2.0604395604395602
+Feira de Santana,umidade,centrada,15,3.0,treino,5114,5108,113,2.21221613155834
+Feira de Santana,umidade,centrada,15,3.0,validacao,1460,1460,30,2.0547945205479454
+Feira de Santana,umidade,centrada,15,3.5,teste,1462,1456,19,1.304945054945055
+Feira de Santana,umidade,centrada,15,3.5,treino,5114,5108,73,1.4291307752545028
+Feira de Santana,umidade,centrada,15,3.5,validacao,1460,1460,19,1.3013698630136987
+Feira de Santana,umidade,centrada,15,4.0,teste,1462,1456,12,0.8241758241758241
+Feira de Santana,umidade,centrada,15,4.0,treino,5114,5108,44,0.8613938919342208
+Feira de Santana,umidade,centrada,15,4.0,validacao,1460,1460,11,0.7534246575342466
+Goiânia,precipitacao,causal,3,2.5,teste,1462,1438,23,1.599443671766342
+Goiânia,precipitacao,causal,3,2.5,treino,5114,5022,136,2.7080844285145362
+Goiânia,precipitacao,causal,3,2.5,validacao,1460,1436,31,2.1587743732590527
+Goiânia,precipitacao,causal,3,3.0,teste,1462,1438,13,0.9040333796940194
+Goiânia,precipitacao,causal,3,3.0,treino,5114,5022,67,1.3341298287534846
+Goiânia,precipitacao,causal,3,3.0,validacao,1460,1436,17,1.1838440111420614
+Goiânia,precipitacao,causal,3,3.5,teste,1462,1438,7,0.48678720445062584
+Goiânia,precipitacao,causal,3,3.5,treino,5114,5022,29,0.5774591796097173
+Goiânia,precipitacao,causal,3,3.5,validacao,1460,1436,5,0.34818941504178275
+Goiânia,precipitacao,causal,3,4.0,teste,1462,1438,2,0.13908205841446453
+Goiânia,precipitacao,causal,3,4.0,treino,5114,5022,10,0.19912385503783353
+Goiânia,precipitacao,causal,3,4.0,validacao,1460,1436,1,0.06963788300835655
+Goiânia,precipitacao,causal,7,2.5,teste,1462,1438,25,1.7385257301808066
+Goiânia,precipitacao,causal,7,2.5,treino,5114,5014,145,2.8919026725169523
+Goiânia,precipitacao,causal,7,2.5,validacao,1460,1436,30,2.0891364902506964
+Goiânia,precipitacao,causal,7,3.0,teste,1462,1438,13,0.9040333796940194
+Goiânia,precipitacao,causal,7,3.0,treino,5114,5014,66,1.316314319904268
+Goiânia,precipitacao,causal,7,3.0,validacao,1460,1436,17,1.1838440111420614
+Goiânia,precipitacao,causal,7,3.5,teste,1462,1438,9,0.6258692628650904
+Goiânia,precipitacao,causal,7,3.5,treino,5114,5014,39,0.7778220981252493
+Goiânia,precipitacao,causal,7,3.5,validacao,1460,1436,7,0.48746518105849584
+Goiânia,precipitacao,causal,7,4.0,teste,1462,1438,3,0.2086230876216968
+Goiânia,precipitacao,causal,7,4.0,treino,5114,5014,13,0.2592740327084164
+Goiânia,precipitacao,causal,7,4.0,validacao,1460,1436,1,0.06963788300835655
+Goiânia,precipitacao,causal,15,2.5,teste,1462,1438,39,2.7121001390820583
+Goiânia,precipitacao,causal,15,2.5,treino,5114,4994,169,3.384060873047657
+Goiânia,precipitacao,causal,15,2.5,validacao,1460,1436,36,2.5069637883008355
+Goiânia,precipitacao,causal,15,3.0,teste,1462,1438,19,1.321279554937413
+Goiânia,precipitacao,causal,15,3.0,treino,5114,4994,85,1.7020424509411294
+Goiânia,precipitacao,causal,15,3.0,validacao,1460,1436,21,1.4623955431754874
+Goiânia,precipitacao,causal,15,3.5,teste,1462,1438,12,0.8344923504867872
+Goiânia,precipitacao,causal,15,3.5,treino,5114,4994,50,1.001201441730076
+Goiânia,precipitacao,causal,15,3.5,validacao,1460,1436,7,0.48746518105849584
+Goiânia,precipitacao,causal,15,4.0,teste,1462,1438,3,0.2086230876216968
+Goiânia,precipitacao,causal,15,4.0,treino,5114,4994,20,0.4004805766920304
+Goiânia,precipitacao,causal,15,4.0,validacao,1460,1436,1,0.06963788300835655
+Goiânia,precipitacao,centrada,3,2.5,teste,1462,1436,19,1.3231197771587744
+Goiânia,precipitacao,centrada,3,2.5,treino,5114,5028,82,1.6308671439936357
+Goiânia,precipitacao,centrada,3,2.5,validacao,1460,1436,13,0.9052924791086351
+Goiânia,precipitacao,centrada,3,3.0,teste,1462,1436,9,0.6267409470752089
+Goiânia,precipitacao,centrada,3,3.0,treino,5114,5028,40,0.7955449482895783
+Goiânia,precipitacao,centrada,3,3.0,validacao,1460,1436,6,0.4178272980501393
+Goiânia,precipitacao,centrada,3,3.5,teste,1462,1436,4,0.2785515320334262
+Goiânia,precipitacao,centrada,3,3.5,treino,5114,5028,20,0.39777247414478917
+Goiânia,precipitacao,centrada,3,3.5,validacao,1460,1436,1,0.06963788300835655
+Goiânia,precipitacao,centrada,3,4.0,teste,1462,1436,2,0.1392757660167131
+Goiânia,precipitacao,centrada,3,4.0,treino,5114,5028,5,0.09944311853619729
+Goiânia,precipitacao,centrada,3,4.0,validacao,1460,1436,0,0.0
+Goiânia,precipitacao,centrada,7,2.5,teste,1462,1436,23,1.6016713091922006
+Goiânia,precipitacao,centrada,7,2.5,treino,5114,5028,114,2.2673031026252985
+Goiânia,precipitacao,centrada,7,2.5,validacao,1460,1436,23,1.6016713091922006
+Goiânia,precipitacao,centrada,7,3.0,teste,1462,1436,14,0.9749303621169917
+Goiânia,precipitacao,centrada,7,3.0,treino,5114,5028,49,0.9745425616547335
+Goiânia,precipitacao,centrada,7,3.0,validacao,1460,1436,12,0.8356545961002786
+Goiânia,precipitacao,centrada,7,3.5,teste,1462,1436,7,0.48746518105849584
+Goiânia,precipitacao,centrada,7,3.5,treino,5114,5028,26,0.5171042163882259
+Goiânia,precipitacao,centrada,7,3.5,validacao,1460,1436,2,0.1392757660167131
+Goiânia,precipitacao,centrada,7,4.0,teste,1462,1436,3,0.20891364902506965
+Goiânia,precipitacao,centrada,7,4.0,treino,5114,5028,8,0.15910898965791567
+Goiânia,precipitacao,centrada,7,4.0,validacao,1460,1436,0,0.0
+Goiânia,precipitacao,centrada,15,2.5,teste,1462,1432,28,1.9553072625698324
+Goiânia,precipitacao,centrada,15,2.5,treino,5114,5024,141,2.8065286624203822
+Goiânia,precipitacao,centrada,15,2.5,validacao,1460,1436,29,2.01949860724234
+Goiânia,precipitacao,centrada,15,3.0,teste,1462,1432,14,0.9776536312849162
+Goiânia,precipitacao,centrada,15,3.0,treino,5114,5024,67,1.3335987261146496
+Goiânia,precipitacao,centrada,15,3.0,validacao,1460,1436,13,0.9052924791086351
+Goiânia,precipitacao,centrada,15,3.5,teste,1462,1432,9,0.6284916201117319
+Goiânia,precipitacao,centrada,15,3.5,treino,5114,5024,36,0.7165605095541401
+Goiânia,precipitacao,centrada,15,3.5,validacao,1460,1436,6,0.4178272980501393
+Goiânia,precipitacao,centrada,15,4.0,teste,1462,1432,3,0.20949720670391062
+Goiânia,precipitacao,centrada,15,4.0,treino,5114,5024,9,0.17914012738853502
+Goiânia,precipitacao,centrada,15,4.0,validacao,1460,1436,0,0.0
+Goiânia,temperatura,causal,3,2.5,teste,1462,1462,144,9.849521203830369
+Goiânia,temperatura,causal,3,2.5,treino,5114,5106,532,10.419114766940854
+Goiânia,temperatura,causal,3,2.5,validacao,1460,1460,151,10.342465753424657
+Goiânia,temperatura,causal,3,3.0,teste,1462,1462,102,6.976744186046512
+Goiânia,temperatura,causal,3,3.0,treino,5114,5106,366,7.1680376028202115
+Goiânia,temperatura,causal,3,3.0,validacao,1460,1460,121,8.287671232876713
+Goiânia,temperatura,causal,3,3.5,teste,1462,1462,82,5.60875512995896
+Goiânia,temperatura,causal,3,3.5,treino,5114,5106,269,5.26831179005092
+Goiânia,temperatura,causal,3,3.5,validacao,1460,1460,93,6.36986301369863
+Goiânia,temperatura,causal,3,4.0,teste,1462,1462,58,3.9671682626538987
+Goiânia,temperatura,causal,3,4.0,treino,5114,5106,199,3.897375636506071
+Goiânia,temperatura,causal,3,4.0,validacao,1460,1460,72,4.931506849315069
+Goiânia,temperatura,causal,7,2.5,teste,1462,1462,98,6.703146374829001
+Goiânia,temperatura,causal,7,2.5,treino,5114,5098,365,7.1596704590035305
+Goiânia,temperatura,causal,7,2.5,validacao,1460,1460,104,7.123287671232877
+Goiânia,temperatura,causal,7,3.0,teste,1462,1462,56,3.830369357045144
+Goiânia,temperatura,causal,7,3.0,treino,5114,5098,225,4.413495488426834
+Goiânia,temperatura,causal,7,3.0,validacao,1460,1460,70,4.794520547945205
+Goiânia,temperatura,causal,7,3.5,teste,1462,1462,40,2.735978112175103
+Goiânia,temperatura,causal,7,3.5,treino,5114,5098,146,2.8638681836014124
+Goiânia,temperatura,causal,7,3.5,validacao,1460,1460,47,3.219178082191781
+Goiânia,temperatura,causal,7,4.0,teste,1462,1462,28,1.915184678522572
+Goiânia,temperatura,causal,7,4.0,treino,5114,5098,95,1.8634758728913299
+Goiânia,temperatura,causal,7,4.0,validacao,1460,1460,34,2.328767123287671
+Goiânia,temperatura,causal,15,2.5,teste,1462,1462,64,4.377564979480164
+Goiânia,temperatura,causal,15,2.5,treino,5114,5078,285,5.612445844820796
+Goiânia,temperatura,causal,15,2.5,validacao,1460,1460,75,5.136986301369863
+Goiânia,temperatura,causal,15,3.0,teste,1462,1462,24,1.6415868673050615
+Goiânia,temperatura,causal,15,3.0,treino,5114,5078,160,3.1508467900748327
+Goiânia,temperatura,causal,15,3.0,validacao,1460,1460,41,2.808219178082192
+Goiânia,temperatura,causal,15,3.5,teste,1462,1462,13,0.8891928864569083
+Goiânia,temperatura,causal,15,3.5,treino,5114,5078,101,1.988972036234738
+Goiânia,temperatura,causal,15,3.5,validacao,1460,1460,29,1.9863013698630136
+Goiânia,temperatura,causal,15,4.0,teste,1462,1462,6,0.4103967168262654
+Goiânia,temperatura,causal,15,4.0,treino,5114,5078,65,1.2800315084679008
+Goiânia,temperatura,causal,15,4.0,validacao,1460,1460,23,1.5753424657534247
+Goiânia,temperatura,centrada,3,2.5,teste,1462,1460,71,4.863013698630137
+Goiânia,temperatura,centrada,3,2.5,treino,5114,5112,256,5.007824726134586
+Goiânia,temperatura,centrada,3,2.5,validacao,1460,1460,73,5.0
+Goiânia,temperatura,centrada,3,3.0,teste,1462,1460,56,3.835616438356164
+Goiânia,temperatura,centrada,3,3.0,treino,5114,5112,182,3.560250391236307
+Goiânia,temperatura,centrada,3,3.0,validacao,1460,1460,47,3.219178082191781
+Goiânia,temperatura,centrada,3,3.5,teste,1462,1460,45,3.0821917808219177
+Goiânia,temperatura,centrada,3,3.5,treino,5114,5112,124,2.4256651017214397
+Goiânia,temperatura,centrada,3,3.5,validacao,1460,1460,32,2.191780821917808
+Goiânia,temperatura,centrada,3,4.0,teste,1462,1460,31,2.1232876712328768
+Goiânia,temperatura,centrada,3,4.0,treino,5114,5112,82,1.6040688575899844
+Goiânia,temperatura,centrada,3,4.0,validacao,1460,1460,26,1.7808219178082192
+Goiânia,temperatura,centrada,7,2.5,teste,1462,1460,50,3.4246575342465753
+Goiânia,temperatura,centrada,7,2.5,treino,5114,5112,165,3.227699530516432
+Goiânia,temperatura,centrada,7,2.5,validacao,1460,1460,53,3.6301369863013697
+Goiânia,temperatura,centrada,7,3.0,teste,1462,1460,30,2.0547945205479454
+Goiânia,temperatura,centrada,7,3.0,treino,5114,5112,98,1.9170579029733958
+Goiânia,temperatura,centrada,7,3.0,validacao,1460,1460,35,2.3972602739726026
+Goiânia,temperatura,centrada,7,3.5,teste,1462,1460,18,1.2328767123287672
+Goiânia,temperatura,centrada,7,3.5,treino,5114,5112,69,1.3497652582159625
+Goiânia,temperatura,centrada,7,3.5,validacao,1460,1460,22,1.5068493150684932
+Goiânia,temperatura,centrada,7,4.0,teste,1462,1460,9,0.6164383561643836
+Goiânia,temperatura,centrada,7,4.0,treino,5114,5112,48,0.9389671361502347
+Goiânia,temperatura,centrada,7,4.0,validacao,1460,1460,14,0.958904109589041
+Goiânia,temperatura,centrada,15,2.5,teste,1462,1456,31,2.129120879120879
+Goiânia,temperatura,centrada,15,2.5,treino,5114,5108,139,2.721221613155834
+Goiânia,temperatura,centrada,15,2.5,validacao,1460,1460,43,2.9452054794520546
+Goiânia,temperatura,centrada,15,3.0,teste,1462,1456,13,0.8928571428571429
+Goiânia,temperatura,centrada,15,3.0,treino,5114,5108,64,1.2529365700861395
+Goiânia,temperatura,centrada,15,3.0,validacao,1460,1460,26,1.7808219178082192
+Goiânia,temperatura,centrada,15,3.5,teste,1462,1456,6,0.41208791208791207
+Goiânia,temperatura,centrada,15,3.5,treino,5114,5108,36,0.7047768206734534
+Goiânia,temperatura,centrada,15,3.5,validacao,1460,1460,17,1.1643835616438356
+Goiânia,temperatura,centrada,15,4.0,teste,1462,1456,4,0.27472527472527475
+Goiânia,temperatura,centrada,15,4.0,treino,5114,5108,24,0.46985121378230227
+Goiânia,temperatura,centrada,15,4.0,validacao,1460,1460,8,0.547945205479452
+Goiânia,umidade,causal,3,2.5,teste,1462,1462,147,10.054719562243502
+Goiânia,umidade,causal,3,2.5,treino,5114,5106,557,10.9087348217783
+Goiânia,umidade,causal,3,2.5,validacao,1460,1460,164,11.232876712328768
+Goiânia,umidade,causal,3,3.0,teste,1462,1462,101,6.908344733242134
+Goiânia,umidade,causal,3,3.0,treino,5114,5106,407,7.971014492753623
+Goiânia,umidade,causal,3,3.0,validacao,1460,1460,119,8.150684931506849
+Goiânia,umidade,causal,3,3.5,teste,1462,1462,69,4.719562243502052
+Goiânia,umidade,causal,3,3.5,treino,5114,5106,307,6.012534273403839
+Goiânia,umidade,causal,3,3.5,validacao,1460,1460,87,5.958904109589041
+Goiânia,umidade,causal,3,4.0,teste,1462,1462,52,3.556771545827633
+Goiânia,umidade,causal,3,4.0,treino,5114,5106,235,4.602428515471994
+Goiânia,umidade,causal,3,4.0,validacao,1460,1460,66,4.52054794520548
+Goiânia,umidade,causal,7,2.5,teste,1462,1462,104,7.113543091655266
+Goiânia,umidade,causal,7,2.5,treino,5114,5098,398,7.806983130639466
+Goiânia,umidade,causal,7,2.5,validacao,1460,1460,123,8.424657534246576
+Goiânia,umidade,causal,7,3.0,teste,1462,1462,68,4.651162790697675
+Goiânia,umidade,causal,7,3.0,treino,5114,5098,270,5.296194586112201
+Goiânia,umidade,causal,7,3.0,validacao,1460,1460,80,5.47945205479452
+Goiânia,umidade,causal,7,3.5,teste,1462,1462,52,3.556771545827633
+Goiânia,umidade,causal,7,3.5,treino,5114,5098,193,3.785798352295018
+Goiânia,umidade,causal,7,3.5,validacao,1460,1460,49,3.356164383561644
+Goiânia,umidade,causal,7,4.0,teste,1462,1462,37,2.53077975376197
+Goiânia,umidade,causal,7,4.0,treino,5114,5098,144,2.824637112593174
+Goiânia,umidade,causal,7,4.0,validacao,1460,1460,33,2.26027397260274
+Goiânia,umidade,causal,15,2.5,teste,1462,1462,98,6.703146374829001
+Goiânia,umidade,causal,15,2.5,treino,5114,5078,291,5.730602599448602
+Goiânia,umidade,causal,15,2.5,validacao,1460,1460,81,5.5479452054794525
+Goiânia,umidade,causal,15,3.0,teste,1462,1462,66,4.514363885088919
+Goiânia,umidade,causal,15,3.0,treino,5114,5078,173,3.4068530917684128
+Goiânia,umidade,causal,15,3.0,validacao,1460,1460,44,3.0136986301369864
+Goiânia,umidade,causal,15,3.5,teste,1462,1462,46,3.146374829001368
+Goiânia,umidade,causal,15,3.5,treino,5114,5078,111,2.185899960614415
+Goiânia,umidade,causal,15,3.5,validacao,1460,1460,29,1.9863013698630136
+Goiânia,umidade,causal,15,4.0,teste,1462,1462,29,1.9835841313269493
+Goiânia,umidade,causal,15,4.0,treino,5114,5078,80,1.5754233950374164
+Goiânia,umidade,causal,15,4.0,validacao,1460,1460,17,1.1643835616438356
+Goiânia,umidade,centrada,3,2.5,teste,1462,1460,82,5.616438356164384
+Goiânia,umidade,centrada,3,2.5,treino,5114,5112,277,5.418622848200313
+Goiânia,umidade,centrada,3,2.5,validacao,1460,1460,68,4.657534246575342
+Goiânia,umidade,centrada,3,3.0,teste,1462,1460,54,3.6986301369863015
+Goiânia,umidade,centrada,3,3.0,treino,5114,5112,196,3.8341158059467917
+Goiânia,umidade,centrada,3,3.0,validacao,1460,1460,46,3.1506849315068495
+Goiânia,umidade,centrada,3,3.5,teste,1462,1460,40,2.73972602739726
+Goiânia,umidade,centrada,3,3.5,treino,5114,5112,144,2.816901408450704
+Goiânia,umidade,centrada,3,3.5,validacao,1460,1460,34,2.328767123287671
+Goiânia,umidade,centrada,3,4.0,teste,1462,1460,23,1.5753424657534247
+Goiânia,umidade,centrada,3,4.0,treino,5114,5112,100,1.9561815336463224
+Goiânia,umidade,centrada,3,4.0,validacao,1460,1460,25,1.7123287671232876
+Goiânia,umidade,centrada,7,2.5,teste,1462,1460,55,3.767123287671233
+Goiânia,umidade,centrada,7,2.5,treino,5114,5112,216,4.225352112676056
+Goiânia,umidade,centrada,7,2.5,validacao,1460,1460,53,3.6301369863013697
+Goiânia,umidade,centrada,7,3.0,teste,1462,1460,32,2.191780821917808
+Goiânia,umidade,centrada,7,3.0,treino,5114,5112,134,2.621283255086072
+Goiânia,umidade,centrada,7,3.0,validacao,1460,1460,23,1.5753424657534247
+Goiânia,umidade,centrada,7,3.5,teste,1462,1460,22,1.5068493150684932
+Goiânia,umidade,centrada,7,3.5,treino,5114,5112,79,1.5453834115805947
+Goiânia,umidade,centrada,7,3.5,validacao,1460,1460,15,1.0273972602739727
+Goiânia,umidade,centrada,7,4.0,teste,1462,1460,18,1.2328767123287672
+Goiânia,umidade,centrada,7,4.0,treino,5114,5112,54,1.056338028169014
+Goiânia,umidade,centrada,7,4.0,validacao,1460,1460,10,0.684931506849315
+Goiânia,umidade,centrada,15,2.5,teste,1462,1456,52,3.5714285714285716
+Goiânia,umidade,centrada,15,2.5,treino,5114,5108,210,4.1111981205951444
+Goiânia,umidade,centrada,15,2.5,validacao,1460,1460,48,3.287671232876712
+Goiânia,umidade,centrada,15,3.0,teste,1462,1456,33,2.2664835164835164
+Goiânia,umidade,centrada,15,3.0,treino,5114,5108,134,2.6233359436178545
+Goiânia,umidade,centrada,15,3.0,validacao,1460,1460,27,1.8493150684931507
+Goiânia,umidade,centrada,15,3.5,teste,1462,1456,25,1.717032967032967
+Goiânia,umidade,centrada,15,3.5,treino,5114,5108,93,1.8206734534064213
+Goiânia,umidade,centrada,15,3.5,validacao,1460,1460,15,1.0273972602739727
+Goiânia,umidade,centrada,15,4.0,teste,1462,1456,17,1.1675824175824177
+Goiânia,umidade,centrada,15,4.0,treino,5114,5108,60,1.1746280344557556
+Goiânia,umidade,centrada,15,4.0,validacao,1460,1460,10,0.684931506849315
+Manaus,precipitacao,causal,3,2.5,teste,1462,1438,69,4.798331015299026
+Manaus,precipitacao,causal,3,2.5,treino,5114,5022,177,3.5244922341696534
+Manaus,precipitacao,causal,3,2.5,validacao,1460,1436,53,3.6908077994428967
+Manaus,precipitacao,causal,3,3.0,teste,1462,1438,36,2.5034770514603615
+Manaus,precipitacao,causal,3,3.0,treino,5114,5022,89,1.7722023098367183
+Manaus,precipitacao,causal,3,3.0,validacao,1460,1436,24,1.6713091922005572
+Manaus,precipitacao,causal,3,3.5,teste,1462,1438,18,1.2517385257301807
+Manaus,precipitacao,causal,3,3.5,treino,5114,5022,31,0.6172839506172839
+Manaus,precipitacao,causal,3,3.5,validacao,1460,1436,7,0.48746518105849584
+Manaus,precipitacao,causal,3,4.0,teste,1462,1438,5,0.3477051460361613
+Manaus,precipitacao,causal,3,4.0,treino,5114,5022,12,0.23894862604540024
+Manaus,precipitacao,causal,3,4.0,validacao,1460,1436,4,0.2785515320334262
+Manaus,precipitacao,causal,7,2.5,teste,1462,1438,70,4.867872044506258
+Manaus,precipitacao,causal,7,2.5,treino,5114,5014,163,3.2508974870362985
+Manaus,precipitacao,causal,7,2.5,validacao,1460,1436,57,3.969359331476323
+Manaus,precipitacao,causal,7,3.0,teste,1462,1438,40,2.7816411682892905
+Manaus,precipitacao,causal,7,3.0,treino,5114,5014,90,1.7949740725967291
+Manaus,precipitacao,causal,7,3.0,validacao,1460,1436,27,1.8802228412256268
+Manaus,precipitacao,causal,7,3.5,teste,1462,1438,24,1.6689847009735743
+Manaus,precipitacao,causal,7,3.5,treino,5114,5014,29,0.5783805345033906
+Manaus,precipitacao,causal,7,3.5,validacao,1460,1436,10,0.6963788300835655
+Manaus,precipitacao,causal,7,4.0,teste,1462,1438,5,0.3477051460361613
+Manaus,precipitacao,causal,7,4.0,treino,5114,5014,14,0.2792181890706023
+Manaus,precipitacao,causal,7,4.0,validacao,1460,1436,6,0.4178272980501393
+Manaus,precipitacao,causal,15,2.5,teste,1462,1438,56,3.8942976356050067
+Manaus,precipitacao,causal,15,2.5,treino,5114,4994,167,3.3440128153784543
+Manaus,precipitacao,causal,15,2.5,validacao,1460,1436,52,3.6211699164345403
+Manaus,precipitacao,causal,15,3.0,teste,1462,1438,31,2.1557719054242
+Manaus,precipitacao,causal,15,3.0,treino,5114,4994,82,1.6419703644373247
+Manaus,precipitacao,causal,15,3.0,validacao,1460,1436,21,1.4623955431754874
+Manaus,precipitacao,causal,15,3.5,teste,1462,1438,20,1.3908205841446453
+Manaus,precipitacao,causal,15,3.5,treino,5114,4994,34,0.6808169803764518
+Manaus,precipitacao,causal,15,3.5,validacao,1460,1436,7,0.48746518105849584
+Manaus,precipitacao,causal,15,4.0,teste,1462,1438,6,0.4172461752433936
+Manaus,precipitacao,causal,15,4.0,treino,5114,4994,15,0.30036043251902284
+Manaus,precipitacao,causal,15,4.0,validacao,1460,1436,5,0.34818941504178275
+Manaus,precipitacao,centrada,3,2.5,teste,1462,1436,58,4.03899721448468
+Manaus,precipitacao,centrada,3,2.5,treino,5114,5028,132,2.6252983293556085
+Manaus,precipitacao,centrada,3,2.5,validacao,1460,1436,38,2.6462395543175488
+Manaus,precipitacao,centrada,3,3.0,teste,1462,1436,29,2.01949860724234
+Manaus,precipitacao,centrada,3,3.0,treino,5114,5028,60,1.1933174224343674
+Manaus,precipitacao,centrada,3,3.0,validacao,1460,1436,16,1.1142061281337048
+Manaus,precipitacao,centrada,3,3.5,teste,1462,1436,16,1.1142061281337048
+Manaus,precipitacao,centrada,3,3.5,treino,5114,5028,29,0.5767700875099443
+Manaus,precipitacao,centrada,3,3.5,validacao,1460,1436,9,0.6267409470752089
+Manaus,precipitacao,centrada,3,4.0,teste,1462,1436,5,0.34818941504178275
+Manaus,precipitacao,centrada,3,4.0,treino,5114,5028,15,0.29832935560859186
+Manaus,precipitacao,centrada,3,4.0,validacao,1460,1436,6,0.4178272980501393
+Manaus,precipitacao,centrada,7,2.5,teste,1462,1436,58,4.03899721448468
+Manaus,precipitacao,centrada,7,2.5,treino,5114,5028,131,2.605409705648369
+Manaus,precipitacao,centrada,7,2.5,validacao,1460,1436,48,3.3426183844011144
+Manaus,precipitacao,centrada,7,3.0,teste,1462,1436,26,1.8105849582172702
+Manaus,precipitacao,centrada,7,3.0,treino,5114,5028,64,1.2728719172633254
+Manaus,precipitacao,centrada,7,3.0,validacao,1460,1436,21,1.4623955431754874
+Manaus,precipitacao,centrada,7,3.5,teste,1462,1436,13,0.9052924791086351
+Manaus,precipitacao,centrada,7,3.5,treino,5114,5028,31,0.6165473349244233
+Manaus,precipitacao,centrada,7,3.5,validacao,1460,1436,8,0.5571030640668524
+Manaus,precipitacao,centrada,7,4.0,teste,1462,1436,5,0.34818941504178275
+Manaus,precipitacao,centrada,7,4.0,treino,5114,5028,13,0.25855210819411295
+Manaus,precipitacao,centrada,7,4.0,validacao,1460,1436,5,0.34818941504178275
+Manaus,precipitacao,centrada,15,2.5,teste,1462,1432,55,3.840782122905028
+Manaus,precipitacao,centrada,15,2.5,treino,5114,5024,122,2.428343949044586
+Manaus,precipitacao,centrada,15,2.5,validacao,1460,1436,53,3.6908077994428967
+Manaus,precipitacao,centrada,15,3.0,teste,1462,1432,27,1.8854748603351956
+Manaus,precipitacao,centrada,15,3.0,treino,5114,5024,66,1.3136942675159236
+Manaus,precipitacao,centrada,15,3.0,validacao,1460,1436,22,1.532033426183844
+Manaus,precipitacao,centrada,15,3.5,teste,1462,1432,11,0.7681564245810056
+Manaus,precipitacao,centrada,15,3.5,treino,5114,5024,27,0.5374203821656051
+Manaus,precipitacao,centrada,15,3.5,validacao,1460,1436,7,0.48746518105849584
+Manaus,precipitacao,centrada,15,4.0,teste,1462,1432,4,0.27932960893854747
+Manaus,precipitacao,centrada,15,4.0,treino,5114,5024,10,0.19904458598726116
+Manaus,precipitacao,centrada,15,4.0,validacao,1460,1436,5,0.34818941504178275
+Manaus,temperatura,causal,3,2.5,teste,1462,1462,96,6.566347469220246
+Manaus,temperatura,causal,3,2.5,treino,5114,5106,428,8.382295338817078
+Manaus,temperatura,causal,3,2.5,validacao,1460,1460,136,9.315068493150685
+Manaus,temperatura,causal,3,3.0,teste,1462,1462,73,4.993160054719562
+Manaus,temperatura,causal,3,3.0,treino,5114,5106,280,5.483744614179397
+Manaus,temperatura,causal,3,3.0,validacao,1460,1460,93,6.36986301369863
+Manaus,temperatura,causal,3,3.5,teste,1462,1462,54,3.6935704514363885
+Manaus,temperatura,causal,3,3.5,treino,5114,5106,201,3.936545240893067
+Manaus,temperatura,causal,3,3.5,validacao,1460,1460,72,4.931506849315069
+Manaus,temperatura,causal,3,4.0,teste,1462,1462,35,2.3939808481532148
+Manaus,temperatura,causal,3,4.0,treino,5114,5106,153,2.99647473560517
+Manaus,temperatura,causal,3,4.0,validacao,1460,1460,54,3.6986301369863015
+Manaus,temperatura,causal,7,2.5,teste,1462,1462,62,4.240766073871409
+Manaus,temperatura,causal,7,2.5,treino,5114,5098,210,4.119262455865045
+Manaus,temperatura,causal,7,2.5,validacao,1460,1460,88,6.027397260273973
+Manaus,temperatura,causal,7,3.0,teste,1462,1462,39,2.667578659370725
+Manaus,temperatura,causal,7,3.0,treino,5114,5098,110,2.1577089054531187
+Manaus,temperatura,causal,7,3.0,validacao,1460,1460,49,3.356164383561644
+Manaus,temperatura,causal,7,3.5,teste,1462,1462,24,1.6415868673050615
+Manaus,temperatura,causal,7,3.5,treino,5114,5098,57,1.118085523734798
+Manaus,temperatura,causal,7,3.5,validacao,1460,1460,31,2.1232876712328768
+Manaus,temperatura,causal,7,4.0,teste,1462,1462,16,1.094391244870041
+Manaus,temperatura,causal,7,4.0,treino,5114,5098,38,0.745390349156532
+Manaus,temperatura,causal,7,4.0,validacao,1460,1460,25,1.7123287671232876
+Manaus,temperatura,causal,15,2.5,teste,1462,1462,45,3.0779753761969904
+Manaus,temperatura,causal,15,2.5,treino,5114,5078,103,2.0283576211106733
+Manaus,temperatura,causal,15,2.5,validacao,1460,1460,57,3.904109589041096
+Manaus,temperatura,causal,15,3.0,teste,1462,1462,25,1.7099863201094392
+Manaus,temperatura,causal,15,3.0,treino,5114,5078,26,0.5120126033871603
+Manaus,temperatura,causal,15,3.0,validacao,1460,1460,18,1.2328767123287672
+Manaus,temperatura,causal,15,3.5,teste,1462,1462,13,0.8891928864569083
+Manaus,temperatura,causal,15,3.5,treino,5114,5078,9,0.17723513194170934
+Manaus,temperatura,causal,15,3.5,validacao,1460,1460,6,0.410958904109589
+Manaus,temperatura,causal,15,4.0,teste,1462,1462,4,0.27359781121751026
+Manaus,temperatura,causal,15,4.0,treino,5114,5078,5,0.09846396218983852
+Manaus,temperatura,causal,15,4.0,validacao,1460,1460,2,0.136986301369863
+Manaus,temperatura,centrada,3,2.5,teste,1462,1460,65,4.4520547945205475
+Manaus,temperatura,centrada,3,2.5,treino,5114,5112,287,5.614241001564945
+Manaus,temperatura,centrada,3,2.5,validacao,1460,1460,115,7.876712328767123
+Manaus,temperatura,centrada,3,3.0,teste,1462,1460,38,2.6027397260273974
+Manaus,temperatura,centrada,3,3.0,treino,5114,5112,183,3.57981220657277
+Manaus,temperatura,centrada,3,3.0,validacao,1460,1460,77,5.273972602739726
+Manaus,temperatura,centrada,3,3.5,teste,1462,1460,24,1.643835616438356
+Manaus,temperatura,centrada,3,3.5,treino,5114,5112,126,2.464788732394366
+Manaus,temperatura,centrada,3,3.5,validacao,1460,1460,56,3.835616438356164
+Manaus,temperatura,centrada,3,4.0,teste,1462,1460,19,1.3013698630136987
+Manaus,temperatura,centrada,3,4.0,treino,5114,5112,92,1.7996870109546166
+Manaus,temperatura,centrada,3,4.0,validacao,1460,1460,43,2.9452054794520546
+Manaus,temperatura,centrada,7,2.5,teste,1462,1460,41,2.808219178082192
+Manaus,temperatura,centrada,7,2.5,treino,5114,5112,147,2.875586854460094
+Manaus,temperatura,centrada,7,2.5,validacao,1460,1460,60,4.109589041095891
+Manaus,temperatura,centrada,7,3.0,teste,1462,1460,19,1.3013698630136987
+Manaus,temperatura,centrada,7,3.0,treino,5114,5112,67,1.310641627543036
+Manaus,temperatura,centrada,7,3.0,validacao,1460,1460,28,1.917808219178082
+Manaus,temperatura,centrada,7,3.5,teste,1462,1460,11,0.7534246575342466
+Manaus,temperatura,centrada,7,3.5,treino,5114,5112,41,0.8020344287949922
+Manaus,temperatura,centrada,7,3.5,validacao,1460,1460,21,1.4383561643835616
+Manaus,temperatura,centrada,7,4.0,teste,1462,1460,5,0.3424657534246575
+Manaus,temperatura,centrada,7,4.0,treino,5114,5112,24,0.4694835680751174
+Manaus,temperatura,centrada,7,4.0,validacao,1460,1460,13,0.8904109589041096
+Manaus,temperatura,centrada,15,2.5,teste,1462,1456,30,2.0604395604395602
+Manaus,temperatura,centrada,15,2.5,treino,5114,5108,62,1.2137823022709475
+Manaus,temperatura,centrada,15,2.5,validacao,1460,1460,35,2.3972602739726026
+Manaus,temperatura,centrada,15,3.0,teste,1462,1456,13,0.8928571428571429
+Manaus,temperatura,centrada,15,3.0,treino,5114,5108,24,0.46985121378230227
+Manaus,temperatura,centrada,15,3.0,validacao,1460,1460,16,1.095890410958904
+Manaus,temperatura,centrada,15,3.5,teste,1462,1456,5,0.3434065934065934
+Manaus,temperatura,centrada,15,3.5,treino,5114,5108,5,0.09788566953797964
+Manaus,temperatura,centrada,15,3.5,validacao,1460,1460,10,0.684931506849315
+Manaus,temperatura,centrada,15,4.0,teste,1462,1456,4,0.27472527472527475
+Manaus,temperatura,centrada,15,4.0,treino,5114,5108,1,0.01957713390759593
+Manaus,temperatura,centrada,15,4.0,validacao,1460,1460,6,0.410958904109589
+Manaus,umidade,causal,3,2.5,teste,1462,1462,139,9.50752393980848
+Manaus,umidade,causal,3,2.5,treino,5114,5106,431,8.44104974539757
+Manaus,umidade,causal,3,2.5,validacao,1460,1460,124,8.493150684931507
+Manaus,umidade,causal,3,3.0,teste,1462,1462,95,6.497948016415869
+Manaus,umidade,causal,3,3.0,treino,5114,5106,315,6.169212690951821
+Manaus,umidade,causal,3,3.0,validacao,1460,1460,93,6.36986301369863
+Manaus,umidade,causal,3,3.5,teste,1462,1462,62,4.240766073871409
+Manaus,umidade,causal,3,3.5,treino,5114,5106,236,4.622013317665491
+Manaus,umidade,causal,3,3.5,validacao,1460,1460,64,4.383561643835616
+Manaus,umidade,causal,3,4.0,teste,1462,1462,42,2.8727770177838576
+Manaus,umidade,causal,3,4.0,treino,5114,5106,181,3.54484919702311
+Manaus,umidade,causal,3,4.0,validacao,1460,1460,48,3.287671232876712
+Manaus,umidade,causal,7,2.5,teste,1462,1462,82,5.60875512995896
+Manaus,umidade,causal,7,2.5,treino,5114,5098,256,5.0215770890545315
+Manaus,umidade,causal,7,2.5,validacao,1460,1460,90,6.164383561643835
+Manaus,umidade,causal,7,3.0,teste,1462,1462,52,3.556771545827633
+Manaus,umidade,causal,7,3.0,treino,5114,5098,128,2.5107885445272657
+Manaus,umidade,causal,7,3.0,validacao,1460,1460,58,3.9726027397260273
+Manaus,umidade,causal,7,3.5,teste,1462,1462,32,2.188782489740082
+Manaus,umidade,causal,7,3.5,treino,5114,5098,78,1.5300117693213025
+Manaus,umidade,causal,7,3.5,validacao,1460,1460,36,2.4657534246575343
+Manaus,umidade,causal,7,4.0,teste,1462,1462,18,1.231190150478796
+Manaus,umidade,causal,7,4.0,treino,5114,5098,46,0.9023146331894861
+Manaus,umidade,causal,7,4.0,validacao,1460,1460,24,1.643835616438356
+Manaus,umidade,causal,15,2.5,teste,1462,1462,66,4.514363885088919
+Manaus,umidade,causal,15,2.5,treino,5114,5078,213,4.194564789287121
+Manaus,umidade,causal,15,2.5,validacao,1460,1460,59,4.041095890410959
+Manaus,umidade,causal,15,3.0,teste,1462,1462,35,2.3939808481532148
+Manaus,umidade,causal,15,3.0,treino,5114,5078,102,2.0086648286727056
+Manaus,umidade,causal,15,3.0,validacao,1460,1460,35,2.3972602739726026
+Manaus,umidade,causal,15,3.5,teste,1462,1462,18,1.231190150478796
+Manaus,umidade,causal,15,3.5,treino,5114,5078,53,1.0437179992122882
+Manaus,umidade,causal,15,3.5,validacao,1460,1460,13,0.8904109589041096
+Manaus,umidade,causal,15,4.0,teste,1462,1462,7,0.478796169630643
+Manaus,umidade,causal,15,4.0,treino,5114,5078,25,0.4923198109491926
+Manaus,umidade,causal,15,4.0,validacao,1460,1460,3,0.2054794520547945
+Manaus,umidade,centrada,3,2.5,teste,1462,1460,83,5.684931506849315
+Manaus,umidade,centrada,3,2.5,treino,5114,5112,354,6.924882629107981
+Manaus,umidade,centrada,3,2.5,validacao,1460,1460,105,7.191780821917808
+Manaus,umidade,centrada,3,3.0,teste,1462,1460,59,4.041095890410959
+Manaus,umidade,centrada,3,3.0,treino,5114,5112,231,4.518779342723005
+Manaus,umidade,centrada,3,3.0,validacao,1460,1460,73,5.0
+Manaus,umidade,centrada,3,3.5,teste,1462,1460,39,2.671232876712329
+Manaus,umidade,centrada,3,3.5,treino,5114,5112,157,3.071205007824726
+Manaus,umidade,centrada,3,3.5,validacao,1460,1460,50,3.4246575342465753
+Manaus,umidade,centrada,3,4.0,teste,1462,1460,26,1.7808219178082192
+Manaus,umidade,centrada,3,4.0,treino,5114,5112,111,2.171361502347418
+Manaus,umidade,centrada,3,4.0,validacao,1460,1460,38,2.6027397260273974
+Manaus,umidade,centrada,7,2.5,teste,1462,1460,58,3.9726027397260273
+Manaus,umidade,centrada,7,2.5,treino,5114,5112,226,4.420970266040689
+Manaus,umidade,centrada,7,2.5,validacao,1460,1460,52,3.5616438356164384
+Manaus,umidade,centrada,7,3.0,teste,1462,1460,29,1.9863013698630136
+Manaus,umidade,centrada,7,3.0,treino,5114,5112,128,2.503912363067293
+Manaus,umidade,centrada,7,3.0,validacao,1460,1460,22,1.5068493150684932
+Manaus,umidade,centrada,7,3.5,teste,1462,1460,13,0.8904109589041096
+Manaus,umidade,centrada,7,3.5,treino,5114,5112,70,1.3693270735524257
+Manaus,umidade,centrada,7,3.5,validacao,1460,1460,11,0.7534246575342466
+Manaus,umidade,centrada,7,4.0,teste,1462,1460,6,0.410958904109589
+Manaus,umidade,centrada,7,4.0,treino,5114,5112,45,0.8802816901408451
+Manaus,umidade,centrada,7,4.0,validacao,1460,1460,5,0.3424657534246575
+Manaus,umidade,centrada,15,2.5,teste,1462,1456,53,3.64010989010989
+Manaus,umidade,centrada,15,2.5,treino,5114,5108,136,2.662490211433046
+Manaus,umidade,centrada,15,2.5,validacao,1460,1460,40,2.73972602739726
+Manaus,umidade,centrada,15,3.0,teste,1462,1456,28,1.9230769230769231
+Manaus,umidade,centrada,15,3.0,treino,5114,5108,58,1.1354737666405639
+Manaus,umidade,centrada,15,3.0,validacao,1460,1460,17,1.1643835616438356
+Manaus,umidade,centrada,15,3.5,teste,1462,1456,14,0.9615384615384616
+Manaus,umidade,centrada,15,3.5,treino,5114,5108,26,0.5090054815974941
+Manaus,umidade,centrada,15,3.5,validacao,1460,1460,8,0.547945205479452
+Manaus,umidade,centrada,15,4.0,teste,1462,1456,4,0.27472527472527475
+Manaus,umidade,centrada,15,4.0,treino,5114,5108,11,0.2153484729835552
+Manaus,umidade,centrada,15,4.0,validacao,1460,1460,0,0.0
+Porto Alegre,precipitacao,causal,3,2.5,teste,1462,1438,131,9.109874826147427
+Porto Alegre,precipitacao,causal,3,2.5,treino,5114,5022,398,7.925129430505774
+Porto Alegre,precipitacao,causal,3,2.5,validacao,1460,1436,125,8.704735376044567
+Porto Alegre,precipitacao,causal,3,3.0,teste,1462,1438,93,6.4673157162726005
+Porto Alegre,precipitacao,causal,3,3.0,treino,5114,5022,274,5.455993628036639
+Porto Alegre,precipitacao,causal,3,3.0,validacao,1460,1436,89,6.197771587743732
+Porto Alegre,precipitacao,causal,3,3.5,teste,1462,1438,63,4.381084840055633
+Porto Alegre,precipitacao,causal,3,3.5,treino,5114,5022,182,3.62405416168857
+Porto Alegre,precipitacao,causal,3,3.5,validacao,1460,1436,58,4.03899721448468
+Porto Alegre,precipitacao,causal,3,4.0,teste,1462,1438,37,2.5730180806675937
+Porto Alegre,precipitacao,causal,3,4.0,treino,5114,5022,109,2.1704500199123853
+Porto Alegre,precipitacao,causal,3,4.0,validacao,1460,1436,28,1.9498607242339834
+Porto Alegre,precipitacao,causal,7,2.5,teste,1462,1438,160,11.126564673157162
+Porto Alegre,precipitacao,causal,7,2.5,treino,5114,5014,466,9.29397686477862
+Porto Alegre,precipitacao,causal,7,2.5,validacao,1460,1436,146,10.167130919220055
+Porto Alegre,precipitacao,causal,7,3.0,teste,1462,1438,113,7.858136300417246
+Porto Alegre,precipitacao,causal,7,3.0,treino,5114,5014,322,6.422018348623853
+Porto Alegre,precipitacao,causal,7,3.0,validacao,1460,1436,108,7.520891364902507
+Porto Alegre,precipitacao,causal,7,3.5,teste,1462,1438,75,5.21557719054242
+Porto Alegre,precipitacao,causal,7,3.5,treino,5114,5014,217,4.3278819305943355
+Porto Alegre,precipitacao,causal,7,3.5,validacao,1460,1436,75,5.222841225626741
+Porto Alegre,precipitacao,causal,7,4.0,teste,1462,1438,45,3.129346314325452
+Porto Alegre,precipitacao,causal,7,4.0,treino,5114,5014,128,2.5528520143597926
+Porto Alegre,precipitacao,causal,7,4.0,validacao,1460,1436,35,2.437325905292479
+Porto Alegre,precipitacao,causal,15,2.5,teste,1462,1438,170,11.821974965229485
+Porto Alegre,precipitacao,causal,15,2.5,treino,5114,4994,505,10.112134561473768
+Porto Alegre,precipitacao,causal,15,2.5,validacao,1460,1436,165,11.49025069637883
+Porto Alegre,precipitacao,causal,15,3.0,teste,1462,1438,118,8.205841446453407
+Porto Alegre,precipitacao,causal,15,3.0,treino,5114,4994,353,7.068482178614337
+Porto Alegre,precipitacao,causal,15,3.0,validacao,1460,1436,117,8.147632311977716
+Porto Alegre,precipitacao,causal,15,3.5,teste,1462,1438,77,5.354659248956884
+Porto Alegre,precipitacao,causal,15,3.5,treino,5114,4994,242,4.845814977973569
+Porto Alegre,precipitacao,causal,15,3.5,validacao,1460,1436,83,5.779944289693593
+Porto Alegre,precipitacao,causal,15,4.0,teste,1462,1438,44,3.0598052851182196
+Porto Alegre,precipitacao,causal,15,4.0,treino,5114,4994,132,2.643171806167401
+Porto Alegre,precipitacao,causal,15,4.0,validacao,1460,1436,38,2.6462395543175488
+Porto Alegre,precipitacao,centrada,3,2.5,teste,1462,1436,116,8.07799442896936
+Porto Alegre,precipitacao,centrada,3,2.5,treino,5114,5028,369,7.3389021479713605
+Porto Alegre,precipitacao,centrada,3,2.5,validacao,1460,1436,125,8.704735376044567
+Porto Alegre,precipitacao,centrada,3,3.0,teste,1462,1436,81,5.64066852367688
+Porto Alegre,precipitacao,centrada,3,3.0,treino,5114,5028,256,5.0914876690533015
+Porto Alegre,precipitacao,centrada,3,3.0,validacao,1460,1436,96,6.685236768802229
+Porto Alegre,precipitacao,centrada,3,3.5,teste,1462,1436,58,4.03899721448468
+Porto Alegre,precipitacao,centrada,3,3.5,treino,5114,5028,169,3.3611774065234687
+Porto Alegre,precipitacao,centrada,3,3.5,validacao,1460,1436,65,4.5264623955431755
+Porto Alegre,precipitacao,centrada,3,4.0,teste,1462,1436,36,2.5069637883008355
+Porto Alegre,precipitacao,centrada,3,4.0,treino,5114,5028,90,1.7899761336515514
+Porto Alegre,precipitacao,centrada,3,4.0,validacao,1460,1436,35,2.437325905292479
+Porto Alegre,precipitacao,centrada,7,2.5,teste,1462,1436,146,10.167130919220055
+Porto Alegre,precipitacao,centrada,7,2.5,treino,5114,5028,458,9.108989657915672
+Porto Alegre,precipitacao,centrada,7,2.5,validacao,1460,1436,146,10.167130919220055
+Porto Alegre,precipitacao,centrada,7,3.0,teste,1462,1436,103,7.172701949860724
+Porto Alegre,precipitacao,centrada,7,3.0,treino,5114,5028,307,6.105807478122514
+Porto Alegre,precipitacao,centrada,7,3.0,validacao,1460,1436,104,7.242339832869081
+Porto Alegre,precipitacao,centrada,7,3.5,teste,1462,1436,66,4.596100278551532
+Porto Alegre,precipitacao,centrada,7,3.5,treino,5114,5028,211,4.196499602227526
+Porto Alegre,precipitacao,centrada,7,3.5,validacao,1460,1436,72,5.013927576601671
+Porto Alegre,precipitacao,centrada,7,4.0,teste,1462,1436,38,2.6462395543175488
+Porto Alegre,precipitacao,centrada,7,4.0,treino,5114,5028,110,2.1877486077963404
+Porto Alegre,precipitacao,centrada,7,4.0,validacao,1460,1436,37,2.5766016713091924
+Porto Alegre,precipitacao,centrada,15,2.5,teste,1462,1432,161,11.243016759776536
+Porto Alegre,precipitacao,centrada,15,2.5,treino,5114,5024,499,9.93232484076433
+Porto Alegre,precipitacao,centrada,15,2.5,validacao,1460,1436,165,11.49025069637883
+Porto Alegre,precipitacao,centrada,15,3.0,teste,1462,1432,119,8.310055865921788
+Porto Alegre,precipitacao,centrada,15,3.0,treino,5114,5024,343,6.827229299363057
+Porto Alegre,precipitacao,centrada,15,3.0,validacao,1460,1436,115,8.008356545961004
+Porto Alegre,precipitacao,centrada,15,3.5,teste,1462,1432,82,5.726256983240224
+Porto Alegre,precipitacao,centrada,15,3.5,treino,5114,5024,229,4.55812101910828
+Porto Alegre,precipitacao,centrada,15,3.5,validacao,1460,1436,73,5.0835654596100275
+Porto Alegre,precipitacao,centrada,15,4.0,teste,1462,1432,48,3.35195530726257
+Porto Alegre,precipitacao,centrada,15,4.0,treino,5114,5024,123,2.448248407643312
+Porto Alegre,precipitacao,centrada,15,4.0,validacao,1460,1436,35,2.437325905292479
+Porto Alegre,temperatura,causal,3,2.5,teste,1462,1462,136,9.30232558139535
+Porto Alegre,temperatura,causal,3,2.5,treino,5114,5106,541,10.595377986682335
+Porto Alegre,temperatura,causal,3,2.5,validacao,1460,1460,153,10.479452054794521
+Porto Alegre,temperatura,causal,3,3.0,teste,1462,1462,81,5.540355677154583
+Porto Alegre,temperatura,causal,3,3.0,treino,5114,5106,389,7.618488053270662
+Porto Alegre,temperatura,causal,3,3.0,validacao,1460,1460,118,8.082191780821917
+Porto Alegre,temperatura,causal,3,3.5,teste,1462,1462,52,3.556771545827633
+Porto Alegre,temperatura,causal,3,3.5,treino,5114,5106,272,5.327066196631414
+Porto Alegre,temperatura,causal,3,3.5,validacao,1460,1460,91,6.232876712328767
+Porto Alegre,temperatura,causal,3,4.0,teste,1462,1462,38,2.5991792065663475
+Porto Alegre,temperatura,causal,3,4.0,treino,5114,5106,211,4.132393262828045
+Porto Alegre,temperatura,causal,3,4.0,validacao,1460,1460,71,4.863013698630137
+Porto Alegre,temperatura,causal,7,2.5,teste,1462,1462,93,6.361149110807114
+Porto Alegre,temperatura,causal,7,2.5,treino,5114,5098,286,5.6100431541781095
+Porto Alegre,temperatura,causal,7,2.5,validacao,1460,1460,116,7.945205479452055
+Porto Alegre,temperatura,causal,7,3.0,teste,1462,1462,63,4.309165526675787
+Porto Alegre,temperatura,causal,7,3.0,treino,5114,5098,179,3.511180855237348
+Porto Alegre,temperatura,causal,7,3.0,validacao,1460,1460,78,5.342465753424658
+Porto Alegre,temperatura,causal,7,3.5,teste,1462,1462,31,2.1203830369357046
+Porto Alegre,temperatura,causal,7,3.5,treino,5114,5098,115,2.255786582973715
+Porto Alegre,temperatura,causal,7,3.5,validacao,1460,1460,58,3.9726027397260273
+Porto Alegre,temperatura,causal,7,4.0,teste,1462,1462,21,1.4363885088919288
+Porto Alegre,temperatura,causal,7,4.0,treino,5114,5098,65,1.275009807767752
+Porto Alegre,temperatura,causal,7,4.0,validacao,1460,1460,36,2.4657534246575343
+Porto Alegre,temperatura,causal,15,2.5,teste,1462,1462,63,4.309165526675787
+Porto Alegre,temperatura,causal,15,2.5,treino,5114,5078,242,4.765655769988184
+Porto Alegre,temperatura,causal,15,2.5,validacao,1460,1460,80,5.47945205479452
+Porto Alegre,temperatura,causal,15,3.0,teste,1462,1462,32,2.188782489740082
+Porto Alegre,temperatura,causal,15,3.0,treino,5114,5078,120,2.3631350925561243
+Porto Alegre,temperatura,causal,15,3.0,validacao,1460,1460,33,2.26027397260274
+Porto Alegre,temperatura,causal,15,3.5,teste,1462,1462,17,1.1627906976744187
+Porto Alegre,temperatura,causal,15,3.5,treino,5114,5078,50,0.9846396218983852
+Porto Alegre,temperatura,causal,15,3.5,validacao,1460,1460,14,0.958904109589041
+Porto Alegre,temperatura,causal,15,4.0,teste,1462,1462,7,0.478796169630643
+Porto Alegre,temperatura,causal,15,4.0,treino,5114,5078,29,0.5710909807010635
+Porto Alegre,temperatura,causal,15,4.0,validacao,1460,1460,6,0.410958904109589
+Porto Alegre,temperatura,centrada,3,2.5,teste,1462,1460,53,3.6301369863013697
+Porto Alegre,temperatura,centrada,3,2.5,treino,5114,5112,240,4.694835680751174
+Porto Alegre,temperatura,centrada,3,2.5,validacao,1460,1460,70,4.794520547945205
+Porto Alegre,temperatura,centrada,3,3.0,teste,1462,1460,28,1.917808219178082
+Porto Alegre,temperatura,centrada,3,3.0,treino,5114,5112,149,2.9147104851330203
+Porto Alegre,temperatura,centrada,3,3.0,validacao,1460,1460,49,3.356164383561644
+Porto Alegre,temperatura,centrada,3,3.5,teste,1462,1460,18,1.2328767123287672
+Porto Alegre,temperatura,centrada,3,3.5,treino,5114,5112,101,1.9757433489827856
+Porto Alegre,temperatura,centrada,3,3.5,validacao,1460,1460,41,2.808219178082192
+Porto Alegre,temperatura,centrada,3,4.0,teste,1462,1460,15,1.0273972602739727
+Porto Alegre,temperatura,centrada,3,4.0,treino,5114,5112,70,1.3693270735524257
+Porto Alegre,temperatura,centrada,3,4.0,validacao,1460,1460,33,2.26027397260274
+Porto Alegre,temperatura,centrada,7,2.5,teste,1462,1460,51,3.493150684931507
+Porto Alegre,temperatura,centrada,7,2.5,treino,5114,5112,186,3.6384976525821595
+Porto Alegre,temperatura,centrada,7,2.5,validacao,1460,1460,64,4.383561643835616
+Porto Alegre,temperatura,centrada,7,3.0,teste,1462,1460,17,1.1643835616438356
+Porto Alegre,temperatura,centrada,7,3.0,treino,5114,5112,109,2.132237871674491
+Porto Alegre,temperatura,centrada,7,3.0,validacao,1460,1460,36,2.4657534246575343
+Porto Alegre,temperatura,centrada,7,3.5,teste,1462,1460,6,0.410958904109589
+Porto Alegre,temperatura,centrada,7,3.5,treino,5114,5112,52,1.0172143974960877
+Porto Alegre,temperatura,centrada,7,3.5,validacao,1460,1460,24,1.643835616438356
+Porto Alegre,temperatura,centrada,7,4.0,teste,1462,1460,3,0.2054794520547945
+Porto Alegre,temperatura,centrada,7,4.0,treino,5114,5112,32,0.6259780907668232
+Porto Alegre,temperatura,centrada,7,4.0,validacao,1460,1460,13,0.8904109589041096
+Porto Alegre,temperatura,centrada,15,2.5,teste,1462,1456,21,1.4423076923076923
+Porto Alegre,temperatura,centrada,15,2.5,treino,5114,5108,115,2.2513703993735317
+Porto Alegre,temperatura,centrada,15,2.5,validacao,1460,1460,43,2.9452054794520546
+Porto Alegre,temperatura,centrada,15,3.0,teste,1462,1456,10,0.6868131868131868
+Porto Alegre,temperatura,centrada,15,3.0,treino,5114,5108,44,0.8613938919342208
+Porto Alegre,temperatura,centrada,15,3.0,validacao,1460,1460,24,1.643835616438356
+Porto Alegre,temperatura,centrada,15,3.5,teste,1462,1456,3,0.20604395604395603
+Porto Alegre,temperatura,centrada,15,3.5,treino,5114,5108,30,0.5873140172278778
+Porto Alegre,temperatura,centrada,15,3.5,validacao,1460,1460,11,0.7534246575342466
+Porto Alegre,temperatura,centrada,15,4.0,teste,1462,1456,1,0.06868131868131869
+Porto Alegre,temperatura,centrada,15,4.0,treino,5114,5108,15,0.2936570086139389
+Porto Alegre,temperatura,centrada,15,4.0,validacao,1460,1460,5,0.3424657534246575
+Porto Alegre,umidade,causal,3,2.5,teste,1462,1462,149,10.191518467852257
+Porto Alegre,umidade,causal,3,2.5,treino,5114,5106,481,9.420289855072463
+Porto Alegre,umidade,causal,3,2.5,validacao,1460,1460,139,9.520547945205479
+Porto Alegre,umidade,causal,3,3.0,teste,1462,1462,116,7.934336525307797
+Porto Alegre,umidade,causal,3,3.0,treino,5114,5106,351,6.8742655699177435
+Porto Alegre,umidade,causal,3,3.0,validacao,1460,1460,101,6.917808219178082
+Porto Alegre,umidade,causal,3,3.5,teste,1462,1462,91,6.224350205198358
+Porto Alegre,umidade,causal,3,3.5,treino,5114,5106,263,5.150802976889933
+Porto Alegre,umidade,causal,3,3.5,validacao,1460,1460,84,5.7534246575342465
+Porto Alegre,umidade,causal,3,4.0,teste,1462,1462,71,4.856361149110807
+Porto Alegre,umidade,causal,3,4.0,treino,5114,5106,205,4.014884449667059
+Porto Alegre,umidade,causal,3,4.0,validacao,1460,1460,67,4.589041095890411
+Porto Alegre,umidade,causal,7,2.5,teste,1462,1462,94,6.429548563611491
+Porto Alegre,umidade,causal,7,2.5,treino,5114,5098,329,6.453511180855237
+Porto Alegre,umidade,causal,7,2.5,validacao,1460,1460,86,5.890410958904109
+Porto Alegre,umidade,causal,7,3.0,teste,1462,1462,66,4.514363885088919
+Porto Alegre,umidade,causal,7,3.0,treino,5114,5098,210,4.119262455865045
+Porto Alegre,umidade,causal,7,3.0,validacao,1460,1460,58,3.9726027397260273
+Porto Alegre,umidade,causal,7,3.5,teste,1462,1462,40,2.735978112175103
+Porto Alegre,umidade,causal,7,3.5,treino,5114,5098,153,3.0011769321302473
+Porto Alegre,umidade,causal,7,3.5,validacao,1460,1460,35,2.3972602739726026
+Porto Alegre,umidade,causal,7,4.0,teste,1462,1462,29,1.9835841313269493
+Porto Alegre,umidade,causal,7,4.0,treino,5114,5098,113,2.2165555119654767
+Porto Alegre,umidade,causal,7,4.0,validacao,1460,1460,23,1.5753424657534247
+Porto Alegre,umidade,causal,15,2.5,teste,1462,1462,68,4.651162790697675
+Porto Alegre,umidade,causal,15,2.5,treino,5114,5078,223,4.391492713666798
+Porto Alegre,umidade,causal,15,2.5,validacao,1460,1460,58,3.9726027397260273
+Porto Alegre,umidade,causal,15,3.0,teste,1462,1462,35,2.3939808481532148
+Porto Alegre,umidade,causal,15,3.0,treino,5114,5078,111,2.185899960614415
+Porto Alegre,umidade,causal,15,3.0,validacao,1460,1460,27,1.8493150684931507
+Porto Alegre,umidade,causal,15,3.5,teste,1462,1462,21,1.4363885088919288
+Porto Alegre,umidade,causal,15,3.5,treino,5114,5078,68,1.3391098857818038
+Porto Alegre,umidade,causal,15,3.5,validacao,1460,1460,15,1.0273972602739727
+Porto Alegre,umidade,causal,15,4.0,teste,1462,1462,17,1.1627906976744187
+Porto Alegre,umidade,causal,15,4.0,treino,5114,5078,40,0.7877116975187082
+Porto Alegre,umidade,causal,15,4.0,validacao,1460,1460,10,0.684931506849315
+Porto Alegre,umidade,centrada,3,2.5,teste,1462,1460,88,6.027397260273973
+Porto Alegre,umidade,centrada,3,2.5,treino,5114,5112,331,6.474960876369327
+Porto Alegre,umidade,centrada,3,2.5,validacao,1460,1460,102,6.986301369863014
+Porto Alegre,umidade,centrada,3,3.0,teste,1462,1460,59,4.041095890410959
+Porto Alegre,umidade,centrada,3,3.0,treino,5114,5112,236,4.61658841940532
+Porto Alegre,umidade,centrada,3,3.0,validacao,1460,1460,74,5.068493150684931
+Porto Alegre,umidade,centrada,3,3.5,teste,1462,1460,42,2.8767123287671232
+Porto Alegre,umidade,centrada,3,3.5,treino,5114,5112,170,3.325508607198748
+Porto Alegre,umidade,centrada,3,3.5,validacao,1460,1460,56,3.835616438356164
+Porto Alegre,umidade,centrada,3,4.0,teste,1462,1460,27,1.8493150684931507
+Porto Alegre,umidade,centrada,3,4.0,treino,5114,5112,123,2.4061032863849765
+Porto Alegre,umidade,centrada,3,4.0,validacao,1460,1460,38,2.6027397260273974
+Porto Alegre,umidade,centrada,7,2.5,teste,1462,1460,70,4.794520547945205
+Porto Alegre,umidade,centrada,7,2.5,treino,5114,5112,239,4.67527386541471
+Porto Alegre,umidade,centrada,7,2.5,validacao,1460,1460,70,4.794520547945205
+Porto Alegre,umidade,centrada,7,3.0,teste,1462,1460,39,2.671232876712329
+Porto Alegre,umidade,centrada,7,3.0,treino,5114,5112,147,2.875586854460094
+Porto Alegre,umidade,centrada,7,3.0,validacao,1460,1460,45,3.0821917808219177
+Porto Alegre,umidade,centrada,7,3.5,teste,1462,1460,27,1.8493150684931507
+Porto Alegre,umidade,centrada,7,3.5,treino,5114,5112,84,1.6431924882629108
+Porto Alegre,umidade,centrada,7,3.5,validacao,1460,1460,28,1.917808219178082
+Porto Alegre,umidade,centrada,7,4.0,teste,1462,1460,20,1.36986301369863
+Porto Alegre,umidade,centrada,7,4.0,treino,5114,5112,51,0.9976525821596244
+Porto Alegre,umidade,centrada,7,4.0,validacao,1460,1460,15,1.0273972602739727
+Porto Alegre,umidade,centrada,15,2.5,teste,1462,1456,54,3.708791208791209
+Porto Alegre,umidade,centrada,15,2.5,treino,5114,5108,211,4.1307752545027405
+Porto Alegre,umidade,centrada,15,2.5,validacao,1460,1460,59,4.041095890410959
+Porto Alegre,umidade,centrada,15,3.0,teste,1462,1456,29,1.9917582417582418
+Porto Alegre,umidade,centrada,15,3.0,treino,5114,5108,114,2.2317932654659356
+Porto Alegre,umidade,centrada,15,3.0,validacao,1460,1460,32,2.191780821917808
+Porto Alegre,umidade,centrada,15,3.5,teste,1462,1456,15,1.0302197802197801
+Porto Alegre,umidade,centrada,15,3.5,treino,5114,5108,60,1.1746280344557556
+Porto Alegre,umidade,centrada,15,3.5,validacao,1460,1460,15,1.0273972602739727
+Porto Alegre,umidade,centrada,15,4.0,teste,1462,1456,4,0.27472527472527475
+Porto Alegre,umidade,centrada,15,4.0,treino,5114,5108,27,0.52858261550509
+Porto Alegre,umidade,centrada,15,4.0,validacao,1460,1460,7,0.4794520547945205

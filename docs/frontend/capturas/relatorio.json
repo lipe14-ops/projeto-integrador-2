@@ -1,0 +1,205 @@
+{
+  "carregamento_segundos": 6,
+  "desktop_2023_2024": {
+    "graficos": [
+      {
+        "titulo": "Temperatura média",
+        "card": [
+          91,
+          1243
+        ],
+        "area": [
+          1187,
+          324
+        ],
+        "plot": [
+          169,
+          1122,
+          265
+        ],
+        "faixas": 11
+      },
+      {
+        "titulo": "Precipitação acumulada",
+        "card": [
+          91,
+          1243
+        ],
+        "area": [
+          1187,
+          324
+        ],
+        "plot": [
+          169,
+          1122,
+          265
+        ],
+        "faixas": 11
+      },
+      {
+        "titulo": "Umidade relativa média",
+        "card": [
+          91,
+          1243
+        ],
+        "area": [
+          1187,
+          324
+        ],
+        "plot": [
+          169,
+          1122,
+          265
+        ],
+        "faixas": 11
+      }
+    ],
+    "rolagemHorizontal": false,
+    "legendaEstacoes": [
+      "VerãoOutonoInvernoPrimavera",
+      "VerãoOutonoInvernoPrimavera",
+      "VerãoOutonoInvernoPrimavera"
+    ]
+  },
+  "desktop_tooltip_chuva": [
+    "fev/24 | Porto Alegre — RS: 110 mm | El Niño | Verão 2023/24 | 22/12/2023 a 19/03/2024"
+  ],
+  "capturas": [
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/desktop_2023-2024_analise.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/desktop_2023-2024_tooltip.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/desktop_2015-2025_temperatura.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/desktop_2015-2025_precipitacao.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/desktop_2015-2025_umidade.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/celular_2023-2024_graficos.png"
+  ],
+  "desktop_2015_2025": {
+    "graficos": [
+      {
+        "titulo": "Temperatura média",
+        "card": [
+          91,
+          1243
+        ],
+        "area": [
+          1187,
+          324
+        ],
+        "plot": [
+          169,
+          1122,
+          265
+        ],
+        "faixas": 54
+      },
+      {
+        "titulo": "Precipitação acumulada",
+        "card": [
+          91,
+          1243
+        ],
+        "area": [
+          1187,
+          324
+        ],
+        "plot": [
+          169,
+          1122,
+          265
+        ],
+        "faixas": 54
+      },
+      {
+        "titulo": "Umidade relativa média",
+        "card": [
+          91,
+          1243
+        ],
+        "area": [
+          1187,
+          324
+        ],
+        "plot": [
+          169,
+          1122,
+          265
+        ],
+        "faixas": 54
+      }
+    ],
+    "rolagemHorizontal": false,
+    "legendaEstacoes": [
+      "VerãoOutonoInvernoPrimavera",
+      "VerãoOutonoInvernoPrimavera",
+      "VerãoOutonoInvernoPrimavera"
+    ]
+  },
+  "meteorologicas_nota": "Meteorológicas: trimestres completos — verão dez–fev, outono mar–mai, inverno jun–ago, primavera set–nov. Não equivalem à estação chuvosa ou seca da região. Passe o cursor ou toque em um mês para ver a estação. Arraste a barra inferior de qualquer gráfico para ampliar os três.",
+  "meteorologicas_tooltip": [
+    "jan/21 | Porto Alegre — RS: 24,8 °C | La Niña | Verão 2020/21 | 01/12/2020 a 28/02/2021"
+  ],
+  "celular_2023_2024": {
+    "graficos": [
+      {
+        "titulo": "Temperatura média",
+        "card": [
+          14,
+          361
+        ],
+        "area": [
+          330,
+          234
+        ],
+        "plot": [
+          80,
+          265,
+          175
+        ],
+        "faixas": 11
+      },
+      {
+        "titulo": "Precipitação acumulada",
+        "card": [
+          14,
+          361
+        ],
+        "area": [
+          330,
+          234
+        ],
+        "plot": [
+          80,
+          265,
+          175
+        ],
+        "faixas": 11
+      },
+      {
+        "titulo": "Umidade relativa média",
+        "card": [
+          14,
+          361
+        ],
+        "area": [
+          330,
+          234
+        ],
+        "plot": [
+          80,
+          265,
+          175
+        ],
+        "faixas": 11
+      }
+    ],
+    "rolagemHorizontal": false,
+    "legendaEstacoes": [
+      "VerãoOutonoInvernoPrimavera",
+      "VerãoOutonoInvernoPrimavera",
+      "VerãoOutonoInvernoPrimavera"
+    ]
+  },
+  "celular_toque_tooltip": [
+    "fev/24 | Porto Alegre — RS: 25,1 °C | El Niño | Verão 2023/24 | 22/12/2023 a 19/03/2024"
+  ],
+  "console_erros": null
+}

@@ -1,0 +1,169 @@
+{
+  "t0_lista_municipios_ms": 2562,
+  "t1_carregamento_ms": 2134,
+  "t5_eventos_2023_2024": {
+    "estado": null,
+    "contagem": "12 eventos em 2023–2024, 11 com notícias verificadas. Os eventos aparecem como ▼ no gráfico de precipitação.",
+    "eventos": [
+      {
+        "data": "14–16 dez 2024",
+        "resumo": "81 mm acumulados em 3 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial moderado"
+        ],
+        "noticias": 3
+      },
+      {
+        "data": "23 mai 2024",
+        "resumo": "39 mm em um dia (esperado: cerca de 1 mm)",
+        "selos": [
+          "Para o local: Muito forte para o local",
+          "Impacto: Impacto potencial moderado"
+        ],
+        "noticias": 3
+      },
+      {
+        "data": "10–12 mai 2024",
+        "resumo": "103 mm acumulados em 3 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial alto"
+        ],
+        "noticias": 3
+      },
+      {
+        "data": "30 abr – 2 mai 2024",
+        "resumo": "103 mm acumulados em 3 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial alto"
+        ],
+        "noticias": 3
+      }
+    ],
+    "marcadores": 12
+  },
+  "capturas": [
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/melhorias/01_desktop_porto-alegre_2023-2024_pagina.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/melhorias/02_desktop_eventos_2024.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/melhorias/03_desktop_grafico-chuva_evento-destacado.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/melhorias/04_desktop_tooltip_com_evento.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/melhorias/05_desktop_comparacao_porto-alegre_x_manaus.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/melhorias/06_desktop_rio-verde_eventos.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/melhorias/07_desktop_goiania_sem-analise.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/melhorias/08_celular_porto-alegre_2024_pagina.png"
+  ],
+  "t2_troca_periodo": {
+    "ms": 1579,
+    "novas_consultas_mensais": 0
+  },
+  "t5_eventos_2024": {
+    "estado": null,
+    "contagem": "5 eventos em 2024, 5 com notícias verificadas. Os eventos aparecem como ▼ no gráfico de precipitação.",
+    "eventos": [
+      {
+        "data": "14–16 dez 2024",
+        "resumo": "81 mm acumulados em 3 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial moderado"
+        ],
+        "noticias": 3
+      },
+      {
+        "data": "23 mai 2024",
+        "resumo": "39 mm em um dia (esperado: cerca de 1 mm)",
+        "selos": [
+          "Para o local: Muito forte para o local",
+          "Impacto: Impacto potencial moderado"
+        ],
+        "noticias": 3
+      },
+      {
+        "data": "10–12 mai 2024",
+        "resumo": "103 mm acumulados em 3 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial alto"
+        ],
+        "noticias": 3
+      },
+      {
+        "data": "30 abr – 2 mai 2024",
+        "resumo": "103 mm acumulados em 3 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial alto"
+        ],
+        "noticias": 3
+      }
+    ],
+    "marcadores": 5
+  },
+  "t5_ver_no_grafico": {
+    "ativo": 1,
+    "visivel": true
+  },
+  "t6_tooltip_evento": "dez/24 | Porto Alegre — RS: 201 mm | ▼ 14–16 dez 2024: 81 mm acumulados em 3 dias · 3 notícia(s) | Primavera 2024 · 20 dias neste período | 22/09/2024 a 20/12/2024 | Verão 2024/25 · 11 dias neste período | 21/12/2024 a 19/03/2025",
+  "t4_sugestoes_comparacao": [
+    "Manaus — AM"
+  ],
+  "t4_comparacao_ms": 1023,
+  "t4_legenda": "Porto Alegre — RS | Manaus — AM | El Niño (fundo) | La Niña (fundo) | Verão | Outono | Inverno | Primavera",
+  "rio_verde": {
+    "estado": null,
+    "contagem": "23 eventos em 2015–2025, 16 com notícias verificadas. Os eventos aparecem como ▼ no gráfico de precipitação.",
+    "eventos": [
+      {
+        "data": "14–16 dez 2025",
+        "resumo": "41 mm em um dia (esperado: cerca de 4 mm) · 60 mm acumulados em 3 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial moderado"
+        ],
+        "noticias": 2
+      },
+      {
+        "data": "4–8 jan 2025",
+        "resumo": "96 mm acumulados em 5 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial moderado"
+        ],
+        "noticias": 3
+      },
+      {
+        "data": "3–5 nov 2024",
+        "resumo": "59 mm acumulados em 3 dias",
+        "selos": [
+          "Para o local: Acumulado excepcional",
+          "Impacto: Impacto potencial moderado"
+        ],
+        "noticias": 3
+      },
+      {
+        "data": "15 out 2024",
+        "resumo": "47 mm em um dia (esperado: cerca de 1 mm)",
+        "selos": [
+          "Para o local: Excepcional para o local",
+          "Impacto: Impacto potencial moderado"
+        ],
+        "noticias": 3
+      }
+    ],
+    "marcadores": 23,
+    "metodo": "Chuva fora do padrão em um dia: um modelo estatístico (ARIMA) prevê a chuva de cada dia a partir dos dias anteriores; o dia entra quando a chuva fica muito acima da previsão (escore Z acima de 3).\nVários dias seguidos de chuva: somas de 3 e 5 dias acima de 99% dos períodos iguais dos anos anteriores. Isso captura episódios longos, como a enchente de maio de 2024 no RS, que o modelo diário não dest"
+  },
+  "goiania_carregamento_ms": 2038,
+  "goiania": {
+    "estado": "A análise de eventos extremos ainda não foi feita para Goiânia. Por enquanto ela está disponível para os municípios já processados pela equipe.",
+    "contagem": null,
+    "eventos": [],
+    "marcadores": 0
+  },
+  "celular": {
+    "rolagemHorizontal": false,
+    "larguraPainel": 361
+  }
+}

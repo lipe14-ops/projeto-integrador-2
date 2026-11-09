@@ -29,6 +29,9 @@ dependencies = [
     "matplotlib>=3.11.2",
     "numpy>=2.0.0",
     "plotly>=7.1.0",
+    "scikit-learn>=1.9.1",
+    "statsmodels>=0.15.0",
+    "httpx>=0.28.1",
 ]
 
 [project.scripts]
@@ -37,3 +40,14 @@ codigo = "codigo.cli:main"
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["ignore::FutureWarning", "ignore::UserWarning"]
+markers = ["db: testes que usam o banco PostgreSQL/PostGIS de teste"]

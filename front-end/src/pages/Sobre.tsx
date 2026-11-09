@@ -4,6 +4,8 @@ import { MdOutlineWaterDrop } from 'react-icons/md'
 import { LuWaves } from 'react-icons/lu'
 import { GoDatabase } from 'react-icons/go'
 import { CiSearch } from 'react-icons/ci'
+import { FaLinkedin } from 'react-icons/fa6'
+import { useState } from 'react'
 
 
 const indicadores = [
@@ -28,6 +30,30 @@ const indicadores = [
     Icone: LuWaves,
   },
 ]
+
+const desenvolvedores = [
+  {
+    nome: 'Filipe Nascimento Soares',
+    foto: '/devs/filipe.jpg',
+    linkedin: 'https://www.linkedin.com/in/filipe-nascimento-57659b1b5/',
+    descricao: 'Desenvolvedor do Clima Brasil, atuando no backend, no pipeline de dados climáticos e na integração com o front-end.',
+  },
+  {
+    nome: 'Guilherme Marinheiro de Oliveira',
+    foto: '/devs/guilherme.jpg',
+    linkedin: 'https://www.linkedin.com/in/guilherme-marinheiro-de-oliveira-8b7911329/',
+    descricao: 'Desenvolvedor do Clima Brasil, atuando na interface, nos mapas e na visualização dos dados climáticos.',
+  },
+]
+
+function FotoDesenvolvedor({ nome, foto }: { nome: string; foto: string }) {
+  const [falhou, setFalhou] = useState(false)
+  const iniciais = nome.split(' ').filter(Boolean).map((p) => p[0]).slice(0, 2).join('').toUpperCase()
+  if (falhou) {
+    return <div className="dev-card__photo dev-card__photo--fallback" aria-hidden="true">{iniciais}</div>
+  }
+  return <img className="dev-card__photo" src={foto} alt={`Foto de ${nome}`} onError={() => setFalhou(true)} />
+}
 
 export default function Sobre() {
   return (
@@ -113,6 +139,27 @@ export default function Sobre() {
             <p>O El Niño altera a circulação atmosférica e pode influenciar os padrões de chuva e temperatura. Em termos gerais, costuma favorecer mais chuva no Sul e condições mais secas em partes do Norte e do Nordeste. A intensidade e a distribuição desses efeitos variam de um episódio para outro, conforme a estação e outros fatores climáticos; por isso, essa tendência não prevê o tempo de uma cidade específica.</p>
           </article>
           <p className="about-context-note">As faixas de El Niño e La Niña nos gráficos servem como referência para explorar coincidências nas séries. Elas não indicam, sozinhas, uma relação de causa e efeito para cada município.</p>
+        </div>
+      </section>
+
+      <section className="about-section" aria-labelledby="about-devs">
+        <div className="about-section__heading">
+          <p className="mono-label">Equipe</p>
+          <h2 id="about-devs" className="section-title">Sobre os desenvolvedores</h2>
+        </div>
+        <div className="about-grid">
+          {desenvolvedores.map(({ nome, foto, linkedin, descricao }) => (
+            <article className="card about-feature dev-card" key={nome}>
+              <FotoDesenvolvedor nome={nome} foto={foto} />
+              <div className="dev-card__body">
+                <h3>{nome}</h3>
+                <p>{descricao}</p>
+                <a className="dev-card__link" href={linkedin} target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin size={18} /> LinkedIn
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </div>

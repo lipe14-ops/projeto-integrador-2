@@ -1,0 +1,193 @@
+municipio,variavel,tipo_z,limiar,split,n_avaliados,n_outliers,pct,n_pos,n_neg,n_seguido_de_flag
+Manaus,temperatura,classico,2.5,treino,5104,75,1.469435736677116,16,59,1
+Manaus,temperatura,classico,2.5,validacao,1460,30,2.0547945205479454,6,24,1
+Manaus,temperatura,classico,2.5,teste,1462,30,2.0519835841313268,5,25,3
+Manaus,temperatura,classico,3.0,treino,5104,27,0.5289968652037618,5,22,0
+Manaus,temperatura,classico,3.0,validacao,1460,14,0.958904109589041,3,11,0
+Manaus,temperatura,classico,3.0,teste,1462,9,0.615595075239398,1,8,1
+Manaus,temperatura,classico,3.5,treino,5104,6,0.11755485893416928,1,5,0
+Manaus,temperatura,classico,3.5,validacao,1460,5,0.3424657534246575,1,4,0
+Manaus,temperatura,classico,3.5,teste,1462,5,0.34199726402188785,1,4,0
+Manaus,temperatura,classico,4.0,treino,5104,5,0.09796238244514106,1,4,0
+Manaus,temperatura,classico,4.0,validacao,1460,4,0.273972602739726,1,3,0
+Manaus,temperatura,classico,4.0,teste,1462,3,0.2051983584131327,1,2,0
+Manaus,temperatura,robusto,2.5,treino,5104,95,1.8612852664576802,16,79,3
+Manaus,temperatura,robusto,2.5,validacao,1460,34,2.328767123287671,6,28,1
+Manaus,temperatura,robusto,2.5,teste,1462,38,2.5991792065663475,5,33,4
+Manaus,temperatura,robusto,3.0,treino,5104,36,0.7053291536050157,5,31,0
+Manaus,temperatura,robusto,3.0,validacao,1460,19,1.3013698630136987,3,16,0
+Manaus,temperatura,robusto,3.0,teste,1462,11,0.7523939808481532,1,10,1
+Manaus,temperatura,robusto,3.5,treino,5104,10,0.19592476489028213,1,9,0
+Manaus,temperatura,robusto,3.5,validacao,1460,8,0.547945205479452,1,7,0
+Manaus,temperatura,robusto,3.5,teste,1462,5,0.34199726402188785,1,4,0
+Manaus,temperatura,robusto,4.0,treino,5104,5,0.09796238244514106,1,4,0
+Manaus,temperatura,robusto,4.0,validacao,1460,5,0.3424657534246575,1,4,0
+Manaus,temperatura,robusto,4.0,teste,1462,3,0.2051983584131327,1,2,0
+Manaus,umidade,classico,2.5,treino,5104,98,1.9200626959247649,40,58,0
+Manaus,umidade,classico,2.5,validacao,1460,58,3.9726027397260273,32,26,2
+Manaus,umidade,classico,2.5,teste,1462,47,3.2147742818057456,26,21,1
+Manaus,umidade,classico,3.0,treino,5104,38,0.7445141065830722,16,22,0
+Manaus,umidade,classico,3.0,validacao,1460,19,1.3013698630136987,12,7,0
+Manaus,umidade,classico,3.0,teste,1462,17,1.1627906976744187,12,5,0
+Manaus,umidade,classico,3.5,treino,5104,9,0.17633228840125392,4,5,0
+Manaus,umidade,classico,3.5,validacao,1460,9,0.6164383561643836,7,2,0
+Manaus,umidade,classico,3.5,teste,1462,6,0.4103967168262654,6,0,0
+Manaus,umidade,classico,4.0,treino,5104,5,0.09796238244514106,3,2,0
+Manaus,umidade,classico,4.0,validacao,1460,5,0.3424657534246575,4,1,0
+Manaus,umidade,classico,4.0,teste,1462,4,0.27359781121751026,4,0,0
+Manaus,umidade,robusto,2.5,treino,5104,152,2.9780564263322886,64,88,7
+Manaus,umidade,robusto,2.5,validacao,1460,70,4.794520547945205,35,35,3
+Manaus,umidade,robusto,2.5,teste,1462,65,4.4459644322845415,39,26,3
+Manaus,umidade,robusto,3.0,treino,5104,52,1.0188087774294672,24,28,0
+Manaus,umidade,robusto,3.0,validacao,1460,32,2.191780821917808,20,12,0
+Manaus,umidade,robusto,3.0,teste,1462,30,2.0519835841313268,20,10,0
+Manaus,umidade,robusto,3.5,treino,5104,25,0.4898119122257053,11,14,0
+Manaus,umidade,robusto,3.5,validacao,1460,15,1.0273972602739727,10,5,0
+Manaus,umidade,robusto,3.5,teste,1462,11,0.7523939808481532,10,1,0
+Manaus,umidade,robusto,4.0,treino,5104,7,0.1371473354231975,4,3,0
+Manaus,umidade,robusto,4.0,validacao,1460,7,0.4794520547945205,6,1,0
+Manaus,umidade,robusto,4.0,teste,1462,5,0.34199726402188785,5,0,0
+Feira de Santana,temperatura,classico,2.5,treino,5104,126,2.468652037617555,20,106,11
+Feira de Santana,temperatura,classico,2.5,validacao,1460,37,2.5342465753424657,4,33,2
+Feira de Santana,temperatura,classico,2.5,teste,1462,37,2.53077975376197,3,34,5
+Feira de Santana,temperatura,classico,3.0,treino,5104,70,1.371473354231975,8,62,4
+Feira de Santana,temperatura,classico,3.0,validacao,1460,22,1.5068493150684932,3,19,1
+Feira de Santana,temperatura,classico,3.0,teste,1462,23,1.573187414500684,2,21,4
+Feira de Santana,temperatura,classico,3.5,treino,5104,36,0.7053291536050157,1,35,1
+Feira de Santana,temperatura,classico,3.5,validacao,1460,12,0.821917808219178,0,12,1
+Feira de Santana,temperatura,classico,3.5,teste,1462,16,1.094391244870041,0,16,1
+Feira de Santana,temperatura,classico,4.0,treino,5104,16,0.31347962382445144,0,16,0
+Feira de Santana,temperatura,classico,4.0,validacao,1460,7,0.4794520547945205,0,7,0
+Feira de Santana,temperatura,classico,4.0,teste,1462,8,0.5471956224350205,0,8,1
+Feira de Santana,temperatura,robusto,2.5,treino,5104,202,3.957680250783699,43,159,25
+Feira de Santana,temperatura,robusto,2.5,validacao,1460,59,4.041095890410959,9,50,5
+Feira de Santana,temperatura,robusto,2.5,teste,1462,54,3.6935704514363885,12,42,10
+Feira de Santana,temperatura,robusto,3.0,treino,5104,123,2.4098746081504703,17,106,10
+Feira de Santana,temperatura,robusto,3.0,validacao,1460,37,2.5342465753424657,4,33,2
+Feira de Santana,temperatura,robusto,3.0,teste,1462,37,2.53077975376197,3,34,5
+Feira de Santana,temperatura,robusto,3.5,treino,5104,75,1.469435736677116,8,67,4
+Feira de Santana,temperatura,robusto,3.5,validacao,1460,23,1.5753424657534247,2,21,2
+Feira de Santana,temperatura,robusto,3.5,teste,1462,24,1.6415868673050615,2,22,4
+Feira de Santana,temperatura,robusto,4.0,treino,5104,40,0.7836990595611285,1,39,1
+Feira de Santana,temperatura,robusto,4.0,validacao,1460,14,0.958904109589041,0,14,1
+Feira de Santana,temperatura,robusto,4.0,teste,1462,16,1.094391244870041,0,16,1
+Feira de Santana,umidade,classico,2.5,treino,5104,126,2.468652037617555,99,27,9
+Feira de Santana,umidade,classico,2.5,validacao,1460,32,2.191780821917808,23,9,3
+Feira de Santana,umidade,classico,2.5,teste,1462,37,2.53077975376197,33,4,5
+Feira de Santana,umidade,classico,3.0,treino,5104,65,1.2735109717868338,59,6,3
+Feira de Santana,umidade,classico,3.0,validacao,1460,17,1.1643835616438356,14,3,0
+Feira de Santana,umidade,classico,3.0,teste,1462,21,1.4363885088919288,21,0,1
+Feira de Santana,umidade,classico,3.5,treino,5104,33,0.646551724137931,31,2,0
+Feira de Santana,umidade,classico,3.5,validacao,1460,6,0.410958904109589,6,0,0
+Feira de Santana,umidade,classico,3.5,teste,1462,10,0.6839945280437757,10,0,1
+Feira de Santana,umidade,classico,4.0,treino,5104,17,0.3330721003134796,17,0,0
+Feira de Santana,umidade,classico,4.0,validacao,1460,4,0.273972602739726,4,0,0
+Feira de Santana,umidade,classico,4.0,teste,1462,5,0.34199726402188785,5,0,0
+Feira de Santana,umidade,robusto,2.5,treino,5104,213,4.173197492163009,170,43,22
+Feira de Santana,umidade,robusto,2.5,validacao,1460,67,4.589041095890411,50,17,7
+Feira de Santana,umidade,robusto,2.5,teste,1462,65,4.4459644322845415,55,10,8
+Feira de Santana,umidade,robusto,3.0,treino,5104,122,2.390282131661442,99,23,9
+Feira de Santana,umidade,robusto,3.0,validacao,1460,31,2.1232876712328768,23,8,3
+Feira de Santana,umidade,robusto,3.0,teste,1462,35,2.3939808481532148,33,2,4
+Feira de Santana,umidade,robusto,3.5,treino,5104,67,1.3126959247648904,62,5,3
+Feira de Santana,umidade,robusto,3.5,validacao,1460,17,1.1643835616438356,15,2,0
+Feira de Santana,umidade,robusto,3.5,teste,1462,21,1.4363885088919288,21,0,1
+Feira de Santana,umidade,robusto,4.0,treino,5104,38,0.7445141065830722,36,2,0
+Feira de Santana,umidade,robusto,4.0,validacao,1460,9,0.6164383561643836,9,0,0
+Feira de Santana,umidade,robusto,4.0,teste,1462,11,0.7523939808481532,11,0,1
+Porto Alegre,temperatura,classico,2.5,treino,5104,123,2.4098746081504703,32,91,5
+Porto Alegre,temperatura,classico,2.5,validacao,1460,43,2.9452054794520546,11,32,7
+Porto Alegre,temperatura,classico,2.5,teste,1462,35,2.3939808481532148,5,30,1
+Porto Alegre,temperatura,classico,3.0,treino,5104,57,1.1167711598746082,11,46,1
+Porto Alegre,temperatura,classico,3.0,validacao,1460,27,1.8493150684931507,5,22,4
+Porto Alegre,temperatura,classico,3.0,teste,1462,18,1.231190150478796,1,17,1
+Porto Alegre,temperatura,classico,3.5,treino,5104,29,0.5681818181818182,5,24,0
+Porto Alegre,temperatura,classico,3.5,validacao,1460,14,0.958904109589041,1,13,0
+Porto Alegre,temperatura,classico,3.5,teste,1462,11,0.7523939808481532,1,10,1
+Porto Alegre,temperatura,classico,4.0,treino,5104,16,0.31347962382445144,1,15,0
+Porto Alegre,temperatura,classico,4.0,validacao,1460,9,0.6164383561643836,0,9,0
+Porto Alegre,temperatura,classico,4.0,teste,1462,8,0.5471956224350205,1,7,1
+Porto Alegre,temperatura,robusto,2.5,treino,5104,256,5.015673981191223,73,183,20
+Porto Alegre,temperatura,robusto,2.5,validacao,1460,79,5.410958904109589,20,59,15
+Porto Alegre,temperatura,robusto,2.5,teste,1462,68,4.651162790697675,18,50,7
+Porto Alegre,temperatura,robusto,3.0,treino,5104,130,2.5470219435736676,30,100,5
+Porto Alegre,temperatura,robusto,3.0,validacao,1460,46,3.1506849315068495,11,35,7
+Porto Alegre,temperatura,robusto,3.0,teste,1462,37,2.53077975376197,5,32,1
+Porto Alegre,temperatura,robusto,3.5,treino,5104,70,1.371473354231975,12,58,2
+Porto Alegre,temperatura,robusto,3.5,validacao,1460,31,2.1232876712328768,6,25,4
+Porto Alegre,temperatura,robusto,3.5,teste,1462,21,1.4363885088919288,1,20,1
+Porto Alegre,temperatura,robusto,4.0,treino,5104,40,0.7836990595611285,6,34,1
+Porto Alegre,temperatura,robusto,4.0,validacao,1460,21,1.4383561643835616,2,19,1
+Porto Alegre,temperatura,robusto,4.0,teste,1462,13,0.8891928864569083,1,12,1
+Porto Alegre,umidade,classico,2.5,treino,5104,105,2.0572100313479624,30,75,6
+Porto Alegre,umidade,classico,2.5,validacao,1460,42,2.8767123287671232,13,29,1
+Porto Alegre,umidade,classico,2.5,teste,1462,29,1.9835841313269493,8,21,2
+Porto Alegre,umidade,classico,3.0,treino,5104,40,0.7836990595611285,5,35,1
+Porto Alegre,umidade,classico,3.0,validacao,1460,17,1.1643835616438356,5,12,0
+Porto Alegre,umidade,classico,3.0,teste,1462,5,0.34199726402188785,0,5,0
+Porto Alegre,umidade,classico,3.5,treino,5104,19,0.3722570532915361,1,18,0
+Porto Alegre,umidade,classico,3.5,validacao,1460,10,0.684931506849315,3,7,0
+Porto Alegre,umidade,classico,3.5,teste,1462,2,0.13679890560875513,0,2,0
+Porto Alegre,umidade,classico,4.0,treino,5104,8,0.15673981191222572,0,8,0
+Porto Alegre,umidade,classico,4.0,validacao,1460,3,0.2054794520547945,1,2,0
+Porto Alegre,umidade,classico,4.0,teste,1462,1,0.06839945280437756,0,1,0
+Porto Alegre,umidade,robusto,2.5,treino,5104,214,4.192789968652038,52,162,25
+Porto Alegre,umidade,robusto,2.5,validacao,1460,67,4.589041095890411,19,48,4
+Porto Alegre,umidade,robusto,2.5,teste,1462,55,3.761969904240766,17,38,4
+Porto Alegre,umidade,robusto,3.0,treino,5104,91,1.7829153605015673,17,74,5
+Porto Alegre,umidade,robusto,3.0,validacao,1460,37,2.5342465753424657,9,28,1
+Porto Alegre,umidade,robusto,3.0,teste,1462,20,1.3679890560875514,3,17,1
+Porto Alegre,umidade,robusto,3.5,treino,5104,40,0.7836990595611285,3,37,0
+Porto Alegre,umidade,robusto,3.5,validacao,1460,16,1.095890410958904,4,12,0
+Porto Alegre,umidade,robusto,3.5,teste,1462,5,0.34199726402188785,0,5,0
+Porto Alegre,umidade,robusto,4.0,treino,5104,21,0.4114420062695925,1,20,0
+Porto Alegre,umidade,robusto,4.0,validacao,1460,10,0.684931506849315,2,8,0
+Porto Alegre,umidade,robusto,4.0,teste,1462,3,0.2051983584131327,0,3,0
+Goiânia,temperatura,classico,2.5,treino,5104,99,1.9396551724137931,12,87,10
+Goiânia,temperatura,classico,2.5,validacao,1460,38,2.6027397260273974,6,32,3
+Goiânia,temperatura,classico,2.5,teste,1462,30,2.0519835841313268,8,22,4
+Goiânia,temperatura,classico,3.0,treino,5104,55,1.0775862068965518,3,52,8
+Goiânia,temperatura,classico,3.0,validacao,1460,27,1.8493150684931507,2,25,2
+Goiânia,temperatura,classico,3.0,teste,1462,12,0.8207934336525308,0,12,2
+Goiânia,temperatura,classico,3.5,treino,5104,29,0.5681818181818182,1,28,5
+Goiânia,temperatura,classico,3.5,validacao,1460,15,1.0273972602739727,0,15,0
+Goiânia,temperatura,classico,3.5,teste,1462,8,0.5471956224350205,0,8,0
+Goiânia,temperatura,classico,4.0,treino,5104,19,0.3722570532915361,0,19,4
+Goiânia,temperatura,classico,4.0,validacao,1460,8,0.547945205479452,0,8,0
+Goiânia,temperatura,classico,4.0,teste,1462,3,0.2051983584131327,0,3,0
+Goiânia,temperatura,robusto,2.5,treino,5104,179,3.50705329153605,37,142,14
+Goiânia,temperatura,robusto,2.5,validacao,1460,57,3.904109589041096,9,48,9
+Goiânia,temperatura,robusto,2.5,teste,1462,54,3.6935704514363885,17,37,11
+Goiânia,temperatura,robusto,3.0,treino,5104,86,1.6849529780564263,7,79,10
+Goiânia,temperatura,robusto,3.0,validacao,1460,35,2.3972602739726026,5,30,3
+Goiânia,temperatura,robusto,3.0,teste,1462,22,1.5047879616963065,3,19,2
+Goiânia,temperatura,robusto,3.5,treino,5104,54,1.0579937304075235,2,52,8
+Goiânia,temperatura,robusto,3.5,validacao,1460,27,1.8493150684931507,2,25,2
+Goiânia,temperatura,robusto,3.5,teste,1462,12,0.8207934336525308,0,12,2
+Goiânia,temperatura,robusto,4.0,treino,5104,29,0.5681818181818182,1,28,5
+Goiânia,temperatura,robusto,4.0,validacao,1460,15,1.0273972602739727,0,15,0
+Goiânia,temperatura,robusto,4.0,teste,1462,8,0.5471956224350205,0,8,0
+Goiânia,umidade,classico,2.5,treino,5104,134,2.6253918495297808,94,40,8
+Goiânia,umidade,classico,2.5,validacao,1460,43,2.9452054794520546,31,12,2
+Goiânia,umidade,classico,2.5,teste,1462,31,2.1203830369357046,20,11,2
+Goiânia,umidade,classico,3.0,treino,5104,69,1.3518808777429467,57,12,5
+Goiânia,umidade,classico,3.0,validacao,1460,22,1.5068493150684932,15,7,1
+Goiânia,umidade,classico,3.0,teste,1462,19,1.2995896032831737,15,4,0
+Goiânia,umidade,classico,3.5,treino,5104,27,0.5289968652037618,24,3,1
+Goiânia,umidade,classico,3.5,validacao,1460,12,0.821917808219178,11,1,1
+Goiânia,umidade,classico,3.5,teste,1462,10,0.6839945280437757,9,1,0
+Goiânia,umidade,classico,4.0,treino,5104,11,0.21551724137931033,11,0,0
+Goiânia,umidade,classico,4.0,validacao,1460,6,0.410958904109589,5,1,0
+Goiânia,umidade,classico,4.0,teste,1462,6,0.4103967168262654,5,1,0
+Goiânia,umidade,robusto,2.5,treino,5104,239,4.682601880877743,160,79,30
+Goiânia,umidade,robusto,2.5,validacao,1460,71,4.863013698630137,46,25,7
+Goiânia,umidade,robusto,2.5,teste,1462,68,4.651162790697675,43,25,4
+Goiânia,umidade,robusto,3.0,treino,5104,131,2.566614420062696,99,32,7
+Goiânia,umidade,robusto,3.0,validacao,1460,42,2.8767123287671232,31,11,2
+Goiânia,umidade,robusto,3.0,teste,1462,29,1.9835841313269493,21,8,2
+Goiânia,umidade,robusto,3.5,treino,5104,76,1.4890282131661443,64,12,5
+Goiânia,umidade,robusto,3.5,validacao,1460,23,1.5753424657534247,16,7,1
+Goiânia,umidade,robusto,3.5,teste,1462,20,1.3679890560875514,16,4,0
+Goiânia,umidade,robusto,4.0,treino,5104,43,0.8424764890282131,38,5,2
+Goiânia,umidade,robusto,4.0,validacao,1460,15,1.0273972602739727,12,3,1
+Goiânia,umidade,robusto,4.0,teste,1462,11,0.7523939808481532,10,1,0

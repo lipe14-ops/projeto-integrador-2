@@ -19,6 +19,7 @@ from app.repositories import (
 )
 from app.schemas.clima import ClimaMunicipioResponse
 from app.schemas.municipio import MunicipioSemGeometriaResponse
+from app.climate_news.router import router as climate_news_router
 
 app = FastAPI(
     title="API de Municípios",
@@ -31,6 +32,12 @@ app.add_middleware(
     allow_methods=["GET"],
     allow_headers=["*"],
 )
+
+
+# /api/climate é o caminho público; /climate atende o proxy do Vite, que
+# remove o prefixo /api ao encaminhar as chamadas do front-end.
+app.include_router(climate_news_router, prefix="/api/climate")
+app.include_router(climate_news_router, prefix="/climate", include_in_schema=False)
 
 
 @app.get("/health")

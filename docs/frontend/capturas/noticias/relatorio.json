@@ -1,0 +1,68 @@
+{
+  "todas": {
+    "resumo": "166 notícias verificadas em eventos de 2015 a 2025",
+    "itens": 20,
+    "primeiro": "MT entra em alerta com dois avisos de perigo para chuvas intensas e temporais | (abre em nova aba) |  | G1 | · | publicada em 19 de dez. de 2025 | · | Rio Verde — GO |  | EVENTO DE CHUVA | 15 dez 2025 · 41 mm em um dia |",
+    "paginacao": "Página 1 de 9",
+    "vazio": null,
+    "rolagemHorizontal": false
+  },
+  "municipios": [
+    "Todos os municípios analisados",
+    "Porto Alegre — RS (132)",
+    "Rio Verde — GO (34)"
+  ],
+  "capturas": [
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/noticias/01_desktop_noticias_todas.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/noticias/02_desktop_noticias_rio-verde.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/noticias/03_desktop_noticias_porto-alegre_2024.png",
+    "/home/theguy/Documents/faculdade/periodo-6/projeto-integrador/codigo/docs/frontend/capturas/noticias/04_desktop_noticias_sem-resultados.png"
+  ],
+  "rio_verde": {
+    "resumo": "32 notícias verificadas sobre Rio Verde em eventos de 2015 a 2025",
+    "itens": 20,
+    "primeiro": "MT entra em alerta com dois avisos de perigo para chuvas intensas e temporais | (abre em nova aba) |  | G1 | · | publicada em 19 de dez. de 2025 |  | EVENTO DE CHUVA | 15 dez 2025 · 41 mm em um dia | La Niña",
+    "paginacao": "Página 1 de 2",
+    "vazio": null,
+    "rolagemHorizontal": false
+  },
+  "porto_alegre_g1": {
+    "resumo": "29 notícias verificadas sobre Porto Alegre em eventos de 2015 a 2025",
+    "itens": 20,
+    "primeiro": "Ciclone no RS: chuva supera os 100mm em 12h e causa transtornos | (abre em nova aba) |  | G1 | · | publicada em 07 de nov. de 2025 |  | EVENTO DE CHUVA | 7 nov 2025 · 46 mm em um dia | La Niña",
+    "paginacao": "Página 1 de 2",
+    "vazio": null,
+    "rolagemHorizontal": false
+  },
+  "porto_alegre_pagina2": {
+    "resumo": "132 notícias verificadas sobre Porto Alegre em eventos de 2015 a 2025",
+    "itens": 20,
+    "primeiro": "Água recua na zona Sul de Porto Alegre, com pontos de alagamento parcial | (abre em nova aba) |  | Correio do Povo | · | publicada em 20 de jun. de 2025 |  | EVENTO DE CHUVA | 19 jun 2025 · 105 mm em 3 dias",
+    "paginacao": "Página 2 de 7",
+    "vazio": null,
+    "rolagemHorizontal": false
+  },
+  "porto_alegre_2024_publicacao": {
+    "resumo": "28 notícias verificadas sobre Porto Alegre em eventos de 2024",
+    "itens": 20,
+    "primeiro": "Depois da enchente e das eleições: por uma Porto Alegre diversa e democrática | (abre em nova aba) |  | Brasil de Fato | · | publicada em 20 de dez. de 2024 |  | EVENTO DE CHUVA | 16 dez 2024 · 81 mm em 3 dias",
+    "paginacao": "Página 1 de 2",
+    "vazio": null,
+    "rolagemHorizontal": false
+  },
+  "vazio": {
+    "resumo": "0 notícias verificadas sobre Porto Alegre em eventos de 2024",
+    "itens": 0,
+    "paginacao": null,
+    "vazio": "Nenhuma notícia encontrada com esses filtros.Limpar filtros",
+    "rolagemHorizontal": false
+  },
+  "celular": {
+    "resumo": "161 notícias verificadas em eventos de 2015 a 2025",
+    "itens": 20,
+    "primeiro": "MT entra em alerta com dois avisos de perigo para chuvas intensas e temporais | (abre em nova aba) |  | G1 | · | publicada em 19 de dez. de 2025 | · | Rio Verde — GO |  | EVENTO DE CHUVA | 15 dez 2025 · 41 mm em um dia |",
+    "paginacao": "Página 1 de 9",
+    "vazio": null,
+    "rolagemHorizontal": false
+  }
+}

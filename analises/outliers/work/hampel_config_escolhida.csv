@@ -1,0 +1,3 @@
+variante,meia_janela_dias,limiar,recall,f1,taxa_real_val_pct,no_orcamento
+centrada,15,3.5,0.55625,0.7104234736370043,0.9503424657534247,True
+causal,15,4.0,0.4375,0.6036036036036037,1.018835616438356,False

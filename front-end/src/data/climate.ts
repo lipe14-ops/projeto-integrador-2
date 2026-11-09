@@ -20,6 +20,11 @@ export interface Municipio {
   anoPopulacao?: number | null
   bioma?: string | null
   areaKm2?: number | null
+  mesorregiao?: string | null
+  microrregiao?: string | null
+  geomorfologia?: string | null
+  regiaoGeomorfologica?: string | null
+  dominioGeomorfologico?: string | null
 }
 
 export const MUNICIPIOS: Municipio[] = [
@@ -102,6 +107,11 @@ function mulberry32(seed: number) {
 const gauss = (r: () => number) => Math.sqrt(-2 * Math.log(r() || 1e-9)) * Math.cos(2 * Math.PI * r())
 const hash = (s: string) => [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) >>> 0, 7)
 const media = (v: number[]) => v.reduce((a, b) => a + b, 0) / v.length
+/** Média ignorando lacunas (NaN); NaN se não houver nenhum valor. */
+export function mediaValida(v: number[]): number {
+  const validos = v.filter(Number.isFinite)
+  return validos.length ? media(validos) : NaN
+}
 
 const PERFIL_TEMP = [0.0, 0.1, 0.0, -0.3, -0.9, -1.5, -1.6, -0.9, 0.6, 1.5, 1.1, 0.4]
 const PERFIL_CHUVA = [1.15, 1.0, 1.05, 0.55, 0.15, 0.03, 0.02, 0.04, 0.25, 0.75, 1.1, 1.25]
@@ -177,12 +187,13 @@ export function agregar(valores: number[], ini: number, fim: number, gran: Granu
       rotulo: String(ANO_INICIO + a),
       inicio: i0,
       fim: i1,
-      valor: modo === 'soma' ? fatia.reduce((x, y) => x + y, 0) : media(fatia),
+      // soma com mês ausente subestimaria o total: vira lacuna
+      valor: modo === 'soma' ? (fatia.every(Number.isFinite) ? fatia.reduce((x, y) => x + y, 0) : NaN) : mediaValida(fatia),
     })
   }
   return pontos
 }
 
-export const mediaPeriodo = (v: number[], ini: number, fim: number) => media(v.slice(ini, fim))
+export const mediaPeriodo = (v: number[], ini: number, fim: number) => mediaValida(v.slice(ini, fim))
 export const mesInicialDoAno = (ano: number) => (ano - ANO_INICIO) * 12
 export const mesFinalDoAno = (ano: number) => (ano - ANO_INICIO + 1) * 12
