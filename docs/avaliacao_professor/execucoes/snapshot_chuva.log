@@ -1,0 +1,32 @@
+{
+  "source": "PostgreSQL: precipitation_anomaly (última detecção concluída por município), precipitacao_diaria",
+  "climate_records": 46567712,
+  "municipalities_with_data": 5535,
+  "detection_runs": 5535,
+  "municipalities_with_detection": 5535,
+  "scored_periods": [
+    {
+      "scored_start": "2017-01-01",
+      "scored_end": "2025-12-30",
+      "runs": "5535"
+    }
+  ],
+  "files": {
+    "municipios": {
+      "rows": 5573,
+      "sha256": "7480e9fce442431594577f16192075bef19198e820c555a6b85eb41c0906d2eb"
+    },
+    "enso": {
+      "rows": 132,
+      "sha256": "24bdb7738e05ca8bac55f342e3392050abceb492893f0428a51322b1e3bd6b3a"
+    },
+    "precipitacao_anomalias": {
+      "rows": 315602,
+      "sha256": "3fa91b317c9119d7a8e0cf3a13a02842157f4b56fe7ea3f760f1c58945fdff24"
+    },
+    "precipitacao_exposicao": {
+      "rows": 597780,
+      "sha256": "1e5c708d4ed701413de66e607f74f7d1e36b03a8f11d4686a1f99b9822279726"
+    }
+  }
+}

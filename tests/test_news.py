@@ -327,3 +327,35 @@ def test_neighborhood_with_same_name_needs_state_context():
     body_go = "O temporal provocou alagamentos em Rio Verde, no sudoeste goiano, e a chuva derrubou árvores na cidade."
     agent, _ = checker({URL: (200, article_html("Temporal causa estragos no interior", body_go))})
     assert agent.verify(candidate(headline="Temporal causa estragos no interior"), RV_CTX).status == "verified"
+
+
+# ---- regressão: JSON-LD era descartado junto com os <script> (extract.py) ----
+
+
+def test_json_ld_date_and_publisher_are_read():
+    from app.climate_news.news.extract import extract_metadata
+
+    page = (
+        '<html><head><title>Enxurrada arrasta carros em Porto Alegre</title>'
+        '<script type="application/ld+json">{"@type": "NewsArticle", "headline": "Enxurrada arrasta carros", '
+        '"datePublished": "2024-05-02T09:30:00-03:00", "publisher": {"name": "Correio Exemplo"}}</script>'
+        "</head><body><article><h1>Enxurrada arrasta carros em Porto Alegre</h1>"
+        "<p>A enxurrada provocada pela chuva forte desta quinta-feira arrastou carros em Porto Alegre.</p>"
+        "</article></body></html>"
+    )
+    meta = extract_metadata(page, "https://exemplo.com.br/noticia/2024/05/02/enxurrada.html")
+    assert meta.published_source == "json-ld:datePublished"
+    assert meta.published_at == datetime(2024, 5, 2, 9, 30, tzinfo=meta.published_at.tzinfo)
+    assert meta.publisher == "Correio Exemplo"
+    assert meta.page_type == "article"
+    assert "application/ld+json" not in meta.text  # scripts continuam fora do texto
+
+
+def test_xhtml_with_xml_encoding_declaration_is_parsed():
+    # regressão: lxml recusava str com <?xml ... encoding?> e a notícia ficava pendente
+    from app.climate_news.news.extract import extract_metadata
+
+    page = '<?xml version="1.0" encoding="UTF-8"?>\n' + article_html(TITLE, BODY)
+    meta = extract_metadata(page, URL)
+    assert meta.title == TITLE
+    assert meta.published_at is not None

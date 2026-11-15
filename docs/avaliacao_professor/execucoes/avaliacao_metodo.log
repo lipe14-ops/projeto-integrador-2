@@ -1,0 +1,15 @@
+2026-11-14 21:28:22,177 INFO climate_news.analysis: avaliação do método: 10/101 municípios
+2026-11-14 21:29:14,876 INFO climate_news.analysis: avaliação do método: 20/101 municípios
+2026-11-14 21:30:09,942 INFO climate_news.analysis: avaliação do método: 30/101 municípios
+2026-11-14 21:30:46,804 INFO climate_news.analysis: avaliação do método: 40/101 municípios
+2026-11-14 21:31:33,589 INFO climate_news.analysis: avaliação do método: 50/101 municípios
+2026-11-14 21:32:17,271 INFO climate_news.analysis: avaliação do método: 60/101 municípios
+2026-11-14 21:32:38,339 INFO climate_news.analysis: avaliação do método: 70/101 municípios
+2026-11-14 21:33:05,914 INFO climate_news.analysis: avaliação do método: 80/101 municípios
+2026-11-14 21:33:50,726 INFO climate_news.analysis: avaliação do método: 90/101 municípios
+2026-11-14 21:34:21,489 INFO climate_news.analysis: avaliação do método: 100/101 municípios
+{
+  "municipios": 101,
+  "erros": 1,
+  "simulacoes": 20
+}

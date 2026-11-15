@@ -1,0 +1,83 @@
+BENCHMARK SINTÉTICO DO FACT-CHECKER (dados fictícios; mede conformidade à especificação)
+
+casos: 67  por categoria: {"positivo": {"n": 23, "conforme": 21}, "negativo": {"n": 35, "conforme": 28}, "pendente": {"n": 6, "conforme": 6}, "ambiguo": {"n": 3, "conforme": 2}}
+matriz (positivo = verified): TP=21 FP=8 FN=2 TN=36
+precision: 0.724
+recall: 0.913
+f1: 0.808
+false_positive_rate: 0.182
+false_negative_rate: 0.087
+accuracy: 0.851
+pending: total=6 entre positivos=0 entre negativos=6
+conformidade de status (inclui pending vs rejected): 0.851
+conformidade completa (status + relevância + duplicata): 0.851
+tabela esperado × previsto: {"verified": {"verified": 21, "rejected": 2}, "rejected": {"rejected": 28, "verified": 7}, "pending_verification": {"pending_verification": 6}, "not_verified": {"rejected": 2, "verified": 1}}
+
+id | categoria | esperado | previsto | relevância | duplicata | ok | primeiro motivo
+P01 | positivo | verified | verified | relevant | None | OK | -
+P02 | positivo | verified | verified | regional | None | OK | -
+P03 | positivo | verified | verified | relevant | None | OK | -
+P04 | positivo | verified | verified | relevant | None | OK | -
+P05 | positivo | verified | verified | relevant | None | OK | -
+P06 | positivo | verified | verified | relevant | None | OK | -
+P07 | positivo | verified | verified | relevant | None | OK | -
+P08 | positivo | verified | verified | relevant | None | OK | -
+P09 | positivo | verified | verified | relevant | None | OK | -
+P10 | positivo | verified | verified | relevant | None | OK | -
+P11 | positivo | verified | verified | relevant | None | OK | -
+P12 | positivo | verified | verified | relevant | None | OK | -
+P13 | positivo | verified | verified | relevant | None | OK | -
+P14 | positivo | verified | verified | relevant | None | OK | -
+P15 | positivo | verified | verified | relevant | None | OK | -
+P16 | positivo | verified | verified | relevant | None | OK | -
+P17 | positivo | verified | rejected | not_relevant | None | DIVERGE | temporal_relation: manchete trata de outro período/evento ([2000]); provável retrospectiva
+P18 | positivo | verified | verified | relevant | None | OK | -
+P19 | positivo | verified | verified | relevant | None | OK | -
+P20 | positivo | verified | verified | relevant | republication | OK | -
+P21 | positivo | verified | verified | relevant | same_article | OK | -
+P22 | positivo | verified | verified | relevant | None | OK | -
+P23 | positivo | verified | rejected | not_relevant | None | DIVERGE | geographic_relation: não menciona Porto Alegre/RS nem municípios vizinhos
+N01 | negativo | rejected | rejected | not_relevant | None | OK | page_exists: HTTP 404: página inexistente
+N02 | negativo | rejected | rejected | not_relevant | None | OK | page_exists: HTTP 410: página inexistente
+N03 | negativo | rejected | rejected | not_relevant | None | OK | url_is_article: pagina_inicial_listagem_ou_busca
+N04 | negativo | rejected | rejected | not_relevant | None | OK | url_is_article: url_de_agregador_ou_buscador
+N05 | negativo | rejected | rejected | not_relevant | None | OK | url_is_article: pagina_inicial_listagem_ou_busca
+N06 | negativo | rejected | rejected | not_relevant | None | OK | url_is_article: pagina_inicial_listagem_ou_busca
+N07 | negativo | rejected | rejected | not_relevant | None | OK | page_exists: redireciona para página que não é matéria (pagina_inicial_listagem_ou_busca): https://folharegional-ficticia.com.br/
+N08 | negativo | rejected | rejected | not_relevant | None | OK | headline_matches: manchete alegada 'Chuva alaga bairros de Porto Alegre e Defesa Civil emite alerta' ≠ título da página 'Prefeitura anuncia nova linha de ônibus no centro' (similaridade 0.00)
+N09 | negativo | rejected | rejected | not_relevant | None | OK | temporal_relation: publicada em 2024-06-20, fora da janela 2024-04-28..2024-05-08 da anomalia 2024-05-01
+N10 | negativo | rejected | rejected | not_relevant | None | OK | temporal_relation: publicada em 2024-04-26, fora da janela 2024-04-28..2024-05-08 da anomalia 2024-05-01
+N11 | negativo | rejected | rejected | not_relevant | None | OK | temporal_relation: publicada em 2024-04-27, fora da janela 2024-04-28..2024-05-08 da anomalia 2024-05-01
+N12 | negativo | rejected | rejected | not_relevant | None | OK | temporal_relation: publicada em 2023-05-02, fora da janela 2024-04-28..2024-05-08 da anomalia 2024-05-01
+N13 | negativo | rejected | rejected | not_relevant | None | OK | temporal_relation: texto relata evento em 2024-05-08 ('desta quarta'), fora de 2024-04-29..2024-05-04: provável outro evento dentro da janela de publicação
+N14 | negativo | rejected | rejected | not_relevant | None | OK | geographic_relation: não menciona Porto Alegre/RS nem municípios vizinhos
+N15 | negativo | rejected | rejected | not_relevant | None | OK | geographic_relation: não menciona Bom Jesus/RS nem municípios vizinhos
+N16 | negativo | rejected | rejected | not_relevant | None | OK | geographic_relation: não menciona Porto Alegre/RS nem municípios vizinhos
+N17 | negativo | rejected | rejected | not_relevant | None | OK | geographic_relation: não menciona Rio Verde/GO nem municípios vizinhos
+N18 | negativo | rejected | rejected | not_relevant | None | OK | geographic_relation: não menciona Rio Verde/GO nem municípios vizinhos
+N19 | negativo | rejected | verified | relevant | None | DIVERGE | -
+N20 | negativo | rejected | rejected | not_relevant | None | OK | thematic_relation: manchete sem termo de evento de chuva e texto sem relato datado de evento (corpo ['chuva'], data do evento não identificada)
+N21 | negativo | rejected | verified | relevant | None | DIVERGE | -
+N22 | negativo | rejected | rejected | not_relevant | None | OK | thematic_relation: manchete sem termo de evento de chuva e texto sem relato datado de evento (corpo [], data do evento identificada)
+N23 | negativo | rejected | rejected | not_relevant | None | OK | thematic_relation: manchete sem termo de evento de chuva e texto sem relato datado de evento (corpo [], data do evento identificada)
+N24 | negativo | rejected | rejected | not_relevant | None | OK | thematic_relation: manchete sem termo de evento de chuva e texto sem relato datado de evento (corpo [], data do evento identificada)
+N25 | negativo | rejected | rejected | not_relevant | None | OK | temporal_relation: texto relata evento em 2024-04-27 ('no sabado'), fora de 2024-04-29..2024-05-04: provável outro evento dentro da janela de publicação
+N26 | negativo | rejected | verified | relevant | None | DIVERGE | -
+N27 | negativo | rejected | verified | relevant | None | DIVERGE | -
+N28 | negativo | rejected | verified | relevant | None | DIVERGE | -
+N29 | negativo | rejected | rejected | not_relevant | None | OK | thematic_relation: manchete sem termo de evento de chuva e texto sem relato datado de evento (corpo [], data do evento identificada)
+N30 | negativo | rejected | rejected | not_relevant | None | OK | thematic_relation: manchete sem termo de evento de chuva e texto sem relato datado de evento (corpo [], data do evento identificada)
+N31 | negativo | rejected | rejected | not_relevant | None | OK | thematic_relation: manchete sem termo de evento de chuva e texto sem relato datado de evento (corpo ['alagament', 'chuva', 'enchente'], data do evento não identificada)
+N32 | negativo | rejected | rejected | not_relevant | None | OK | temporal_relation: matéria retrospectiva sobre evento anterior (pista: 'um ano apos')
+N33 | negativo | rejected | rejected | not_relevant | None | OK | temporal_relation: manchete trata de outro período/evento ([1941]); provável retrospectiva
+N34 | negativo | rejected | verified | relevant | None | DIVERGE | -
+N35 | negativo | rejected | verified | regional | None | DIVERGE | -
+PD01 | pendente | pending_verification | pending_verification | undetermined | None | OK | page_exists: não acessível (ReadTimeout: timed out); tentar novamente
+PD02 | pendente | pending_verification | pending_verification | undetermined | None | OK | page_exists: não acessível (503); tentar novamente
+PD03 | pendente | pending_verification | pending_verification | undetermined | None | OK | page_exists: não acessível (403); tentar novamente
+PD04 | pendente | pending_verification | pending_verification | undetermined | None | OK | page_exists: não acessível (429); tentar novamente
+PD05 | pendente | pending_verification | pending_verification | undetermined | None | OK | publication_date_confirmed: data de publicação não encontrada na página
+PD06 | pendente | pending_verification | pending_verification | undetermined | None | OK | page_exists: página sem título identificável
+A01 | ambiguo | not_verified | rejected | not_relevant | None | OK | geographic_relation: não menciona Porto Alegre/RS nem municípios vizinhos
+A02 | ambiguo | not_verified | rejected | not_relevant | None | OK | geographic_relation: não menciona Bom Jesus/RS nem municípios vizinhos
+A03 | ambiguo | not_verified | verified | relevant | None | DIVERGE | -

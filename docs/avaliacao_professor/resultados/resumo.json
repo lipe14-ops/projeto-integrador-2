@@ -1,0 +1,2669 @@
+{
+  "analysis_version": "seasonal-spatial/1.0.0",
+  "snapshot": {
+    "analysis_version": "seasonal-spatial/1.0.0",
+    "precipitation": {
+      "generated_at": "2026-11-15T00:25:46.500980+00:00",
+      "source": "PostgreSQL: precipitation_anomaly (última detecção concluída por município), precipitacao_diaria",
+      "detection_runs": 5535,
+      "municipalities_with_detection": 5535,
+      "scored_periods": [
+        {
+          "scored_start": "2017-01-01",
+          "scored_end": "2025-12-30",
+          "runs": "5535"
+        }
+      ],
+      "files": {
+        "municipios": {
+          "rows": 5573,
+          "sha256": "7480e9fce442431594577f16192075bef19198e820c555a6b85eb41c0906d2eb"
+        },
+        "enso": {
+          "rows": 132,
+          "sha256": "24bdb7738e05ca8bac55f342e3392050abceb492893f0428a51322b1e3bd6b3a"
+        },
+        "precipitacao_anomalias": {
+          "rows": 315602,
+          "sha256": "8fa34798b2e2398291182c2bf74d2c817025cefd482fbd9e381edacdbd1035dc"
+        },
+        "precipitacao_exposicao": {
+          "rows": 597780,
+          "sha256": "1e5c708d4ed701413de66e607f74f7d1e36b03a8f11d4686a1f99b9822279726"
+        }
+      }
+    },
+    "thermal": {
+      "generated_at": "2026-11-14T23:45:25.390834+00:00",
+      "source": "PostgreSQL: registro_climatico (ERA5-Land 00 e 12 UTC → média diária)",
+      "config": {
+        "z_threshold": 3.0,
+        "mean_harmonics": 3,
+        "variance_harmonics": 2,
+        "max_p": 3,
+        "initial_train_years": 2,
+        "window_days": 15,
+        "min_train_days": 365
+      },
+      "municipalities": 5535,
+      "errors": [
+        {
+          "codigo_ibge": 1500305,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 1500305,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 1501402,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 1501402,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 1502509,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 1502509,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 1502608,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 1502608,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2102408,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2102408,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2109452,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2109452,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2111201,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2111201,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2305357,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2305357,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2404408,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2404408,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2408102,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2408102,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2800605,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2800605,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2805307,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2805307,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2605459,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2605459,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2503209,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2503209,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3205309,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3205309,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3300100,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3300100,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3300233,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3300233,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3300258,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3300258,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3302601,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3302601,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3304524,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3304524,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2916104,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2916104,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2919926,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2919926,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2927408,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2927408,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2929206,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2929206,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2929750,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2929750,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2933208,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 2933208,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4118204,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4118204,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4202073,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4202073,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4202453,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4202453,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4208302,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4208302,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4208807,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4208807,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4212254,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4212254,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3518701,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3518701,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3520426,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 3520426,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4300001,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4300001,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4300002,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4300002,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4310330,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4310330,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4321105,
+          "variable": "temperatura",
+          "error": "sem dados suficientes"
+        },
+        {
+          "codigo_ibge": 4321105,
+          "variable": "umidade",
+          "error": "sem dados suficientes"
+        }
+      ],
+      "n_errors": 76,
+      "files": {
+        "termica_anomalias": {
+          "rows": 444600,
+          "sha256": "49a84e9bc03c20315a2a0648791d03a868bd885688b1fac811efe9d1bd097a80"
+        },
+        "termica_exposicao": {
+          "rows": 1195560,
+          "sha256": "2340d69f37d6d15910c26898e679dc8dc84641cfc8865b5bdd51b2c1dd92bef3"
+        },
+        "termica_diagnosticos": {
+          "rows": 11070,
+          "sha256": "7fa5fcc6cf7799d99f7003d282b39247df4f726751097003c41615c45991413e"
+        }
+      }
+    },
+    "geometry": {
+      "generated_at": "2026-11-14T23:50:30.548172+00:00",
+      "rows": 5573,
+      "tolerance_degrees": 0.01,
+      "sha256": "bde3e15ee11fa2b1c1890dbbbbbd7432db24d5a12d561e0a049a3b91a83c10e6"
+    },
+    "thermal_reclassification": {
+      "generated_at": "2026-11-15T00:25:48.971348+00:00",
+      "before": {
+        "extremo_local": 349252,
+        "anomalia_estatistica": 95348
+      },
+      "after": {
+        "extremo_local": 348962,
+        "anomalia_estatistica": 95638
+      },
+      "file": {
+        "rows": 444600,
+        "sha256": "69e538df4cee07e38b49f16226af356a63cf22064866fe8fe75514e589c345a2"
+      }
+    }
+  },
+  "min_eventos": 20,
+  "cobertura": {
+    "precipitacao": {
+      "municipios": 5535,
+      "dias_validos_min": 3071,
+      "dias_validos_mediana": 3071.0,
+      "dias_validos_max": 3071
+    },
+    "temperatura": {
+      "municipios": 5535,
+      "dias_validos_min": 3287,
+      "dias_validos_mediana": 3287.0,
+      "dias_validos_max": 3287
+    },
+    "umidade": {
+      "municipios": 5535,
+      "dias_validos_min": 3287,
+      "dias_validos_mediana": 3287.0,
+      "dias_validos_max": 3287
+    }
+  },
+  "municipios_cadastrados": 5573,
+  "sazonal": {
+    "precipitacao|todas": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 384,
+          "mediana_eventos": 29.0,
+          "mediana_outono_inverno_pct": 35.2,
+          "pct_outono_inverno_acima_50": 17.4,
+          "padroes_pct": {
+            "sem_predominio": 38.0,
+            "predominio_verao": 34.4,
+            "predominio_primavera": 14.6,
+            "predominio_outono": 13.0
+          },
+          "predominio_outono_ou_inverno_pct": 13.0
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 1778,
+          "mediana_eventos": 49.0,
+          "mediana_outono_inverno_pct": 50.9,
+          "pct_outono_inverno_acima_50": 52.0,
+          "padroes_pct": {
+            "predominio_outono": 47.0,
+            "predominio_verao": 36.2,
+            "sem_predominio": 8.2,
+            "predominio_primavera": 6.1,
+            "predominio_inverno": 2.5
+          },
+          "predominio_outono_ou_inverno_pct": 49.5
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 440,
+          "mediana_eventos": 31.0,
+          "mediana_outono_inverno_pct": 21.1,
+          "pct_outono_inverno_acima_50": 6.4,
+          "padroes_pct": {
+            "predominio_verao": 53.6,
+            "sem_predominio": 29.5,
+            "predominio_primavera": 16.1,
+            "predominio_outono": 0.7
+          },
+          "predominio_outono_ou_inverno_pct": 0.7
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 1606,
+          "mediana_eventos": 35.0,
+          "mediana_outono_inverno_pct": 23.4,
+          "pct_outono_inverno_acima_50": 1.4,
+          "padroes_pct": {
+            "predominio_verao": 49.3,
+            "sem_predominio": 28.8,
+            "predominio_primavera": 21.7,
+            "predominio_outono": 0.2
+          },
+          "predominio_outono_ou_inverno_pct": 0.2
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 663,
+          "mediana_eventos": 20.0,
+          "mediana_outono_inverno_pct": 49.6,
+          "pct_outono_inverno_acima_50": 48.1,
+          "padroes_pct": {
+            "sem_predominio": 93.8,
+            "predominio_primavera": 2.9,
+            "predominio_verao": 2.1,
+            "predominio_outono": 1.1,
+            "predominio_inverno": 0.2
+          },
+          "predominio_outono_ou_inverno_pct": 1.2
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 4872,
+          "mediana_eventos": 34.0,
+          "mediana_outono_inverno_pct": 35.5,
+          "pct_outono_inverno_acima_50": 27.9,
+          "padroes_pct": {
+            "predominio_verao": 37.3,
+            "sem_predominio": 30.9,
+            "predominio_outono": 18.5,
+            "predominio_primavera": 12.4,
+            "predominio_inverno": 0.9
+          },
+          "predominio_outono_ou_inverno_pct": 19.4
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 29,
+        "participacao_norm_pct": {
+          "verao": 7.0,
+          "outono": 27.4,
+          "inverno": 27.4,
+          "primavera": 38.2
+        },
+        "outono_inverno_pct": 54.8,
+        "padrao": "sem_predominio",
+        "qvalor": 0.1556,
+        "pvalor": 0.1206,
+        "percentil_brasil": 79.2,
+        "percentil_sul": 73.0,
+        "mediana_rs_pct": 56.2
+      },
+      "moran_outono_inverno": {
+        "I": 0.9406,
+        "expected": -0.00021,
+        "p_value": 0.005,
+        "n": 4872,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 41.0,
+        "Centro-Oeste|outono": 18.8,
+        "Centro-Oeste|inverno": 5.3,
+        "Centro-Oeste|primavera": 34.9,
+        "Nordeste|verao": 35.6,
+        "Nordeste|outono": 37.7,
+        "Nordeste|inverno": 10.7,
+        "Nordeste|primavera": 15.9,
+        "Norte|verao": 37.5,
+        "Norte|outono": 28.9,
+        "Norte|inverno": 7.2,
+        "Norte|primavera": 26.5,
+        "Sudeste|verao": 40.5,
+        "Sudeste|outono": 18.7,
+        "Sudeste|inverno": 5.7,
+        "Sudeste|primavera": 35.1,
+        "Sul|verao": 18.7,
+        "Sul|outono": 24.7,
+        "Sul|inverno": 25.3,
+        "Sul|primavera": 31.3,
+        "Brasil|verao": 35.5,
+        "Brasil|outono": 28.4,
+        "Brasil|inverno": 10.3,
+        "Brasil|primavera": 25.7
+      }
+    },
+    "precipitacao|extremos": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 361,
+          "mediana_eventos": 25.0,
+          "mediana_outono_inverno_pct": 37.1,
+          "pct_outono_inverno_acima_50": 22.7,
+          "padroes_pct": {
+            "predominio_verao": 44.9,
+            "sem_predominio": 36.6,
+            "predominio_outono": 17.2,
+            "predominio_primavera": 1.4
+          },
+          "predominio_outono_ou_inverno_pct": 17.2
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 1774,
+          "mediana_eventos": 34.0,
+          "mediana_outono_inverno_pct": 56.3,
+          "pct_outono_inverno_acima_50": 58.7,
+          "padroes_pct": {
+            "predominio_outono": 58.6,
+            "predominio_verao": 24.5,
+            "sem_predominio": 9.7,
+            "predominio_primavera": 4.6,
+            "predominio_inverno": 2.6
+          },
+          "predominio_outono_ou_inverno_pct": 61.3
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 311,
+          "mediana_eventos": 22.0,
+          "mediana_outono_inverno_pct": 21.9,
+          "pct_outono_inverno_acima_50": 3.9,
+          "padroes_pct": {
+            "predominio_verao": 62.4,
+            "sem_predominio": 34.1,
+            "predominio_primavera": 2.6,
+            "predominio_outono": 1.0
+          },
+          "predominio_outono_ou_inverno_pct": 1.0
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 1123,
+          "mediana_eventos": 23.0,
+          "mediana_outono_inverno_pct": 23.8,
+          "pct_outono_inverno_acima_50": 0.6,
+          "padroes_pct": {
+            "predominio_verao": 65.7,
+            "sem_predominio": 30.6,
+            "predominio_primavera": 3.6,
+            "predominio_outono": 0.1
+          },
+          "predominio_outono_ou_inverno_pct": 0.1
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 599,
+          "mediana_eventos": 20.0,
+          "mediana_outono_inverno_pct": 49.6,
+          "pct_outono_inverno_acima_50": 43.2,
+          "padroes_pct": {
+            "sem_predominio": 94.0,
+            "predominio_primavera": 2.3,
+            "predominio_verao": 2.0,
+            "predominio_outono": 1.5,
+            "predominio_inverno": 0.2
+          },
+          "predominio_outono_ou_inverno_pct": 1.7
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 4169,
+          "mediana_eventos": 25.0,
+          "mediana_outono_inverno_pct": 38.7,
+          "pct_outono_inverno_acima_50": 33.6,
+          "padroes_pct": {
+            "predominio_verao": 37.0,
+            "sem_predominio": 31.6,
+            "predominio_outono": 26.7,
+            "predominio_primavera": 3.6,
+            "predominio_inverno": 1.2
+          },
+          "predominio_outono_ou_inverno_pct": 27.9
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 27,
+        "participacao_norm_pct": {
+          "verao": 7.5,
+          "outono": 25.8,
+          "inverno": 25.8,
+          "primavera": 41.0
+        },
+        "outono_inverno_pct": 51.5,
+        "padrao": "sem_predominio",
+        "qvalor": 0.1434,
+        "pvalor": 0.112,
+        "percentil_brasil": 67.4,
+        "percentil_sul": 58.3,
+        "mediana_rs_pct": 56.2
+      },
+      "moran_outono_inverno": {
+        "I": 0.9322,
+        "expected": -0.00024,
+        "p_value": 0.005,
+        "n": 4169,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 48.3,
+        "Centro-Oeste|outono": 18.9,
+        "Centro-Oeste|inverno": 5.4,
+        "Centro-Oeste|primavera": 27.4,
+        "Nordeste|verao": 31.7,
+        "Nordeste|outono": 41.4,
+        "Nordeste|inverno": 12.4,
+        "Nordeste|primavera": 14.5,
+        "Norte|verao": 39.8,
+        "Norte|outono": 31.4,
+        "Norte|inverno": 7.1,
+        "Norte|primavera": 21.6,
+        "Sudeste|verao": 48.3,
+        "Sudeste|outono": 17.5,
+        "Sudeste|inverno": 6.0,
+        "Sudeste|primavera": 28.2,
+        "Sul|verao": 19.6,
+        "Sul|outono": 24.0,
+        "Sul|inverno": 25.7,
+        "Sul|primavera": 30.7,
+        "Brasil|verao": 36.0,
+        "Brasil|outono": 29.9,
+        "Brasil|inverno": 11.9,
+        "Brasil|primavera": 22.2
+      }
+    },
+    "precipitacao|impacto": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 0,
+          "mediana_eventos": 0.0,
+          "mediana_outono_inverno_pct": null,
+          "pct_outono_inverno_acima_50": null,
+          "padroes_pct": {},
+          "predominio_outono_ou_inverno_pct": null
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 7,
+          "mediana_eventos": 0.0,
+          "mediana_outono_inverno_pct": 38.7,
+          "pct_outono_inverno_acima_50": 42.9,
+          "padroes_pct": {
+            "predominio_verao": 57.1,
+            "sem_predominio": 14.3,
+            "predominio_outono": 14.3,
+            "predominio_inverno": 14.3
+          },
+          "predominio_outono_ou_inverno_pct": 28.6
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 0,
+          "mediana_eventos": 0.0,
+          "mediana_outono_inverno_pct": null,
+          "pct_outono_inverno_acima_50": null,
+          "padroes_pct": {},
+          "predominio_outono_ou_inverno_pct": null
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 9,
+          "mediana_eventos": 0.0,
+          "mediana_outono_inverno_pct": 18.8,
+          "pct_outono_inverno_acima_50": 0.0,
+          "padroes_pct": {
+            "predominio_verao": 66.7,
+            "sem_predominio": 22.2,
+            "predominio_primavera": 11.1
+          },
+          "predominio_outono_ou_inverno_pct": 0.0
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 3,
+          "mediana_eventos": 0.0,
+          "mediana_outono_inverno_pct": 37.1,
+          "pct_outono_inverno_acima_50": 33.3,
+          "padroes_pct": {
+            "sem_predominio": 100.0
+          },
+          "predominio_outono_ou_inverno_pct": 0.0
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 19,
+          "mediana_eventos": 0.0,
+          "mediana_outono_inverno_pct": 25.5,
+          "pct_outono_inverno_acima_50": 21.1,
+          "padroes_pct": {
+            "predominio_verao": 52.6,
+            "sem_predominio": 31.6,
+            "predominio_outono": 5.3,
+            "predominio_inverno": 5.3,
+            "predominio_primavera": 5.3
+          },
+          "predominio_outono_ou_inverno_pct": 10.5
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 24,
+        "participacao_norm_pct": {
+          "verao": 4.2,
+          "outono": 29.0,
+          "inverno": 24.9,
+          "primavera": 41.9
+        },
+        "outono_inverno_pct": 53.9,
+        "padrao": "sem_predominio",
+        "qvalor": 0.0959,
+        "pvalor": 0.0736,
+        "percentil_brasil": 84.2,
+        "percentil_sul": 100.0,
+        "mediana_rs_pct": 53.9
+      },
+      "moran_outono_inverno": null,
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 40.3,
+        "Centro-Oeste|outono": 14.5,
+        "Centro-Oeste|inverno": 2.6,
+        "Centro-Oeste|primavera": 42.6,
+        "Nordeste|verao": 32.3,
+        "Nordeste|outono": 38.8,
+        "Nordeste|inverno": 13.7,
+        "Nordeste|primavera": 15.2,
+        "Norte|verao": 42.0,
+        "Norte|outono": 43.8,
+        "Norte|inverno": 3.5,
+        "Norte|primavera": 10.6,
+        "Sudeste|verao": 60.8,
+        "Sudeste|outono": 12.2,
+        "Sudeste|inverno": 2.9,
+        "Sudeste|primavera": 24.0,
+        "Sul|verao": 30.6,
+        "Sul|outono": 18.4,
+        "Sul|inverno": 21.2,
+        "Sul|primavera": 29.9,
+        "Brasil|verao": 45.2,
+        "Brasil|outono": 24.1,
+        "Brasil|inverno": 9.0,
+        "Brasil|primavera": 21.7
+      }
+    },
+    "temperatura_alta|todas": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 27,
+          "mediana_eventos": 8.0,
+          "mediana_outono_inverno_pct": 96.0,
+          "pct_outono_inverno_acima_50": 74.1,
+          "padroes_pct": {
+            "predominio_inverno": 40.7,
+            "predominio_primavera": 25.9,
+            "predominio_outono": 22.2,
+            "sem_predominio": 7.4,
+            "predominio_verao": 3.7
+          },
+          "predominio_outono_ou_inverno_pct": 63.0
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 79,
+          "mediana_eventos": 8.0,
+          "mediana_outono_inverno_pct": 60.4,
+          "pct_outono_inverno_acima_50": 64.6,
+          "padroes_pct": {
+            "sem_predominio": 38.0,
+            "predominio_primavera": 34.2,
+            "predominio_inverno": 27.8
+          },
+          "predominio_outono_ou_inverno_pct": 27.8
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 0,
+          "mediana_eventos": 4.0,
+          "mediana_outono_inverno_pct": null,
+          "pct_outono_inverno_acima_50": null,
+          "padroes_pct": {},
+          "predominio_outono_ou_inverno_pct": null
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 1,
+          "mediana_eventos": 3.0,
+          "mediana_outono_inverno_pct": 40.6,
+          "pct_outono_inverno_acima_50": 0.0,
+          "padroes_pct": {
+            "sem_predominio": 100.0
+          },
+          "predominio_outono_ou_inverno_pct": 0.0
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 0,
+          "mediana_eventos": 4.0,
+          "mediana_outono_inverno_pct": null,
+          "pct_outono_inverno_acima_50": null,
+          "padroes_pct": {},
+          "predominio_outono_ou_inverno_pct": null
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 107,
+          "mediana_eventos": 5.0,
+          "mediana_outono_inverno_pct": 61.6,
+          "pct_outono_inverno_acima_50": 66.4,
+          "padroes_pct": {
+            "predominio_primavera": 31.8,
+            "sem_predominio": 30.8,
+            "predominio_inverno": 30.8,
+            "predominio_outono": 5.6,
+            "predominio_verao": 0.9
+          },
+          "predominio_outono_ou_inverno_pct": 36.4
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 4,
+        "participacao_norm_pct": {
+          "verao": 75.2,
+          "outono": 0.0,
+          "inverno": 0.0,
+          "primavera": 24.8
+        },
+        "outono_inverno_pct": 0.0,
+        "padrao": "insuficiente",
+        "qvalor": null,
+        "pvalor": null,
+        "percentil_brasil": 16.8,
+        "percentil_sul": null,
+        "mediana_rs_pct": null
+      },
+      "moran_outono_inverno": {
+        "I": 0.965,
+        "expected": -0.00943,
+        "p_value": 0.005,
+        "n": 107,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 76.2,
+        "Centro-Oeste|outono": 6.3,
+        "Centro-Oeste|inverno": 13.8,
+        "Centro-Oeste|primavera": 3.7,
+        "Nordeste|verao": 12.0,
+        "Nordeste|outono": 18.1,
+        "Nordeste|inverno": 31.1,
+        "Nordeste|primavera": 38.8,
+        "Norte|verao": 18.2,
+        "Norte|outono": 32.0,
+        "Norte|inverno": 34.8,
+        "Norte|primavera": 15.0,
+        "Sudeste|verao": 40.1,
+        "Sudeste|outono": 10.4,
+        "Sudeste|inverno": 26.9,
+        "Sudeste|primavera": 22.6,
+        "Sul|verao": 74.5,
+        "Sul|outono": 6.6,
+        "Sul|inverno": 4.8,
+        "Sul|primavera": 14.1,
+        "Brasil|verao": 31.1,
+        "Brasil|outono": 15.9,
+        "Brasil|inverno": 26.0,
+        "Brasil|primavera": 26.9
+      }
+    },
+    "temperatura_alta|extremos": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 15,
+          "mediana_eventos": 6.0,
+          "mediana_outono_inverno_pct": 100.0,
+          "pct_outono_inverno_acima_50": 93.3,
+          "padroes_pct": {
+            "predominio_inverno": 53.3,
+            "predominio_outono": 26.7,
+            "sem_predominio": 13.3,
+            "predominio_primavera": 6.7
+          },
+          "predominio_outono_ou_inverno_pct": 80.0
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 51,
+          "mediana_eventos": 7.0,
+          "mediana_outono_inverno_pct": 65.1,
+          "pct_outono_inverno_acima_50": 82.4,
+          "padroes_pct": {
+            "sem_predominio": 45.1,
+            "predominio_inverno": 39.2,
+            "predominio_primavera": 15.7
+          },
+          "predominio_outono_ou_inverno_pct": 39.2
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 0,
+          "mediana_eventos": 2.0,
+          "mediana_outono_inverno_pct": null,
+          "pct_outono_inverno_acima_50": null,
+          "padroes_pct": {},
+          "predominio_outono_ou_inverno_pct": null
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 1,
+          "mediana_eventos": 3.0,
+          "mediana_outono_inverno_pct": 40.6,
+          "pct_outono_inverno_acima_50": 0.0,
+          "padroes_pct": {
+            "sem_predominio": 100.0
+          },
+          "predominio_outono_ou_inverno_pct": 0.0
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 0,
+          "mediana_eventos": 3.0,
+          "mediana_outono_inverno_pct": null,
+          "pct_outono_inverno_acima_50": null,
+          "padroes_pct": {},
+          "predominio_outono_ou_inverno_pct": null
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 67,
+          "mediana_eventos": 4.0,
+          "mediana_outono_inverno_pct": 69.3,
+          "pct_outono_inverno_acima_50": 83.6,
+          "padroes_pct": {
+            "predominio_inverno": 41.8,
+            "sem_predominio": 38.8,
+            "predominio_primavera": 13.4,
+            "predominio_outono": 6.0
+          },
+          "predominio_outono_ou_inverno_pct": 47.8
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 4,
+        "participacao_norm_pct": {
+          "verao": 75.2,
+          "outono": 0.0,
+          "inverno": 0.0,
+          "primavera": 24.8
+        },
+        "outono_inverno_pct": 0.0,
+        "padrao": "insuficiente",
+        "qvalor": null,
+        "pvalor": null,
+        "percentil_brasil": 9.0,
+        "percentil_sul": null,
+        "mediana_rs_pct": null
+      },
+      "moran_outono_inverno": {
+        "I": 0.8285,
+        "expected": -0.01515,
+        "p_value": 0.005,
+        "n": 67,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 86.2,
+        "Centro-Oeste|outono": 7.8,
+        "Centro-Oeste|inverno": 3.0,
+        "Centro-Oeste|primavera": 3.0,
+        "Nordeste|verao": 11.4,
+        "Nordeste|outono": 18.5,
+        "Nordeste|inverno": 31.8,
+        "Nordeste|primavera": 38.4,
+        "Norte|verao": 19.3,
+        "Norte|outono": 33.4,
+        "Norte|inverno": 32.3,
+        "Norte|primavera": 14.9,
+        "Sudeste|verao": 40.0,
+        "Sudeste|outono": 12.4,
+        "Sudeste|inverno": 20.2,
+        "Sudeste|primavera": 27.3,
+        "Sul|verao": 70.2,
+        "Sul|outono": 6.0,
+        "Sul|inverno": 5.8,
+        "Sul|primavera": 18.0,
+        "Brasil|verao": 29.7,
+        "Brasil|outono": 16.9,
+        "Brasil|inverno": 24.6,
+        "Brasil|primavera": 28.8
+      }
+    },
+    "temperatura_baixa|todas": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 230,
+          "mediana_eventos": 20.0,
+          "mediana_outono_inverno_pct": 56.3,
+          "pct_outono_inverno_acima_50": 55.7,
+          "padroes_pct": {
+            "sem_predominio": 45.2,
+            "predominio_primavera": 32.6,
+            "predominio_inverno": 22.2
+          },
+          "predominio_outono_ou_inverno_pct": 22.2
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 1722,
+          "mediana_eventos": 32.0,
+          "mediana_outono_inverno_pct": 47.2,
+          "pct_outono_inverno_acima_50": 39.9,
+          "padroes_pct": {
+            "sem_predominio": 88.9,
+            "predominio_primavera": 8.3,
+            "predominio_inverno": 2.0,
+            "predominio_outono": 0.7,
+            "predominio_verao": 0.1
+          },
+          "predominio_outono_ou_inverno_pct": 2.7
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 385,
+          "mediana_eventos": 30.0,
+          "mediana_outono_inverno_pct": 56.3,
+          "pct_outono_inverno_acima_50": 68.6,
+          "padroes_pct": {
+            "sem_predominio": 83.1,
+            "predominio_inverno": 12.7,
+            "predominio_primavera": 3.4,
+            "predominio_verao": 0.8
+          },
+          "predominio_outono_ou_inverno_pct": 12.7
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 1606,
+          "mediana_eventos": 31.0,
+          "mediana_outono_inverno_pct": 53.2,
+          "pct_outono_inverno_acima_50": 57.7,
+          "padroes_pct": {
+            "sem_predominio": 92.9,
+            "predominio_inverno": 5.9,
+            "predominio_verao": 0.9,
+            "predominio_primavera": 0.2
+          },
+          "predominio_outono_ou_inverno_pct": 5.9
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 1171,
+          "mediana_eventos": 36.0,
+          "mediana_outono_inverno_pct": 40.3,
+          "pct_outono_inverno_acima_50": 10.5,
+          "padroes_pct": {
+            "sem_predominio": 96.4,
+            "predominio_verao": 3.5,
+            "predominio_inverno": 0.1
+          },
+          "predominio_outono_ou_inverno_pct": 0.1
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 5115,
+          "mediana_eventos": 32.0,
+          "mediana_outono_inverno_pct": 47.3,
+          "pct_outono_inverno_acima_50": 41.6,
+          "padroes_pct": {
+            "sem_predominio": 89.4,
+            "predominio_primavera": 4.6,
+            "predominio_inverno": 4.5,
+            "predominio_verao": 1.2,
+            "predominio_outono": 0.2
+          },
+          "predominio_outono_ou_inverno_pct": 4.8
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 19,
+        "participacao_norm_pct": {
+          "verao": 37.2,
+          "outono": 26.1,
+          "inverno": 15.6,
+          "primavera": 21.1
+        },
+        "outono_inverno_pct": 41.7,
+        "padrao": "insuficiente",
+        "qvalor": null,
+        "pvalor": null,
+        "percentil_brasil": 33.1,
+        "percentil_sul": 56.3,
+        "mediana_rs_pct": 35.1
+      },
+      "moran_outono_inverno": {
+        "I": 0.8677,
+        "expected": -0.0002,
+        "p_value": 0.005,
+        "n": 5115,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 19.4,
+        "Centro-Oeste|outono": 18.4,
+        "Centro-Oeste|inverno": 36.3,
+        "Centro-Oeste|primavera": 25.9,
+        "Nordeste|verao": 20.4,
+        "Nordeste|outono": 26.0,
+        "Nordeste|inverno": 21.4,
+        "Nordeste|primavera": 32.2,
+        "Norte|verao": 10.7,
+        "Norte|outono": 18.3,
+        "Norte|inverno": 37.7,
+        "Norte|primavera": 33.2,
+        "Sudeste|verao": 22.9,
+        "Sudeste|outono": 17.4,
+        "Sudeste|inverno": 34.5,
+        "Sudeste|primavera": 25.2,
+        "Sul|verao": 36.2,
+        "Sul|outono": 17.4,
+        "Sul|inverno": 23.8,
+        "Sul|primavera": 22.7,
+        "Brasil|verao": 24.3,
+        "Brasil|outono": 20.3,
+        "Brasil|inverno": 28.0,
+        "Brasil|primavera": 27.4
+      }
+    },
+    "temperatura_baixa|extremos": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 194,
+          "mediana_eventos": 17.0,
+          "mediana_outono_inverno_pct": 58.4,
+          "pct_outono_inverno_acima_50": 57.2,
+          "padroes_pct": {
+            "sem_predominio": 42.3,
+            "predominio_primavera": 33.5,
+            "predominio_inverno": 24.2
+          },
+          "predominio_outono_ou_inverno_pct": 24.2
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 1537,
+          "mediana_eventos": 26.0,
+          "mediana_outono_inverno_pct": 48.0,
+          "pct_outono_inverno_acima_50": 43.5,
+          "padroes_pct": {
+            "sem_predominio": 88.7,
+            "predominio_primavera": 8.0,
+            "predominio_inverno": 2.1,
+            "predominio_outono": 1.1
+          },
+          "predominio_outono_ou_inverno_pct": 3.3
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 312,
+          "mediana_eventos": 26.0,
+          "mediana_outono_inverno_pct": 64.5,
+          "pct_outono_inverno_acima_50": 91.3,
+          "padroes_pct": {
+            "sem_predominio": 69.9,
+            "predominio_inverno": 30.1
+          },
+          "predominio_outono_ou_inverno_pct": 30.1
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 1031,
+          "mediana_eventos": 21.5,
+          "mediana_outono_inverno_pct": 63.3,
+          "pct_outono_inverno_acima_50": 75.1,
+          "padroes_pct": {
+            "sem_predominio": 80.0,
+            "predominio_inverno": 18.4,
+            "predominio_verao": 1.0,
+            "predominio_primavera": 0.6
+          },
+          "predominio_outono_ou_inverno_pct": 18.4
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 916,
+          "mediana_eventos": 25.0,
+          "mediana_outono_inverno_pct": 46.4,
+          "pct_outono_inverno_acima_50": 33.7,
+          "padroes_pct": {
+            "sem_predominio": 98.8,
+            "predominio_verao": 1.2
+          },
+          "predominio_outono_ou_inverno_pct": 0.0
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 3991,
+          "mediana_eventos": 24.0,
+          "mediana_outono_inverno_pct": 52.0,
+          "pct_outono_inverno_acima_50": 53.8,
+          "padroes_pct": {
+            "sem_predominio": 85.0,
+            "predominio_inverno": 9.1,
+            "predominio_primavera": 4.9,
+            "predominio_verao": 0.5,
+            "predominio_outono": 0.4
+          },
+          "predominio_outono_ou_inverno_pct": 9.6
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 11,
+        "participacao_norm_pct": {
+          "verao": 36.7,
+          "outono": 18.0,
+          "inverno": 9.0,
+          "primavera": 36.4
+        },
+        "outono_inverno_pct": 27.0,
+        "padrao": "insuficiente",
+        "qvalor": null,
+        "pvalor": null,
+        "percentil_brasil": 4.2,
+        "percentil_sul": 3.4,
+        "mediana_rs_pct": 36.0
+      },
+      "moran_outono_inverno": {
+        "I": 0.8882,
+        "expected": -0.00025,
+        "p_value": 0.005,
+        "n": 3991,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 12.9,
+        "Centro-Oeste|outono": 20.4,
+        "Centro-Oeste|inverno": 41.7,
+        "Centro-Oeste|primavera": 25.0,
+        "Nordeste|verao": 20.5,
+        "Nordeste|outono": 26.7,
+        "Nordeste|inverno": 21.6,
+        "Nordeste|primavera": 31.3,
+        "Norte|verao": 9.9,
+        "Norte|outono": 18.3,
+        "Norte|inverno": 38.2,
+        "Norte|primavera": 33.5,
+        "Sudeste|verao": 20.5,
+        "Sudeste|outono": 19.1,
+        "Sudeste|inverno": 40.0,
+        "Sudeste|primavera": 20.4,
+        "Sul|verao": 33.8,
+        "Sul|outono": 20.1,
+        "Sul|inverno": 25.1,
+        "Sul|primavera": 21.0,
+        "Brasil|verao": 22.0,
+        "Brasil|outono": 22.1,
+        "Brasil|inverno": 30.2,
+        "Brasil|primavera": 25.7
+      }
+    },
+    "umidade_alta|todas": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 239,
+          "mediana_eventos": 20.0,
+          "mediana_outono_inverno_pct": 39.7,
+          "pct_outono_inverno_acima_50": 43.5,
+          "padroes_pct": {
+            "predominio_verao": 43.9,
+            "predominio_inverno": 22.2,
+            "predominio_outono": 19.7,
+            "predominio_primavera": 9.6,
+            "sem_predominio": 4.6
+          },
+          "predominio_outono_ou_inverno_pct": 41.8
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 1315,
+          "mediana_eventos": 28.0,
+          "mediana_outono_inverno_pct": 41.5,
+          "pct_outono_inverno_acima_50": 37.5,
+          "padroes_pct": {
+            "predominio_primavera": 42.1,
+            "sem_predominio": 26.5,
+            "predominio_inverno": 16.2,
+            "predominio_outono": 13.4,
+            "predominio_verao": 1.8
+          },
+          "predominio_outono_ou_inverno_pct": 29.6
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 296,
+          "mediana_eventos": 22.0,
+          "mediana_outono_inverno_pct": 48.7,
+          "pct_outono_inverno_acima_50": 47.6,
+          "padroes_pct": {
+            "predominio_verao": 36.8,
+            "sem_predominio": 33.1,
+            "predominio_inverno": 29.7,
+            "predominio_outono": 0.3
+          },
+          "predominio_outono_ou_inverno_pct": 30.1
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 781,
+          "mediana_eventos": 19.0,
+          "mediana_outono_inverno_pct": 63.3,
+          "pct_outono_inverno_acima_50": 79.8,
+          "padroes_pct": {
+            "sem_predominio": 64.4,
+            "predominio_inverno": 31.4,
+            "predominio_outono": 3.1,
+            "predominio_primavera": 1.0,
+            "predominio_verao": 0.1
+          },
+          "predominio_outono_ou_inverno_pct": 34.4
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 281,
+          "mediana_eventos": 9.0,
+          "mediana_outono_inverno_pct": 71.1,
+          "pct_outono_inverno_acima_50": 98.9,
+          "padroes_pct": {
+            "sem_predominio": 63.7,
+            "predominio_inverno": 28.5,
+            "predominio_outono": 7.8
+          },
+          "predominio_outono_ou_inverno_pct": 36.3
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 2913,
+          "mediana_eventos": 20.0,
+          "mediana_outono_inverno_pct": 55.5,
+          "pct_outono_inverno_acima_50": 56.3,
+          "padroes_pct": {
+            "sem_predominio": 39.1,
+            "predominio_inverno": 23.3,
+            "predominio_primavera": 20.0,
+            "predominio_outono": 9.3,
+            "predominio_verao": 8.2
+          },
+          "predominio_outono_ou_inverno_pct": 32.6
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 2,
+        "participacao_norm_pct": {
+          "verao": 50.5,
+          "outono": 0.0,
+          "inverno": 49.5,
+          "primavera": 0.0
+        },
+        "outono_inverno_pct": 49.5,
+        "padrao": "insuficiente",
+        "qvalor": null,
+        "pvalor": null,
+        "percentil_brasil": 41.7,
+        "percentil_sul": 0.7,
+        "mediana_rs_pct": null
+      },
+      "moran_outono_inverno": {
+        "I": 0.9172,
+        "expected": -0.00034,
+        "p_value": 0.005,
+        "n": 2913,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 39.6,
+        "Centro-Oeste|outono": 9.8,
+        "Centro-Oeste|inverno": 35.9,
+        "Centro-Oeste|primavera": 14.7,
+        "Nordeste|verao": 13.4,
+        "Nordeste|outono": 22.7,
+        "Nordeste|inverno": 21.7,
+        "Nordeste|primavera": 42.2,
+        "Norte|verao": 40.6,
+        "Norte|outono": 23.2,
+        "Norte|inverno": 23.6,
+        "Norte|primavera": 12.6,
+        "Sudeste|verao": 13.8,
+        "Sudeste|outono": 26.0,
+        "Sudeste|inverno": 37.1,
+        "Sudeste|primavera": 23.1,
+        "Sul|verao": 7.9,
+        "Sul|outono": 28.9,
+        "Sul|inverno": 38.3,
+        "Sul|primavera": 24.9,
+        "Brasil|verao": 17.4,
+        "Brasil|outono": 23.2,
+        "Brasil|inverno": 29.7,
+        "Brasil|primavera": 29.7
+      }
+    },
+    "umidade_alta|extremos": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 72,
+          "mediana_eventos": 13.0,
+          "mediana_outono_inverno_pct": 44.1,
+          "pct_outono_inverno_acima_50": 45.8,
+          "padroes_pct": {
+            "predominio_outono": 33.3,
+            "predominio_primavera": 26.4,
+            "predominio_verao": 16.7,
+            "sem_predominio": 12.5,
+            "predominio_inverno": 11.1
+          },
+          "predominio_outono_ou_inverno_pct": 44.4
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 1127,
+          "mediana_eventos": 23.0,
+          "mediana_outono_inverno_pct": 39.6,
+          "pct_outono_inverno_acima_50": 32.6,
+          "padroes_pct": {
+            "predominio_primavera": 43.7,
+            "sem_predominio": 32.3,
+            "predominio_outono": 13.3,
+            "predominio_inverno": 9.0,
+            "predominio_verao": 1.7
+          },
+          "predominio_outono_ou_inverno_pct": 22.3
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 72,
+          "mediana_eventos": 14.0,
+          "mediana_outono_inverno_pct": 60.1,
+          "pct_outono_inverno_acima_50": 69.4,
+          "padroes_pct": {
+            "sem_predominio": 40.3,
+            "predominio_inverno": 34.7,
+            "predominio_verao": 25.0
+          },
+          "predominio_outono_ou_inverno_pct": 34.7
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 363,
+          "mediana_eventos": 13.0,
+          "mediana_outono_inverno_pct": 69.7,
+          "pct_outono_inverno_acima_50": 97.2,
+          "padroes_pct": {
+            "sem_predominio": 49.9,
+            "predominio_inverno": 45.5,
+            "predominio_outono": 2.8,
+            "predominio_primavera": 1.9
+          },
+          "predominio_outono_ou_inverno_pct": 48.2
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 99,
+          "mediana_eventos": 6.0,
+          "mediana_outono_inverno_pct": 80.7,
+          "pct_outono_inverno_acima_50": 100.0,
+          "padroes_pct": {
+            "predominio_inverno": 52.5,
+            "sem_predominio": 29.3,
+            "predominio_outono": 18.2
+          },
+          "predominio_outono_ou_inverno_pct": 70.7
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 1733,
+          "mediana_eventos": 15.0,
+          "mediana_outono_inverno_pct": 52.6,
+          "pct_outono_inverno_acima_50": 52.0,
+          "padroes_pct": {
+            "sem_predominio": 35.3,
+            "predominio_primavera": 29.9,
+            "predominio_inverno": 20.3,
+            "predominio_outono": 11.7,
+            "predominio_verao": 2.8
+          },
+          "predominio_outono_ou_inverno_pct": 31.9
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 2,
+        "participacao_norm_pct": {
+          "verao": 50.5,
+          "outono": 0.0,
+          "inverno": 49.5,
+          "primavera": 0.0
+        },
+        "outono_inverno_pct": 49.5,
+        "padrao": "insuficiente",
+        "qvalor": null,
+        "pvalor": null,
+        "percentil_brasil": 46.0,
+        "percentil_sul": 0.0,
+        "mediana_rs_pct": null
+      },
+      "moran_outono_inverno": {
+        "I": 0.9206,
+        "expected": -0.00058,
+        "p_value": 0.005,
+        "n": 1733,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 25.4,
+        "Centro-Oeste|outono": 11.2,
+        "Centro-Oeste|inverno": 44.4,
+        "Centro-Oeste|primavera": 19.0,
+        "Nordeste|verao": 14.6,
+        "Nordeste|outono": 22.2,
+        "Nordeste|inverno": 20.5,
+        "Nordeste|primavera": 42.8,
+        "Norte|verao": 35.7,
+        "Norte|outono": 22.4,
+        "Norte|inverno": 24.2,
+        "Norte|primavera": 17.7,
+        "Sudeste|verao": 10.8,
+        "Sudeste|outono": 26.1,
+        "Sudeste|inverno": 40.7,
+        "Sudeste|primavera": 22.4,
+        "Sul|verao": 7.1,
+        "Sul|outono": 28.1,
+        "Sul|inverno": 39.9,
+        "Sul|primavera": 25.0,
+        "Brasil|verao": 15.1,
+        "Brasil|outono": 23.0,
+        "Brasil|inverno": 30.1,
+        "Brasil|primavera": 31.9
+      }
+    },
+    "umidade_baixa|todas": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 341,
+          "mediana_eventos": 28.0,
+          "mediana_outono_inverno_pct": 61.4,
+          "pct_outono_inverno_acima_50": 60.7,
+          "padroes_pct": {
+            "predominio_outono": 41.3,
+            "predominio_verao": 35.8,
+            "predominio_inverno": 11.7,
+            "sem_predominio": 10.0,
+            "predominio_primavera": 1.2
+          },
+          "predominio_outono_ou_inverno_pct": 53.1
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 412,
+          "mediana_eventos": 11.0,
+          "mediana_outono_inverno_pct": 89.9,
+          "pct_outono_inverno_acima_50": 73.3,
+          "padroes_pct": {
+            "predominio_outono": 39.6,
+            "predominio_inverno": 31.3,
+            "predominio_primavera": 22.6,
+            "predominio_verao": 4.4,
+            "sem_predominio": 2.2
+          },
+          "predominio_outono_ou_inverno_pct": 70.9
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 182,
+          "mediana_eventos": 16.0,
+          "mediana_outono_inverno_pct": 15.9,
+          "pct_outono_inverno_acima_50": 9.9,
+          "padroes_pct": {
+            "predominio_verao": 89.6,
+            "predominio_inverno": 6.0,
+            "predominio_outono": 2.7,
+            "sem_predominio": 1.6
+          },
+          "predominio_outono_ou_inverno_pct": 8.8
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 311,
+          "mediana_eventos": 13.0,
+          "mediana_outono_inverno_pct": 61.2,
+          "pct_outono_inverno_acima_50": 76.2,
+          "padroes_pct": {
+            "sem_predominio": 48.2,
+            "predominio_outono": 34.1,
+            "predominio_inverno": 12.5,
+            "predominio_verao": 3.9,
+            "predominio_primavera": 1.3
+          },
+          "predominio_outono_ou_inverno_pct": 46.6
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 785,
+          "mediana_eventos": 23.0,
+          "mediana_outono_inverno_pct": 70.2,
+          "pct_outono_inverno_acima_50": 93.6,
+          "padroes_pct": {
+            "sem_predominio": 64.1,
+            "predominio_outono": 21.7,
+            "predominio_inverno": 13.9,
+            "predominio_primavera": 0.3,
+            "predominio_verao": 0.1
+          },
+          "predominio_outono_ou_inverno_pct": 35.5
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 2032,
+          "mediana_eventos": 15.0,
+          "mediana_outono_inverno_pct": 67.3,
+          "pct_outono_inverno_acima_50": 73.8,
+          "padroes_pct": {
+            "sem_predominio": 34.4,
+            "predominio_outono": 28.8,
+            "predominio_inverno": 16.1,
+            "predominio_verao": 15.6,
+            "predominio_primavera": 5.1
+          },
+          "predominio_outono_ou_inverno_pct": 44.9
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 25,
+        "participacao_norm_pct": {
+          "verao": 20.3,
+          "outono": 31.9,
+          "inverno": 43.8,
+          "primavera": 4.0
+        },
+        "outono_inverno_pct": 75.7,
+        "padrao": "sem_predominio",
+        "qvalor": 0.0531,
+        "pvalor": 0.0353,
+        "percentil_brasil": 63.8,
+        "percentil_sul": 67.4,
+        "mediana_rs_pct": 76.6
+      },
+      "moran_outono_inverno": {
+        "I": 0.9407,
+        "expected": -0.00049,
+        "p_value": 0.005,
+        "n": 2032,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 64.3,
+        "Centro-Oeste|outono": 10.8,
+        "Centro-Oeste|inverno": 23.1,
+        "Centro-Oeste|primavera": 1.8,
+        "Nordeste|verao": 4.6,
+        "Nordeste|outono": 27.1,
+        "Nordeste|inverno": 35.4,
+        "Nordeste|primavera": 32.9,
+        "Norte|verao": 33.9,
+        "Norte|outono": 37.9,
+        "Norte|inverno": 21.5,
+        "Norte|primavera": 6.7,
+        "Sudeste|verao": 17.2,
+        "Sudeste|outono": 34.5,
+        "Sudeste|inverno": 33.4,
+        "Sudeste|primavera": 14.9,
+        "Sul|verao": 17.7,
+        "Sul|outono": 34.9,
+        "Sul|inverno": 33.2,
+        "Sul|primavera": 14.2,
+        "Brasil|verao": 20.9,
+        "Brasil|outono": 31.1,
+        "Brasil|inverno": 31.3,
+        "Brasil|primavera": 16.7
+      }
+    },
+    "umidade_baixa|extremos": {
+      "por_regiao": {
+        "Norte": {
+          "municipios": 446,
+          "elegiveis": 261,
+          "mediana_eventos": 22.0,
+          "mediana_outono_inverno_pct": 66.3,
+          "pct_outono_inverno_acima_50": 68.6,
+          "padroes_pct": {
+            "predominio_outono": 47.9,
+            "predominio_verao": 27.2,
+            "sem_predominio": 13.4,
+            "predominio_inverno": 10.0,
+            "predominio_primavera": 1.5
+          },
+          "predominio_outono_ou_inverno_pct": 57.9
+        },
+        "Nordeste": {
+          "municipios": 1778,
+          "elegiveis": 156,
+          "mediana_eventos": 9.0,
+          "mediana_outono_inverno_pct": 88.2,
+          "pct_outono_inverno_acima_50": 87.2,
+          "padroes_pct": {
+            "predominio_outono": 74.4,
+            "predominio_primavera": 10.3,
+            "sem_predominio": 7.1,
+            "predominio_inverno": 6.4,
+            "predominio_verao": 1.9
+          },
+          "predominio_outono_ou_inverno_pct": 80.8
+        },
+        "Centro-Oeste": {
+          "municipios": 467,
+          "elegiveis": 119,
+          "mediana_eventos": 11.0,
+          "mediana_outono_inverno_pct": 14.6,
+          "pct_outono_inverno_acima_50": 6.7,
+          "padroes_pct": {
+            "predominio_verao": 92.4,
+            "predominio_outono": 5.9,
+            "sem_predominio": 1.7
+          },
+          "predominio_outono_ou_inverno_pct": 5.9
+        },
+        "Sudeste": {
+          "municipios": 1660,
+          "elegiveis": 265,
+          "mediana_eventos": 11.0,
+          "mediana_outono_inverno_pct": 62.2,
+          "pct_outono_inverno_acima_50": 83.8,
+          "padroes_pct": {
+            "sem_predominio": 50.6,
+            "predominio_outono": 36.2,
+            "predominio_inverno": 10.9,
+            "predominio_primavera": 1.5,
+            "predominio_verao": 0.8
+          },
+          "predominio_outono_ou_inverno_pct": 47.2
+        },
+        "Sul": {
+          "municipios": 1183,
+          "elegiveis": 761,
+          "mediana_eventos": 23.0,
+          "mediana_outono_inverno_pct": 70.0,
+          "pct_outono_inverno_acima_50": 93.4,
+          "padroes_pct": {
+            "sem_predominio": 67.4,
+            "predominio_outono": 19.8,
+            "predominio_inverno": 12.5,
+            "predominio_primavera": 0.3
+          },
+          "predominio_outono_ou_inverno_pct": 32.3
+        },
+        "Brasil": {
+          "municipios": 5535,
+          "elegiveis": 1563,
+          "mediana_eventos": 12.0,
+          "mediana_outono_inverno_pct": 67.6,
+          "pct_outono_inverno_acima_50": 80.4,
+          "padroes_pct": {
+            "sem_predominio": 44.5,
+            "predominio_outono": 31.7,
+            "predominio_verao": 12.0,
+            "predominio_inverno": 10.2,
+            "predominio_primavera": 1.7
+          },
+          "predominio_outono_ou_inverno_pct": 41.9
+        }
+      },
+      "porto_alegre": {
+        "n_eventos": 25,
+        "participacao_norm_pct": {
+          "verao": 20.3,
+          "outono": 31.9,
+          "inverno": 43.8,
+          "primavera": 4.0
+        },
+        "outono_inverno_pct": 75.7,
+        "padrao": "sem_predominio",
+        "qvalor": 0.0605,
+        "pvalor": 0.0353,
+        "percentil_brasil": 66.3,
+        "percentil_sul": 68.3,
+        "mediana_rs_pct": 76.6
+      },
+      "moran_outono_inverno": {
+        "I": 0.9139,
+        "expected": -0.00064,
+        "p_value": 0.005,
+        "n": 1563,
+        "permutations": 199
+      },
+      "pooled_regioes": {
+        "Centro-Oeste|verao": 65.7,
+        "Centro-Oeste|outono": 12.9,
+        "Centro-Oeste|inverno": 19.3,
+        "Centro-Oeste|primavera": 2.1,
+        "Nordeste|verao": 5.1,
+        "Nordeste|outono": 28.4,
+        "Nordeste|inverno": 34.2,
+        "Nordeste|primavera": 32.4,
+        "Norte|verao": 31.3,
+        "Norte|outono": 41.2,
+        "Norte|inverno": 19.7,
+        "Norte|primavera": 7.7,
+        "Sudeste|verao": 17.1,
+        "Sudeste|outono": 35.7,
+        "Sudeste|inverno": 32.3,
+        "Sudeste|primavera": 14.9,
+        "Sul|verao": 17.5,
+        "Sul|outono": 34.7,
+        "Sul|inverno": 33.4,
+        "Sul|primavera": 14.4,
+        "Brasil|verao": 20.4,
+        "Brasil|outono": 32.7,
+        "Brasil|inverno": 30.5,
+        "Brasil|primavera": 16.4
+      }
+    }
+  },
+  "enso": {
+    "precipitacao": {
+      "el_nino|inverno": {
+        "razao": 1.513,
+        "ic95": [
+          1.461,
+          1.567
+        ],
+        "n": 4151,
+        "dias": 630990
+      },
+      "la_nina|inverno": {
+        "razao": 1.763,
+        "ic95": [
+          1.699,
+          1.828
+        ],
+        "n": 3647,
+        "dias": 476010
+      },
+      "el_nino|outono": {
+        "razao": 1.252,
+        "ic95": [
+          1.228,
+          1.277
+        ],
+        "n": 15552,
+        "dias": 952020
+      },
+      "la_nina|outono": {
+        "razao": 1.021,
+        "ic95": [
+          1.0,
+          1.042
+        ],
+        "n": 12673,
+        "dias": 952020
+      },
+      "el_nino|primavera": {
+        "razao": 1.142,
+        "ic95": [
+          1.117,
+          1.168
+        ],
+        "n": 15819,
+        "dias": 1256445
+      },
+      "la_nina|primavera": {
+        "razao": 1.26,
+        "ic95": [
+          1.235,
+          1.287
+        ],
+        "n": 21760,
+        "dias": 1566405
+      },
+      "el_nino|verao": {
+        "razao": 1.285,
+        "ic95": [
+          1.261,
+          1.311
+        ],
+        "n": 27558,
+        "dias": 1405890
+      },
+      "la_nina|verao": {
+        "razao": 1.1,
+        "ic95": [
+          1.079,
+          1.121
+        ],
+        "n": 28770,
+        "dias": 1715850
+      }
+    },
+    "temperatura_alta": {
+      "el_nino|inverno": {
+        "razao": 1.508,
+        "ic95": [
+          1.432,
+          1.588
+        ],
+        "n": 1906,
+        "dias": 675270
+      },
+      "la_nina|inverno": {
+        "razao": 0.74,
+        "ic95": [
+          0.684,
+          0.8
+        ],
+        "n": 705,
+        "dias": 509220
+      },
+      "el_nino|outono": {
+        "razao": 1.913,
+        "ic95": [
+          1.802,
+          2.031
+        ],
+        "n": 1921,
+        "dias": 1018440
+      },
+      "la_nina|outono": {
+        "razao": 1.072,
+        "ic95": [
+          0.997,
+          1.152
+        ],
+        "n": 1076,
+        "dias": 1018440
+      },
+      "el_nino|primavera": {
+        "razao": 2.281,
+        "ic95": [
+          2.158,
+          2.412
+        ],
+        "n": 3823,
+        "dias": 1345005
+      },
+      "la_nina|primavera": {
+        "razao": 1.673,
+        "ic95": [
+          1.582,
+          1.771
+        ],
+        "n": 3497,
+        "dias": 1677105
+      },
+      "el_nino|verao": {
+        "razao": 2.217,
+        "ic95": [
+          2.11,
+          2.329
+        ],
+        "n": 6212,
+        "dias": 1505520
+      },
+      "la_nina|verao": {
+        "razao": 0.641,
+        "ic95": [
+          0.603,
+          0.68
+        ],
+        "n": 2191,
+        "dias": 1837620
+      }
+    },
+    "temperatura_baixa": {
+      "el_nino|inverno": {
+        "razao": 0.49,
+        "ic95": [
+          0.474,
+          0.507
+        ],
+        "n": 3690,
+        "dias": 675270
+      },
+      "la_nina|inverno": {
+        "razao": 1.396,
+        "ic95": [
+          1.362,
+          1.43
+        ],
+        "n": 7922,
+        "dias": 509220
+      },
+      "el_nino|outono": {
+        "razao": 0.602,
+        "ic95": [
+          0.584,
+          0.621
+        ],
+        "n": 4923,
+        "dias": 1018440
+      },
+      "la_nina|outono": {
+        "razao": 1.293,
+        "ic95": [
+          1.263,
+          1.324
+        ],
+        "n": 10574,
+        "dias": 1018440
+      },
+      "el_nino|primavera": {
+        "razao": 1.096,
+        "ic95": [
+          1.071,
+          1.123
+        ],
+        "n": 13542,
+        "dias": 1345005
+      },
+      "la_nina|primavera": {
+        "razao": 1.331,
+        "ic95": [
+          1.302,
+          1.36
+        ],
+        "n": 20493,
+        "dias": 1677105
+      },
+      "el_nino|verao": {
+        "razao": 1.718,
+        "ic95": [
+          1.674,
+          1.763
+        ],
+        "n": 18576,
+        "dias": 1505520
+      },
+      "la_nina|verao": {
+        "razao": 1.159,
+        "ic95": [
+          1.128,
+          1.19
+        ],
+        "n": 15293,
+        "dias": 1837620
+      }
+    },
+    "umidade_alta": {
+      "el_nino|inverno": {
+        "razao": 1.096,
+        "ic95": [
+          1.064,
+          1.129
+        ],
+        "n": 5338,
+        "dias": 675270
+      },
+      "la_nina|inverno": {
+        "razao": 1.116,
+        "ic95": [
+          1.079,
+          1.153
+        ],
+        "n": 4099,
+        "dias": 509220
+      },
+      "el_nino|outono": {
+        "razao": 0.971,
+        "ic95": [
+          0.942,
+          1.001
+        ],
+        "n": 5853,
+        "dias": 1018440
+      },
+      "la_nina|outono": {
+        "razao": 0.944,
+        "ic95": [
+          0.916,
+          0.974
+        ],
+        "n": 5691,
+        "dias": 1018440
+      },
+      "el_nino|primavera": {
+        "razao": 0.881,
+        "ic95": [
+          0.857,
+          0.906
+        ],
+        "n": 9084,
+        "dias": 1345005
+      },
+      "la_nina|primavera": {
+        "razao": 1.011,
+        "ic95": [
+          0.986,
+          1.037
+        ],
+        "n": 13002,
+        "dias": 1677105
+      },
+      "el_nino|verao": {
+        "razao": 1.746,
+        "ic95": [
+          1.679,
+          1.816
+        ],
+        "n": 8274,
+        "dias": 1505520
+      },
+      "la_nina|verao": {
+        "razao": 1.315,
+        "ic95": [
+          1.263,
+          1.368
+        ],
+        "n": 7604,
+        "dias": 1837620
+      }
+    },
+    "umidade_baixa": {
+      "el_nino|inverno": {
+        "razao": 0.562,
+        "ic95": [
+          0.54,
+          0.585
+        ],
+        "n": 2738,
+        "dias": 675270
+      },
+      "la_nina|inverno": {
+        "razao": 1.183,
+        "ic95": [
+          1.146,
+          1.222
+        ],
+        "n": 4349,
+        "dias": 509220
+      },
+      "el_nino|outono": {
+        "razao": 0.657,
+        "ic95": [
+          0.637,
+          0.678
+        ],
+        "n": 4964,
+        "dias": 1018440
+      },
+      "la_nina|outono": {
+        "razao": 1.003,
+        "ic95": [
+          0.977,
+          1.03
+        ],
+        "n": 7575,
+        "dias": 1018440
+      },
+      "el_nino|primavera": {
+        "razao": 0.69,
+        "ic95": [
+          0.662,
+          0.719
+        ],
+        "n": 3719,
+        "dias": 1345005
+      },
+      "la_nina|primavera": {
+        "razao": 1.027,
+        "ic95": [
+          0.992,
+          1.064
+        ],
+        "n": 6904,
+        "dias": 1677105
+      },
+      "el_nino|verao": {
+        "razao": 1.25,
+        "ic95": [
+          1.204,
+          1.296
+        ],
+        "n": 7551,
+        "dias": 1505520
+      },
+      "la_nina|verao": {
+        "razao": 1.148,
+        "ic95": [
+          1.108,
+          1.19
+        ],
+        "n": 8469,
+        "dias": 1837620
+      }
+    }
+  },
+  "enso_meses_por_fase_2015_2025": {
+    "el_nino": 44,
+    "la_nina": 30,
+    "neutro": 58
+  },
+  "enso_meses_por_fase_2017_2025": {
+    "el_nino": 27,
+    "la_nina": 30,
+    "neutro": 51
+  },
+  "classes": {
+    "chuva_por_classe": {
+      "extremo_local": 94635,
+      "extremo_acumulado": 75988,
+      "anomalia_estatistica": 68998,
+      "dado_incompleto": 34801,
+      "artefato_provavel": 20988,
+      "extremo_sazonal": 17593,
+      "anomalia_negativa": 2599
+    },
+    "chuva_por_detector_e_classe": {
+      "accumulation_percentile|dado_incompleto": 22424,
+      "accumulation_percentile|extremo_acumulado": 75988,
+      "arima_zscore|anomalia_estatistica": 68998,
+      "arima_zscore|anomalia_negativa": 2599,
+      "arima_zscore|artefato_provavel": 20988,
+      "arima_zscore|dado_incompleto": 12377,
+      "arima_zscore|extremo_local": 94635,
+      "arima_zscore|extremo_sazonal": 17593
+    },
+    "arima_contadas": 181226,
+    "arima_pct_apenas_estatistica": 38.1,
+    "arima_pct_extremo": 61.9,
+    "arima_pct_intensidade_alta": 15.5,
+    "arima_pct_com_noticia": 0.68,
+    "extremos_pct_com_noticia": 1.21,
+    "termica_por_variavel_direcao_classe": {
+      "temperatura|negative|anomalia_estatistica": 43662,
+      "temperatura|negative|extremo_local": 138098,
+      "temperatura|positive|anomalia_estatistica": 7685,
+      "temperatura|positive|extremo_local": 27966,
+      "umidade|negative|anomalia_estatistica": 14088,
+      "umidade|negative|extremo_local": 94077,
+      "umidade|positive|anomalia_estatistica": 30203,
+      "umidade|positive|extremo_local": 88821
+    },
+    "termica_diagnosticos": {
+      "temperatura": {
+        "z_std_mediana": 1.0404,
+        "taxa_pos_mediana_pct": 0.152,
+        "taxa_neg_mediana_pct": 1.004,
+        "ordem_ar_moda": 1
+      },
+      "umidade": {
+        "z_std_mediana": 1.0423,
+        "taxa_pos_mediana_pct": 0.639,
+        "taxa_neg_mediana_pct": 0.487,
+        "ordem_ar_moda": 1
+      }
+    },
+    "exemplos_residuo_poa": [
+      {
+        "data": "2017-12-23",
+        "observado_mm": 46.41,
+        "previsto_mm": 1.06,
+        "residuo_log": 3.1354,
+        "residuo_mm": 45.35,
+        "z": 3.092
+      },
+      {
+        "data": "2018-11-03",
+        "observado_mm": 31.88,
+        "previsto_mm": 0.38,
+        "residuo_log": 3.1705,
+        "residuo_mm": 31.5,
+        "z": 3.092
+      },
+      {
+        "data": "2019-04-16",
+        "observado_mm": 42.32,
+        "previsto_mm": 0.93,
+        "residuo_log": 3.1098,
+        "residuo_mm": 41.39,
+        "z": 3.068
+      },
+      {
+        "data": "2020-07-07",
+        "observado_mm": 70.88,
+        "previsto_mm": 0.43,
+        "residuo_log": 3.9177,
+        "residuo_mm": 70.45,
+        "z": 3.896
+      },
+      {
+        "data": "2020-09-12",
+        "observado_mm": 44.38,
+        "previsto_mm": 1.05,
+        "residuo_log": 3.099,
+        "residuo_mm": 43.34,
+        "z": 3.083
+      },
+      {
+        "data": "2021-06-26",
+        "observado_mm": 39.64,
+        "previsto_mm": 0.63,
+        "residuo_log": 3.2167,
+        "residuo_mm": 39.01,
+        "z": 3.207
+      },
+      {
+        "data": "2021-09-07",
+        "observado_mm": 35.61,
+        "previsto_mm": 0.34,
+        "residuo_log": 3.309,
+        "residuo_mm": 35.27,
+        "z": 3.298
+      },
+      {
+        "data": "2022-04-03",
+        "observado_mm": 39.63,
+        "previsto_mm": 0.99,
+        "residuo_log": 3.0158,
+        "residuo_mm": 38.64,
+        "z": 3.034
+      },
+      {
+        "data": "2022-06-17",
+        "observado_mm": 68.46,
+        "previsto_mm": 0.81,
+        "residuo_log": 3.6451,
+        "residuo_mm": 67.65,
+        "z": 3.665
+      },
+      {
+        "data": "2022-07-14",
+        "observado_mm": 23.87,
+        "previsto_mm": 0.26,
+        "residuo_log": 2.9865,
+        "residuo_mm": 23.62,
+        "z": 3.004
+      },
+      {
+        "data": "2023-07-12",
+        "observado_mm": 71.03,
+        "previsto_mm": 1.18,
+        "residuo_log": 3.4989,
+        "residuo_mm": 69.85,
+        "z": 3.515
+      },
+      {
+        "data": "2023-08-23",
+        "observado_mm": 52.6,
+        "previsto_mm": 0.87,
+        "residuo_log": 3.3546,
+        "residuo_mm": 51.73,
+        "z": 3.37
+      },
+      {
+        "data": "2023-09-04",
+        "observado_mm": 145.84,
+        "previsto_mm": 2.9,
+        "residuo_log": 3.6284,
+        "residuo_mm": 142.94,
+        "z": 3.645
+      },
+      {
+        "data": "2023-11-02",
+        "observado_mm": 41.86,
+        "previsto_mm": 0.93,
+        "residuo_log": 3.0981,
+        "residuo_mm": 40.92,
+        "z": 3.113
+      },
+      {
+        "data": "2024-03-21",
+        "observado_mm": 32.47,
+        "previsto_mm": 0.49,
+        "residuo_log": 3.1146,
+        "residuo_mm": 31.99,
+        "z": 3.08
+      },
+      {
+        "data": "2024-05-23",
+        "observado_mm": 38.66,
+        "previsto_mm": 0.85,
+        "residuo_log": 3.0634,
+        "residuo_mm": 37.8,
+        "z": 3.03
+      },
+      {
+        "data": "2025-11-07",
+        "observado_mm": 45.85,
+        "previsto_mm": 0.69,
+        "residuo_log": 3.324,
+        "residuo_mm": 45.17,
+        "z": 3.251
+      }
+    ]
+  },
+  "metodo": {
+    "municipios": 100,
+    "erros": 1,
+    "taxa_alerta_pct": {
+      "2.5": {
+        "mediana": 2.084,
+        "p10": 1.231,
+        "p90": 3.396,
+        "gaussiana": 0.621
+      },
+      "3.0": {
+        "mediana": 0.782,
+        "p10": 0.257,
+        "p90": 1.941,
+        "gaussiana": 0.135
+      },
+      "3.5": {
+        "mediana": 0.228,
+        "p10": 0.029,
+        "p90": 1.016,
+        "gaussiana": 0.023
+      },
+      "4.0": {
+        "mediana": 0.065,
+        "p10": 0.0,
+        "p90": 0.56,
+        "gaussiana": 0.003
+      }
+    },
+    "z_std_mediana": 1.008,
+    "z_assimetria_mediana": 0.8644,
+    "pct_modelos_com_fourier": 16.0,
+    "pct_brown_forsythe_p_menor_005": 98.0,
+    "razao_dp_max_min_estacoes_mediana": 1.92,
+    "alertas_sigma_global": {
+      "contagem": {
+        "verao": 787,
+        "outono": 714,
+        "inverno": 253,
+        "primavera": 781
+      },
+      "participacao_norm_pct": {
+        "verao": 31.4,
+        "outono": 27.9,
+        "inverno": 9.9,
+        "primavera": 30.9
+      }
+    },
+    "alertas_sigma_seasonal": {
+      "contagem": {
+        "verao": 320,
+        "outono": 573,
+        "inverno": 1273,
+        "primavera": 666
+      },
+      "participacao_norm_pct": {
+        "verao": 11.5,
+        "outono": 20.1,
+        "inverno": 44.7,
+        "primavera": 23.7
+      }
+    },
+    "pct_muda_estacao_dominante": 87.6,
+    "municipios_com_8_alertas": 89,
+    "extremos_p95_participacao_norm_pct": {
+      "verao": 44.1,
+      "outono": 26.9,
+      "inverno": 8.8,
+      "primavera": 20.3
+    },
+    "jaccard_p95_mediana": 0.162,
+    "pct_alertas_que_sao_p95": 54.1,
+    "pct_p95_detectados_pelo_arima": 21.5,
+    "extremos_p99_participacao_norm_pct": {
+      "verao": 44.8,
+      "outono": 28.3,
+      "inverno": 7.8,
+      "primavera": 19.1
+    },
+    "jaccard_p99_mediana": 0.146,
+    "pct_alertas_que_sao_p99": 21.8,
+    "pct_p99_detectados_pelo_arima": 38.3,
+    "simulacao_nula": {
+      "series": 20,
+      "taxa_alerta_pct": {
+        "2.5": {
+          "mediana": 1.963,
+          "min": 0.609,
+          "max": 3.591
+        },
+        "3.0": {
+          "mediana": 0.396,
+          "min": 0.0,
+          "max": 1.278
+        },
+        "3.5": {
+          "mediana": 0.0,
+          "min": 0.0,
+          "max": 0.213
+        },
+        "4.0": {
+          "mediana": 0.0,
+          "min": 0.0,
+          "max": 0.03
+        }
+      },
+      "por_forma_gama": {
+        "0.5": 0.852,
+        "0.7": 0.365,
+        "1.0": 0.107
+      }
+    }
+  },
+  "figuras": [
+    "mapa_estacao_predominante.png",
+    "mapa_outono_inverno_precipitacao.png",
+    "mapa_outono_inverno_temperatura_alta.png",
+    "mapa_outono_inverno_temperatura_baixa.png",
+    "mapa_outono_inverno_umidade_alta.png",
+    "mapa_outono_inverno_umidade_baixa.png",
+    "mapa_taxa_chuva.png",
+    "barras_regioes_precipitacao.png",
+    "barras_regioes_temperatura_alta.png",
+    "barras_regioes_temperatura_baixa.png",
+    "barras_regioes_umidade_alta.png",
+    "barras_regioes_umidade_baixa.png",
+    "enso_razao_precipitacao.png",
+    "metodo_sigma_sazonal.png"
+  ]
+}

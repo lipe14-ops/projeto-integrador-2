@@ -77,19 +77,25 @@ def _json_ld_items(doc) -> list[dict]:
 ARTICLE_TYPES = {"NewsArticle", "Article", "ReportageNewsArticle", "BlogPosting", "AnalysisNewsArticle", "LiveBlogPosting"}
 
 
+XML_DECLARATION = re.compile(r"^\s*<\?xml[^>]*\?>")
+
+
 def extract_metadata(content: str, url: str) -> PageMetadata:
-    doc = lxml_html.fromstring(content)
+    # lxml recusa str com declaração de encoding (páginas XHTML: <?xml ... encoding="UTF-8"?>)
+    doc = lxml_html.fromstring(XML_DECLARATION.sub("", content, count=1))
     meta = PageMetadata(url=url)
 
-    for tag in doc.xpath("//script|//style|//noscript"):
-        tag.drop_tree()
-
+    # JSON-LD vive em <script>: precisa ser lido ANTES de remover os scripts
+    # (antes, a remoção vinha primeiro e o JSON-LD nunca era usado)
     articles = []
     for item in _json_ld_items(doc):
         types = item.get("@type")
         types = set(types) if isinstance(types, list) else {types}
         if types & ARTICLE_TYPES:
             articles.append(item)
+
+    for tag in doc.xpath("//script|//style|//noscript"):
+        tag.drop_tree()
 
     meta.title = _meta(doc, "property", "og:title") or _meta(doc, "name", "twitter:title")
     if not meta.title and articles:

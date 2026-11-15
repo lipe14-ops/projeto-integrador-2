@@ -14,6 +14,16 @@ município do país.
 
 ## Funcionalidades
 
+- **Página inicial.** Apresenta a plataforma com a identidade do pôster
+  científico (`docs/poster`): abrangência real da base, mapa das UFs,
+  capacidades analíticas desenhadas com os dados e a metodologia.
+- **Estatísticas gerais.** Panorama nacional calculado no servidor
+  (`/api/estatisticas`): indicadores ponderados pela área municipal com
+  comparação a 2015–2025, evolução mensal/anual/ciclo sazonal com El Niño e La
+  Niña, estações do Hemisfério Sul, anomalias estatísticas × extremos (por ano,
+  estação, região e município), mapa coroplético municipal, regiões e
+  anomalias por fase ENSO. Filtros globais de período, região, estação e fase.
+  Fica na mesma aba que o mapa de anomalias, em duas sub-abas.
 - **Mapa interativo dos 5.570 municípios.** Clique em um estado para ver os
   municípios dele e em um município para abrir os dados. A busca por estado e
   município faz o mesmo pelos filtros.
@@ -33,6 +43,13 @@ município do país.
   chuva muito acima do esperado, detectados estatisticamente e marcados (▼) no
   gráfico de precipitação. Cada evento lista as notícias da época, conferidas na
   página original. Eventos sem notícia verificada não aparecem.
+- **Mapa de anomalias (aba Estatísticas; análise espacial e sazonal).** Mapa coroplético dos 5.570
+  municípios com frequência de eventos (por 1.000 dias válidos), intensidade,
+  participação de cada estação, estação predominante (teste qui-quadrado com
+  FDR) e razão El Niño/La Niña × neutro, para chuva, temperatura e umidade.
+  Filtros por classe do evento (anomalia estatística, extremo para o local,
+  com notícia), período, estação e fase ENSO. Clique em um município para
+  compará-lo com o estado, a região e o Brasil.
 - **Aviso de notícias.** Ao selecionar um município com notícias, um aviso
   leva direto para a lista de eventos e matérias.
 
@@ -122,6 +139,11 @@ análise exploratória estão em **[docs/execucao-backend.md](docs/execucao-back
 Para a detecção de anomalias e a investigação de notícias, veja
 [docs/anomalias_noticias/README.md](docs/anomalias_noticias/README.md).
 
+A resposta às observações da avaliação (fundamentação do ARIMA + Z-score,
+anomalia × extremo, validação das notícias, resíduo de chuva e distribuição
+sazonal nacional) está em
+**[docs/avaliacao_professor/RELATORIO_FINAL.md](docs/avaliacao_professor/RELATORIO_FINAL.md)**.
+
 Testes do backend:
 
 ```sh
@@ -133,6 +155,7 @@ uv run pytest
 ```
 app/                 API FastAPI (municípios, clima, anomalias e notícias)
   climate_news/      detecção de anomalias, agentes de investigação e rotas /api/climate
+  estatisticas/      panorama nacional (rotas /api/estatisticas, sobre clima_mensal)
 alembic/             migrações do banco
 scripts/             download e carga de municípios, ERA5-Land e ONI
 src/codigo/          CLI e pipeline (`uv run codigo ...`)

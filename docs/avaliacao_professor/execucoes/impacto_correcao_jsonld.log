@@ -1,0 +1,46 @@
+gerado em 2026-11-15T00:03:25.919392+00:00
+URLs distintas pendentes por data ausente: 2358; amostra (semente 20261114): 40
+resultado: {'erro_RemoteProtocolError': 2, 'sem_data_nas_duas': 30, 'data_so_com_correcao': 8}
+data_so_com_correcao = data encontrada apenas com a correcao do JSON-LD (extract.py)
+data_por_outro_metodo = a pagina hoje traz data em meta/time (mudou desde a coleta ou outro User-Agent)
+
+erro_RemoteProtocolError | None | http://araguaina.to.gov.br/noticias/2022/360-fam-ilias-do-pa-brej-ao-s-ao-beneficiadas-com-nova-ponte-bueiros-e-estradas-recuperadas
+erro_RemoteProtocolError | None | http://www.araguaina.to.gov.br/noticias/2017/via-lago-democratiza-acesso-ao-lago-azul-em-aragua-ina
+sem_data_nas_duas | None | http://www.araguaina.to.gov.br/noticias/2022/demupe-intensifica-fiscalizac-ao-de-acessibilidade-nas-calcadas-de-aragua-ina
+sem_data_nas_duas | None | https://costabrancanews.com/bueiros-e-bocas-de-lobo-entupidos-com-lixo-contribuem-para-alagamentos-das-ruas-de-mossoro/
+sem_data_nas_duas | None | https://g1.globo.com/ce/ceara/cetv-1-edicao-juazeiro-do-norte/video/departamento-municipal-de-transito-fiscaliza-rua-do-horto-para-evitar-novos-acidentes-10107032.ghtml
+sem_data_nas_duas | None | https://g1.globo.com/go/goias/videos-ja-1-edicao/video/moradores-relatam-deslizamento-de-terra-no-morro-do-mendanha-em-goiania-10226067.ghtml
+sem_data_nas_duas | None | https://g1.globo.com/mg/minas-gerais/mg1/video/onibus-cai-de-viaduto-e-deixa-19-feridos-em-contagem-7195899.ghtml
+sem_data_nas_duas | None | https://g1.globo.com/mt/mato-grosso/videos-bom-dia-regiao/video/moradores-de-rondonopolis-reclamam-de-problemas-na-iluminacao-publica-9949151.ghtml
+sem_data_nas_duas | None | https://g1.globo.com/pr/parana/videos-boa-noite-parana/video/calor-continua-amanha-24-com-pancadas-de-chuva-em-boa-parte-do-estado-12382810.ghtml
+sem_data_nas_duas | None | https://g1.globo.com/previsao-do-tempo/mt/sao-jose-do-povo.ghtml
+sem_data_nas_duas | None | https://g1.globo.com/sp/sao-jose-do-rio-preto-aracatuba/videos-tem-noticias-2-edicao/video/produtores-de-mel-discutem-projeto-de-lei-que-proibe-pulverizacao-de-defensivos-agricolas-5887214.ghtml
+sem_data_nas_duas | None | https://g1.globo.com/sp/sao-paulo/video/teto-de-supermercado-desaba-em-barueri-na-grande-sp-durante-temporal-13221227.ghtml
+sem_data_nas_duas | None | https://gremio.net/noticias/detalhes/27461/gremio-supera-o-caxias-e-vai-para-setima-final-consecutiva-no-campeonato-gaucho
+data_so_com_correcao | json-ld:datePublished | https://maceio.al.gov.br/noticias/seminfra/obra-de-drenagem-vai-reduzir-alagamentos-no-tabuleiro-do-martins
+sem_data_nas_duas | None | https://noticias.sorocaba.sp.gov.br/prefeitura-disponibiliza-de-forma-on-line-fotos-de-caes-e-gatos-do-abrigo-municipal-para-incentivar-adocao/
+sem_data_nas_duas | None | https://portal.inmet.gov.br/noticias/balan%C3%A7o-das-condi%C3%A7%C3%B5es-de-tempo-no-m%C3%AAs-de-abril-de-2022-em-s%C3%A3o-paulo-sp
+sem_data_nas_duas | None | https://portal.inmet.gov.br/noticias/balan%C3%A7o-s%C3%A3o-paulo-sp-teve-chuva-acima-da-m%C3%A9dia-e-temperatura-abaixo-na-primavera-de-2022
+sem_data_nas_duas | None | https://terradomandu.com.br/index.php/guarda-municipal-de-pouso-alegre-e-extinta/
+sem_data_nas_duas | None | https://www.7segundos.com.br/arapiraca/noticias/2019/06/13/123246-prefeitura-de-arapiraca-nao-repassa-dinheiro-e-quadrilha-faz-apelo-para-poder-se-apresentar
+sem_data_nas_duas | None | https://www.7segundos.com.br/arapiraca/noticias/2022/05/25/205352-video-rio-boacica-transborda-e-bloqueia-estrada-de-acesso-a-igreja-nova
+sem_data_nas_duas | None | https://www.7segundos.com.br/arapiraca/noticias/2022/06/09/206429-video-sem-previsao-de-reconstrucao-de-ponte-moradores-usam-estrutura-de-adutora-para-chegar-ao-t
+sem_data_nas_duas | None | https://www.alagoinhas.ba.gov.br/index.php/copa-rural-antonio-pena-comeca-com-vitoria-do-time-da-calu/
+sem_data_nas_duas | None | https://www.climaaovivo.com.br/alertas/alerta-vermelho-para-acumulado-de-chuva-com-grande-risco-de-alagamentos-e-deslizamentos-na-regiao-sul-do-pais-06-12-24
+data_so_com_correcao | json-ld:datePublished | https://www.climaaovivo.com.br/noticias/temporais-chuva-forte-e-dias-ensolarados-para-o-mes-de-fevereiro-30-01-24
+sem_data_nas_duas | None | https://www.climaaovivo.com.br/videos/belissimo-amanhecer-em-sao-jose-sc-20-01-24
+sem_data_nas_duas | None | https://www.climaaovivo.com.br/videos/evolucao-de-chuva-em-mossoro-rn-23-03-22
+sem_data_nas_duas | None | https://www.corinthians.com.br/idolo-alvinegro-gil-completa-34-anos-neste-sabado-12
+data_so_com_correcao | json-ld:datePublished | https://www.correio24horas.com.br/bahia/uma-das-vitimas-de-chacina-em-cruz-das-almas-estava-gravida-0422
+data_so_com_correcao | json-ld:datePublished | https://www.correio24horas.com.br/minha-bahia/chuva-em-ilheus-provoca-alagamentos-queda-de-arvores-na-ba-264-e-falta-de-energia-1223
+data_so_com_correcao | json-ld:datePublished | https://www.correio24horas.com.br/minha-bahia/idoso-morre-apos-deslizamento-terra-em-distrito-turistico-da-bahia-1025
+sem_data_nas_duas | None | https://www.londrinaesporteclube.com.br/futebol/brasileiro-serie-b/jogo/05-10-2019/cuiaba-londrina/1040
+sem_data_nas_duas | None | https://www.meteored.com.br/fazenda-sao-vicente.htm
+data_so_com_correcao | json-ld:datePublished | https://www.otempo.com.br/cidades/bh-e-outras-546-cidades-de-mg-estao-em-alerta-de-perigo-para-chuvas-violentas-1.3352526
+data_so_com_correcao | json-ld:datePublished | https://www.otempo.com.br/cidades/inmet-emite-alerta-de-tempestade-em-bh-e-outras-584-cidades-mineiras-veja-lista-1.2560296
+sem_data_nas_duas | None | https://www.pelotas.com.br/noticia/progride-a-requalificacao-de-vias-do-recanto-de-portugal
+sem_data_nas_duas | None | https://www.pelotas.rs.gov.br/noticia/municipio-abre-dois-novos-abrigos
+sem_data_nas_duas | None | https://www.portaladesso.com.br/noticias/18906/defesa-civil-divulga-novo-boletim-e-ventos-podem-ultrapassar-100-km-h-na-serra.html
+sem_data_nas_duas | None | https://www.portovelho.ro.gov.br/artigo/42984/circuito-energia-passeio-turistico-na-usina-hidreletrica-retoma-as-atividades-no-sabado-13
+sem_data_nas_duas | None | https://www.santaluzia.mg.gov.br/noticiasv3/defesa-civil-de-santa-luzia-recebe-kit-para-reforco-nos-trabalhos-prestados-no-periodo-chuvoso/
+data_so_com_correcao | json-ld:datePublished | https://www.sonoticiaboa.com.br/2024/05/14/criancas-brasil-enviam-cartinhas-doacoes-vitimas-enchentes-rs

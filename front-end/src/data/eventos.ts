@@ -125,7 +125,7 @@ const mm = (v: number) => `${Math.round(v).toLocaleString('pt-BR')} mm`
 /** Frase em linguagem simples para uma anomalia. */
 export function descreverAnomalia(a: AnomaliaChuva): string {
   if (a.detector === 'accumulation_percentile') return `${mm(a.observadoMm)} acumulados em ${a.dias} dias`
-  const esperado = a.previstoMm !== null && a.previstoMm >= 0.5 ? ` (esperado: cerca de ${mm(a.previstoMm)})` : ''
+  const esperado = a.previstoMm !== null && a.previstoMm >= 0.5 ? ` (previsão típica do modelo: ${mm(a.previstoMm)})` : ''
   return `${mm(a.observadoMm)} em um dia${esperado}`
 }
 

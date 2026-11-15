@@ -42,7 +42,17 @@ function converterMunicipio(item: MunicipioApi): Municipio {
   }
 }
 
-export async function carregarMunicipios(): Promise<Municipio[]> {
+// a lista é usada pelo Explorar e pelo mapa nacional: uma única carga por sessão
+let promessaMunicipios: Promise<Municipio[]> | null = null
+export function carregarMunicipios(): Promise<Municipio[]> {
+  promessaMunicipios ??= buscarMunicipios().catch((e: unknown) => {
+    promessaMunicipios = null
+    throw e
+  })
+  return promessaMunicipios
+}
+
+async function buscarMunicipios(): Promise<Municipio[]> {
   // ~5.570 municípios: as 6 páginas são pedidas em paralelo (antes, em sequência:
   // ~3 s no primeiro acesso); se a última vier cheia, segue paginando.
   const pageSize = 1000

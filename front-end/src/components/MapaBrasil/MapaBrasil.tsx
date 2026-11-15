@@ -64,7 +64,7 @@ function AjustarVisao({ geojson }: { geojson: Geo | null }) {
 // cujo contorno aparece como linhas retas no mapa (agravado pelo `zoom: 0.9` do
 // .app-shell, que faz o Leaflet medir o contêiner ~11% maior). Com padding 1, o
 // SVG cobre uma tela inteira em cada direção.
-const renderizador = criarRenderizadorMapa();
+
 
 // ---------- Estilos ----------
 const estiloEstado: PathOptions = {
@@ -81,6 +81,8 @@ const estiloMunicipioSelecionado: PathOptions = {
 };
 
 export default function MapaBrasil({ onSelectMunicipio, pontosNoticias, statusNoticias = "ok" }: MapaBrasilProps) {
+  // um renderizador por mapa (o do Leaflet pertence a um único mapa)
+  const [renderizador] = useState(criarRenderizadorMapa);
   const [estadosGeo, setEstadosGeo] = useState<Geo | null>(null);
   const [estados, setEstados] = useState<Record<string, EstadoInfo>>({});
   const [uf, setUf] = useState<string | null>(null);

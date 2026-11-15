@@ -1,0 +1,57 @@
+gerado em 2026-11-14T23:59:31.242953+00:00
+URLs verificadas no banco: 3506; amostra (semente 20261114): 50
+respondem com 2xx: 50 (100.0%)
+distribuicao: {'200': 50}
+redirecionadas (URL final diferente): 0
+(2xx indica que a URL responde; nao reconfirma o conteudo da materia)
+
+200 | - | https://1500noticias.com/chuva-deixou-moradores-ilhados-do-dinah-borges/
+200 | - | https://agenciabrasil.ebc.com.br/geral/noticia/2020-09/chuva-causa-transtornos-e-deixa-o-rio-em-estado-de-atencao
+200 | - | https://agenciabrasil.ebc.com.br/geral/noticia/2021-12/forca-tarefa-atua-nas-cidades-baianas-afetadas-pelas-chuvas
+200 | - | https://cbnparaiba.com.br/entrevista-apos-deslizamento-em-ponte-de-campina-grande-estado-explica-incidente-e-quais-medidas-devem-ser-tomadas/
+200 | - | https://diariodotransporte.com.br/2023/01/04/mais-de-60-linhas-de-onibus-da-emtu-na-regiao-metropolitana-de-sao-paulo-sofrem-com-atrasos-por-conta-das-fortes-chuvas-desta-quinta-05/
+200 | - | https://folhapatoense.com/2020/02/21/indices-oficiais-das-chuvas-das-ultimas-24-horas-em-patos-e-regiao-2/
+200 | - | https://g1.globo.com/al/alagoas/arquivo/noticia/2021/06/15/chuva-provoca-alagamentos-em-ruas-de-maceio.ghtml
+200 | - | https://g1.globo.com/ba/bahia/noticia/2021/12/01/itambe-decreta-situacao-de-emergencia-apos-fortes-chuvas-seis-familias-estao-desabrigadas.ghtml
+200 | - | https://g1.globo.com/ba/bahia/noticia/2023/12/18/cidade-do-oeste-da-bahia-registra-chuva-de-granizo-apos-onda-de-calor.ghtml
+200 | - | https://g1.globo.com/ce/ceara/noticia/2024/03/13/ceara-recebe-alerta-de-chuvas-intensas-em-todas-as-cidades.ghtml
+200 | - | https://g1.globo.com/df/distrito-federal/noticia/2018/10/19/fim-de-semana-no-df-sera-de-chuva-e-frio-diz-inmet-veja-previsao.ghtml
+200 | - | https://g1.globo.com/mg/minas-gerais/noticia/cidades-mineiras-sofrem-com-inundacoes-e-deslizamentos-de-terra-apos-fortes-chuvas.ghtml
+200 | - | https://g1.globo.com/mg/sul-de-minas/noticia/2024/12/05/defesa-civil-visita-e-distribui-kits-com-produtos-de-limpeza-para-moradores-atingidos-pela-chuva-em-pouso-alegre-mg.ghtml
+200 | - | https://g1.globo.com/mg/vales-mg/noticia/2025/12/03/inmet-emite-alerta-vermelho-de-grande-perigo-para-125-cidades-do-leste-de-mg.ghtml
+200 | - | https://g1.globo.com/pa/santarem-regiao/noticia/2017/01/lamentamos-esses-erros-no-projeto-diz-nelio-sobre-o-residencial-salvacao.html
+200 | - | https://g1.globo.com/pe/petrolina-regiao/noticia/2022/11/04/fotos-chuva-intensa-deixa-varios-bairros-de-petrolina-alagados.ghtml
+200 | - | https://g1.globo.com/pr/parana/noticia/2021/10/24/temporal-deixa-938-casas-danificadas-no-parana-e-causa-desligamento-de-cinco-unidades-geradoras-de-itaipu.ghtml
+200 | - | https://g1.globo.com/pr/parana/noticia/2024/12/10/pessoas-afetadas-temporais-parana.ghtml
+200 | - | https://g1.globo.com/rj/sul-do-rio-costa-verde/noticia/2022/02/05/chuva-forte-causa-alagamentos-e-deslizamentos-de-terra-em-cidades-do-sul-do-rio.ghtml
+200 | - | https://g1.globo.com/ro/rondonia/noticia/2021/02/10/veja-a-previsao-do-tempo-para-quinta-feira-11-em-rondonia.ghtml
+200 | - | https://g1.globo.com/sc/santa-catarina/noticia/2022/08/10/video-aereo-mostra-ruas-tomadas-pela-agua-em-joinville-durante-passagem-de-ciclone.ghtml
+200 | - | https://g1.globo.com/sc/santa-catarina/verao/2019/noticia/2019/02/17/chuva-causa-transtornos-e-alagamentos-em-sc-familias-sao-retiradas-de-casas-em-barcos.ghtml
+200 | - | https://g1.globo.com/sp/mogi-das-cruzes-suzano/noticia/2023/02/22/com-ruas-alagadas-ha-mais-de-15-dias-moradores-da-vila-maria-augusta-em-itaquaquecetuba-fazem-protesto.ghtml
+200 | - | https://g1.globo.com/sp/ribeirao-preto-franca/noticia/2023/01/10/ribeirao-preto-registra-maior-volume-de-chuvas-de-sp-na-madrugada-e-volta-a-ter-pontos-de-alagamento.ghtml
+200 | - | https://g1.globo.com/sp/sao-paulo/noticia/2020/02/12/cratera-se-abre-apos-temporal-em-cotia-e-interdita-via.ghtml
+200 | - | https://g1.globo.com/sp/sorocaba-jundiai/noticia/2023/01/05/equipes-trabalham-no-rescaldo-de-estragos-causados-por-temporal-na-regiao-de-sorocaba.ghtml
+200 | - | https://g1.globo.com/sp/sorocaba-jundiai/noticia/2024/11/08/tunel-que-liga-avenidas-em-jundiai-e-interditado-apos-ficar-alagado-durante-chuva.ghtml
+200 | - | https://gauchazh.clicrbs.com.br/geral/noticia/2024/03/vento-chegou-a-137-km-h-durante-a-madrugada-no-sul-do-rs-clu1ban6e001n01b65ulebjq4.html
+200 | - | https://ndmais.com.br/tempo/ciclone-extratropical-videos-impressionantes-mostram-estragos-no-vale-do-itajai/
+200 | - | https://ndmais.com.br/tempo/fotos-temporal-da-madrugada-causa-mortes-no-alto-vale-do-itajai/
+200 | - | https://oeco.org.br/noticias/justica-decide-que-hydro-alunorte-pague-r-150-milhoes-por-danos-ambientais/
+200 | - | https://piauihoje.com/noticias/cidade/nivel-do-rio-parnaiba-sai-da-cota-de-atencao-em-teresina-414564.html
+200 | - | https://portalcaparao.com.br/2024/12/chuvas-cameras-mostram-rios-em-manhuacu-e-13-cidades-da-regiao-veja-como-acessar/
+200 | - | https://portalodia.com/noticias/geral/chuva-intensa-deixa-pessoas-desabrigadas-em-parnaiba-defesa-civil-faz-alerta-429174.html
+200 | - | https://tribunadonorte.com.br/natal/chuvas-provocam-alagamentos-em-natal-fotos/
+200 | - | https://tvnova.tv.br/jornalfatonovo/alerta-para-risco-de-inundacao-do-rio-ipojuca-e-emitido-pela-apac/
+200 | - | https://www.acidadeon.com/campinas/cotidiano/video-fortes-chuvas-causam-alagamentos-em-diversos-pontos-de-campinas-veja-locais/
+200 | - | https://www.acidadeon.com/ribeiraopreto/cotidiano/chuva-transforma-avenida-em-rio-na-regiao-de-ribeirao-preto-veja-o-video/
+200 | - | https://www.agazeta.com.br/clima/chuva-no-es-cidades-estao-em-alerta-de-deslizamento-e-de-inundacao-1021
+200 | - | https://www.cnnbrasil.com.br/nacional/chuvas-minas-gerais-9-janeiro/
+200 | - | https://www.diariodoaco.com.br/noticia/0057611-chuva-danifica-teto-do-hospital-municipal-em-ipatinga
+200 | - | https://www.em.com.br/app/noticia/gerais/2019/12/03/interna_gerais,1105674/chove-forte-em-patos-de-minas-e-ruas-sao-alagadas-veja-videos.shtml
+200 | - | https://www.gazetaweb.com/noticias/geral/centro-lgbtqia-de-maceio-declara-situacao-de-emergencia-devido-as-chuvas
+200 | - | https://www.h2foz.com.br/pense-nisso/foz-do-iguacu-e-o-risco-de-grandes-enchentes/
+200 | - | https://www.metropoles.com/distrito-federal/novembro-comeca-com-chuva-ou-sol-veja-previsao
+200 | - | https://www.miseria.com.br/ultimas-noticias/cariri/11-cidades-da-regiao-do-cariri-estao-sob-alerta-de-inmet-por-chuvas-intensas/
+200 | - | https://www.nsctotal.com.br/cotidiano/enxurrada-causa-destruicao-e-mortes-em-presidente-getulio
+200 | - | https://www.nsctotal.com.br/cotidiano/temporal-que-atinge-rio-grande-do-sul-chega-a-santa-catarina-e-gera-alerta-da-defesa-civil
+200 | - | https://www.opovo.com.br/noticias/ceara/quixada/2024/03/31/moradores-de-quixada-usam-barco-apos-forte-chuva-causar-alagamento.html
+200 | - | https://www.pmvc.ba.gov.br/instituto-nacional-de-meteorologia-preve-chuvas-e-ventos-intensos-para-vitoria-da-conquista-nesta-quinta-feira-4/

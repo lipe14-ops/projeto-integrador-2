@@ -1,0 +1,174 @@
+.estatisticas .ed-kpis {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+/* mesmas cores de destaque dos indicadores do Explorar (.kpi--temp/rain/hum) */
+#indicadores .ed-kpis > .ed-kpi:nth-child(1) { --accent: var(--rust); }
+#indicadores .ed-kpis > .ed-kpi:nth-child(2) { --accent: var(--blue); }
+#indicadores .ed-kpis > .ed-kpi:nth-child(3) { --accent: var(--green); }
+
+.est-criterio {
+  margin-top: 4px;
+}
+
+.est-criterio summary {
+  color: var(--teal);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.est-indicadores-extra {
+  margin-top: var(--ed-s6);
+}
+
+.est-extremos {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.est-extremos li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--ed-line);
+  font-size: 14px;
+}
+
+.est-extremos li > span {
+  color: var(--ed-ink-2);
+}
+
+.est-extremos b {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.est-extremos small {
+  display: block;
+  color: var(--ed-muted);
+  font-size: 12.5px;
+}
+
+.est-definicoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--ed-s4);
+  margin-bottom: var(--ed-s5);
+}
+
+.est-definicoes > div {
+  padding: var(--ed-s4) var(--ed-s5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.est-definicoes p {
+  color: var(--ed-ink-2);
+  font-size: 15px;
+}
+
+.est-definicoes__rotulo {
+  margin-bottom: 4px;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+.est-anom-totais .ed-kpi:nth-child(2) { --accent: #2a6fd6; }
+.est-anom-totais .ed-kpi:nth-child(3) { --accent: #c0562b; }
+
+.est-anom-grade,
+.est-enso-grade {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.est-delta {
+  color: var(--ed-muted);
+  font-size: 12px;
+}
+
+.est-mapa .mapa-wrapper {
+  position: relative;
+  height: clamp(420px, 62vh, 640px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.est-mapa .coropletico__mapa {
+  width: 100%;
+  height: 100%;
+  background: var(--map-water);
+}
+
+.est-mapa-lateral {
+  display: grid;
+  gap: var(--ed-s3);
+  padding-top: 4px;
+}
+
+.est-legenda-mapa {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 6px;
+  font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.est-legenda-mapa i {
+  display: inline-block;
+  width: 22px;
+  height: 14px;
+  margin-right: 8px;
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 2px;
+  vertical-align: -2px;
+}
+
+.est-mapa-resumo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+  padding: var(--ed-s3) 0;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+}
+
+.est-mapa-resumo dt {
+  color: var(--ed-muted);
+  font-size: 12px;
+}
+
+.est-mapa-resumo dd {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.est-mapa-sel {
+  min-height: 64px;
+  font-size: 14px;
+}
+
+@media (max-width: 1080px) {
+  .est-anom-grade,
+  .est-enso-grade {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .est-definicoes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

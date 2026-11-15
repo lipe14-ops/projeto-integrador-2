@@ -20,6 +20,10 @@ from app.repositories import (
 from app.schemas.clima import ClimaMunicipioResponse
 from app.schemas.municipio import MunicipioSemGeometriaResponse
 from app.climate_news.router import router as climate_news_router
+from app.climate_news.analysis.router import router as analysis_router
+from app.estatisticas.router import aquecer as aquecer_estatisticas
+from app.estatisticas.router import router as estatisticas_router
+from fastapi.middleware.gzip import GZipMiddleware
 
 app = FastAPI(
     title="API de Municípios",
@@ -38,6 +42,13 @@ app.add_middleware(
 # remove o prefixo /api ao encaminhar as chamadas do front-end.
 app.include_router(climate_news_router, prefix="/api/climate")
 app.include_router(climate_news_router, prefix="/climate", include_in_schema=False)
+app.include_router(analysis_router, prefix="/api/analysis")
+app.include_router(analysis_router, prefix="/analysis", include_in_schema=False)
+app.include_router(estatisticas_router, prefix="/api/estatisticas")
+app.include_router(estatisticas_router, prefix="/estatisticas", include_in_schema=False)
+app.router.on_startup.append(aquecer_estatisticas)
+# a malha nacional e o coroplético somam alguns MB de JSON: comprime a resposta
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 
 @app.get("/health")
