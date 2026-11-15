@@ -1,0 +1,112 @@
+gerado em 2026-11-15T00:00:10.009171+00:00
+
+
+== execucoes de investigacao (pipeline_run)
+completed: 226
+failed: 1
+processing: 1
+
+== investigacoes (news_investigation)
+tarefas: 9522; anomalias distintas investigadas: 9522
+municipios investigados: 227
+candidatas encontradas (soma n_found): 32505
+tarefas sem nenhuma candidata: 1711 (18.0%)
+contadores das tarefas: verified=5189 rejected=19377 pending=6671
+status completed: 9520
+status failed: 2
+detector accumulation_percentile: 4135 anomalias investigadas, 1523 com >=1 noticia verificada (36.8%)
+detector arima_zscore: 5387 anomalias investigadas, 1302 com >=1 noticia verificada (24.2%)
+
+== noticias (news_article, status global por URL)
+pending_verification: 3009
+rejected: 10802
+verified: 3506
+verificadas com confiabilidade high: 2055
+verificadas com confiabilidade low: 71
+verificadas com confiabilidade medium: 1380
+noticias ligadas a mais de uma anomalia: 5341
+tentativas de verificacao registradas: 32800
+
+== vinculos anomalia x noticia (anomaly_news)
+total: 31237
+link_status           relevance_status
+pending_verification  undetermined         6671
+rejected              not_relevant        19377
+verified              regional              263
+                      relevant             4926
+
+== vinculos por regiao e decisao
+link_status   pending_verification  rejected  verified    All
+regiao                                                       
+Centro-Oeste                   267      1190       160   1617
+Nordeste                      3070      7695      1826  12591
+Norte                          713      2143       270   3126
+Sudeste                       1989      6770      2138  10897
+Sul                            632      1579       795   3006
+All                           6671     19377      5189  31237
+
+== motivo da rejeicao (primeiro criterio que falhou)
+-- rejected (n=19377)
+  thematic_relation: 11987 (61.9%)
+  temporal_relation: publicação fora da janela: 3067 (15.8%)
+  geographic_relation: 2360 (12.2%)
+  temporal_relation: evento datado fora da faixa: 1170 (6.0%)
+  headline_matches: 295 (1.5%)
+  url_is_article: pagina_inicial_listagem_ou_busca: 161 (0.8%)
+  temporal_relation: pista de retrospectiva: 132 (0.7%)
+  url_is_article: url_de_agregador_ou_buscador: 84 (0.4%)
+  temporal_relation: manchete cita outro ano: 67 (0.3%)
+  url_is_article: caminho_curto_demais_para_materia: 32 (0.2%)
+  page_exists: 404/410: 18 (0.1%)
+  page_exists: redireciona para não-matéria: 4 (0.0%)
+-- pending_verification (n=6671)
+  publication_date_confirmed: 5517 (82.7%)
+  page_exists: inacessível (403): 570 (8.5%)
+  page_exists: sem título: 256 (3.8%)
+  page_exists: HTML não interpretável (vazio): 139 (2.1%)
+  page_exists: inacessível (erro de rede/timeout): 63 (0.9%)
+  page_exists: inacessível (500): 47 (0.7%)
+  page_exists: inacessível (520): 44 (0.7%)
+  page_exists: inacessível (307): 19 (0.3%)
+  page_exists: inacessível (400): 5 (0.1%)
+  page_exists: HTML não interpretável (outro erro): 4 (0.1%)
+  page_exists: inacessível (522): 3 (0.0%)
+  page_exists: inacessível (523): 1 (0.0%)
+  page_exists: inacessível (513): 1 (0.0%)
+  page_exists: inacessível (502): 1 (0.0%)
+  page_exists: inacessível (503): 1 (0.0%)
+
+== nivel da fonte (source_tier)
+link_status        pending_verification  rejected  verified    All
+decision                                                          
+nao_avaliado                       1154       594         0   1748
+news_agency                           0       184       134    318
+official                            980      1346       210   2536
+recognized_media                   1676      9193      2885  13754
+regional_or_other                  2861      8060      1960  12881
+All                                6671     19377      5189  31237
+confiabilidade nos vinculos verificados: [["high", 3100], ["medium", 1978], ["low", 111]]
+metodo da data de publicacao (vinculos com data lida): [["meta[property=article:published_time]", 10807], ["meta[itemprop=datePublished]", 10027], ["html:visible-date-element", 1579], ["html:time[datetime]", 1158], ["meta[name=article:published_time]", 307], ["meta[name=parsely-pub-date]", 66], ["meta[name=date]", 21], ["meta[name=pubdate]", 4], ["meta[name=datePublished]", 3]]
+vinculos em que a data do buscador diverge da pagina (> 2 dias): 521
+
+== duplicatas detectadas (vinculos verificados)
+nenhuma: 5180
+republication: 9
+
+== eventos distintos com >=1 noticia verificada
+pares (municipio, data da anomalia) distintos: 2735
+municipios distintos: 202
+episodios (datas a <=1 dia agrupadas, por municipio): 2508
+noticias distintas verificadas em algum vinculo: 3506
+noticias verificadas para mais de uma anomalia: 1111 (mesma materia sustentando anomalias de detectores/datas proximas)
+episodios com noticia verificada por regiao: {"Centro-Oeste": 92, "Nordeste": 852, "Norte": 165, "Sudeste": 1081, "Sul": 318}
+
+== exposicao a padroes de falso positivo do benchmark (manchetes de vinculos VERIFICADOS)
+(contagem de manchetes que contem o padrao; NAO e contagem de erros: exige revisao humana)
+estiagem/seca/falta de chuva: 17 de 3506 (0.5%)
+calor/temperatura: 26 de 3506 (0.7%)
+previsao/alerta: 480 de 3506 (13.7%)
+frio/geada: 37 de 3506 (1.1%)
+uso figurado de 'cheia': 0 de 3506 (0.0%)
+vento sem chuva na manchete: 40 de 3506 (1.1%)
+politica/projeto/obra: 46 de 3506 (1.3%)

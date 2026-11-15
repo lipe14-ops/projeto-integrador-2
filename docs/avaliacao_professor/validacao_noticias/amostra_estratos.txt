@@ -1,0 +1,22 @@
+gerado em 2026-11-14T23:58:00.667629+00:00
+populacao de vinculos anomalia x noticia: 31237 (sha256 das chaves: 78d34c2e563ce4a068a281e0bd9d47dcc1c05b14d180aeb52e4a71818d9bbb0a)
+semente: 20261114; alvo por estrato (decisao x regiao): 10
+linhas exportadas: 150 -> docs/avaliacao_professor/validacao_noticias/amostra_para_anotacao.csv e docs/avaliacao_professor/validacao_noticias/amostra_para_anotacao_cega.csv
+rotulos permitidos: confirma, nao_confirma, indeterminado
+
+             decisao       regiao  populacao  amostra
+            verified        Norte        270       10
+            verified     Nordeste       1826       10
+            verified Centro-Oeste        160       10
+            verified      Sudeste       2138       10
+            verified          Sul        795       10
+            rejected        Norte       2143       10
+            rejected     Nordeste       7695       10
+            rejected Centro-Oeste       1190       10
+            rejected      Sudeste       6770       10
+            rejected          Sul       1579       10
+pending_verification        Norte        713       10
+pending_verification     Nordeste       3070       10
+pending_verification Centro-Oeste        267       10
+pending_verification      Sudeste       1989       10
+pending_verification          Sul        632       10

@@ -1,0 +1,243 @@
+2026-11-14 21:43:47,719 INFO climate_news.analysis: relatório: precipitacao / todas
+2026-11-14 21:43:56,531 INFO climate_news.analysis: relatório: precipitacao / extremos
+2026-11-14 21:44:04,756 INFO climate_news.analysis: relatório: precipitacao / impacto
+2026-11-14 21:44:09,671 INFO climate_news.analysis: relatório: temperatura_alta / todas
+2026-11-14 21:44:15,819 INFO climate_news.analysis: relatório: temperatura_alta / extremos
+2026-11-14 21:44:21,961 INFO climate_news.analysis: relatório: temperatura_baixa / todas
+2026-11-14 21:44:30,103 INFO climate_news.analysis: relatório: temperatura_baixa / extremos
+2026-11-14 21:44:38,040 INFO climate_news.analysis: relatório: umidade_alta / todas
+2026-11-14 21:44:45,433 INFO climate_news.analysis: relatório: umidade_alta / extremos
+2026-11-14 21:44:52,357 INFO climate_news.analysis: relatório: umidade_baixa / todas
+2026-11-14 21:44:59,401 INFO climate_news.analysis: relatório: umidade_baixa / extremos
+{
+  "cobertura": {
+    "precipitacao": {
+      "municipios": 5535,
+      "dias_validos_min": 3071,
+      "dias_validos_mediana": 3071.0,
+      "dias_validos_max": 3071
+    },
+    "temperatura": {
+      "municipios": 5535,
+      "dias_validos_min": 3287,
+      "dias_validos_mediana": 3287.0,
+      "dias_validos_max": 3287
+    },
+    "umidade": {
+      "municipios": 5535,
+      "dias_validos_min": 3287,
+      "dias_validos_mediana": 3287.0,
+      "dias_validos_max": 3287
+    }
+  },
+  "classes": {
+    "chuva_por_classe": {
+      "extremo_local": 94635,
+      "extremo_acumulado": 75988,
+      "anomalia_estatistica": 68998,
+      "dado_incompleto": 34801,
+      "artefato_provavel": 20988,
+      "extremo_sazonal": 17593,
+      "anomalia_negativa": 2599
+    },
+    "chuva_por_detector_e_classe": {
+      "accumulation_percentile|dado_incompleto": 22424,
+      "accumulation_percentile|extremo_acumulado": 75988,
+      "arima_zscore|anomalia_estatistica": 68998,
+      "arima_zscore|anomalia_negativa": 2599,
+      "arima_zscore|artefato_provavel": 20988,
+      "arima_zscore|dado_incompleto": 12377,
+      "arima_zscore|extremo_local": 94635,
+      "arima_zscore|extremo_sazonal": 17593
+    },
+    "arima_contadas": 181226,
+    "arima_pct_apenas_estatistica": 38.1,
+    "arima_pct_extremo": 61.9,
+    "arima_pct_intensidade_alta": 15.5,
+    "arima_pct_com_noticia": 0.68,
+    "extremos_pct_com_noticia": 1.21,
+    "termica_por_variavel_direcao_classe": {
+      "temperatura|negative|anomalia_estatistica": 43662,
+      "temperatura|negative|extremo_local": 138098,
+      "temperatura|positive|anomalia_estatistica": 7685,
+      "temperatura|positive|extremo_local": 27966,
+      "umidade|negative|anomalia_estatistica": 14088,
+      "umidade|negative|extremo_local": 94077,
+      "umidade|positive|anomalia_estatistica": 30203,
+      "umidade|positive|extremo_local": 88821
+    },
+    "termica_diagnosticos": {
+      "temperatura": {
+        "z_std_mediana": 1.0404,
+        "taxa_pos_mediana_pct": 0.152,
+        "taxa_neg_mediana_pct": 1.004,
+        "ordem_ar_moda": 1
+      },
+      "umidade": {
+        "z_std_mediana": 1.0423,
+        "taxa_pos_mediana_pct": 0.639,
+        "taxa_neg_mediana_pct": 0.487,
+        "ordem_ar_moda": 1
+      }
+    },
+    "exemplos_residuo_poa": [
+      {
+        "data": "2017-12-23",
+        "observado_mm": 46.41,
+        "previsto_mm": 1.06,
+        "residuo_log": 3.1354,
+        "residuo_mm": 45.35,
+        "z": 3.092
+      },
+      {
+        "data": "2018-11-03",
+        "observado_mm": 31.88,
+        "previsto_mm": 0.38,
+        "residuo_log": 3.1705,
+        "residuo_mm": 31.5,
+        "z": 3.092
+      },
+      {
+        "data": "2019-04-16",
+        "observado_mm": 42.32,
+        "previsto_mm": 0.93,
+        "residuo_log": 3.1098,
+        "residuo_mm": 41.39,
+        "z": 3.068
+      },
+      {
+        "data": "2020-07-07",
+        "observado_mm": 70.88,
+        "previsto_mm": 0.43,
+        "residuo_log": 3.9177,
+        "residuo_mm": 70.45,
+        "z": 3.896
+      },
+      {
+        "data": "2020-09-12",
+        "observado_mm": 44.38,
+        "previsto_mm": 1.05,
+        "residuo_log": 3.099,
+        "residuo_mm": 43.34,
+        "z": 3.083
+      },
+      {
+        "data": "2021-06-26",
+        "observado_mm": 39.64,
+        "previsto_mm": 0.63,
+        "residuo_log": 3.2167,
+        "residuo_mm": 39.01,
+        "z": 3.207
+      },
+      {
+        "data": "2021-09-07",
+        "observado_mm": 35.61,
+        "previsto_mm": 0.34,
+        "residuo_log": 3.309,
+        "residuo_mm": 35.27,
+        "z": 3.298
+      },
+      {
+        "data": "2022-04-03",
+        "observado_mm": 39.63,
+        "previsto_mm": 0.99,
+        "residuo_log": 3.0158,
+        "residuo_mm": 38.64,
+        "z": 3.034
+      },
+      {
+        "data": "2022-06-17",
+        "observado_mm": 68.46,
+        "previsto_mm": 0.81,
+        "residuo_log": 3.6451,
+        "residuo_mm": 67.65,
+        "z": 3.665
+      },
+      {
+        "data": "2022-07-14",
+        "observado_mm": 23.87,
+        "previsto_mm": 0.26,
+        "residuo_log": 2.9865,
+        "residuo_mm": 23.62,
+        "z": 3.004
+      },
+      {
+        "data": "2023-07-12",
+        "observado_mm": 71.03,
+        "previsto_mm": 1.18,
+        "residuo_log": 3.4989,
+        "residuo_mm": 69.85,
+        "z": 3.515
+      },
+      {
+        "data": "2023-08-23",
+        "observado_mm": 52.6,
+        "previsto_mm": 0.87,
+        "residuo_log": 3.3546,
+        "residuo_mm": 51.73,
+        "z": 3.37
+      },
+      {
+        "data": "2023-09-04",
+        "observado_mm": 145.84,
+        "previsto_mm": 2.9,
+        "residuo_log": 3.6284,
+        "residuo_mm": 142.94,
+        "z": 3.645
+      },
+      {
+        "data": "2023-11-02",
+        "observado_mm": 41.86,
+        "previsto_mm": 0.93,
+        "residuo_log": 3.0981,
+        "residuo_mm": 40.92,
+        "z": 3.113
+      },
+      {
+        "data": "2024-03-21",
+        "observado_mm": 32.47,
+        "previsto_mm": 0.49,
+        "residuo_log": 3.1146,
+        "residuo_mm": 31.99,
+        "z": 3.08
+      },
+      {
+        "data": "2024-05-23",
+        "observado_mm": 38.66,
+        "previsto_mm": 0.85,
+        "residuo_log": 3.0634,
+        "residuo_mm": 37.8,
+        "z": 3.03
+      },
+      {
+        "data": "2025-11-07",
+        "observado_mm": 45.85,
+        "previsto_mm": 0.69,
+        "residuo_log": 3.324,
+        "residuo_mm": 45.17,
+        "z": 3.251
+      }
+    ]
+  },
+  "porto_alegre": {
+    "precipitacao|todas": {
+      "n_eventos": 29,
+      "participacao_norm_pct": {
+        "verao": 7.0,
+        "outono": 27.4,
+        "inverno": 27.4,
+        "primavera": 38.2
+      },
+      "outono_inverno_pct": 54.8,
+      "padrao": "sem_predominio",
+      "qvalor": 0.1556,
+      "pvalor": 0.1206,
+      "percentil_brasil": 79.2,
+      "percentil_sul": 73.0,
+      "mediana_rs_pct": 56.2
+    },
+    "precipitacao|extremos": {
+      "n_eventos": 27,
+      "participacao_norm_pct": {
+        "verao": 7.5,
+        "outono": 

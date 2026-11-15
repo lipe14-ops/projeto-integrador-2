@@ -1,0 +1,203 @@
+2026-11-14 20:39:38,816 INFO climate_news.analysis: térmica 1/27: códigos 1400000–1499999, 1933 anomalias
+2026-11-14 20:39:40,398 INFO climate_news.analysis: térmica 2/27: códigos 1200000–1299999, 2021 anomalias
+2026-11-14 20:39:43,745 INFO climate_news.analysis: térmica 3/27: códigos 1600000–1699999, 1242 anomalias
+2026-11-14 20:39:46,484 INFO climate_news.analysis: térmica 4/27: códigos 1100000–1199999, 5161 anomalias
+2026-11-14 20:39:48,414 INFO climate_news.analysis: térmica 5/27: códigos 1300000–1399999, 5924 anomalias
+2026-11-14 20:40:04,046 INFO climate_news.analysis: térmica 6/27: códigos 1500000–1599999, 12356 anomalias
+2026-11-14 20:40:09,293 INFO climate_news.analysis: térmica 7/27: códigos 1700000–1799999, 10476 anomalias
+2026-11-14 20:40:26,995 INFO climate_news.analysis: térmica 8/27: códigos 2100000–2199999, 23040 anomalias
+2026-11-14 20:40:41,375 INFO climate_news.analysis: térmica 9/27: códigos 2200000–2299999, 20024 anomalias
+2026-11-14 20:40:54,733 INFO climate_news.analysis: térmica 10/27: códigos 2300000–2399999, 15903 anomalias
+2026-11-14 20:41:00,633 INFO climate_news.analysis: térmica 11/27: códigos 2400000–2499999, 15446 anomalias
+2026-11-14 20:41:18,165 INFO climate_news.analysis: térmica 12/27: códigos 2800000–2899999, 4826 anomalias
+2026-11-14 20:41:22,941 INFO climate_news.analysis: térmica 13/27: códigos 2700000–2799999, 6549 anomalias
+2026-11-14 20:41:39,786 INFO climate_news.analysis: térmica 14/27: códigos 2600000–2699999, 12041 anomalias
+2026-11-14 20:41:41,210 INFO climate_news.analysis: térmica 15/27: códigos 2500000–2599999, 18587 anomalias
+2026-11-14 20:41:59,951 INFO climate_news.analysis: térmica 16/27: códigos 3200000–3299999, 6149 anomalias
+2026-11-14 20:42:06,930 INFO climate_news.analysis: térmica 17/27: códigos 3300000–3399999, 4518 anomalias
+2026-11-14 20:43:06,460 INFO climate_news.analysis: térmica 18/27: códigos 2900000–2999999, 37791 anomalias
+2026-11-14 20:43:49,183 INFO climate_news.analysis: térmica 19/27: códigos 4100000–4199999, 35104 anomalias
+2026-11-14 20:44:24,607 INFO climate_news.analysis: térmica 20/27: códigos 4200000–4299999, 24353 anomalias
+2026-11-14 20:44:39,253 INFO climate_news.analysis: térmica 21/27: códigos 3500000–3599999, 50665 anomalias
+2026-11-14 20:44:45,360 INFO climate_news.analysis: térmica 22/27: códigos 5000000–5099999, 7455 anomalias
+2026-11-14 20:44:50,641 INFO climate_news.analysis: térmica 23/27: códigos 3100000–3199999, 56682 anomalias
+2026-11-14 20:44:52,995 INFO climate_news.analysis: térmica 24/27: códigos 5300000–5399999, 57 anomalias
+2026-11-14 20:45:09,669 INFO climate_news.analysis: térmica 25/27: códigos 5100000–5199999, 15472 anomalias
+2026-11-14 20:45:21,843 INFO climate_news.analysis: térmica 26/27: códigos 5200000–5299999, 16571 anomalias
+2026-11-14 20:45:24,038 INFO climate_news.analysis: térmica 27/27: códigos 4300000–4399999, 34254 anomalias
+{
+  "source": "PostgreSQL: registro_climatico (ERA5-Land 00 e 12 UTC → média diária)",
+  "config": {
+    "z_threshold": 3.0,
+    "mean_harmonics": 3,
+    "variance_harmonics": 2,
+    "max_p": 3,
+    "initial_train_years": 2,
+    "window_days": 15,
+    "min_train_days": 365
+  },
+  "municipalities": 5535,
+  "errors": [
+    {
+      "codigo_ibge": 1500305,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 1500305,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 1501402,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 1501402,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 1502509,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 1502509,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 1502608,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 1502608,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2102408,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2102408,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2109452,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2109452,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2111201,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2111201,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2305357,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2305357,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2404408,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2404408,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2408102,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2408102,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2800605,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2800605,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2805307,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2805307,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2605459,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2605459,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2503209,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 2503209,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 3205309,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 3205309,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 3300100,
+      "variable": "temperatura",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 3300100,
+      "variable": "umidade",
+      "error": "sem dados suficientes"
+    },
+    {
+      "codigo_ibge": 3300233,
+      "variable": "temperatur

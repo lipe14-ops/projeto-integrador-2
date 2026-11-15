@@ -1,0 +1,36 @@
+{
+  "estatisticas": {
+    "carregou": true,
+    "dica_brasil": "Clique em um estado para ver os municípios",
+    "voltar_no_brasil": false,
+    "tooltip_brasil": "Mato Grosso — MT\nClique para ver os municípios | Goiás — GO\nClique para ver os municípios",
+    "tooltips_abertos_brasil": 2,
+    "dica_estado": "Goiás — GO: clique em um município",
+    "voltar_no_estado": true,
+    "tooltip_municipio": "Mato Grosso — MT",
+    "selecionado": "São Miguel do Araguaia — GO",
+    "estado_vizinho": "São Miguel do Araguaia — GO",
+    "dica_apos_trocar": "Mato Grosso — MT: clique em um município",
+    "dica_apos_voltar": "Clique em um estado para ver os municípios",
+    "voltar_apos_voltar": false,
+    "selecao_apos_voltar": null
+  },
+  "mapa_nacional": {
+    "carregou": true,
+    "dica_brasil": "Clique em um estado para ver os municípios",
+    "voltar_no_brasil": false,
+    "tooltip_brasil": "Mato Grosso — MT\nClique para ver os municípios | Goiás — GO\nClique para ver os municípios",
+    "tooltips_abertos_brasil": 2,
+    "dica_estado": "Goiás — GO: clique em um município",
+    "voltar_no_estado": true,
+    "tooltip_municipio": "Mato Grosso — MT",
+    "selecionado": "São Miguel do Araguaia — GO",
+    "estado_vizinho": "São Miguel do Araguaia — GO",
+    "dica_apos_trocar": "Mato Grosso — MT: clique em um município",
+    "dica_apos_voltar": "Clique em um estado para ver os municípios",
+    "voltar_apos_voltar": false,
+    "selecao_apos_voltar": "Selecione um município",
+    "atalho_porto_alegre_dica": "Rio Grande do Sul — RS: clique em um município"
+  },
+  "erros_console": []
+}

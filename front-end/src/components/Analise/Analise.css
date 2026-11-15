@@ -1,0 +1,568 @@
+/* Página "Mapa nacional" (análise espacial e sazonal) */
+
+.analise-pagina .filter-error {
+  color: #a3381c;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* ---------- Filtros ---------- */
+.analise-filtros {
+  position: relative;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  align-items: end;
+  gap: 16px;
+  padding: 18px 20px;
+}
+
+.analise-filtros__metrica {
+  min-width: 220px;
+}
+
+.analise-filtros__periodo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.analise-filtros__periodo .input {
+  padding: 0 10px;
+}
+
+.analise-filtros__periodo span {
+  color: var(--muted);
+}
+
+.analise-filtros select:disabled {
+  background: #f1f4f2;
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.analise-filtros__nota {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.analise-filtros__nota:empty {
+  display: none;
+}
+
+.analise-aviso {
+  padding: 14px 18px;
+  border: 1px solid #ecc9b8;
+  border-left: 4px solid var(--rust);
+  border-radius: var(--radius);
+  background: #fbf1ec;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.analise-aviso .link-btn {
+  display: inline;
+  font-weight: 600;
+}
+
+/* ---------- Mapa + painel ---------- */
+.analise-mapa {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(340px, 1fr);
+  gap: 24px;
+  align-items: start;
+  scroll-margin-top: 16px;
+}
+
+.analise-mapa__principal {
+  display: grid;
+  min-width: 0;
+  gap: 16px;
+}
+
+.analise-mapa__card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.coropletico__mapa {
+  width: 100%;
+  height: 620px;
+  background: var(--map-water);
+}
+
+.coropletico__mapa .leaflet-interactive {
+  cursor: pointer;
+}
+
+.analise-mapa__lateral {
+  position: sticky;
+  top: 16px;
+  min-width: 0;
+  max-height: calc(100vh / 0.9 - 32px);
+  overflow-y: auto;
+  border-radius: var(--radius);
+}
+
+.analise-mapa__legenda-carregando {
+  height: 260px;
+}
+
+.mapa-status {
+  max-width: calc(100% - 24px);
+  white-space: normal;
+  text-align: center;
+}
+
+/* ---------- Legenda ---------- */
+.legenda-analise {
+  display: grid;
+  gap: 14px;
+  padding: 20px 22px;
+  transition: opacity 0.2s;
+}
+
+.is-desatualizada {
+  opacity: 0.6;
+}
+
+.legenda-analise__topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.legenda-analise__topo h3 {
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.legenda-analise__unidade {
+  margin-top: 2px;
+  color: var(--muted);
+}
+
+.legenda-analise__unidade b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.legenda-analise__selo {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #eef3f0;
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.legenda-analise__classes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.legenda-analise__classes li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.legenda-analise__classes i,
+.amostra {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  flex: none;
+  border: 1px solid rgb(15 47 45 / 18%);
+  border-radius: 3px;
+}
+
+.legenda-analise__nota,
+.legenda-analise__definicao {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.legenda-analise__definicao {
+  padding: 10px 14px;
+  border-left: 3px solid var(--teal-soft);
+  background: #f6f9f7;
+  color: var(--ink);
+}
+
+.legenda-analise__lista,
+.legenda-analise__resumo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+}
+
+.legenda-analise__lista dt,
+.legenda-analise__resumo dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.legenda-analise__lista dd,
+.legenda-analise__resumo dd {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.legenda-analise__resumo {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.legenda-analise__resumo dd {
+  font-family: var(--font-mono);
+}
+
+/* ---------- Painel do município ---------- */
+.painel-municipio {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+}
+
+.painel-municipio__topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.painel-municipio__topo h2 {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.painel-municipio__sub {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.painel-municipio__fechar {
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.painel-municipio__fechar:hover {
+  background: #f1f6f4;
+  color: var(--ink);
+}
+
+.painel-municipio__valor {
+  display: grid;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f1f6f4;
+}
+
+.painel-municipio__valor span,
+.painel-municipio__valor small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.painel-municipio__valor b {
+  font-size: 20px;
+}
+
+.painel-municipio__bloco {
+  display: grid;
+  gap: 8px;
+}
+
+.painel-municipio__bloco h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.painel-municipio__nota {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.painel-municipio__grafico {
+  width: 100%;
+  height: 260px;
+}
+
+.painel-municipio__vazio {
+  color: var(--muted);
+}
+
+.painel-municipio__resumo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
+}
+
+.painel-municipio__resumo dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.painel-municipio__resumo dd {
+  font-weight: 600;
+}
+
+.painel-municipio__anos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.painel-municipio__anos li {
+  display: grid;
+  min-width: 52px;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.painel-municipio__anos span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.painel-municipio__anos b {
+  font-family: var(--font-mono);
+}
+
+/* ---------- Tabelas ---------- */
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+.tabela-analise {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabela-analise th,
+.tabela-analise td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tabela-analise thead th {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  vertical-align: bottom;
+}
+
+.tabela-analise th:first-child {
+  text-align: left;
+}
+
+.tabela-analise tbody th {
+  font-weight: 600;
+}
+
+.tabela-analise tr.inicio-grupo td,
+.tabela-analise tr.inicio-grupo th {
+  border-top: 1px solid var(--line-strong);
+}
+
+.tabela-analise small {
+  color: var(--muted);
+}
+
+.tabela-analise--padroes thead th {
+  white-space: normal;
+  min-width: 96px;
+}
+
+.tabela-analise--padroes .amostra {
+  display: block;
+  margin: 0 0 4px auto;
+}
+
+/* ---------- Regiões ---------- */
+.regioes-analise {
+  display: grid;
+  gap: 20px;
+}
+
+.regioes-analise__cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 24px;
+}
+
+.regioes-analise__cabecalho > div {
+  max-width: 900px;
+}
+
+.regioes-analise__pergunta {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.regioes-analise__explicacao {
+  padding: 18px 22px;
+}
+
+.regioes-analise__explicacao ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  list-style: disc;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.regioes-analise__grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  transition: opacity 0.2s;
+}
+
+.regioes-analise__grade .chart-card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.regioes-analise__grade .chart-card__head h3 {
+  font-size: 22px;
+}
+
+.regioes-analise__grade .chart-card__head p {
+  font-size: 16px;
+}
+
+.regioes-analise__grafico {
+  width: 100%;
+  height: 340px;
+}
+
+@media (max-width: 1100px) {
+  .analise-mapa,
+  .regioes-analise__grade {
+    grid-template-columns: 1fr;
+  }
+
+  .analise-mapa__lateral {
+    position: static;
+    max-height: none;
+  }
+
+  .coropletico__mapa {
+    height: 520px;
+  }
+}
+
+@media (max-width: 640px) {
+  .coropletico__mapa {
+    height: 420px;
+  }
+
+  .painel-municipio__resumo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* legenda das séries dos gráficos (ordem fixa; texto na cor do texto) */
+.legenda-series {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 16px;
+  font-size: 14px;
+}
+
+.legenda-series li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legenda-series i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legenda-series i.legenda-series__linha {
+  width: 18px;
+  height: 0;
+  border-top: 2px dashed var(--ink);
+  border-radius: 0;
+}
+
+/* tabelas compactas no painel lateral (sem rolagem horizontal na largura usual) */
+.painel-municipio .tabela-analise {
+  font-size: 13px;
+}
+
+.painel-municipio .tabela-analise th,
+.painel-municipio .tabela-analise td {
+  padding: 5px 4px;
+}
+
+.painel-municipio .tabela-analise thead th {
+  font-size: 12px;
+  white-space: normal;
+  line-height: 1.25;
+}
+
+/* Volume de dados reunido (faixa do topo) */
+.resumo-dados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.resumo-dados__item { display: flex; flex-direction: column; }
+.resumo-dados__item strong { font-size: 1.5rem; color: var(--color-text, inherit); }
+.resumo-dados__item span { font-size: 0.85rem; color: var(--color-text-muted, #52514e); }
+
+/* Ressalvas da seção de notícias */
+.regioes-analise__ressalvas {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #52514e);
+}
+#noticias-intensidade .tabela-analise th:first-child,
+#noticias-intensidade .tabela-analise td:first-child { text-align: left; }

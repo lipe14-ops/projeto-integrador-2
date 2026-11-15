@@ -42,3 +42,10 @@
   box-shadow: 0 0 0 1px #c0562b;
 }
 
+
+/* dica de navegação (estado → município) nos mapas coropléticos */
+.mapa-status--dica {
+  color: #4d625f;
+  font-size: 13px;
+  box-shadow: none;
+}

@@ -67,10 +67,18 @@ class AnomalyItem(BaseModel):
     uf: str | None
     codigo_ibge: int | None
     detector: str
-    observed_mm: float
-    predicted_mm: float | None
-    residual: float | None
-    z_score: float | None
+    observed_mm: float = Field(description="Chuva observada no dia (ERA5-Land), em mm")
+    predicted_mm: float | None = Field(
+        description="Previsão típica do modelo levada para mm: exp(ŷ) − 1, com ŷ a previsão de um passo de "
+        "ln(1 + chuva). Aproxima um valor típico (mediana), não a média esperada."
+    )
+    residual: float | None = Field(
+        description="Erro de previsão de um passo na escala log: ln(1 + observado) − ŷ. É a base do Z. "
+        "Ver docs/avaliacao_professor/RESIDUO_DE_CHUVA.md"
+    )
+    z_score: float | None = Field(
+        description="Resíduo padronizado (resíduo − média)/desvio-padrão dos resíduos do treino; Z > 3 = anomalia estatística"
+    )
     direction: str
     severity: str | None
     classification: str

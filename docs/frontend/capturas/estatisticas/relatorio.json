@@ -1,0 +1,46 @@
+{
+  "inicio_carregou": true,
+  "inicio_kpis": [
+    "Municípios com dados | 5.535 | de 5.573 na malha do IBGE; os demais (ilhas e áreas de lagoa) ficam fora da grade do ERA5-Land",
+    "Período histórico | 2015–2025 | 132 meses consecutivos",
+    "Resolução temporal | 2 leituras/dia | Leituras às 00 e 12 UTC, agregadas por dia e por mês",
+    "Variáveis | 3 | temperatura do ar a 2 m, umidade relativa, precipitação",
+    "Registros climáticos | 46,6 mi | leituras município × horário no banco",
+    "Fonte | ERA5-Land | ERA5-Land, grade de 0,1° (≈ 9 km), amostrada em cada município"
+  ],
+  "inicio_capacidades": 8,
+  "inicio_ufs_coloridas": 54,
+  "inicio_estouro_desktop": 0,
+  "inicio_estouro_celular": 0,
+  "hash_apos_botao": "#estatisticas",
+  "estatisticas_carregou": true,
+  "estatisticas_kpis": [
+    "Temperatura média: 24,7°C",
+    "Precipitação média: 135mm/mês",
+    "Umidade relativa média: 76,8%",
+    "Municípios com dados: 5.535",
+    "Anomalias identificadas: 630.491eventos"
+  ],
+  "estatisticas_graficos": 5,
+  "mapa_poligonos": 1,
+  "estatisticas_estouro_desktop": 0,
+  "filtro_resumo": "Sul · 2020–2024 · Inverno · La Niña",
+  "filtro_kpis": [
+    "Temperatura média | 13,7°C | 2020–2024 · o recorte já inclui todos os meses de 2015–2025 com esses filtros | Média simples dos municípios: 14,3 °C. | Critério de cálculo",
+    "Precipitação média | 106mm/mês | 2020–2024 · o recorte já inclui todos os meses de 2015–2025 com esses filtros | Média simples dos municípios: 106 mm/mês. | Critério de cálculo",
+    "Umidade relativa média | 82,5% | 2020–2024 · o recorte já inclui todos os meses de 2015–2025 com esses filtros | Média simples dos municípios: 81,8 %. | Critério de cálculo",
+    "Municípios com dados | 1.183 | 3 meses no recorte | De 5.573 na malha do IBGE; ilhas e áreas de lagoa ficam fora da grade do ERA5-Land.",
+    "Anomalias identificadas | 4.360eventos | 2020–2024, 5 variáveis | Soma dos eventos (dias anômalos consecutivos = 1 evento) de chuva, temperatura e umidade, acima e abaixo do esperado."
+  ],
+  "filtro_mudou_kpis": true,
+  "mapa_anomalias_legenda": "0 – 11,63\n≥ 11,63\nDados insuficientes\nSem dados (fora da grade do ERA5-Land ou sem dia válido)",
+  "estatisticas_estouro_celular": 0,
+  "elementos_largos_celular": [],
+  "rota_explorar": "Explore o clima de qualquer município do Brasil\n\nTemperatura, chuva e umidade de",
+  "rota_analise": "Mapa nacional de eventos anômalos\n\nFrequência, intensidade e sazonalidade dos ev",
+  "rota_sobre": "SOBRE O PROJETO\n\nSobre o Clima Brasil\n\nO Clima Brasil é uma plataforma de consul",
+  "erros_console": [
+    "[rotas] warning: The width(0) and height(0) of chart should be greater than 0,\n       please check the style of container, or the props width(100%) and height(100%),\n       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the\n       height and width.",
+    "[rotas] warning: The width(0) and height(0) of chart should be greater than 0,\n       please check the style of container, or the props width(100%) and height(100%),\n       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the\n       height and width."
+  ]
+}

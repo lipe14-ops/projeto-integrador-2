@@ -128,7 +128,7 @@ export function EventosExtremos({ municipio, eventos, descartadas, carregando, e
         </button>
         {metodoAberto && (
           <ul>
-            <li><b>Chuva fora do padrão em um dia:</b> um modelo estatístico (ARIMA) prevê a chuva de cada dia a partir dos dias anteriores; o dia entra quando a chuva fica muito acima da previsão (escore Z acima de 3).</li>
+            <li><b>Chuva fora do padrão em um dia:</b> um modelo estatístico (ARIMA) prevê a chuva de cada dia a partir dos dias anteriores; o dia entra quando a chuva fica muito acima da previsão (escore Z acima de 3, calculado sobre o erro de previsão em escala logarítmica). Isso é uma anomalia estatística; o evento também é extremo quando o volume é raro para o município na época do ano.</li>
             <li><b>Vários dias seguidos de chuva:</b> somas de 3 e 5 dias acima de 99% dos períodos iguais dos anos anteriores. Isso captura episódios longos, como a enchente de maio de 2024 no RS, que o modelo diário não destaca.</li>
             <li><b>Revisão:</b> cada caso é avaliado em relação ao clima local e ao potencial de impacto. {descartadas > 0 ? `${descartadas} ${descartadas === 1 ? 'caso foi descartado' : 'casos foram descartados'} neste período por serem chuvas comuns no local.` : 'Nenhum caso foi descartado neste período.'}</li>
             <li><b>Notícias:</b> buscadas de 3 dias antes a 7 dias depois de cada evento e verificadas automaticamente na página original (manchete, fonte, data, tema e município). A verificação é automática e pode errar: confira a matéria antes de citá-la. Dados de reanálise ERA5-Land (~9 km) podem subestimar chuvas muito localizadas.</li>

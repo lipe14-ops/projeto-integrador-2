@@ -13,3 +13,14 @@ wheels/
 data/*
 .run/
 analises/outliers/work/*.csv.gz
+
+# LaTeX (pôster): arquivos intermediários de compilação
+docs/poster/*.aux
+docs/poster/*.log
+docs/poster/*.fls
+docs/poster/*.fdb_latexmk
+docs/poster/*.nav
+docs/poster/*.snm
+docs/poster/*.bbl
+docs/poster/*.out
+docs/poster/*.toc
