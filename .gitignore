@@ -22,5 +22,9 @@ docs/poster/*.fdb_latexmk
 docs/poster/*.nav
 docs/poster/*.snm
 docs/poster/*.bbl
+docs/poster/*.blg
 docs/poster/*.out
 docs/poster/*.toc
+
+# travas temporárias de leitores/editores (ex.: .~lock.arquivo#)
+.~lock.*#

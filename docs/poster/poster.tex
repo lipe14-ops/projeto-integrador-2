@@ -7,7 +7,7 @@
 % Packages
 % ====================
 
-\usepackage[size=custom, width=160,height=90, scale=1.6]{beamerposter}
+\usepackage[size=custom, width=160,height=90, scale=1.3]{beamerposter}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{luainputenc}
@@ -25,7 +25,9 @@
 \pgfplotsset{compat=1.14}
 
 \usepackage{anyfontsize}
-\usepackage{fontawesome5}
+% Ícones do FontAwesome 5 convertidos em contornos vetoriais (figures/icones/*.pdf):
+% alguns leitores de PDF mostravam o nome do ícone ("Chart-line") em vez do desenho.
+\newcommand{\icone}[1]{\raisebox{-0.12em}{\includegraphics[height=0.95em]{figures/icones/#1.pdf}}}
 
 \usepackage{lipsum}
 % citações numéricas: o formato autor-ano do modelo saía quebrado nesta
@@ -77,11 +79,11 @@
 % ====================
 
 \footercontent{
-    \href{https://github.com/lipe14-ops/projeto-integrador-2}{\faGithub\hspace{0.5ex} lipe14-ops/projeto-integrador-2}
+    \href{https://github.com/lipe14-ops/projeto-integrador-2}{\icone{Github}\hspace{0.5ex} lipe14-ops/projeto-integrador-2}
     \hspace{5cm}
-    \href{mailto:filipe.soares@estudante.ifgoiano.edu.br}{\faEnvelope\hspace{0.5ex} filipe.soares@estudante.ifgoiano.edu.br}
+    \href{mailto:filipe.soares@estudante.ifgoiano.edu.br}{\icone{Envelope}\hspace{0.5ex} filipe.soares@estudante.ifgoiano.edu.br}
     \hspace{5cm}
-    \href{mailto:guilherme.marinheiro@estudante.ifgoiano.edu.br}{\faEnvelope\hspace{0.5ex} guilherme.marinheiro@estudante.ifgoiano.edu.br}
+    \href{mailto:guilherme.marinheiro@estudante.ifgoiano.edu.br}{\icone{Envelope}\hspace{0.5ex} guilherme.marinheiro@estudante.ifgoiano.edu.br}
 }
 % (can be left out to remove footer)
 
@@ -111,7 +113,7 @@
 			    \begin{block}{Resumo}
 			    	\small{O Clima Brasil é uma plataforma web gratuita para explorar o clima dos 5.570 municípios
 			    	brasileiros de 2015 a 2025, com os períodos de El Niño e La Niña em destaque, comparação entre
-			    	municípios, dias de chuva fora do padrão com notícias da época e um mapa nacional.}
+			    	municípios, dias de chuva fora do padrão com notícias da época e estatísticas nacionais.}
 			    \end{block}
 
 				%%%%%%%%%%%%% Introdução
@@ -121,9 +123,10 @@
 			        A plataforma responde a:
 
 			        \begin{enumerate}
-			        	\item \textbf{Impacto local:} como foi o clima de um município durante o El Niño e a La Niña?
+			        	\item \textbf{Impacto local:} como foi o clima de um município no El Niño e na La Niña?
 			        	\item \textbf{Comparação:} como dois municípios se diferenciam?
 			        	\item \textbf{Eventos:} quando choveu fora do padrão, e o que os jornais disseram?
+			        	\item \textbf{Panorama:} que padrões o país mostra por região, estação e fase do ENSO?
 			        \end{enumerate}
 			    \end{block}
 
@@ -144,14 +147,20 @@
 						\item \textbf{Dados:} reanálise ERA5-Land~\citep{munozsabater2021era5land} (grade de $\sim$9\,km).
 						\item \textbf{IBGE:} malha municipal, código, região, população, bioma, relevo e área.
 						\item \textbf{El Niño e La Niña:} índice ONI da NOAA, em faixas atrás dos gráficos.
-						\item \textbf{Notícias:} busca matérias de 3 dias antes a 7 depois do evento e confere data,
-						cidade e tema na página original~\citep{tarhule2005sahel,yagoub2020newspapers}. Teste com 67
-						notícias simuladas e gabarito prévio: 91\% das corretas aceitas, 72\% de acerto (F1 = 0,81).
+						\item \textbf{Notícias:} de 3 dias antes a 7 depois do evento, com data, cidade e tema
+						conferidos na página original~\citep{tarhule2005sahel,yagoub2020newspapers}. Teste com 67 notícias
+						simuladas e gabarito prévio: 91\% das corretas aceitas, F1 = 0,81.
+						\item \textbf{Dias fora do padrão:} um modelo estatístico (ARIMA) prevê a chuva de cada
+						dia~\citep{hyndman2021fpp,leigh2019framework}. O ``resíduo'' é o erro dessa previsão; se for
+						maior que 3 desvios-padrão ($Z>3$), o dia é \emph{anomalia}. Ele só é \emph{extremo} se o
+						volume também for \textbf{raro}: maior que o de 95\% dos dias de chuva do município nos anos
+						anteriores (percentil 95), por exemplo 33\,mm em Porto Alegre e 21\,mm em Rio Verde. Assim,
+						38,1\% das anomalias não são extremas.
 					\end{itemize}
 
 					\begin{center}
-						\includegraphics[width=0.26\linewidth]{figures/tela_ibge_recorte.png}\\
-						\small Malha municipal e ficha do município com dados do IBGE.
+						\includegraphics[width=\linewidth]{figures/tela_estatisticas_enso.png}\\
+						\small Aba Estatísticas: chuva nos meses de cada fase do ENSO, por região.
 					\end{center}
 
 
@@ -170,18 +179,17 @@
 					\begin{tikzpicture}[
 						node distance=1.2cm and 1.4cm,
 						caixa/.style={draw=mitred, fill=white, rounded corners=6pt, line width=2pt,
-							align=center, minimum height=4cm, text width=12.2cm, inner sep=0.4cm},
+							align=center, minimum height=5.2cm, text width=11.6cm, inner sep=0.7cm, anchor=center},
 						seta/.style={-{Latex[length=0.9cm,width=0.8cm]}, line width=3pt, draw=mitred}]
-						\node[caixa] (dados) {\faCloudSunRain\\[0.4ex]\textbf{Dados}\\\small ERA5-Land, IBGE
-						e NOAA};
-						\node[caixa, right=of dados] (banco) {\faDatabase\\[0.4ex]\textbf{Banco}\\\small
+						\node[caixa] (dados) {\icone{CloudSunRain}\\[0.4ex]\textbf{Dados}\\\small ERA5-Land, IBGE, NOAA};
+						\node[caixa, right=of dados] (banco) {\icone{Database}\\[0.4ex]\textbf{Banco}\\\small
 						PostgreSQL + PostGIS};
-						\node[caixa, right=of banco] (analise) {\faChartLine\\[0.4ex]\textbf{Análise}\\\small dias
+						\node[caixa, right=of banco] (analise) {\icone{ChartLine}\\[0.4ex]\textbf{Análise}\\\small dias
 						fora do padrão};
-						\node[caixa, below=of analise] (noticias) {\faNewspaper\\[0.4ex]\textbf{Notícias}\\\small
+						\node[caixa, below=of analise] (noticias) {\icone{Newspaper}\\[0.4ex]\textbf{Notícias}\\\small
 						busca e conferência};
-						\node[caixa, left=of noticias] (api) {\faServer\\[0.4ex]\textbf{API}\\\small FastAPI};
-						\node[caixa, left=of api] (site) {\faGlobeAmericas\\[0.4ex]\textbf{Site}\\\small React +
+						\node[caixa, left=of noticias] (api) {\icone{Server}\\[0.4ex]\textbf{API}\\\small FastAPI};
+						\node[caixa, left=of api] (site) {\icone{GlobeAmericas}\\[0.4ex]\textbf{Site}\\\small React +
 						Leaflet};
 						\draw[seta] (dados) -- (banco);
 						\draw[seta] (banco) -- (analise);
@@ -191,14 +199,8 @@
 					\end{tikzpicture}\par}
 
 					\begin{itemize}
-						\item \textbf{Navegação:} Brasil $\rightarrow$ estado $\rightarrow$ município, com
-						gráficos mensais, comparação entre municípios e download dos dados.
-						\item \textbf{Dias fora do padrão:} um modelo estatístico (ARIMA) prevê a chuva de cada
-						dia~\citep{hyndman2021fpp,leigh2019framework}. O ``resíduo'' é o erro dessa previsão; se for
-						maior que 3 desvios-padrão ($Z>3$), o dia é \emph{anomalia}. Ele só é \emph{extremo} se o
-						volume também for \textbf{raro}: maior que o de 95\% dos dias de chuva do município nos anos
-						anteriores (percentil 95), por exemplo 33\,mm em Porto Alegre e 21\,mm em Rio Verde. Assim,
-						38,1\% das anomalias não são extremas.
+						\item \textbf{Navegação:} Brasil $\rightarrow$ estado $\rightarrow$ município em todos os
+						mapas; gráficos, comparação, download e médias regionais ponderadas pela área.
 					\end{itemize}
 				\end{alertblock}
 
@@ -207,13 +209,13 @@
 					\heading{Gráficos com El Niño e La Niña}
 
 					\begin{center}
-						\includegraphics[width=0.32\linewidth]{figures/tela_graficos_recorte.png}
+						\includegraphics[width=0.96\linewidth]{figures/tela_graficos_recorte.png}
 					\end{center}
 
 					\heading{Eventos de chuva com notícias conferidas}
 
 					\begin{center}
-						\includegraphics[width=0.46\linewidth]{figures/tela_noticia_evento.png}
+						\includegraphics[width=0.96\linewidth]{figures/tela_noticia_evento.png}
 					\end{center}
 
 					\small
@@ -234,12 +236,12 @@
 			    \begin{block}{Resultados}
 			        \begin{figure}
 			            \centering
-			            \includegraphics[width=0.25\columnwidth]{figures/tela_mapa_nacional_recorte.png}
+			            \includegraphics[width=0.52\columnwidth]{figures/tela_mapa_nacional_recorte.png}
 			            \caption{Mapa coroplético: estação com mais eventos de chuva por município.}
 			            \label{fig:mapa}
 			        \end{figure}
 
-			        Respostas obtidas na plataforma (Explorar e Mapa nacional):
+			        Respostas obtidas na plataforma (abas Explorar e Estatísticas):
 			        \begin{enumerate}
 			        	\item \textbf{Impacto local:} gráficos de qualquer município com El Niño e La Niña ao fundo
 			        	(leitura visual, não causal).
@@ -248,13 +250,16 @@
 			        	e o inverno em 0,9\% (Figura~\ref{fig:mapa}).
 			        	\item \textbf{Eventos:} quanto mais forte a chuva, mais notícias confirmam o evento (18\%
 			        	abaixo de 20\,mm; 37\% nos acumulados extremos).
+			        	% números de /api/estatisticas/enso (2015-2025, médias ponderadas pela área)
+			        	\item \textbf{Panorama:} nos meses de El Niño, chuva 14\% acima da média no Sul e 6\% abaixo
+			        	no Norte; na La Niña, 12\% abaixo no Sul (associação, não causa).
 			        \end{enumerate}
 			    \end{block}
 
 				%%%%%%%%%%%%% Conclusão
 			    \begin{block}{Conclusão}
 			    	Contra a dispersão dos dados, o site reúne 46,6 milhões de registros de 5.535 municípios e
-			    	responde às três perguntas com um método validado~\citep{leigh2019framework}.
+			    	responde às quatro perguntas com um método validado~\citep{leigh2019framework}.
 			    	\textbf{Próximos passos:} comparar com o INMET e avaliar as notícias por humanos.
 			    \end{block}
 
